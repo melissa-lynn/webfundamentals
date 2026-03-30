@@ -1,0 +1,390 @@
+<?xml version="1.0"?>
+<section xml:id="html_html-quiz">
+  <title>HTML Quiz</title>
+  <p>Do NOT click on the start button until you are ready to take this quiz.  (probably during class)  Once you open the
+            quiz you are committed to finishing it.  The quiz has a time limit of 20 minutes.</p>
+  <exercises line="7" runestone_options="{'timelimit': 30, 'subchapter': 'htmlquiz', 'chapter': 'HTML', 'basecourse': 'webfundamentals', 'optional': '', 'optclass': '', 'divid': 'html_final_timed', 'qnumber': '', 'question_label': '2.6.1'}" source="/Users/lynn5/WebDevBook/webfundamentals/_sources/HTML/htmlquiz.rst">
+    <exercise label="html_quiz_q1">
+      <statement>
+        <p>Q-1: What does HTML stand for?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>Hyperlinks and Text Markup Language</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>Hyper Text Markup Language</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Home Tool Markup Language</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="html_quiz_q2">
+      <statement>
+        <p>Q-2: Choose the correct HTML element for the largest heading:</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>&lt;h6&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;head&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;heading&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>&lt;h1&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="html_quiz_q3">
+      <statement>
+        <p>Q-3: What is the correct HTML element for inserting a line break?</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>&lt;br&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;break&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;lb&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="html_quiz_q4">
+      <statement>
+        <p>Q-4: What is the correct HTML for creating a hyperlink?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>&lt;a&gt;http://www.w3schools.com&lt;/a&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>&lt;a href="http://www.w3schools.com"&gt;W3Schools&lt;/a&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;a name="http://www.w3schools.com"&gt;W3Schools.com&lt;/a&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;a url="http://www.w3schools.com"&gt;W3Schools.com&lt;/a&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="html_quiz_q5">
+      <statement>
+        <p>Q-5: Which character is used to indicate an end tag?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>*</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>/</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>^</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="html_quiz_q6">
+      <statement>
+        <p>Q-6: Which of these elements are all &amp;lt;table&amp;gt; elements?</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>&lt;table&gt;&lt;tr&gt;&lt;td&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;table&gt;&lt;head&gt;&lt;tfoot&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;thead&gt;&lt;body&gt;&lt;tr&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;table&gt;&lt;tr&gt;&lt;tt&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="html_quiz_q7">
+      <statement>
+        <p>Q-7: Inline elements are normally displayed without starting a new line.</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>True</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>False</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="html_quiz_q8">
+      <statement>
+        <p>Q-8: How can you make a numbered list?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>&lt;dl&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;ul&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;list&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>&lt;ol&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="html_quiz_q9">
+      <statement>
+        <p>Q-9: What is the correct HTML for inserting an image?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>&lt;image src="image.gif" alt="MyImage"&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;img href="image.gif" alt="MyImage"&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>&lt;img src="image.gif" alt="MyImage"&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;img alt="MyImage"&gt;image.gif&lt;/img&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="html_quiz_q10">
+      <statement>
+        <p>Q-10: Block elements are normally displayed without starting a new line.</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>False</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>True</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="html_quiz_q11">
+      <statement>
+        <p>Q-11: Which HTML element defines the title of a document?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>&lt;meta&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;head&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>&lt;title&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;h1&gt;</p>
+          </statement>
+          <feedback>
+            <p>None</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </exercises>
+  <p>Once you have completed the quiz you can review your answers but you will not be able to change them.</p>
+</section>

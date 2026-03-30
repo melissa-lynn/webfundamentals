@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-html" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>HTML Basics</title>
+
+  <introduction>
+    <p>As we noted in the previous chapter, HTML is the language of the web for expressing content. But before we dive into the specifics of HTML, let's look at what we mean by a markup language in general.  A markup language is a language that <term>annotates</term> text so that the computer can manipulate it for some purpose.  Most markup languages are readable by humans and are designed to be written with a plain text editor as rather than a fancy word processor like Microsoft Word.</p>
+  <p>This book is written using a markup language called <url href="http://sphinx-doc.org/rest.html" visual="http://sphinx-doc.org/rest.html">restructuredText</url> restructuredText is similar to another very popular markup language called <url href="http://daringfireball.net/projects/markdown/syntax" visual="http://daringfireball.net/projects/markdown/syntax">Markdown</url>.  Both of these languages are designed to be easily readable by humans, and yet easily translate into our language of choice for this class, HTML.  Now you know about three markup languages:</p>
+  <p>
+    <ul>
+      <li>
+        <p>HTML</p>
+      </li>
+      <li>
+        <p>Markdown</p>
+      </li>
+      <li>
+        <p>restructuredText</p>
+      </li>
+    </ul>
+  </p>
+  <p>The restructutedText markup for the content in this chapter so far looks like this:</p>
+  <program language="rst">
+    <input>
+The HyperText Markup Language
+=============================
+
+As we noted in the previous chapter, HTML is the language of the web for expressing content. But before we dive into the specifics of HTML, let's look at what we mean by a markup language in general.  A markup language is a language that **annotates** text so that the computer can manipulate it for some purpose.  Most markup languages are readable by humans and are designed to be written with a plain text editor as rather than a fancy word processor like Microsoft Word.
+
+This book is written using a markup language called `restructuredText &lt;//http://sphinx-doc.org/rest.html&gt;`_ restructuredText is similar to another very popular markup language called `Markdown &lt;http://daringfireball.net/projects/markdown/syntax&gt;`_.  Both of these languages are designed to be easily readable by humans, and yet easily translate into our language of choice for this class, HTML.  Now you know about three markup languages:
+
+* HTML
+* Markdown
+* restructuredText
+
+The restructutedText markup for the content in this chapter so far looks like this:
+</input>
+  </program>
+  <p>The annotations in the restructuredText are pretty unobtrusive, and actually add to the readability of the plain text in most cases.  For example the <c>===</c> below the title of this chapter indicate that it is, in fact a title or heading.  regular paragraphs require no extra annotation.  To make something bold you surround it by double asterisks.  If you want to make a bullet list, you just start the line with an asterisk.</p>
+  <p>Most documents have a reasonably limited set of elements including the following:</p>
+  <p>
+    <ul>
+      <li>
+        <p>Paragraphs</p>
+      </li>
+      <li>
+        <p>Title</p>
+      </li>
+      <li>
+        <p>Headings and subheadings and subsubheadings</p>
+      </li>
+      <li>
+        <p>bullet lists</p>
+      </li>
+      <li>
+        <p>numbered lists</p>
+      </li>
+      <li>
+        <p>tables of data</p>
+      </li>
+      <li>
+        <p>figures or images</p>
+      </li>
+      <li>
+        <p>text that is bold, or italic</p>
+      </li>
+      <li>
+        <p>page headers</p>
+      </li>
+      <li>
+        <p>page footers</p>
+      </li>
+    </ul>
+  </p>
+  <p>As we learn HTML it's important to keep in mind that the job of html is to structure the document and provide content.  We'll worry about making things look pretty until we get to CSS.</p>
+  <p>HTML uses a set of tags to annotate(mark up) the document.  The tags all look like this:  <c>&lt; tagname &gt;</c> and they are balanced so that at the end of the content for that tag there is <c>&lt;/ tagname &gt;</c>.  Notice that the closing tag contains a  slash at the beginning to differentiate itself from an opening tag.</p>
+  <p>An HTML document then just contains a series of these balanced tags.  Let's look at a small document that looks like this:</p>
+  <example>
+    <title>My First Heading</title>
+    <h1>My First Heading</h1>
+    <p>A simple paragraph of text.</p>
+    <p>Another paragraph of text.</p>
+  </example>
+    <p>The HTML for this document is as follows:</p>
+    
+    <program xml:id="html_1" interactive="activecode" language="htmlmixed">
+      <input>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Test Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;My First Heading&lt;/h1&gt;
+        &lt;p&gt;A simple paragraph of text&lt;/p&gt;
+        &lt;p&gt;Another paragraph of text&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+    <p>If you click the run button you will see the HTML in the example above in a special output window that mimics your browser.  Try changing the text of one of the paragraphs and click run again.   Try changing the <c>h1</c> tag to <c>h2</c>  Don't forget to change both the opening and closing tags.   I have indented the HTML for you so you can see the opening and closing tags more clearly.  A web browser does not care about indentation one bit, you can get rid of all of the indentation, or put everything on one line and the page will still look the same.</p>
+    <p>Before we move on to talk more about specific HTML tags it's useful to think about the page that is produced and the structure of the page.  You get a sense of the structure from the indentation I have provided, but it's useful to look at this from another perspective.  Figure 2 illustrates a <q>tree view</q> of an HTML page.</p>
+    <figure align="" xml:id="id1-2">
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2.  A tree view of the html page</caption>
+      <image source="tree.svg" width="50%"/>
+    </figure>
+    <p>This tree is upside down with how we usually think of a tree, but in computer science we put the <q>root</q> of the tree at the top.  So the root of this tree is the html tag.  The html tag has two <term>children</term>, the head and the body.  The head has one child, which is the title tag.  The html tag is the <term>parent</term> of the head tag.  The body has three children, the h1 tag and two p tags.  You may also find it helpful to think of this as an outline, although you would have to rotate the picture 90 degrees counter clockwise to get the orientation into outline form.  We will see how this tree structure of an html page is useful later on when we start to use CSS and Javascript.</p>
+  
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="html-basic.ptx" />
+  <xi:include href="html-advanced.ptx" />
+  <xi:include href="html-structural.ptx" />
+  <xi:include href="html-Exercises.ptx" />
+  <xi:include href="html-htmlquiz.ptx" />
+
+</chapter>

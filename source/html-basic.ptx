@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<section xml:id="html_basic-html-tags">
+  <title>Basic HTML Tags</title>
+  <subsection xml:id="html_headings">
+    <title>Headings</title>
+    <p>Like any document HTML documents may have several layers of headings.  In fact you can have heading levels from 1 to 6 in an HTML document.</p>
+    <program xml:id="html_headings-1" interactive="activecode" language="htmlmixed">
+      <input>
+&lt;h1&gt;Level one&lt;/h1&gt;
+&lt;h2&gt;Level two&lt;/h2&gt;
+&lt;h3&gt;Level three&lt;/h3&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+    <p>Now modify the example above to add the next three levels of headings.  What do you notice?  What happens if you add a level 7 heading?   What happens if you close an h2 tag with an h1 or an h3?</p>
+    <hint>
+      <p>As you might expect, the headings continue to get smaller as you go from 1 to 6.  But when you go to level 7 the text gets bigger.  This is because the web browser is written so that it just ignores any tags that it does not know about.  This is somewhat of a disadvantage as you don't get any error messages, things just look wrong, and you have to figure out why.</p>
+    </hint>
+    <p>Another aspect of the heading tag is that it is what we call a <term>block</term> tag.  Notice that each heading appears on its own line.  Thats pretty much what we would expect for a heading.  But not necessarily for other tags.  shortly, we will see some <term>inline</term> tags that do not each appear on their own line.</p>
+  </subsection>
+  <subsection xml:id="html_paragraphs">
+    <title>Paragraphs</title>
+    <p>Paragraphs are another funamental element of documents.  Paragraphs are also another example of a block element in that each paragraph gets its own space and is separated from other html elements by blank lines in the document.</p>
+    <program xml:id="html_paragraph" interactive="activecode" language="htmlmixed">
+      <input>
+&lt;p&gt;This is a short sentence.&lt;/p&gt;
+&lt;p&gt;This is a paragraph.  What happens when we have a really really really long line that takes up more than one line of the browser? &lt;/p&gt;
+&lt;p&gt;Level this is a short sentence&lt;/p&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+    <p>What happens when you put a paragraph inside another paragraph?  What about a header inside a paragraph?</p>
+  </subsection>
+  <subsection xml:id="html_images">
+    <title>Images</title>
+    <p>Images are another common element of a document or a web page.  To include an image in a document you must use an <c>img</c> tag.  Image tags are an example of an <term>inline</term> element because they just flow in with the surrounding text.  They do not force a new block to be created in the rendering of the html.  Here are a couple of images:</p>
+    <figure align="" xml:id="id1-4">
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Luther Bell:  <literal>https://runestone.academy/ns/books/published/webfundamentals/_images/LutherBellPic.jpg</literal></caption>
+      <image source="LutherBellPic.jpg" width="50%"/>
+    </figure>
+    <figure align="" xml:id="id2">
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Norse Logo:  <literal>https://runestone.academy/ns/books/published/webfundamentals/_images/norse-logo.png</literal></caption>
+      <image source="norse-logo.png" width="50%"/>
+    </figure>
+    <p>The image tag has a new component to it called an attribute.  In general tags can have many attributes in the case of an image we can inlude it by using a <c>src</c> attribute that contains the URL to the image we want to embed.  We can embed any image on the internet in our own document by referring to it by its URL in the <c>src</c> attribute.</p>
+    <program xml:id="html_img" interactive="activecode" language="htmlmixed">
+      <input>
+&lt;h1&gt;Embedded Images&lt;/h1&gt;
+&lt;p&gt;Images are inline elements they fit in the flow
+&lt;img src="https://runestone.academy/ns/books/published/webfundamentals/_images/LutherBellPic.jpg"&gt;
+of a paragraph without causing extra line breaks.&lt;/p&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+    <p>Try modifying the example above so that it includes the norse logo rather than the bell.
+                You can also change the height and width of  an image by using a <c>height=</c> attribute or a <c>width=</c> attribute.  Try changing the size of the image in the example above.  Notice what it does to the flow.  Try changing just one of height or width and then try changing both at the same time.  You can stretch your image in all kinds of crazy ways.</p>
+    <p>There are several other attributes of the image tag as well.  You can read about them <url href="http://www.w3schools.com/tags/tag_img.asp" visual="http://www.w3schools.com/tags/tag_img.asp">here</url>.</p>
+  </subsection>
+  <subsection xml:id="html_links">
+    <title>Links</title>
+    <p>The last basic link to cover in this section is the link tag <c>a</c>.  In fact the last sentence of the previous section used a link to send you to the w3schools website to learn more about the attributes of an <c>img</c> tag.  Links are what made the web so popular in the first place.  Today we call them links, but in earlier years they were usually referred to as Hyperlinks. You can provide a link to any URL on the web using the <c>href</c> attribute on the <c>a</c> tag.   The text that you will click on goes between the opening <c>a</c> tag and the closing <c>a</c> tag.</p>
+    <program xml:id="html_link" interactive="activecode" language="htmlmixed">
+      <input>
+&lt;h1&gt;Links make the web!&lt;/h1&gt;
+&lt;p&gt;Links are another inline element.  You can read about links and their attributes
+&lt;a href="http://www.w3schools.com/tags/tag_a.asp"&gt;Here&lt;/a&gt; on the w3schools website.&lt;/p&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+    <p>Try clicking on the link in the example above.  What happens?  How do you get back?   Don't worry, you can always just reload this page.</p>
+    <p>Links can also be used to navigate within the same page.  to do this you use one <c>a</c> tag to create
+                an anchor point on the page using the name attribute like this:  <c>&lt;a name="target"&gt;I am a target&lt;/a&gt;</c>  You can create
+                a link that will jump to the target anywhere else on the page using <c>&lt;a href="#target"&gt;Go to Target&lt;/a&gt;</c></p>
+  </subsection>
+  <subsection xml:id="html_simple-text-formatting">
+    <title>Simple Text Formatting</title>
+    <p>Making text bold or italic and other formatting is easy in HTML as well.  The following example illustrates the basic text formatting tags.</p>
+    <program xml:id="html_fmt" interactive="activecode" language="htmlmixed">
+      <input>
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;&lt;b&gt;This text is bold&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This text is strong&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;This text is italic&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This text is emphasized&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;This is computer output&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This is&lt;sub&gt; subscript&lt;/sub&gt; and &lt;sup&gt;superscript&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;This &lt;br /&gt; forces &lt;br /&gt; a &lt;br /&gt; line break &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+    <p>You can mix and match these styles in all kinds of ways.  Try making a superscript inside a superscript.  Try making the subscript bold or italic.</p>
+    <p>
+      <term>Check your Understanding</term>
+    </p>
+    <exercise label="blockelem">
+      <statement>
+        <p>Click on the beginning tag for all block elements in the example.</p>
+      </statement>
+      <feedback>
+        <p>Block elements start on a new line and take up the full width available.</p>
+      </feedback>
+      <areas>
+        <cline>&lt;html&gt;</cline>
+        <cline>
+          <area correct="no">&lt;body&gt;</area>
+        </cline>
+        <cline/>
+        <cline><area correct="yes">&lt;h1&gt;</area>Welcome to my Page&lt;/h1&gt;</cline>
+        <cline><area correct="yes">&lt;p&gt;</area>Hello World!   This is <area correct="no">&lt;b&gt;</area>me&lt;/b&gt; <area correct="no">&lt;img src="me.jpg"&gt;</area> &lt;/p&gt;</cline>
+        <cline><area correct="yes">&lt;p&gt;</area>This is my second paragraph</cline>
+        <cline><area correct="no">&lt;a href="home.html"&gt;</area>Click here for my homepage&lt;/a&gt;</cline>
+        <cline>
+          <area correct="no">&lt;/p&gt;</area>
+        </cline>
+        <cline>&lt;/body&gt;</cline>
+        <cline>&lt;/html&gt;</cline>
+      </areas>
+    </exercise>
+    <exercise label="inlineelem">
+      <statement>
+        <p>Click on the beginning tag for all inline elements in the example.</p>
+      </statement>
+      <feedback>
+        <p>Inline elements do not start on a new line and only take as much width as needed.</p>
+      </feedback>
+      <areas>
+        <cline> &lt;html&gt;</cline>
+        <cline> &lt;body&gt;</cline>
+        <cline><area correct="no">&lt;h1&gt;</area>Welcome to my Page&lt;/h1&gt;</cline>
+        <cline> &lt;p&gt;Hello World!  This is <area correct="yes">&lt;b&gt;</area>me&lt;/b&gt; <area correct="yes">&lt;img src="me.jpg"&gt;</area> &lt;/p&gt;</cline>
+        <cline/>
+        <cline><area correct="no">&lt;p&gt;</area>This is my second paragraph</cline>
+        <cline><area correct="yes">&lt;a href="home.html"&gt;</area>Click here for my homepage&lt;/a&gt;</cline>
+        <cline> &lt;/p&gt;</cline>
+        <cline> &lt;/body&gt;</cline>
+        <cline> &lt;/html&gt;</cline>
+      </areas>
+    </exercise>
+  </subsection>
+</section>

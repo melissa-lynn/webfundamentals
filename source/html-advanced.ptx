@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<section xml:id="html_advanced-html-tags">
+  <title>Advanced HTML Tags</title>
+  <subsection xml:id="html_unordered-lists">
+    <title>Unordered Lists</title>
+    <program xml:id="advhtml_ul" interactive="activecode" language="htmlmixed">
+      <input>
+&lt;ul&gt;
+&lt;li&gt;This is an unordered list&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ul&lt;/code&gt; tags
+&lt;/ul&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </subsection>
+  <subsection xml:id="html_ordered-lists">
+    <title>Ordered Lists</title>
+    <program xml:id="advhtml_ol" interactive="activecode" language="htmlmixed">
+      <input>
+&lt;ol&gt;
+&lt;li&gt;This is an ordered list&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ol&lt;/code&gt; tags
+&lt;li&gt;Notice that the &lt;code&gt;li&lt;/code&gt; tags are used for both.
+&lt;/ol&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+    <p>The <c>ol</c> tag can also have a type attribute.  The type attribute can be one of the following values</p>
+    <p>
+      <ul>
+        <li>
+          <p>1 This will cause the list to be numbered with numbers</p>
+        </li>
+        <li>
+          <p>A This will cause the list to be ordered with upper case letters</p>
+        </li>
+        <li>
+          <p>a This will cause the list to be ordered with lower case letters</p>
+        </li>
+        <li>
+          <p>I This will cause the list to be ordered with upper case roman numerals</p>
+        </li>
+        <li>
+          <p>i This will cause the list to be ordered with lower case roman numerals</p>
+        </li>
+      </ul>
+    </p>
+    <p>Try it yourself.</p>
+  </subsection>
+  <subsection xml:id="html_description-lists">
+    <title>Description Lists</title>
+    <program xml:id="advhtml_dl" interactive="activecode" language="htmlmixed">
+      <input>
+&lt;dl&gt;
+&lt;dt&gt;Description list&lt;/dt&gt;&lt;dd&gt;A list for defining terms&lt;/dd&gt;
+&lt;dt&gt;dt&lt;/dt&gt;&lt;dd&gt;The &lt;code&gt;dt&lt;/code&gt; tags are for the term&lt;/dd&gt;
+&lt;dt&gt;dd&lt;/dt&gt;&lt;dd&gt;The &lt;code&gt;dd&lt;/code&gt; tags are for the description&lt;/dd&gt;
+&lt;/dl&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </subsection>
+  <subsection xml:id="html_nesting-lists">
+    <title>Nesting Lists</title>
+    <p>Lists can be inside of other lists. Too.  This is very much true of most HTML tags.</p>
+    <program xml:id="advhtml_nested" interactive="activecode" language="htmlmixed">
+      <input>
+&lt;ol&gt;
+&lt;li&gt;This is an ordered list&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ol&lt;/code&gt; tags
+&lt;li&gt;Notice that the &lt;code&gt;li&lt;/code&gt; tags are used for both.
+&lt;ul&gt;
+&lt;li&gt;This is an unordered list&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ul&lt;/code&gt; tags&lt;/li&gt;
+&lt;/ul&gt;
+&lt;li&gt;You can mix and match lists like this as deeply as you want.&lt;/li&gt;
+&lt;/ol&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </subsection>
+  <subsection xml:id="html_tables">
+    <title>Tables</title>
+    <p>Tables have many uses, you can use them for organizing data as you normally would in a report where you have rows and columns of numbers or other information, but you can also use tables invisibly to influence how your page is displayed.  In the early days of html it was common to use a table to create a two column page layout.  We can still do that but now it is <term>much more acceptable</term> to use CSS for that purpose.</p>
+    <p>Here is a complete example that illustrates the use of the following table specific tags</p>
+    <p>
+      <ul>
+        <li>
+          <p>table  &#x2013; This is the main tag for a table</p>
+        </li>
+        <li>
+          <p>tr  &#x2013; every row in a table starts with a tr tag</p>
+        </li>
+        <li>
+          <p>td &#x2013; every column in a row is delineated by a <c>td</c> tag</p>
+        </li>
+        <li>
+          <p>th &#x2013; You can use the <c>th</c> tag in place of the <c>td</c> tag in the first row to make headings</p>
+        </li>
+      </ul>
+    </p>
+    <program xml:id="advhtml_table" interactive="activecode" language="htmlmixed">
+      <input>
+ &lt;table width='100%' border=1px cellspacing=0&gt;
+ &lt;caption&gt;Table of Scores&lt;/caption&gt;
+ &lt;tr&gt;
+     &lt;th&gt;Number&lt;/th&gt;
+     &lt;th&gt;First Name&lt;/th&gt;
+     &lt;th&gt;Last Name&lt;/th&gt;
+     &lt;th&gt;Points&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+     &lt;td&gt;1&lt;/td&gt;
+     &lt;td&gt;Russell&lt;/td&gt;
+     &lt;td&gt;Jackson&lt;/td&gt;
+     &lt;td&gt;94&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+     &lt;td&gt;2&lt;/td&gt;
+     &lt;td&gt;John&lt;/td&gt;
+     &lt;td&gt;Deere&lt;/td&gt;
+     &lt;td&gt;80&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+     &lt;td&gt;3&lt;/td&gt;
+     &lt;td&gt;Nikola&lt;/td&gt;
+     &lt;td&gt;Tesla&lt;/td&gt;
+     &lt;td&gt;100&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+     &lt;td&gt;4&lt;/td&gt;
+     &lt;td&gt;Richard&lt;/td&gt;
+     &lt;td&gt;Smith&lt;/td&gt;
+     &lt;td&gt;50&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/table&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+    <p>There are many attributes you can use with the various table tags.</p>
+    <p>
+      <ul>
+        <li>
+          <p><c>table</c>
+                        * width - you can specify a width as a percentage or as a number of pixels.  This attribute is useful for right now, but it's use is not encouraged, as you are better off to use CSS to control the look of your table.  We say that this attribute is <term>deprecated</term>
+                        * border - you can add borders to your tables as in the example above, but this tag is deprecated as well.
+                        * The spacing between the cells of the table.  Also deprecated.</p>
+        </li>
+        <li>
+          <p><c>td</c>
+                        * colspan  &#x2013; if you have a particular table where you need an extra wide column in some rows you can make a cell of your table span more than one column using the colspan attribute.  Its value is the number of columns.</p>
+        </li>
+        <li>
+          <p><c>tr</c>
+                        * rowspan &#x2013; If you have a particular table where you need an column to span multiple rows you can make a cell of your table span more than one row using the rowspan attribute.  Its value is the number of rows.</p>
+        </li>
+      </ul>
+    </p>
+    <p>Experiment with a table.  What kinds of tags can you include inside each <c>td</c>?  Can you make a table inside another table?</p>
+  </subsection>
+  <subsection xml:id="html_audio">
+    <title>Audio</title>
+    <p>Embedding audio in your webpage allows you to link to various files containing music or speech.  The audio tag looks like the following:</p>
+    <program language="html">
+      <input>
+&lt;audio controls&gt;
+    &lt;source src="horse.ogg" type="audio/ogg"&gt;
+    &lt;source src="horse.mp3" type="audio/mpeg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</input>
+    </program>
+    <p>The <c>controls</c> attribute provides start/stop/fast-forward/rewind buttons for the listener.  The <c>source</c> tags inside the <c>audio</c> tag allow you to provide several different audio formats.  This is because different browsers support different kinds of audio The browser will go through the list, in order, until it finds a format it understands, or else, it will replace the controller with the message at the end.</p>
+  </subsection>
+  <subsection xml:id="html_video">
+    <title>Video</title>
+    <p>Embedding video in your webpage allows you to link to various files containing movies.</p>
+    <program language="html">
+      <input>
+&lt;video height=312 width= 540 controls&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    &lt;source src="movie.ogg" type="video/ogg"&gt;
+    Your browser does not support the video element.
+&lt;/video&gt;
+</input>
+    </program>
+    <p>The <c>controls</c> attribute provides start/stop/fast-forward/rewind buttons for the listener.  The <c>source</c> tags inside the <c>video</c> tag allow you to provide several different video formats.  This is because different browsers support different kinds of video The browser will go through the list, in order, until it finds a format it understands, or else, it will replace the controller with the message at the end.</p>
+  </subsection>
+  <subsection xml:id="html_iframes">
+    <title>IFrames</title>
+    <p>IFrames allow you to embed a webpage within another webpage.  The activecode examples in this book use an iframe to allow you to experiment with the html, by creating a page within a page.</p>
+  </subsection>
+</section>
