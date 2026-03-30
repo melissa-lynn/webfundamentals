@@ -83,7 +83,9 @@ The restructutedText markup for the content in this chapter so far looks like th
   </example>
     <p>The HTML for this document is as follows:</p>
     
-    <program xml:id="html_1" interactive="activecode" language="htmlmixed">
+    <listing>
+      <caption>My First Heading</caption>
+    <program xml:id="html_1" interactive="activecode" language="html" label="program-activecode-html-heading" include-source="yes">
       <input>
 &lt;html&gt;
     &lt;head&gt;
@@ -97,10 +99,11 @@ The restructutedText markup for the content in this chapter so far looks like th
 &lt;/html&gt;
         </input>
       <tests>
-
-
 </tests>
     </program>
+  </listing>
+
+
     <p>If you click the run button you will see the HTML in the example above in a special output window that mimics your browser.  Try changing the text of one of the paragraphs and click run again.   Try changing the <c>h1</c> tag to <c>h2</c>  Don't forget to change both the opening and closing tags.   I have indented the HTML for you so you can see the opening and closing tags more clearly.  A web browser does not care about indentation one bit, you can get rid of all of the indentation, or put everything on one line and the page will still look the same.</p>
     <p>Before we move on to talk more about specific HTML tags it's useful to think about the page that is produced and the structure of the page.  You get a sense of the structure from the indentation I have provided, but it's useful to look at this from another perspective.  Figure 2 illustrates a <q>tree view</q> of an HTML page.</p>
     <figure align="" xml:id="id1-2">
@@ -112,10 +115,10 @@ The restructutedText markup for the content in this chapter so far looks like th
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="html-basic.ptx" />
-  <xi:include href="html-advanced.ptx" />
-  <xi:include href="html-structural.ptx" />
-  <xi:include href="html-Exercises.ptx" />
-  <xi:include href="html-htmlquiz.ptx" />
+  <xi:include href="sec-html-basic.ptx" />
+  <xi:include href="sec-html-advanced.ptx" />
+  <xi:include href="sec-html-structural.ptx" />
+  <xi:include href="sec-html-Exercises.ptx" />
+  <xi:include href="sec-html-htmlquiz.ptx" />
 
 </chapter>

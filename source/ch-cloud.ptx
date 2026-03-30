@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-cloud" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Publishing a Web Page in the Cloud</title>
+
+  <introduction>
+    <p>It is one thing to edit little snippets of HTML in our textbook, but that is not really what we want to learn.  We want to make web pages that can be seen by friends and family around the world.  To do that we need a web server, in a place this is available to people around the world.</p>
+  <p>In earlier days this would involve buying some hardware, and configuring a web server like apache, getting an ISP and many other details that we don't want to mess around with in this class.  In modern times all of this infrastructure is available from several sources under the heading <term>PaaS</term> or Platform as a Service.</p>
+  <p>PaaS providers take care of all of the details of provisioning hardware, and network bandwidth for us.  All we need to do is sign up for an account, and have our credit card ready to go.  In fact for educational or hobbyist use, most of these companies provide their service for free.  Only when you start to get big enough to make real money, do they start to charge you.  Some of the companies that are in this business include:</p>
+  <p>
+    <ul>
+      <li>
+        <p>Amazon Web Services</p>
+      </li>
+      <li>
+        <p>Digital Ocean</p>
+      </li>
+      <li>
+        <p>Heroku</p>
+      </li>
+      <li>
+        <p>Github</p>
+      </li>
+    </ul>
+  </p>
+  <p>One service that makes it very easy to publish your own blog or even a simple web page is a company called Github.  Github is largely a company that helps you manage your software projects, but they have one simple service called <q>Github Pages</q> that works extremely well for our purposes.  To make a web page available to the involves the following steps:</p>
+  <p>
+    <ol label="1">
+      <li>
+        <p>Make an account on <url href="https://github.com/join" visual="https://github.com/join">Github</url></p>
+      </li>
+      <li>
+        <p>Setup <url href="https://pages.github.com" visual="https://pages.github.com">Github Pages</url></p>
+      </li>
+      <li>
+        <p>Edit your first webpage</p>
+      </li>
+      <li>
+        <p>Commit your webpage</p>
+      </li>
+      <li>
+        <p>Push your webpage</p>
+      </li>
+    </ol>
+  </p>
+  <p>You can follow the instructions for steps 1 and 2 as written by the folks at Github.  They are very well written and easy to follow so I'm not going to try to rephrase what they have already done.</p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-cloud-Exercises.ptx" />
+
+</chapter>

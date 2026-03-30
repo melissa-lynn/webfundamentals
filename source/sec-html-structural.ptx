@@ -52,7 +52,9 @@
     <image source="img_sem_elements.gif" width="50%"/>
   </figure>
   <p>Let's look at an example that uses some of these tags:</p>
-  <program xml:id="sem_tags" interactive="activecode" language="htmlmixed">
+  <listing>
+    <caption>Semantic Tags</caption>
+  <program xml:id="sem_tags" interactive="activecode" language="html" label="program-activecode-html-sem-tags" include-source="yes">
     <input>
 &lt;html&gt;
 &lt;body&gt;
@@ -74,6 +76,7 @@
 
 </tests>
   </program>
+</listing>
   <note>
     <title>Historical Note</title>
     <p>All of the tags mentioned above were added to the HTML5 standard.  Before HTML5 there were only two of these invisible structural tags.  You will see many examples of the use of these tags:</p>

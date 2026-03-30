@@ -8,7 +8,8 @@
       </li>
     </ol>
   </p>
-  <program xml:id="ex_html_1" interactive="activecode" language="htmlmixed">
+  <listing>
+  <program xml:id="ex_html_1" interactive="activecode" language="html" label="program-activecode-html-ex-1" include-source="yes">
     <prefix>
 
 
@@ -22,6 +23,7 @@
 
 </tests>
   </program>
+</listing>
   <p>
     <ol label="1">
       <li>
@@ -29,7 +31,8 @@
       </li>
     </ol>
   </p>
-  <program xml:id="ex_html_2" interactive="activecode" language="htmlmixed">
+  <listing>
+  <program xml:id="ex_html_2" interactive="activecode" language="html" label="program-activecode-html-ex-2" include-source="yes">
     <prefix>
 
 
@@ -43,6 +46,7 @@
 
 </tests>
   </program>
+</listing>
   <p>
     <ol label="1">
       <li>
@@ -50,7 +54,8 @@
       </li>
     </ol>
   </p>
-  <program xml:id="ex_html_3" interactive="activecode" language="htmlmixed">
+  <listing>
+  <program xml:id="ex_html_3" interactive="activecode" language="html" label="program-activecode-html-ex-3" include-source="yes">
     <prefix>
 
 
@@ -64,6 +69,7 @@
 
 </tests>
   </program>
+</listing>
   <p>
     <ol label="1">
       <li>
@@ -71,7 +77,8 @@
       </li>
     </ol>
   </p>
-  <program xml:id="ex_html_4" interactive="activecode" language="htmlmixed">
+  <listing>
+  <program xml:id="ex_html_4" interactive="activecode" language="html" label="program-activecode-html-ex-4" include-source="yes">
     <prefix>
 
 
@@ -85,6 +92,7 @@
 
 </tests>
   </program>
+</listing>
   <p>
     <ol label="1">
       <li>
@@ -96,7 +104,8 @@
     <image source="challengetable.png" width="50%"/>
     <p>Hint, this is going to require both rowspan and columnspan.  Also, Do not try to do this all at once.  Start with the header, then move on to the rest of the table, working in small parts</p>
   </blockquote>
-  <program xml:id="ex_html_5" interactive="activecode" language="htmlmixed">
+  <listing>
+  <program xml:id="ex_html_5" interactive="activecode" language="html" label="program-activecode-html-ex-5" include-source="yes">
     <prefix>
 
 
@@ -110,6 +119,7 @@
 
 </tests>
   </program>
+</listing>
   <p>
     <ol label="1">
       <li>
@@ -117,7 +127,8 @@
       </li>
     </ol>
   </p>
-  <program xml:id="ex_html_6" interactive="activecode" language="htmlmixed">
+  <listing>
+  <program xml:id="ex_html_6" interactive="activecode" language="html" label="program-activecode-html-ex-6" include-source="yes">
     <prefix>
 
 
@@ -131,6 +142,7 @@
 
 </tests>
   </program>
+</listing>
   <p>
     <ol label="1">
       <li>
@@ -138,7 +150,8 @@
       </li>
     </ol>
   </p>
-  <program xml:id="ex_html_7" interactive="activecode" language="htmlmixed">
+  <listing>
+  <program xml:id="ex_html_7" interactive="activecode" language="html" label="program-activecode-html-ex-7" include-source="yes">
     <prefix>
 
 
@@ -152,6 +165,7 @@
 
 </tests>
   </program>
+</listing>
   <p>
     <ol label="1">
       <li>
@@ -159,7 +173,8 @@
       </li>
     </ol>
   </p>
-  <program xml:id="ex_html_8" interactive="activecode" language="htmlmixed">
+  <listing>
+  <program xml:id="ex_html_8" interactive="activecode" language="html" label="program-activecode-html-ex-8" include-source="yes">
     <prefix>
 
 
@@ -173,6 +188,7 @@
 
 </tests>
   </program>
+</listing>
   <p>
     <ol label="1">
       <li>
@@ -180,7 +196,8 @@
       </li>
     </ol>
   </p>
-  <program xml:id="ex_html_9" interactive="activecode" language="htmlmixed">
+  <listing>
+  <program xml:id="ex_html_9" interactive="activecode" language="html" label="program-activecode-html-ex-9" include-source="yes">
     <prefix>
 
 
@@ -194,6 +211,7 @@
 
 </tests>
   </program>
+</listing>
   <p>
     <ol label="1">
       <li>
@@ -201,7 +219,8 @@
       </li>
     </ol>
   </p>
-  <program xml:id="ex_html_10" interactive="activecode" language="htmlmixed">
+  <listing>
+  <program xml:id="ex_html_10" interactive="activecode" language="html" label="program-activecode-html-ex-10" include-source="yes">
     <prefix>
 
 
@@ -215,6 +234,7 @@
 
 </tests>
   </program>
+</listing>
   <p>
     <ol label="1">
       <li>
@@ -222,7 +242,8 @@
       </li>
     </ol>
   </p>
-  <program xml:id="ex_html_11" interactive="activecode" language="htmlmixed">
+  <listing>
+  <program xml:id="ex_html_11" interactive="activecode" language="html" label="program-activecode-html-ex-11" include-source="yes">
     <prefix>
 
 
@@ -236,4 +257,5 @@
 
 </tests>
   </program>
+</listing>
 </exercises>

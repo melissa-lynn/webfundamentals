@@ -46,8 +46,8 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="./www-history.ptx" />
-  <xi:include href="./www-technology.ptx" />
-  <xi:include href="./www-Exercises.ptx" />
+  <xi:include href="./sec-www-history.ptx" />
+  <xi:include href="./sec-www-technology.ptx" />
+  <xi:include href="./sec-www-Exercises.ptx" />
 
 </chapter>

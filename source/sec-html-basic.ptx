@@ -4,7 +4,9 @@
   <subsection xml:id="html_headings">
     <title>Headings</title>
     <p>Like any document HTML documents may have several layers of headings.  In fact you can have heading levels from 1 to 6 in an HTML document.</p>
-    <program xml:id="html_headings-1" interactive="activecode" language="htmlmixed">
+    <listing>
+      <caption>Headings</caption>
+    <program xml:id="html_headings-1" interactive="activecode" language="html" label="program-activecode-html-headings-1" include-source="yes">
       <input>
 &lt;h1&gt;Level one&lt;/h1&gt;
 &lt;h2&gt;Level two&lt;/h2&gt;
@@ -15,6 +17,7 @@
 
 </tests>
     </program>
+  </listing>
     <p>Now modify the example above to add the next three levels of headings.  What do you notice?  What happens if you add a level 7 heading?   What happens if you close an h2 tag with an h1 or an h3?</p>
     <hint>
       <p>As you might expect, the headings continue to get smaller as you go from 1 to 6.  But when you go to level 7 the text gets bigger.  This is because the web browser is written so that it just ignores any tags that it does not know about.  This is somewhat of a disadvantage as you don't get any error messages, things just look wrong, and you have to figure out why.</p>
@@ -24,7 +27,9 @@
   <subsection xml:id="html_paragraphs">
     <title>Paragraphs</title>
     <p>Paragraphs are another funamental element of documents.  Paragraphs are also another example of a block element in that each paragraph gets its own space and is separated from other html elements by blank lines in the document.</p>
-    <program xml:id="html_paragraph" interactive="activecode" language="htmlmixed">
+    <listing>
+      <caption>Paragraphs</caption>
+    <program xml:id="html_paragraph" interactive="activecode" language="html" label="program-activecode-html-paragraph" include-source="yes">
       <input>
 &lt;p&gt;This is a short sentence.&lt;/p&gt;
 &lt;p&gt;This is a paragraph.  What happens when we have a really really really long line that takes up more than one line of the browser? &lt;/p&gt;
@@ -35,6 +40,7 @@
 
 </tests>
     </program>
+  </listing>
     <p>What happens when you put a paragraph inside another paragraph?  What about a header inside a paragraph?</p>
   </subsection>
   <subsection xml:id="html_images">
@@ -49,7 +55,9 @@
       <image source="norse-logo.png" width="50%"/>
     </figure>
     <p>The image tag has a new component to it called an attribute.  In general tags can have many attributes in the case of an image we can inlude it by using a <c>src</c> attribute that contains the URL to the image we want to embed.  We can embed any image on the internet in our own document by referring to it by its URL in the <c>src</c> attribute.</p>
-    <program xml:id="html_img" interactive="activecode" language="htmlmixed">
+    <listing>
+      <caption>Images</caption>
+    <program xml:id="html_img" interactive="activecode" language="html" label="program-activecode-html-images" include-source="yes">
       <input>
 &lt;h1&gt;Embedded Images&lt;/h1&gt;
 &lt;p&gt;Images are inline elements they fit in the flow
@@ -61,6 +69,7 @@ of a paragraph without causing extra line breaks.&lt;/p&gt;
 
 </tests>
     </program>
+  </listing>
     <p>Try modifying the example above so that it includes the norse logo rather than the bell.
                 You can also change the height and width of  an image by using a <c>height=</c> attribute or a <c>width=</c> attribute.  Try changing the size of the image in the example above.  Notice what it does to the flow.  Try changing just one of height or width and then try changing both at the same time.  You can stretch your image in all kinds of crazy ways.</p>
     <p>There are several other attributes of the image tag as well.  You can read about them <url href="http://www.w3schools.com/tags/tag_img.asp" visual="http://www.w3schools.com/tags/tag_img.asp">here</url>.</p>
@@ -68,7 +77,9 @@ of a paragraph without causing extra line breaks.&lt;/p&gt;
   <subsection xml:id="html_links">
     <title>Links</title>
     <p>The last basic link to cover in this section is the link tag <c>a</c>.  In fact the last sentence of the previous section used a link to send you to the w3schools website to learn more about the attributes of an <c>img</c> tag.  Links are what made the web so popular in the first place.  Today we call them links, but in earlier years they were usually referred to as Hyperlinks. You can provide a link to any URL on the web using the <c>href</c> attribute on the <c>a</c> tag.   The text that you will click on goes between the opening <c>a</c> tag and the closing <c>a</c> tag.</p>
-    <program xml:id="html_link" interactive="activecode" language="htmlmixed">
+    <listing>
+      <caption>Links</caption>
+    <program xml:id="html_link" interactive="activecode" language="html" label="program-activecode-html-link" include-source="yes">
       <input>
 &lt;h1&gt;Links make the web!&lt;/h1&gt;
 &lt;p&gt;Links are another inline element.  You can read about links and their attributes
@@ -79,6 +90,7 @@ of a paragraph without causing extra line breaks.&lt;/p&gt;
 
 </tests>
     </program>
+  </listing>
     <p>Try clicking on the link in the example above.  What happens?  How do you get back?   Don't worry, you can always just reload this page.</p>
     <p>Links can also be used to navigate within the same page.  to do this you use one <c>a</c> tag to create
                 an anchor point on the page using the name attribute like this:  <c>&lt;a name="target"&gt;I am a target&lt;/a&gt;</c>  You can create
@@ -87,7 +99,9 @@ of a paragraph without causing extra line breaks.&lt;/p&gt;
   <subsection xml:id="html_simple-text-formatting">
     <title>Simple Text Formatting</title>
     <p>Making text bold or italic and other formatting is easy in HTML as well.  The following example illustrates the basic text formatting tags.</p>
-    <program xml:id="html_fmt" interactive="activecode" language="htmlmixed">
+    <listing>
+      <caption>Text Formatting</caption>
+    <program xml:id="html_fmt" interactive="activecode" language="html" label="program-activecode-html-text-formatting" include-source="yes">
       <input>
 &lt;html&gt;
 &lt;body&gt;
@@ -107,6 +121,7 @@ of a paragraph without causing extra line breaks.&lt;/p&gt;
 
 </tests>
     </program>
+  </listing>
     <p>You can mix and match these styles in all kinds of ways.  Try making a superscript inside a superscript.  Try making the subscript bold or italic.</p>
     <p>
       <term>Check your Understanding</term>

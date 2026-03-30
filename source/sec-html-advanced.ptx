@@ -3,7 +3,10 @@
   <title>Advanced HTML Tags</title>
   <subsection xml:id="html_unordered-lists">
     <title>Unordered Lists</title>
-    <program xml:id="advhtml_ul" interactive="activecode" language="htmlmixed">
+
+    <listing>
+      <caption>Unordered Lists</caption>
+    <program xml:id="advhtml_ul" interactive="activecode" language="html" label="program-activecode-html-unordered-list" include-source="yes">
       <input>
 &lt;ul&gt;
 &lt;li&gt;This is an unordered list&lt;/li&gt;
@@ -15,10 +18,13 @@
 
 </tests>
     </program>
+  </listing>
   </subsection>
   <subsection xml:id="html_ordered-lists">
     <title>Ordered Lists</title>
-    <program xml:id="advhtml_ol" interactive="activecode" language="htmlmixed">
+    <listing>
+      <caption>Ordered Lists</caption>
+    <program xml:id="advhtml_ol" interactive="activecode" language="html" label="program-activecode-html-ordered-list" include-source="yes">
       <input>
 &lt;ol&gt;
 &lt;li&gt;This is an ordered list&lt;/li&gt;
@@ -31,6 +37,7 @@
 
 </tests>
     </program>
+  </listing>
     <p>The <c>ol</c> tag can also have a type attribute.  The type attribute can be one of the following values</p>
     <p>
       <ul>
@@ -55,7 +62,9 @@
   </subsection>
   <subsection xml:id="html_description-lists">
     <title>Description Lists</title>
-    <program xml:id="advhtml_dl" interactive="activecode" language="htmlmixed">
+    <listing>
+      <caption>Description Lists</caption>
+    <program xml:id="advhtml_dl" interactive="activecode" language="html" label="program-activecode-html-description-lists" include-source="yes">
       <input>
 &lt;dl&gt;
 &lt;dt&gt;Description list&lt;/dt&gt;&lt;dd&gt;A list for defining terms&lt;/dd&gt;
@@ -68,11 +77,14 @@
 
 </tests>
     </program>
+  </listing>
   </subsection>
   <subsection xml:id="html_nesting-lists">
     <title>Nesting Lists</title>
     <p>Lists can be inside of other lists. Too.  This is very much true of most HTML tags.</p>
-    <program xml:id="advhtml_nested" interactive="activecode" language="htmlmixed">
+    <listing>
+      <caption>Nesting Lists</caption>
+    <program xml:id="advhtml_nested" interactive="activecode" language="html" label="program-activecode-html-nested-lists" include-source="yes">
       <input>
 &lt;ol&gt;
 &lt;li&gt;This is an ordered list&lt;/li&gt;
@@ -90,6 +102,7 @@
 
 </tests>
     </program>
+  </listing>
   </subsection>
   <subsection xml:id="html_tables">
     <title>Tables</title>
@@ -111,7 +124,9 @@
         </li>
       </ul>
     </p>
-    <program xml:id="advhtml_table" interactive="activecode" language="htmlmixed">
+    <listing>
+      <caption>Table</caption>
+    <program xml:id="advhtml_table" interactive="activecode" language="html" label="program-activecode-html-table" include-source="yes">
       <input>
  &lt;table width='100%' border=1px cellspacing=0&gt;
  &lt;caption&gt;Table of Scores&lt;/caption&gt;
@@ -152,6 +167,7 @@
 
 </tests>
     </program>
+  </listing>
     <p>There are many attributes you can use with the various table tags.</p>
     <p>
       <ul>
@@ -176,7 +192,10 @@
   <subsection xml:id="html_audio">
     <title>Audio</title>
     <p>Embedding audio in your webpage allows you to link to various files containing music or speech.  The audio tag looks like the following:</p>
-    <program language="html">
+    
+    <listing>
+      <caption>Audio</caption>
+    <program interactive="activecode" language="html" label="program-activecode-html-audio" include-source="yes">
       <input>
 &lt;audio controls&gt;
     &lt;source src="horse.ogg" type="audio/ogg"&gt;
@@ -185,12 +204,15 @@
 &lt;/audio&gt;
 </input>
     </program>
+  </listing>
     <p>The <c>controls</c> attribute provides start/stop/fast-forward/rewind buttons for the listener.  The <c>source</c> tags inside the <c>audio</c> tag allow you to provide several different audio formats.  This is because different browsers support different kinds of audio The browser will go through the list, in order, until it finds a format it understands, or else, it will replace the controller with the message at the end.</p>
   </subsection>
   <subsection xml:id="html_video">
     <title>Video</title>
     <p>Embedding video in your webpage allows you to link to various files containing movies.</p>
-    <program language="html">
+    <listing>
+      <caption>Video</caption>
+    <program interactive="activecode" language="html" label="program-activecode-html-video" include-source="yes">
       <input>
 &lt;video height=312 width= 540 controls&gt;
     &lt;source src="movie.mp4" type="video/mp4"&gt;
@@ -199,6 +221,7 @@
 &lt;/video&gt;
 </input>
     </program>
+  </listing>
     <p>The <c>controls</c> attribute provides start/stop/fast-forward/rewind buttons for the listener.  The <c>source</c> tags inside the <c>video</c> tag allow you to provide several different video formats.  This is because different browsers support different kinds of video The browser will go through the list, in order, until it finds a format it understands, or else, it will replace the controller with the message at the end.</p>
   </subsection>
   <subsection xml:id="html_iframes">
