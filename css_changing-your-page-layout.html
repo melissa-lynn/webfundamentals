@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Changing your page layout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Fundamentals of Web Programming">
+<meta property="book:author" content="Brad Miller and Friends">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.12.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.d2d4c56cb9826035.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.a4a209ed3a55c515.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Fundamentals of Web Programming</span> <span class="subtitle">The PreTeXt Interactive Edition</span></a></h1>
+<p class="byline">Brad Miller and Friends</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="css_quiz-two.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-css.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="css_positioning-quiz.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="front-back-matter_preface.html" class="internal"><span class="codenumber">1</span> <span class="title">Preface</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="front-back-matter_the-content-and-structure-of-this-book.html" class="internal"><span class="codenumber">1.1</span> <span class="title">The Content and Structure of this Book</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="front-back-matter_learning-zones.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Learning Zones</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-www.html" class="internal"><span class="codenumber">1</span> <span class="title">The World Wide Web</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="www_history.html" class="internal"><span class="codenumber">1.1</span> <span class="title">History</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="www_the-technology-of-the-web.html" class="internal"><span class="codenumber">1.2</span> <span class="title">The Technology of the Web</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="www_the-technology-of-the-web.html#www_an-http-request" class="internal"><span class="codenumber">1.2.1</span> <span class="title">An HTTP Request</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="www_the-technology-of-the-web.html#www_an-http-response" class="internal"><span class="codenumber">1.2.2</span> <span class="title">An HTTP Response</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="www_exercises.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-html.html" class="internal"><span class="codenumber">2</span> <span class="title">HTML Basics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="html_basic-html-tags.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Basic HTML Tags</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_basic-html-tags.html#html_headings" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Headings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_basic-html-tags.html#html_paragraphs" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Paragraphs</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_basic-html-tags.html#html_images" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Images</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_basic-html-tags.html#html_links" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Links</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_basic-html-tags.html#html_simple-text-formatting" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Simple Text Formatting</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="html_advanced-html-tags.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Advanced HTML Tags</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_advanced-html-tags.html#html_unordered-lists" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Unordered Lists</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_advanced-html-tags.html#html_ordered-lists" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Ordered Lists</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_advanced-html-tags.html#html_description-lists" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Description Lists</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_advanced-html-tags.html#html_nesting-lists" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Nesting Lists</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_advanced-html-tags.html#html_tables" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Tables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_advanced-html-tags.html#html_audio" class="internal"><span class="codenumber">2.2.6</span> <span class="title">Audio</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_advanced-html-tags.html#html_video" class="internal"><span class="codenumber">2.2.7</span> <span class="title">Video</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_advanced-html-tags.html#html_iframes" class="internal"><span class="codenumber">2.2.8</span> <span class="title">IFrames</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="html_semantic-html-tags.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Semantic HTML Tags</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="html_exercises.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="html_html-quiz.html" class="internal"><span class="codenumber">2.5</span> <span class="title">HTML Quiz</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="html_html-quiz.html#html_html-quiz-3" class="internal"><span class="codenumber">2.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-cloud.html" class="internal"><span class="codenumber">3</span> <span class="title">Publishing a Web Page in the Cloud</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cloud_exercises.html" class="internal"><span class="codenumber">3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-css.html" class="internal"><span class="codenumber">4</span> <span class="title">Cascading Style Sheets</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="css_introduction-to-css.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction to CSS</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_introduction-to-css.html#css_css-syntax" class="internal"><span class="codenumber">4.1.1</span> <span class="title">CSS Syntax</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_introduction-to-css.html#css_including-css-in-your-page" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Including CSS in Your Page</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_introduction-to-css.html#css_cascading" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Cascading</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="css_changing-the-style-of-an-html-element.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Changing the Style of an HTML Element</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_changing-the-style-of-an-html-element.html#css_background" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Background</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_changing-the-style-of-an-html-element.html#css_text" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Text</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_changing-the-style-of-an-html-element.html#css_font" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Font</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="css_more-on-matching.html" class="internal"><span class="codenumber">4.3</span> <span class="title">More on Matching</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_more-on-matching.html#css_matching-multiple-tags" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Matching multiple tags</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_more-on-matching.html#css_using-an-id-attribute-in-a-rule" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Using an id attribute in a rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_more-on-matching.html#css_using-the-class-attribute-in-a-rule" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Using the class attribute in a rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_more-on-matching.html#css_matching-children" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Matching Children</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="css_quiz-two.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Quiz Two</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="css_quiz-two.html#css_quiz-two-2" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="css_changing-your-page-layout.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Changing your page layout</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_changing-your-page-layout.html#css_the-css-box-model" class="internal"><span class="codenumber">4.5.1</span> <span class="title">The CSS Box Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_changing-your-page-layout.html#css_display" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Display</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_changing-your-page-layout.html#css_floating" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Floating</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="css_changing-your-page-layout.html#css_positioning" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Positioning</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="css_changing-your-page-layout.html#css_fixed" class="internal"><span class="codenumber">4.5.4.1</span> <span class="title">Fixed</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="css_changing-your-page-layout.html#css_relative" class="internal"><span class="codenumber">4.5.4.2</span> <span class="title">Relative</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_changing-your-page-layout.html#css_absolute" class="internal"><span class="codenumber">4.5.5</span> <span class="title">Absolute</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_changing-your-page-layout.html#css_full-page-layout" class="internal"><span class="codenumber">4.5.6</span> <span class="title">Full Page Layout</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="css_positioning-quiz.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Positioning Quiz</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="css_css-tricks.html" class="internal"><span class="codenumber">4.7</span> <span class="title">CSS Tricks</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_css-tricks.html#css_hover" class="internal"><span class="codenumber">4.7.1</span> <span class="title">Hover</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_css-tricks.html#css_animation" class="internal"><span class="codenumber">4.7.2</span> <span class="title">Animation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="css_the-dropdown-menu-project.html" class="internal"><span class="codenumber">4.8</span> <span class="title">The Dropdown Menu Project</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_the-dropdown-menu-project.html#css_step-one" class="internal"><span class="codenumber">4.8.1</span> <span class="title">Step One</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_the-dropdown-menu-project.html#css_step-two" class="internal"><span class="codenumber">4.8.2</span> <span class="title">Step Two</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_the-dropdown-menu-project.html#css_step-three" class="internal"><span class="codenumber">4.8.3</span> <span class="title">Step Three</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_the-dropdown-menu-project.html#css_step-four" class="internal"><span class="codenumber">4.8.4</span> <span class="title">Step Four</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_the-dropdown-menu-project.html#css_step-five" class="internal"><span class="codenumber">4.8.5</span> <span class="title">Step Five</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="css_grid-layout.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Grid Layout</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="css_css-exercises.html" class="internal"><span class="codenumber">4.10</span> <span class="title">CSS Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="css_changing-your-page-layout"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Changing your page layout</span>
+</h2>
+<div class="para" id="css_changing-your-page-layout-2">Before we go any further it is important to stop and think a bit about how the browser renders the html into the browser window.  As the browser reads each html tag, it must figure out where on the page it belongs.  For the most part, the browser flows each tag from top to bottom and from left to right.  As we have mentioned block elements start on a new line, and inline elements flow from left to right, fitting within the horizontal size of the page or else going on to the next line.  In this section we will consider several different CSS options that have an impact on the layout of a page.<div class="autopermalink" data-description="Paragraph"><a href="#css_changing-your-page-layout-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsection" id="css_the-css-box-model"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The CSS Box Model</span>
+</h3>
+<div class="para" id="css_the-css-box-model-2">All HTML elements can be thought of simply as boxes.  In fact that is exactly how the browser thinks of them as it begins the process of rendering the page.  When doing web page design and layout it is very common to hear designers talk about the CSS box model.  Figure 1 illustrates the different components that go into the box model.<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="id1-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/box-model.gif" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Figure used in accordance with w3schools fair use policy<div class="autopermalink" data-description="Figure 4.5.1"><a href="#id1-1" title="Copy heading and permalink for Figure 4.5.1" aria-label="Copy heading and permalink for Figure 4.5.1">🔗</a></div></figcaption></figure><div class="para" id="css_the-css-box-model-4">The different parts of the box model are defined as follows:<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="css_the-css-box-model-5">
+<ul class="disc" id="css_the-css-box-model-5-1">
+<li id="css_the-css-box-model-5-1-1">
+<div class="para" id="css_the-css-box-model-5-1-1-1">Content:  The actual text or image content of an html tag<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-5-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#css_the-css-box-model-5-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="css_the-css-box-model-5-1-2">
+<div class="para" id="css_the-css-box-model-5-1-2-1">Padding:  The space between the content and the border.<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-5-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#css_the-css-box-model-5-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="css_the-css-box-model-5-1-3">
+<div class="para" id="css_the-css-box-model-5-1-3-1">Border:  This can be an actual drawn border or it can be invisible<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-5-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#css_the-css-box-model-5-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="css_the-css-box-model-5-1-4">
+<div class="para" id="css_the-css-box-model-5-1-4-1">Margin: The space outside the border between this box and the boxes next to it in each direction.<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-5-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#css_the-css-box-model-5-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_the-css-box-model-6">Let’s try a simple example:<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="listing figure-like" id="css_the-css-box-model-7"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Box Model<div class="autopermalink" data-description="Listing 4.5.2: Box Model"><a href="#css_the-css-box-model-7" title="Copy heading and permalink for Listing 4.5.2: Box Model" aria-label="Copy heading and permalink for Listing 4.5.2: Box Model">🔗</a></div></figcaption><div class="listing__contents">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for program</summary><article class="view-source-view__content"><pre><code class="language-xml">    &lt;program xml:id="css_boxmodel" interactive="activecode" language="html" label="program-activecode-css-boxmodel" include-source="yes"&gt;
+      &lt;input&gt;
+&amp;lt;html&amp;gt;
+   &amp;lt;head&amp;gt;
+      &amp;lt;style&amp;gt;
+      section {
+           width: 250px;
+           background-color: green;
+           padding: 25px;
+           border: 10px solid blue;
+           margin: 25px;
+           }
+      &amp;lt;/style&amp;gt;
+    &amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+   &amp;lt;section&amp;gt;Hello World&amp;lt;/section&amp;gt;
+   &amp;lt;section id=b&amp;gt;Hello World&amp;lt;/section&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+        &lt;/input&gt;
+      &lt;tests&gt;
+
+
+&lt;/tests&gt;
+    &lt;/program&gt;
+</code></pre></article></details><div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="rs-program-activecode-css-boxmodel"><textarea data-lang="html" data-audio="" data-coach="true" style="visibility: hidden;" id="rs-program-activecode-css-boxmodel_editor" data-question_label="" data-codelens="false" data-timelimit="25000">&lt;html&gt;
+   &lt;head&gt;
+      &lt;style&gt;
+      section {
+           width: 250px;
+           background-color: green;
+           padding: 25px;
+           border: 10px solid blue;
+           margin: 25px;
+           }
+      &lt;/style&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+
+   &lt;section&gt;Hello World&lt;/section&gt;
+   &lt;section id=b&gt;Hello World&lt;/section&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div></div></div>
+</div></figure><div class="para" id="css_the-css-box-model-8">As a bit of review, add a rule to the example above to make the margin for the second Hello world to be 5px.  What does this tell you about how margins work?<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_the-css-box-model-9">The size of content area itself can also be controlled using the following properties:<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="css_the-css-box-model-10">
+<ul class="disc" id="css_the-css-box-model-10-1">
+<li id="css_the-css-box-model-10-1-1">
+<div class="para" id="css_the-css-box-model-10-1-1-1">height<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-10-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#css_the-css-box-model-10-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="css_the-css-box-model-10-1-2">
+<div class="para" id="css_the-css-box-model-10-1-2-1">max-height<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-10-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#css_the-css-box-model-10-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="css_the-css-box-model-10-1-3">
+<div class="para" id="css_the-css-box-model-10-1-3-1">min-height<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-10-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#css_the-css-box-model-10-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="css_the-css-box-model-10-1-4">
+<div class="para" id="css_the-css-box-model-10-1-4-1">width<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-10-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#css_the-css-box-model-10-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="css_the-css-box-model-10-1-5">
+<div class="para" id="css_the-css-box-model-10-1-5-1">max-width<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-10-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#css_the-css-box-model-10-1-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="css_the-css-box-model-10-1-6">
+<div class="para" id="css_the-css-box-model-10-1-6-1">min-width<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-10-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#css_the-css-box-model-10-1-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_the-css-box-model-11">Each of these properties can be specified in terms of pixels (px), points (pt), or as a percentage.  In addition the auto keyword can be used, which is the default and allows the browser to figure out the proper height and width.<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_the-css-box-model-12">When you use height and width with a <dfn class="terminology">container</dfn> element, such as one of the semantic elements, it is very useful to know about the overflow property.  What if you set your height so small that the content does not fit?  The <a class="external" href="http://www.w3schools.com/cssref/pr_pos_overflow.asp" target="_blank">overflow</a> property tells you how to handle that.<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_the-css-box-model-13">Here is an example activecode for you to experiment with:<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="listing figure-like" id="css_the-css-box-model-14"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Overflow<div class="autopermalink" data-description="Listing 4.5.3: Overflow"><a href="#css_the-css-box-model-14" title="Copy heading and permalink for Listing 4.5.3: Overflow" aria-label="Copy heading and permalink for Listing 4.5.3: Overflow">🔗</a></div></figcaption><div class="listing__contents">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for program</summary><article class="view-source-view__content"><pre><code class="language-xml">    &lt;program xml:id="css_overflow" interactive="activecode" language="html" label="program-activecode-css-overflow" include-source="yes"&gt;
+      &lt;input&gt;
+&amp;lt;html&amp;gt;
+   &amp;lt;head&amp;gt;
+      &amp;lt;style&amp;gt;
+      section {
+           width: 250px;
+           background-color: green;
+           padding: 25px;
+           border: 10px solid blue;
+           margin: 25px;
+           height: 100px;
+           }
+      &amp;lt;/style&amp;gt;
+    &amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+   &amp;lt;section&amp;gt;
+   &amp;lt;p&amp;gt;Ea dolore do irure aliquip id qui dolor do in aliquip irure anim id. Adipisicing qui
+    incididunt consectetur veniam cupidatat dolor. Aliquip irure labore elit ipsum officia non
+    culpa consequat et voluptate. Officia nisi nostrud exercitation quis amet ipsum incididunt.
+    Et incididunt eu laborum velit dolore laborum. Esse id mollit fugiat nostrud non ex occaecat
+    culpa. Adipisicing quis excepteur voluptate commodo minim aliqua excepteur occaecat
+    eu ipsum nisi duis amet. Duis proident fugiat velit elit esse cillum minim laborum elit.
+   &amp;lt;/p&amp;gt;
+
+   &amp;lt;/section&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+        &lt;/input&gt;
+      &lt;tests&gt;
+
+
+&lt;/tests&gt;
+    &lt;/program&gt;
+</code></pre></article></details><div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="rs-program-activecode-css-overflow"><textarea data-lang="html" data-audio="" data-coach="true" style="visibility: hidden;" id="rs-program-activecode-css-overflow_editor" data-question_label="" data-codelens="false" data-timelimit="25000">&lt;html&gt;
+   &lt;head&gt;
+      &lt;style&gt;
+      section {
+           width: 250px;
+           background-color: green;
+           padding: 25px;
+           border: 10px solid blue;
+           margin: 25px;
+           height: 100px;
+           }
+      &lt;/style&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+
+   &lt;section&gt;
+   &lt;p&gt;Ea dolore do irure aliquip id qui dolor do in aliquip irure anim id. Adipisicing qui
+    incididunt consectetur veniam cupidatat dolor. Aliquip irure labore elit ipsum officia non
+    culpa consequat et voluptate. Officia nisi nostrud exercitation quis amet ipsum incididunt.
+    Et incididunt eu laborum velit dolore laborum. Esse id mollit fugiat nostrud non ex occaecat
+    culpa. Adipisicing quis excepteur voluptate commodo minim aliqua excepteur occaecat
+    eu ipsum nisi duis amet. Duis proident fugiat velit elit esse cillum minim laborum elit.
+   &lt;/p&gt;
+
+   &lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div></div></div>
+</div></figure><div class="para" id="css_the-css-box-model-15">The possible values for the overflow property are:<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="css_the-css-box-model-16">
+<ul class="disc" id="css_the-css-box-model-16-1">
+<li id="css_the-css-box-model-16-1-1">
+<div class="para" id="css_the-css-box-model-16-1-1-1">visible<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-16-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#css_the-css-box-model-16-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="css_the-css-box-model-16-1-2">
+<div class="para" id="css_the-css-box-model-16-1-2-1">hidden<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-16-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#css_the-css-box-model-16-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="css_the-css-box-model-16-1-3">
+<div class="para" id="css_the-css-box-model-16-1-3-1">scroll<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-16-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#css_the-css-box-model-16-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="css_the-css-box-model-16-1-4">
+<div class="para" id="css_the-css-box-model-16-1-4-1">auto<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-16-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#css_the-css-box-model-16-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_the-css-box-model-17">Give them a try in the example above and see what happens.<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="note remark-like" id="css_the-css-box-model-18"><h4 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Greeking.</span>
+</h4>
+<div class="para" id="css_the-css-box-model-18-2">You may be wondering about the use of latin words in the example paragraph.  This is an old tradition in typesetting, to use a bunch of latin words, many of the sentences start with “Lorum Ipsum,” so sometimes it is called Lorum Ipusum as well.  The idea is to fill the space with words that obviously have no relationship to the actual webpage.  This helps reviewers focus on the style rather than the content.  Why do they call it greeking when the words are latin?  It’s Greek to me.  Obviously they skipped Paideia that day.<div class="autopermalink" data-description="Paragraph"><a href="#css_the-css-box-model-18-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 4.5.4: Greeking"><a href="#css_the-css-box-model-18" title="Copy heading and permalink for Note 4.5.4: Greeking" aria-label="Copy heading and permalink for Note 4.5.4: Greeking">🔗</a></div></article><div class="autopermalink" data-description="Subsection 4.5.1: The CSS Box Model"><a href="#css_the-css-box-model" title="Copy heading and permalink for Subsection 4.5.1: The CSS Box Model" aria-label="Copy heading and permalink for Subsection 4.5.1: The CSS Box Model">🔗</a></div></section><section class="subsection" id="css_display"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Display</span>
+</h3>
+<div class="para" id="css_display-2">With CSS you can take control of how each element is layed out on the page.  You can hide elements, you can make block elements inline, and inline elements block.  There are two ways to control the visibility of an element.  You can completely hide it, as if it is not there and takes up no space on the page, or you can have the leave the space on the page, but it will not have anything in it.<div class="autopermalink" data-description="Paragraph"><a href="#css_display-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="listing figure-like" id="css_display-3"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>CSS Display<div class="autopermalink" data-description="Listing 4.5.5: CSS Display"><a href="#css_display-3" title="Copy heading and permalink for Listing 4.5.5: CSS Display" aria-label="Copy heading and permalink for Listing 4.5.5: CSS Display">🔗</a></div></figcaption><div class="listing__contents">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for program</summary><article class="view-source-view__content"><pre><code class="language-xml">    &lt;program xml:id="css_disp1" interactive="activecode" language="html" label="program-activecode-css-disp1" include-source="yes"&gt;
+      &lt;input&gt;
+&amp;lt;html&amp;gt;
+   &amp;lt;head&amp;gt;
+      &amp;lt;style&amp;gt;
+         h1.gone {
+             background-color: #bbbbbb;
+             display: none;
+         }
+      &amp;lt;/style&amp;gt;
+    &amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+   &amp;lt;h1&amp;gt;Hello World One&amp;lt;/h1&amp;gt;
+   &amp;lt;h1 class="gone"&amp;gt;Hello World Two&amp;lt;/h1&amp;gt;
+   &amp;lt;h1&amp;gt;Hello World Three&amp;lt;/h1&amp;gt;
+   &amp;lt;h1 class="gone"&amp;gt;Hello World Four&amp;lt;/h1&amp;gt;
+   &amp;lt;h1&amp;gt;Hello World Five&amp;lt;/h1&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+        &lt;/input&gt;
+      &lt;tests&gt;
+
+
+&lt;/tests&gt;
+    &lt;/program&gt;
+</code></pre></article></details><div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="rs-program-activecode-css-disp1"><textarea data-lang="html" data-audio="" data-coach="true" style="visibility: hidden;" id="rs-program-activecode-css-disp1_editor" data-question_label="" data-codelens="false" data-timelimit="25000">&lt;html&gt;
+   &lt;head&gt;
+      &lt;style&gt;
+         h1.gone {
+             background-color: #bbbbbb;
+             display: none;
+         }
+      &lt;/style&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+
+   &lt;h1&gt;Hello World One&lt;/h1&gt;
+   &lt;h1 class="gone"&gt;Hello World Two&lt;/h1&gt;
+   &lt;h1&gt;Hello World Three&lt;/h1&gt;
+   &lt;h1 class="gone"&gt;Hello World Four&lt;/h1&gt;
+   &lt;h1&gt;Hello World Five&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div></div></div>
+</div></figure><div class="para" id="css_display-4">Now change the rule and instead of <code class="code-inline tex2jax_ignore">display: none</code> change it to <code class="code-inline tex2jax_ignore">visibility: hidden</code>  Notice that visibility hidden reserves space on the page for the element but does not show it.  Whereas the <code class="code-inline tex2jax_ignore">display: none</code> rule removed any trace of the element.  Now change the rule to <code class="code-inline tex2jax_ignore">visibility: show</code> to display all of the elements.<div class="autopermalink" data-description="Paragraph"><a href="#css_display-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_display-5">The display property can also be used to change block elements into inline elements.  Consider the following example.<div class="autopermalink" data-description="Paragraph"><a href="#css_display-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="listing figure-like" id="css_display-6"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Listing 4.5.6"><a href="#css_display-6" title="Copy heading and permalink for Listing 4.5.6" aria-label="Copy heading and permalink for Listing 4.5.6">🔗</a></div></figcaption><div class="listing__contents">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for program</summary><article class="view-source-view__content"><pre><code class="language-xml">    &lt;program xml:id="css_disp2" interactive="activecode" language="html" label="program-activecode-css-disp2" include-source="yes"&gt;
+      &lt;input&gt;
+&amp;lt;html&amp;gt;
+   &amp;lt;head&amp;gt;
+      &amp;lt;style&amp;gt;
+      &amp;lt;/style&amp;gt;
+    &amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+   &amp;lt;p&amp;gt;There are 10 kinds of people in the world.
+   &amp;lt;ol&amp;gt;
+   &amp;lt;li&amp;gt;Those that know how to count in binary.&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that do not know how to count in binary&amp;lt;/li&amp;gt;
+   &amp;lt;/ol&amp;gt;
+   &amp;lt;p&amp;gt;When you have stopped laughing, add a CSS rule that changes the display
+   property for the ``li`` element and sets its value to ``inline``. &amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+        &lt;/input&gt;
+      &lt;tests&gt;
+
+
+&lt;/tests&gt;
+    &lt;/program&gt;
+</code></pre></article></details><div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="rs-program-activecode-css-disp2"><textarea data-lang="html" data-audio="" data-coach="true" style="visibility: hidden;" id="rs-program-activecode-css-disp2_editor" data-question_label="" data-codelens="false" data-timelimit="25000">&lt;html&gt;
+   &lt;head&gt;
+      &lt;style&gt;
+      &lt;/style&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;There are 10 kinds of people in the world.
+   &lt;ol&gt;
+   &lt;li&gt;Those that know how to count in binary.&lt;/li&gt;
+   &lt;li&gt;Those that do not know how to count in binary&lt;/li&gt;
+   &lt;/ol&gt;
+   &lt;p&gt;When you have stopped laughing, add a CSS rule that changes the display
+   property for the ``li`` element and sets its value to ``inline``. &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div></div></div>
+</div></figure><div class="para" id="css_display-7">This technique is often used in the navigation bar to create a “menu” of links.  See exercise 5 in the exercises section for some practice with this.<div class="autopermalink" data-description="Paragraph"><a href="#css_display-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 4.5.2: Display"><a href="#css_display" title="Copy heading and permalink for Subsection 4.5.2: Display" aria-label="Copy heading and permalink for Subsection 4.5.2: Display">🔗</a></div></section><section class="subsection" id="css_floating"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Floating</span>
+</h3>
+<div class="para" id="css_floating-2">The CSS float property allows us to push HTML elements to the left or right, so that other elements will wrap around them.  This can be extremely useful for images, but will also be very useful when we begin to work on more complex layouts for our pages.  Let’s begin with a simple example.<div class="autopermalink" data-description="Paragraph"><a href="#css_floating-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="listing figure-like" id="css_floating-3"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Float<div class="autopermalink" data-description="Listing 4.5.7: Float"><a href="#css_floating-3" title="Copy heading and permalink for Listing 4.5.7: Float" aria-label="Copy heading and permalink for Listing 4.5.7: Float">🔗</a></div></figcaption><div class="listing__contents">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for program</summary><article class="view-source-view__content"><pre><code class="language-xml">    &lt;program xml:id="css_float1" interactive="activecode" language="html" label="program-activecode-css-float" include-source="yes"&gt;
+      &lt;input&gt;
+&amp;lt;html&amp;gt;
+   &amp;lt;head&amp;gt;
+      &amp;lt;style&amp;gt;
+      &amp;lt;/style&amp;gt;
+    &amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;p&amp;gt;the quick brown fox jumped over the lazy dog.  the quick brown fox jumped over the lazy dog.  the quick brown fox jumped over the lazy dog.  &amp;lt;img src="https://runestone.academy/ns/books/published/webfundamentals/_images/norse-logo.png" /&amp;gt; the quick brown fox jumped over the lazy dog. the quick brown fox jumped over the lazy dog. the quick brown fox jumped over the lazy dog.
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+        &lt;/input&gt;
+      &lt;tests&gt;
+
+
+&lt;/tests&gt;
+    &lt;/program&gt;
+</code></pre></article></details><div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="rs-program-activecode-css-float"><textarea data-lang="html" data-audio="" data-coach="true" style="visibility: hidden;" id="rs-program-activecode-css-float_editor" data-question_label="" data-codelens="false" data-timelimit="25000">&lt;html&gt;
+   &lt;head&gt;
+      &lt;style&gt;
+      &lt;/style&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;the quick brown fox jumped over the lazy dog.  the quick brown fox jumped over the lazy dog.  the quick brown fox jumped over the lazy dog.  &lt;img src="https://runestone.academy/ns/books/published/webfundamentals/_images/norse-logo.png" /&gt; the quick brown fox jumped over the lazy dog. the quick brown fox jumped over the lazy dog. the quick brown fox jumped over the lazy dog.
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div></div></div>
+</div></figure><div class="para" id="css_floating-4">Notice that the logo appears right in the middle of the text in its normal inline flow.   Now, add a CSS rule for an img tag that sets the float property to left.   Then change the rule to float the image to the right.<div class="autopermalink" data-description="Paragraph"><a href="#css_floating-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_floating-5">Next let’s add a second copy of the norse logo to the page by copying and pasting the image again.<div class="autopermalink" data-description="Paragraph"><a href="#css_floating-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_floating-6">Next, modify the html, and add a CSS rule so that one logo is floated to the left and the other is floated to the right.<div class="autopermalink" data-description="Paragraph"><a href="#css_floating-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_floating-7">The float property can also be applied to block elements.  This will cause the block elements to behave more like inline elements.<div class="autopermalink" data-description="Paragraph"><a href="#css_floating-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_floating-8">The clear property is used to undo the effects of the float.<div class="autopermalink" data-description="Paragraph"><a href="#css_floating-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 4.5.3: Floating"><a href="#css_floating" title="Copy heading and permalink for Subsection 4.5.3: Floating" aria-label="Copy heading and permalink for Subsection 4.5.3: Floating">🔗</a></div></section><section class="subsection" id="css_positioning"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Positioning</span>
+</h3>
+<div class="para" id="css_positioning-2">There are several different ways to affect the positioning of html elements either inside or outside of the normal flow of the layout.<div class="autopermalink" data-description="Paragraph"><a href="#css_positioning-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="css_positioning-3">
+<ul class="disc" id="css_positioning-3-1">
+<li id="css_positioning-3-1-1">
+<div class="para" id="css_positioning-3-1-1-1">static<div class="autopermalink" data-description="Paragraph"><a href="#css_positioning-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#css_positioning-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="css_positioning-3-1-2">
+<div class="para" id="css_positioning-3-1-2-1">fixed<div class="autopermalink" data-description="Paragraph"><a href="#css_positioning-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#css_positioning-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="css_positioning-3-1-3">
+<div class="para" id="css_positioning-3-1-3-1">relative<div class="autopermalink" data-description="Paragraph"><a href="#css_positioning-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#css_positioning-3-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="css_positioning-3-1-4">
+<div class="para" id="css_positioning-3-1-4-1">absolute<div class="autopermalink" data-description="Paragraph"><a href="#css_positioning-3-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#css_positioning-3-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#css_positioning-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_positioning-4">
+<dfn class="terminology">Static</dfn> is the default positioning value for the css position property.  The static value simply tells the browser to position this element in the “normal flow” of the document.<div class="autopermalink" data-description="Paragraph"><a href="#css_positioning-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_positioning-5">
+<dfn class="terminology">Fixed</dfn> positioning is measured against the frame of the browser window.  Elements with a fixed position value do not move even when the contents of the browser window are scrolled.  The navigation bar at the top of this page uses the fixed position value so it is always visible.  Because fixed elements are outside the flow of the document they can sometimes cause unexpected results that you have to deal with carefully.<div class="autopermalink" data-description="Paragraph"><a href="#css_positioning-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_positioning-6">A <dfn class="terminology">relatively</dfn> positioned element is measured relative to its normal position in the flow.  Using a relative position value lets you create elements that overlap each other.<div class="autopermalink" data-description="Paragraph"><a href="#css_positioning-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_positioning-7">An <dfn class="terminology">absolute</dfn> element is positioned relative to the first parent element that has a position other than static. If no such element is found, the containing block is the <code class="code-inline tex2jax_ignore">html</code> tag for the entire document.  Absolutely positioned elements are positioned outside the normal flow of the document.<div class="autopermalink" data-description="Paragraph"><a href="#css_positioning-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsubsection" id="css_fixed"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fixed</span>
+</h4>
+<div class="para" id="css_fixed-2">Let’s look at an example of how to use fixed positioning to create an element that stays put on the screen.<div class="autopermalink" data-description="Paragraph"><a href="#css_fixed-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="listing figure-like" id="css_fixed-3"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Positioning 1<div class="autopermalink" data-description="Listing 4.5.8: Positioning 1"><a href="#css_fixed-3" title="Copy heading and permalink for Listing 4.5.8: Positioning 1" aria-label="Copy heading and permalink for Listing 4.5.8: Positioning 1">🔗</a></div></figcaption><div class="listing__contents">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for program</summary><article class="view-source-view__content"><pre><code class="language-xml">      &lt;program xml:id="css_pos1" interactive="activecode" language="html" label="program-activecode-css-pos1" include-source="yes"&gt;
+        &lt;input&gt;
+&amp;lt;html&amp;gt;
+   &amp;lt;head&amp;gt;
+      &amp;lt;style&amp;gt;
+      #sticky {
+         position: fixed;
+         top: 0px;
+         left: 5px
+      }
+      &amp;lt;/style&amp;gt;
+    &amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+   &amp;lt;nav id="sticky"&amp;gt;
+       &amp;lt;p&amp;gt;There are 10 kinds of people in the world.&amp;lt;/p&amp;gt;
+   &amp;lt;/nav&amp;gt;
+   &amp;lt;ol&amp;gt;
+   &amp;lt;li&amp;gt;Those that know how to count in binary.&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that do not know how to count in binary&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that know how to count in binary.&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that do not know how to count in binary&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that know how to count in binary.&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that do not know how to count in binary&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that know how to count in binary.&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that do not know how to count in binary&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that know how to count in binary.&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that do not know how to count in binary&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that know how to count in binary.&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that do not know how to count in binary&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that know how to count in binary.&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that do not know how to count in binary&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that know how to count in binary.&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that do not know how to count in binary&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that know how to count in binary.&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that do not know how to count in binary&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that know how to count in binary.&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that do not know how to count in binary&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that know how to count in binary.&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;Those that do not know how to count in binary&amp;lt;/li&amp;gt;
+   &amp;lt;/ol&amp;gt;
+   &amp;lt;p&amp;gt;When you have stopped laughing, add a CSS rule that changes the display
+   property for the ``li`` element and sets its value to ``inline``. &amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+        &lt;/input&gt;
+        &lt;tests&gt;
+
+
+&lt;/tests&gt;
+      &lt;/program&gt;
+</code></pre></article></details><div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="rs-program-activecode-css-pos1"><textarea data-lang="html" data-audio="" data-coach="true" style="visibility: hidden;" id="rs-program-activecode-css-pos1_editor" data-question_label="" data-codelens="false" data-timelimit="25000">&lt;html&gt;
+   &lt;head&gt;
+      &lt;style&gt;
+      #sticky {
+         position: fixed;
+         top: 0px;
+         left: 5px
+      }
+      &lt;/style&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+   &lt;nav id="sticky"&gt;
+       &lt;p&gt;There are 10 kinds of people in the world.&lt;/p&gt;
+   &lt;/nav&gt;
+   &lt;ol&gt;
+   &lt;li&gt;Those that know how to count in binary.&lt;/li&gt;
+   &lt;li&gt;Those that do not know how to count in binary&lt;/li&gt;
+   &lt;li&gt;Those that know how to count in binary.&lt;/li&gt;
+   &lt;li&gt;Those that do not know how to count in binary&lt;/li&gt;
+   &lt;li&gt;Those that know how to count in binary.&lt;/li&gt;
+   &lt;li&gt;Those that do not know how to count in binary&lt;/li&gt;
+   &lt;li&gt;Those that know how to count in binary.&lt;/li&gt;
+   &lt;li&gt;Those that do not know how to count in binary&lt;/li&gt;
+   &lt;li&gt;Those that know how to count in binary.&lt;/li&gt;
+   &lt;li&gt;Those that do not know how to count in binary&lt;/li&gt;
+   &lt;li&gt;Those that know how to count in binary.&lt;/li&gt;
+   &lt;li&gt;Those that do not know how to count in binary&lt;/li&gt;
+   &lt;li&gt;Those that know how to count in binary.&lt;/li&gt;
+   &lt;li&gt;Those that do not know how to count in binary&lt;/li&gt;
+   &lt;li&gt;Those that know how to count in binary.&lt;/li&gt;
+   &lt;li&gt;Those that do not know how to count in binary&lt;/li&gt;
+   &lt;li&gt;Those that know how to count in binary.&lt;/li&gt;
+   &lt;li&gt;Those that do not know how to count in binary&lt;/li&gt;
+   &lt;li&gt;Those that know how to count in binary.&lt;/li&gt;
+   &lt;li&gt;Those that do not know how to count in binary&lt;/li&gt;
+   &lt;li&gt;Those that know how to count in binary.&lt;/li&gt;
+   &lt;li&gt;Those that do not know how to count in binary&lt;/li&gt;
+   &lt;/ol&gt;
+   &lt;p&gt;When you have stopped laughing, add a CSS rule that changes the display
+   property for the ``li`` element and sets its value to ``inline``. &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div></div></div>
+</div></figure><div class="para" id="css_fixed-4">When you run the example above you will notice that it’s not quite right!  The text is overlapping and the page generally looks ugly.    The elements overlap because the fixed positioning takes the paragraph block element out of the flow.  Because it’s out of the flow the browser renders the <code class="code-inline tex2jax_ignore">ol</code> as if it should be the first thing at the top of the page.<div class="autopermalink" data-description="Paragraph"><a href="#css_fixed-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_fixed-5">Your challenge is to fix the example so that the sentence stays nicely anchored to the top, but the ordered list begins below it.<div class="autopermalink" data-description="Paragraph"><a href="#css_fixed-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="css_fixed-6" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="css_fixed-6-1">Here is one way to solve this problem.  Add a rule for the <code class="code-inline tex2jax_ignore">ol</code> that specifies a top-margin.  Make the top margin large enough so that the list starts below the first paragraph.  You may need to experiment a little bit with some different values before you find one that works well.  Now you should also add some styling to the nav to give it a background color and make it fill the entire width of the window.<div class="autopermalink" data-description="Paragraph"><a href="#css_fixed-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.5.4.1.1"><a href="#css_fixed-6" title="Copy heading and permalink for Hint 4.5.4.1.1" aria-label="Copy heading and permalink for Hint 4.5.4.1.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Subsubsection 4.5.4.1: Fixed"><a href="#css_fixed" title="Copy heading and permalink for Subsubsection 4.5.4.1: Fixed" aria-label="Copy heading and permalink for Subsubsection 4.5.4.1: Fixed">🔗</a></div></section><section class="subsubsection" id="css_relative"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Relative</span>
+</h4>
+<div class="para" id="css_relative-2">Next let’s look at the relative position and how we can use it to make overlapping elements.<div class="autopermalink" data-description="Paragraph"><a href="#css_relative-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_relative-3">Let’s make a stack of cards using the following image:<div class="autopermalink" data-description="Paragraph"><a href="#css_relative-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/ace-of-hearts.gif" class="contained"></div>
+<figure class="listing figure-like" id="css_relative-5"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Positioning 2<div class="autopermalink" data-description="Listing 4.5.9: Positioning 2"><a href="#css_relative-5" title="Copy heading and permalink for Listing 4.5.9: Positioning 2" aria-label="Copy heading and permalink for Listing 4.5.9: Positioning 2">🔗</a></div></figcaption><div class="listing__contents">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for program</summary><article class="view-source-view__content"><pre><code class="language-xml">      &lt;program xml:id="css_pos2" interactive="activecode" language="html" label="program-activecode-css-pos2" include-source="yes"&gt;
+        &lt;input&gt;
+&amp;lt;html&amp;gt;
+   &amp;lt;head&amp;gt;
+      &amp;lt;style&amp;gt;
+      img.card {
+          height: 200px;
+      }
+      &amp;lt;/style&amp;gt;
+   &amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+   &amp;lt;img id="a" class="card" src="https://runestone.academy/ns/books/published/webfundamentals/_images/ace-of-hearts.gif" /&amp;gt;
+   &amp;lt;img id="b" class="card" src="https://runestone.academy/ns/books/published/webfundamentals/_images/ace-of-hearts.gif" /&amp;gt;
+   &amp;lt;img id="c" class="card" src="https://runestone.academy/ns/books/published/webfundamentals/_images/ace-of-hearts.gif" /&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+        &lt;/input&gt;
+        &lt;tests&gt;
+
+
+&lt;/tests&gt;
+      &lt;/program&gt;
+</code></pre></article></details><div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="rs-program-activecode-css-pos2"><textarea data-lang="html" data-audio="" data-coach="true" style="visibility: hidden;" id="rs-program-activecode-css-pos2_editor" data-question_label="" data-codelens="false" data-timelimit="25000">&lt;html&gt;
+   &lt;head&gt;
+      &lt;style&gt;
+      img.card {
+          height: 200px;
+      }
+      &lt;/style&gt;
+   &lt;/head&gt;
+&lt;body&gt;
+   &lt;img id="a" class="card" src="https://runestone.academy/ns/books/published/webfundamentals/_images/ace-of-hearts.gif" /&gt;
+   &lt;img id="b" class="card" src="https://runestone.academy/ns/books/published/webfundamentals/_images/ace-of-hearts.gif" /&gt;
+   &lt;img id="c" class="card" src="https://runestone.academy/ns/books/published/webfundamentals/_images/ace-of-hearts.gif" /&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div></div></div>
+</div></figure><div class="para" id="css_relative-6">If you run the example you will see the three cards lined up next to each other.  As a reminder this is because:<div class="autopermalink" data-description="Paragraph"><a href="#css_relative-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="css_relative-7">
+<ol class="decimal ol-marker-1" id="css_relative-7-1">
+<li id="css_relative-7-1-1">
+<div class="para" id="css_relative-7-1-1-1">images are inline elements and so do not create a line break.<div class="autopermalink" data-description="Paragraph"><a href="#css_relative-7-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#css_relative-7-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="css_relative-7-1-2">
+<div class="para" id="css_relative-7-1-2-1">The browser lays out inline images top to bottom and left to right.<div class="autopermalink" data-description="Paragraph"><a href="#css_relative-7-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#css_relative-7-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#css_relative-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_relative-8">Now let’s use our positioning skills to create a stack.  Modify the example above to add the following css rule:<div class="autopermalink" data-description="Paragraph"><a href="#css_relative-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="code-box"><pre class="program clipboardable"><code class="language-css">img#b {
+    position: relative;
+    top: 20px;
+    left: -100px;
+}
+</code></pre></div>
+<div class="para" id="css_relative-10">Great, now we have made the second card appear to be on top of the first.    Notice that although we have moved the second image, the position of the third image does not change.  This is because space is still reserved for the second image in its middle position, we are manually moving it relative to where it would normally be in the flow.  So a relative positioning works within the flow of the document.  Add a rule for the third image to add it to the stack.<div class="autopermalink" data-description="Paragraph"><a href="#css_relative-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="css_relative-11" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="code-box"><pre class="program clipboardable"><code class="language-css">img#c {
+    position: relative;
+    top: 40px;
+    left: -200px;
+}
+</code></pre></div>
+<div class="autopermalink" data-description="Hint 4.5.4.2.1"><a href="#css_relative-11" title="Copy heading and permalink for Hint 4.5.4.2.1" aria-label="Copy heading and permalink for Hint 4.5.4.2.1">🔗</a></div>
+</div></details><article class="note remark-like" id="css_relative-12"><h5 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Coordinates.</span>
+</h5>
+<div class="para" id="css_relative-12-2">You have no doubt noticed that we are using top and left values to position our box.  This box is positioned within the window where the coordinate 0,0 is in the top left corner.  The X or first coordinate gets larger as you move to the right across the windo, and the second, or Y coordinate grows larger is you move down the screen.  This takes a little adjustment as it is different from what  you learned in math class.<div class="autopermalink" data-description="Paragraph"><a href="#css_relative-12-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 4.5.10: Coordinates"><a href="#css_relative-12" title="Copy heading and permalink for Note 4.5.10: Coordinates" aria-label="Copy heading and permalink for Note 4.5.10: Coordinates">🔗</a></div></article><div class="para" id="css_relative-13">Now, what about elements that come after relatively positioned elements?  If you add a paragraph after the images do you expect the text to be covered up or flowed beneath all of the cards?<div class="autopermalink" data-description="Paragraph"><a href="#css_relative-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_relative-14">Another important thing to notice is that card 2 appears to be stacked on top of card 1, and card three appears to be stacked on top of cards 1 and 2.  This is becuase elements that come later in the document naturally appear on top of elements that come before them.<div class="autopermalink" data-description="Paragraph"><a href="#css_relative-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="css_relative-15">If we want to change that and make it look like card 1 is on top of card 2 and card 2 is on top of card 3 we can use the css <code class="code-inline tex2jax_ignore">z-index</code> property to position the elements.  elements that have a larger z-index will appear to be on top of items with a lower z-index.  By default, all elements have a z-idex of zero.  So to change the order of the stack we will need to modify the rules for images b and c.  Add a z-imaeg property to the <code class="code-inline tex2jax_ignore">img#b</code> and <code class="code-inline tex2jax_ignore">img#c</code> rules giving b a z-index of -1 and c a z-index of -2.<div class="autopermalink" data-description="Paragraph"><a href="#css_relative-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="note remark-like" id="css_relative-16"><h5 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Advanced Topic: Transformation.</span>
+</h5>
+<div class="para" id="css_relative-16-2">CSS Provides the ability for us to really get fancy and transform any element by rotating or scaling.  We can make our stack of cards look much more like a hand of cards by exploring the <a class="external" href="http://www.w3schools.com/cssref/css3_pr_transform.asp" target="_blank">transform</a> property.  In fact the transform property is still so new that it goes by different names in different browsers.  For Chrome, Safari you will want to use the <code class="code-inline tex2jax_ignore">-webkit-transform</code> property while in Firefox you can use <code class="code-inline tex2jax_ignore">transform</code>.  If you are Explorer you will need to use <code class="code-inline tex2jax_ignore">-ms-transform</code>.  In fact to write your page to work  anywhere you would specify all three!<div class="autopermalink" data-description="Paragraph"><a href="#css_relative-16-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 4.5.11: Advanced Topic: Transformation"><a href="#css_relative-16" title="Copy heading and permalink for Note 4.5.11: Advanced Topic: Transformation" aria-label="Copy heading and permalink for Note 4.5.11: Advanced Topic: Transformation">🔗</a></div></article><div class="autopermalink" data-description="Subsubsection 4.5.4.2: Relative"><a href="#css_relative" title="Copy heading and permalink for Subsubsection 4.5.4.2: Relative" aria-label="Copy heading and permalink for Subsubsection 4.5.4.2: Relative">🔗</a></div></section><div class="autopermalink" data-description="Subsection 4.5.4: Positioning"><a href="#css_positioning" title="Copy heading and permalink for Subsection 4.5.4: Positioning" aria-label="Copy heading and permalink for Subsection 4.5.4: Positioning">🔗</a></div></section><section class="subsection" id="css_absolute"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Absolute</span>
+</h3>
+<div class="para" id="css_absolute-2">Absolutely positioned elements are absolute, but relative to their container!  The official rule is that absolute items are positioned using the the upper left corner of the first non-static container as the origin.  If there is no non-static container, then the html tag will be used and the origin will be the upper left corner of the page.<div class="autopermalink" data-description="Paragraph"><a href="#css_absolute-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="listing figure-like" id="css_absolute-3"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Positioning 3<div class="autopermalink" data-description="Listing 4.5.12: Positioning 3"><a href="#css_absolute-3" title="Copy heading and permalink for Listing 4.5.12: Positioning 3" aria-label="Copy heading and permalink for Listing 4.5.12: Positioning 3">🔗</a></div></figcaption><div class="listing__contents">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for program</summary><article class="view-source-view__content"><pre><code class="language-xml">    &lt;program xml:id="css_pos3" interactive="activecode" language="html" label="program-activecode-css-pos3" include-source="yes"&gt;
+      &lt;input&gt;
+&amp;lt;html&amp;gt;
+   &amp;lt;head&amp;gt;
+      &amp;lt;style&amp;gt;
+          main {
+              position: relative;
+          }
+          img.card {
+              height: 200px;
+          }
+          img#a {
+              position: absolute;
+              top: 10px;
+              left: 50px;
+          }
+          img#b {
+              position: absolute;
+              top: 10px;
+              left: 50px;
+          }
+      &amp;lt;/style&amp;gt;
+   &amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;main&amp;gt;
+   &amp;lt;img id="a" class="card" src="https://runestone.academy/ns/books/published/webfundamentals/_images/ace-of-hearts.gif" /&amp;gt;
+   &amp;lt;img id="b" class="card" src="https://runestone.academy/ns/books/published/webfundamentals/_images/ace-of-hearts.gif" /&amp;gt;
+
+&amp;lt;/main&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+        &lt;/input&gt;
+      &lt;tests&gt;
+
+
+&lt;/tests&gt;
+    &lt;/program&gt;
+</code></pre></article></details><div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="rs-program-activecode-css-pos3"><textarea data-lang="html" data-audio="" data-coach="true" style="visibility: hidden;" id="rs-program-activecode-css-pos3_editor" data-question_label="" data-codelens="false" data-timelimit="25000">&lt;html&gt;
+   &lt;head&gt;
+      &lt;style&gt;
+          main {
+              position: relative;
+          }
+          img.card {
+              height: 200px;
+          }
+          img#a {
+              position: absolute;
+              top: 10px;
+              left: 50px;
+          }
+          img#b {
+              position: absolute;
+              top: 10px;
+              left: 50px;
+          }
+      &lt;/style&gt;
+   &lt;/head&gt;
+&lt;body&gt;
+&lt;main&gt;
+   &lt;img id="a" class="card" src="https://runestone.academy/ns/books/published/webfundamentals/_images/ace-of-hearts.gif" /&gt;
+   &lt;img id="b" class="card" src="https://runestone.academy/ns/books/published/webfundamentals/_images/ace-of-hearts.gif" /&gt;
+
+&lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div></div></div>
+</div></figure><div class="para" id="css_absolute-4">OK, what happened to the second card?  How can you make a stack that looks like the stack from our relatively positioned element?  What happens if you add an h1 in front of the main tag?<div class="autopermalink" data-description="Paragraph"><a href="#css_absolute-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 4.5.5: Absolute"><a href="#css_absolute" title="Copy heading and permalink for Subsection 4.5.5: Absolute" aria-label="Copy heading and permalink for Subsection 4.5.5: Absolute">🔗</a></div></section><section class="subsection" id="css_full-page-layout"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Full Page Layout</span>
+</h3>
+<figure class="listing figure-like" id="css_full-page-layout-2"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Full Page Layout Layout<div class="autopermalink" data-description="Listing 4.5.13: Full Page Layout Layout"><a href="#css_full-page-layout-2" title="Copy heading and permalink for Listing 4.5.13: Full Page Layout Layout" aria-label="Copy heading and permalink for Listing 4.5.13: Full Page Layout Layout">🔗</a></div></figcaption><div class="listing__contents">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for program</summary><article class="view-source-view__content"><pre><code class="language-xml">    &lt;program xml:id="css_layout1" interactive="activecode" language="html" label="program-activecode-css-layout1" include-source="yes"&gt;
+      &lt;input&gt;
+ &amp;lt;html&amp;gt;
+     &amp;lt;head&amp;gt;
+         &amp;lt;title&amp;gt;Home&amp;lt;/title&amp;gt;
+         &amp;lt;style&amp;gt;
+         header {
+             position: fixed;
+             background-color: #bbbbbb;
+             top: 0px;
+             left: 0px;
+             width: 100%;
+             height: 20px;
+         }
+         nav {
+             margin-top: 20px;
+             margin-bottom: 0px;
+             background-color: green;
+         }
+         nav li {
+            display: inline;
+         }
+         section {
+             float: left;
+             width: 20%;
+             height: 500px;
+             background-color: blue;
+             color: white;
+         }
+         aside {
+             float: left;
+             width: 80%;
+             height: 500px;
+             background-color: red;
+         }
+         footer {
+             clear: both;
+             background-color: yellow;
+         }
+         body {
+             background-color: black;
+             margin: 0px;
+         }
+         &amp;lt;/style&amp;gt;
+
+     &amp;lt;/head&amp;gt;
+     &amp;lt;body&amp;gt;
+         &amp;lt;header&amp;gt;
+             A header that stays stuck to the top.
+         &amp;lt;/header&amp;gt;
+         &amp;lt;nav&amp;gt;
+             &amp;lt;ul&amp;gt;
+             &amp;lt;li&amp;gt;About&amp;lt;/li&amp;gt;
+             &amp;lt;li&amp;gt;Papers&amp;lt;/li&amp;gt;
+             &amp;lt;li&amp;gt;Donate&amp;lt;/li&amp;gt;
+             &amp;lt;/ul&amp;gt;
+         &amp;lt;/nav&amp;gt;
+         &amp;lt;section&amp;gt;
+             This would be a good place for a table of contents
+         &amp;lt;/section&amp;gt;
+         &amp;lt;aside&amp;gt;
+             This is the main content area
+             &amp;lt;img src="https://runestone.academy/ns/books/published/webfundamentals/_images/img_sem_elements.gif" /&amp;gt;
+         &amp;lt;/aside&amp;gt;
+         &amp;lt;footer&amp;gt;
+             Copyright Area, Contact Us.
+         &amp;lt;/footer&amp;gt;
+     &amp;lt;/body&amp;gt;
+ &amp;lt;/html&amp;gt;
+        &lt;/input&gt;
+      &lt;tests&gt;
+
+
+&lt;/tests&gt;
+    &lt;/program&gt;
+</code></pre></article></details><div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="rs-program-activecode-css-layout1"><textarea data-lang="html" data-audio="" data-coach="true" style="visibility: hidden;" id="rs-program-activecode-css-layout1_editor" data-question_label="" data-codelens="false" data-timelimit="25000">&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Home&lt;/title&gt;
+        &lt;style&gt;
+        header {
+            position: fixed;
+            background-color: #bbbbbb;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 20px;
+        }
+        nav {
+            margin-top: 20px;
+            margin-bottom: 0px;
+            background-color: green;
+        }
+        nav li {
+           display: inline;
+        }
+        section {
+            float: left;
+            width: 20%;
+            height: 500px;
+            background-color: blue;
+            color: white;
+        }
+        aside {
+            float: left;
+            width: 80%;
+            height: 500px;
+            background-color: red;
+        }
+        footer {
+            clear: both;
+            background-color: yellow;
+        }
+        body {
+            background-color: black;
+            margin: 0px;
+        }
+        &lt;/style&gt;
+
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header&gt;
+            A header that stays stuck to the top.
+        &lt;/header&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+            &lt;li&gt;About&lt;/li&gt;
+            &lt;li&gt;Papers&lt;/li&gt;
+            &lt;li&gt;Donate&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+        &lt;section&gt;
+            This would be a good place for a table of contents
+        &lt;/section&gt;
+        &lt;aside&gt;
+            This is the main content area
+            &lt;img src="https://runestone.academy/ns/books/published/webfundamentals/_images/img_sem_elements.gif" /&gt;
+        &lt;/aside&gt;
+        &lt;footer&gt;
+            Copyright Area, Contact Us.
+        &lt;/footer&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</textarea></div></div></div>
+</div></figure><div class="para" id="css_full-page-layout-3">This looks pretty good.  It almost matches the picture in the aside area. This is a pretty typical layout for a good quality page, and you can use this as a template for your own homepage.  However it is missing the article area, and there is an ugly black band between the nav and the tops of the aside and section.  See if you can do the following:<div class="autopermalink" data-description="Paragraph"><a href="#css_full-page-layout-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="css_full-page-layout-4">
+<ol class="decimal ol-marker-1" id="css_full-page-layout-4-1">
+<li id="css_full-page-layout-4-1-1">
+<div class="para" id="css_full-page-layout-4-1-1-1">Remove the black band.  Hint:  A good way to find out why things look the way they do is to use the “Inspect Element” feature of your browser.  If you right click on an area that interests you, you will be able to see all of the css rules including the default style rules that affect a particular element.<div class="autopermalink" data-description="Paragraph"><a href="#css_full-page-layout-4-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#css_full-page-layout-4-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="css_full-page-layout-4-1-2">
+<div class="para" id="css_full-page-layout-4-1-2-1">Add an article area as shown in the picture.  Give it a purple background.  As you try to to make this area match the picture think about the effects of the various things you may try.<div class="autopermalink" data-description="Paragraph"><a href="#css_full-page-layout-4-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#css_full-page-layout-4-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#css_full-page-layout-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 4.5.6: Full Page Layout"><a href="#css_full-page-layout" title="Copy heading and permalink for Subsection 4.5.6: Full Page Layout" aria-label="Copy heading and permalink for Subsection 4.5.6: Full Page Layout">🔗</a></div></section><div class="autopermalink" data-description="Section 4.5: Changing your page layout"><a href="#css_changing-your-page-layout" title="Copy heading and permalink for Section 4.5: Changing your page layout" aria-label="Copy heading and permalink for Section 4.5: Changing your page layout">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="css_quiz-two.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="css_positioning-quiz.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
