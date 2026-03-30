@@ -29,7 +29,7 @@
     </ul>
   </p>
   <p>This URL contains <term>a lot</term> of information.  When you type this into the address bar of your browser you have given your browser enough information to get the specific page you wanted.  A diagram will help with the next part of this discussion.</p>
-  <image source="WWW/Figures/SimpleRequest.png" width="50%"/>
+  <image source="SimpleRequest.png" width="100%"/>
   <p>Let's suppose we continue with the URL above.  You, the user, type in the URL to your browser, The browser knows that the host name is the part that comes after the first two slashes, but before the next slash.  So it is able to extract that part of the URL.  Using patterns like this occurs frequently in Computer Science.  The name is then passed on to another server called the Domain Name Service (DNS) in the diagram above.  The DNS is actually a very large and complex network of servers, but we'll just take it for granted that it works and gives us back the IP address correctly.  With the address in hand, the browser establishes a connection to the server through a mechanism known as a <term>socket</term>.  This socket allows the browser and the server to reliably communicate over the internet.</p>
   <subsection xml:id="www_an-http-request">
     <title>An HTTP Request</title>
