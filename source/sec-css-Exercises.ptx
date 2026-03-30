@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<exercises xml:id="css_css-exercises">
+  <title>CSS Exercises</title>
+  <p>
+    <ol label="1">
+      <li>
+            </li>
+    </ol>
+  </p>
+  <exercise label="ex_css_1">
+    <statement>
+      <p>Add a CSS rule and appropriate html to style every other line of the unordered list with a light blue background color.  Specify the background color using the rgb method.</p>
+    </statement>
+    <listing>
+    <program xml:id="ex_css_1_editor" interactive="activecode" language="html" label="program-activecode-css-e1" include-source="yes">
+      <input>
+&lt;html&gt;
+   &lt;body&gt;
+      &lt;ul&gt;
+         &lt;li&gt;one&lt;/li&gt;
+         &lt;li&gt;two&lt;/li&gt;
+         &lt;li&gt;three&lt;/li&gt;
+         &lt;li&gt;four&lt;/li&gt;
+         &lt;li&gt;five&lt;/li&gt;
+         &lt;li&gt;six&lt;/li&gt;
+      &lt;/ul&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+  </exercise>
+  <p>
+    <ol label="1">
+      <li>
+            </li>
+    </ol>
+  </p>
+  <exercise label="ex_css_2">
+    <statement>
+      <p>Given the table in the html code in the question style the table so that the odd rows have a light gray background  In addition and a header row to the table and style that row so it has white text and a black background color.  Change the font so that they are all 14 point sans serif of some kind.</p>
+    </statement>
+    <listing>
+    <program xml:id="ex_css_2_editor" interactive="activecode" language="html" label="program-activecode-css-e2" include-source="yes">
+      <input>
+
+&lt;html&gt;
+   &lt;body&gt;
+      &lt;table&gt;
+      &lt;tr&gt;&lt;td&gt;Philip&lt;/td&gt;&lt;td&gt;@tweetman&lt;/td&gt;&lt;td&gt;555-1212&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Katey&lt;/td&gt;&lt;td&gt;@applegirl&lt;/td&gt;&lt;td&gt;818-3341&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;JetBrains&lt;/td&gt;&lt;td&gt;@codingisfun&lt;/td&gt;&lt;td&gt;04.032.55512&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Bill&lt;/td&gt;&lt;td&gt;@windows&lt;/td&gt;&lt;td&gt;657-9876&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+  </exercise>
+  <p>
+    <ol label="1">
+      <li>
+            </li>
+    </ol>
+  </p>
+  <exercise label="ex_css_3">
+    <statement>
+      <p>Suppose you are working on a recipe website.  Recipes have a title, a list of ingredients, and an instructions section.  Make a webpage that shows the recipe for grilled cheese sandwiches with bacon and tomato.   The ingredients should be displayed as an unordered list, with no bullets.  meat ingredients should have a light red background color, vegetables should have a light green background, and dairy products should have a light yellow.  The title should be in a sans serif font of your choice, and the instructions should have a heading <q>Instructions</q> and the font for the instructions should be italic.</p>
+    </statement>
+    <listing>
+    <program xml:id="ex_css_3_editor" interactive="activecode" language="html" label="program-activecode-css-e3" include-source="yes">
+      <prefix>
+
+
+</prefix>
+      <input>
+
+
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+  </exercise>
+  <p>
+    <ol label="1">
+      <li>
+            </li>
+    </ol>
+  </p>
+  <exercise label="ex_css_4">
+    <statement>
+      <p>Using CSS and HTML Make a webpage that has two columns.  Each column should use half of the width of the page.  The left half should have a light gray background and the right half should have a light green background.  The left half should have a list of the 5 best selling  books in Amazon's kindle store, and the right should have a list of your five favorite celebrities or athletes.</p>
+    </statement>
+    <listing>
+    <program xml:id="ex_css_4_editor" interactive="activecode" language="html" label="program-activecode-css-e4" include-source="yes">
+      <prefix>
+
+
+</prefix>
+      <input>
+
+
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+  </exercise>
+  <p>
+    <ol label="1">
+      <li>
+            </li>
+    </ol>
+  </p>
+  <exercise label="ex_css_5">
+    <statement>
+      <p>Using the nav element, make a navbar for at the top of a sample webpage.  Add at least three links to the navbar using an unordered list that is displayed as inline rather than block.  Make the navbar have a light blue background color, but change the background of the title to a darker blue when the mouse hovers over it.  (see the <url href="http://www.w3schools.com/cssref/sel_hover.asp" visual="http://www.w3schools.com/cssref/sel_hover.asp">:hover selector</url>)</p>
+    </statement>
+    <listing>
+    <program xml:id="ex_css_5_editor" interactive="activecode" language="html" label="program-activecode-css-e5" include-source="yes">
+      <prefix>
+
+
+</prefix>
+      <input>
+
+
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+  </exercise>
+  <p>
+    <ol label="1">
+      <li>
+            </li>
+    </ol>
+  </p>
+  <exercise label="ex_css_6">
+    <statement>
+      <p>Using the image of the playing card, use transformations and animations to make the playing card spin around endlessly.</p>
+    </statement>
+    <listing>
+    <program xml:id="ex_css_6_editor" interactive="activecode" language="html" label="program-activecode-css-e8" include-source="yes">
+      <prefix>
+
+
+</prefix>
+      <input>
+
+
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+  </exercise>
+  <p>
+    <ol label="1">
+      <li>
+        <p>Using the template developed in the layout chapter, develop a homepage for yourself, published on github pages, that employs a two column layout with a fixed navbar (always on screen), and a footer.  The navbar should link to at least two additional pages used to describe your hobbies or favorite teams.  The CSS for this website should be contained in its own CSS file, and all three pages should use this CSS file.</p>
+      </li>
+      <li>
+        <p>Modify the final version of the menu project so that the menu is a horizontal menu with the first level of submenus dropping down below the selected item.</p>
+      </li>
+    </ol>
+  </p>
+</exercises>

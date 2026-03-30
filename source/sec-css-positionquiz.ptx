@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<section xml:id="css_positioning-quiz">
+  <title>Positioning Quiz</title>
+  <p>Today's quiz has only one question, you may use your textbook to refer to as well as other examples you may have saved from class.  I will use only your final result, so don't forget to save.   This may prove to be quite challenging, but don't worry, I will give plenty of partial credit.</p>
+  <hint>
+    <p>Starting with the HTML I give you, you must recreate the image below.</p>
+    <image source="quiz2b.png" width="50%"/>
+    <p>Dimensions:  The green box is 400px wide and 300px high and is centered with a top margin of 50px.  The pink boxes are 150px high and 150px wide.  The are positioned 20px from the edges of the green box.  The text in the pink boxes is centered and is 20px from the top of the pink box.</p>
+    <listing>
+    <program xml:id="q2_1" interactive="activecode" language="html" label="program-activecode-css-q2_1" include-source="yes">
+      <input>
+&lt;html&gt;
+   &lt;head&gt;
+     &lt;style&gt;
+     &lt;/style&gt;
+   &lt;/head&gt;
+      &lt;body&gt;
+          &lt;main&gt;
+          &lt;nav&gt;
+              &lt;h2&gt;Happy Thanksgiving&lt;/h2&gt;
+          &lt;/nav&gt;
+          &lt;aside&gt;
+              &lt;h2&gt;Let it Snow&lt;/h2&gt;
+          &lt;/aside&gt;
+          &lt;/main&gt;
+      &lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+  </hint>
+</section>

@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<section xml:id="css_introduction-to-css">
+  <title>Introduction to CSS</title>
+  <p>CSS stands for Cascading Style Sheets.  Style sheets define how to display your html code.  This was not always the case.  In HTML 3 the designers of the language added tags like font and color. This was great for companies like Microsoft where you could export your word doc as html, but created a nightmare for developers of large sites that were not developed using WYSIWYG tools, and it made the html completely unreadable.  So, in HTML 4.0 CSS was introduced to fix the problem we created for ourselves.</p>
+  <p>CSS defines how the html should look, and it does this using a set of rules.  We are all used to following certain rules in every day life:  <term>If</term> it is raining, <term>then</term> take your umbrella.  <term>If</term> the light is red, <term>then</term> come to a stop at the stoplight.  In html terms we might say, <term>if</term> the tag is an <c>h1</c> <term>then</term> color it blue and set the font size to 28 points.</p>
+  <subsection xml:id="css_css-syntax">
+    <title>CSS Syntax</title>
+    <p>To tell the computer about these if/then rules, we need a consistent syntax.  The syntax for CSS has two parts, a selector and a declaration.</p>
+    <program language="css">
+      <input>
+selector {
+    declaration;
+    declaration;
+    }
+</input>
+    </program>
+    <p>The declaration itself consists of two parts: a property and a value.  There are many many CSS properties and we willl look at a lot of them, but for now, just think of the property as something like color, font-size, font-family, etc.</p>
+    <p>Selectors can be as simple as a tag name, or a very complex pattern to match.  We will start with some very simple selectors and work our way up to the more complex.</p>
+    <p>Without further fuss, let's look at a CSS rule for coloring h1 tags blue, and changing their font to 28 points.</p>
+    <program language="css">
+      <input>
+h1 {
+    color: blue;
+    font-size: 28pt;
+}
+</input>
+    </program>
+  </subsection>
+  <subsection xml:id="css_including-css-in-your-page">
+    <title>Including CSS in Your Page</title>
+    <p>There are three ways to include CSS in your html document.</p>
+    <p>
+      <ul>
+        <li>
+          <p>You can add a style attribute to a tag.  This should not be used very often, if ever!</p>
+        </li>
+        <li>
+          <p>You can embed your CSS in your file inside a <c>style</c> tag.  We'll use this method in this book for convenience.</p>
+        </li>
+        <li>
+          <p>You can put all of your CSS in a separate style file and include the style file into your HTML.  This is the preferred way of doing it because it achieves the greatest amount of separation between the content and how the content looks.</p>
+        </li>
+      </ul>
+    </p>
+    <p>Let's now look at a complete example:</p>
+    <listing>
+    <program xml:id="css_rule_1" interactive="activecode" language="html" label="program-activecode-css-rule1" include-source="yes">
+      <input>
+&lt;html&gt;
+   &lt;head&gt;
+      &lt;style&gt;
+      h1 {
+         color: blue;
+         font-size: 28pt;
+      }
+      &lt;/style&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      &lt;h1&gt;Hello World!!&lt;/h1&gt;
+      &lt;p&gt;The paragraph text should be unchanged&lt;/p&gt;
+      &lt;h2&gt;I am not blue!&lt;/h2&gt;
+      &lt;h1&gt;Hello Again&lt;/h1&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+    <p>There are several things to notice about the example above.  First the <c>h1</c> selector matches all of the h1 tags in the document.  But it does not match the <c>h2</c> or the <c>p</c> tags.  If you want to change the style of the paragraph you need to add another rule.  Let's try it:  Add a rule to the style tag that colors the paragraph text green.  Then make another rule that makes the h2 tag size 16pt and yellow.</p>
+    <p>One thing to be careful about is to remember the semi-colons after the values.  If you forget a semi-colon, then your rule will not work.</p>
+    <p>Using a separate css file is the most preferred way to organize your CSS.  This allows you to use the same style in multiple web pages, and in a group setting makes it easy for one person to work on the style while another focuses on the content.  CSS stylesheets are included in a web page by using the <c>link</c> tag in the <c>head</c> section of your page as follows:</p>
+    <program language="html">
+      <input>
+&lt;link rel="stylesheet" href="mystyle.css" type="text/css"&gt;
+</input>
+    </program>
+  </subsection>
+  <subsection xml:id="css_cascading">
+    <title>Cascading</title>
+    <p>Since you can add style information about a tag in any or all of the three places, how is the style resolved if different sources provide conflicting information?</p>
+    <p>Default rules from the browser are combined with rules from an external Style Sheet are combined with the rules contained in any style tags in the page itself.  If there is a conflict then then internal style tag wins.  These rules are then combined with any style information contained in a style attribute.  If the style attribute conflicts with any previous informatin, it wins.</p>
+  </subsection>
+</section>

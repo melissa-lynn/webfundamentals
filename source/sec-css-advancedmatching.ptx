@@ -1,0 +1,596 @@
+<?xml version="1.0"?>
+<section xml:id="css_the-dropdown-menu-project">
+  <title>The Dropdown Menu Project</title>
+  <p>In this section we will take on a full project to make some nice navigational dropdown menus with submenus.  This is not a simple project, so we will follow good programming practice and develop our solution iteratively.</p>
+  <subsection xml:id="css_step-one">
+    <title>Step One</title>
+    <p>Before we add any CSS rules at all let's get the menu structure and some page contents in place.   This is not going to look pretty but it will give us a starting place.  This  is almost always a good practice in web development.  Get the basic structure in place first, then incrementally make some improvements.  The reason to do it this way is simple, if you add small things one at a time, it's easy to tell when you do something wrong, and you automatically know that it was the last thing you did that caused the problem.</p>
+    <p>We have two main semantic areas in our page, the navigation menu main contents.  We will separate these two by placing the navigation menu inside a nav tag, and the main contents inside a main tag.</p>
+    <listing>
+        <caption>Menu 1</caption>
+    <program xml:id="menu_1" interactive="activecode" language="html" label="program-activecode-html-menu-1" include-source="yes">
+      <input>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;SubMenus&lt;/title&gt;
+&lt;style type='text/css'&gt;
+
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Fundamentals of Web Programming&lt;/h1&gt;
+
+&lt;nav&gt;
+&lt;ul &gt;
+ &lt;li&gt;&lt;a href='/'&gt;Home&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href='#'&gt;Syllabus&lt;/a&gt;
+  &lt;ul&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Text Book&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Office Hours&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Grading Policy&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Learning Goals&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href='#'&gt;Resources&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href='#'&gt;Publications&lt;/a&gt;
+  &lt;ul&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Articles&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Tutorials&lt;/a&gt;
+    &lt;ul&gt;
+     &lt;li&gt;&lt;a href='#'&gt;HTML&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href='#'&gt;CSS&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href='#'&gt;SVG&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href='#'&gt;XML&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+   &lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Assignments&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href='#'&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+&lt;p&gt;
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+&lt;/p&gt;
+&lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+</listing>
+  </subsection>
+  <subsection xml:id="css_step-two">
+    <title>Step Two</title>
+    <p>Now that the content is in place, let us set some background colors for things, and position our semantic elements.  In this case we want our navigational menu to be on the left side of the page, with the main content to the right.</p>
+    <p>We can position on nav on the left and have the main just to the right of it using the <c>float: left</c> property.  Notice that we set our width for the nav element to be <c>7em</c>, using an <c>em</c> as a unit of measure in this case is a good idea because it will scale the width of our nav bar if we change the size of our font.  Try setting the font size in the body tag and notice that everything grows proportionally.</p>
+    <p>We give the nav its own background color for now, just to make it easy to differentiate between area that belongs to the nav, and the area that belongs to main.</p>
+    <listing>
+        <caption>Menu 2</caption>
+    <program xml:id="menu_2" interactive="activecode" language="html" label="program-activecode-html-menu-2" include-source="yes">
+      <input>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;SubMenus&lt;/title&gt;
+&lt;style type='text/css'&gt;
+body {
+    background: #EEE;
+    color: #000;
+}
+
+h1 {
+    color: #AAA;
+    border-bottom: 1px solid;
+    margin-bottom: 0;
+}
+
+main {
+    color: #CCC;
+    margin-left: 7em;
+    padding: 1px 0 1px 5%;
+    border-left: 1px solid;
+}
+
+nav {
+    float: left;
+    width: 7em;
+    background: #FDD;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Fundamentals of Web Programming&lt;/h1&gt;
+
+&lt;nav&gt;
+&lt;ul&gt;
+ &lt;li&gt;&lt;a href='/'&gt;Home&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href='#'&gt;Syllabus&lt;/a&gt;
+  &lt;ul&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Text Book&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Office Hours&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Grading Policy&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Learning Goals&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href='#'&gt;Resources&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href='#'&gt;Publications&lt;/a&gt;
+  &lt;ul&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Articles&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Tutorials&lt;/a&gt;
+    &lt;ul&gt;
+     &lt;li&gt;&lt;a href='#'&gt;HTML&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href='#'&gt;CSS&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href='#'&gt;SVG&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href='#'&gt;XML&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+   &lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Assignments&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href='#'&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+&lt;p&gt;
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+&lt;/p&gt;
+&lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+</listing>
+  </subsection>
+  <subsection xml:id="css_step-three">
+    <title>Step Three</title>
+    <p>Next let's change our indentation of the sublists using the following three rules:</p>
+    <program language="css">
+      <input>
+nav ul {
+     margin: 0;
+     padding: 0;
+     width: 7em;
+     background: white;
+     border: 1px solid;
+}
+
+nav li {
+     position: relative;
+     list-style: none;
+     margin: 0;
+     border-bottom: 1px solid #CCC;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 0;
+    left: 7em;
+    display: block;
+}
+</input>
+    </program>
+    <p>We set the margin of the uls inside the the nav element (nav ul) to have a margin of 0 because by default they have a non-zero margin, which will make our positioning more difficult later.  The same goes for the padding.  We also set the background to white, and give the bottom a little border.  Setting the list sytle to none removes the bullets.</p>
+    <p>Notice that we add two position properties.  The <c>nav li</c> items are positioned relatively, but we don't change the top or left property.  This is simply in preparation for the next rule  <c>nav ul ul</c> which positions the submenus using absolute measurements.  We can use absolute here because the ul's in question will all be children of li's that have been positioned relatively.  Remember the rule for using absolute position is that the absolute position is relative to the first container that is not statically positioned.  Or else the html tag if no non static tag is found.</p>
+    <listing>
+        <caption>Menu 3</caption>
+    <program xml:id="menu_3" interactive="activecode" language="html" label="program-activecode-html-menu-3" include-source="yes">
+      <input>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;SubMenus&lt;/title&gt;
+&lt;style type='text/css'&gt;
+body {
+    background: #EEE;
+    color: #000;
+}
+
+h1 {
+    color: #AAA;
+    border-bottom: 1px solid;
+    margin-bottom: 0;
+}
+
+main {
+    color: #CCC;
+    margin-left: 7em;
+    padding: 1px 0 1px 5%;
+    border-left: 1px solid;
+}
+
+nav {
+    float: left;
+    width: 7em;
+    background: #FDD;
+}
+
+nav ul {
+     margin: 0;
+     padding: 0;
+     width: 7em;
+     background: white;
+     border: 1px solid;
+}
+
+nav li {
+     position: relative;
+     list-style: none;
+     margin: 0;
+     border-bottom: 1px solid #CCC;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 0;
+    left: 7em;
+    display: block;
+}
+
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Fundamentals of Web Programming&lt;/h1&gt;
+
+&lt;nav&gt;
+&lt;ul &gt;
+ &lt;li&gt;&lt;a href='/'&gt;Home&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href='#'&gt;Syllabus&lt;/a&gt;
+  &lt;ul&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Text Book&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Office Hours&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Grading Policy&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Learning Goals&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href='#'&gt;Resources&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href='#'&gt;Publications&lt;/a&gt;
+  &lt;ul&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Articles&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Tutorials&lt;/a&gt;
+    &lt;ul&gt;
+     &lt;li&gt;&lt;a href='#'&gt;HTML&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href='#'&gt;CSS&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href='#'&gt;SVG&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href='#'&gt;XML&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+   &lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Assignments&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href='#'&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+&lt;p&gt;
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+&lt;/p&gt;
+
+&lt;/main&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+</listing>
+  </subsection>
+  <subsection xml:id="css_step-four">
+    <title>Step Four</title>
+    <p>In this step we add single rule to deal with a small problem.  The problem is that you can only click on a link when the mouse is hovering over a link.  We want to be able to click anywhere in the box containing an a tag.  Changing the display property of the a tag will allow it to fill the enclosing container</p>
+    <program language="css">
+      <input>
+nav li a {
+    display: block;
+    padding: 0.25em 0 0.25em 0.5em;
+    text-decoration: none;
+}
+</input>
+    </program>
+    <listing>
+        <caption>Menu 4</caption>
+    <program xml:id="menu_4" interactive="activecode" language="html" label="program-activecode-html-menu-4" include-source="yes">
+      <input>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;SubMenus&lt;/title&gt;
+&lt;style type='text/css'&gt;
+body {
+    background: #EEE;
+    color: #000;
+}
+
+h1 {
+    color: #AAA;
+    border-bottom: 1px solid;
+    margin-bottom: 0;
+}
+
+main {
+    color: #CCC;
+    margin-left: 7em;
+    padding: 1px 0 1px 5%;
+    border-left: 1px solid;
+}
+
+nav {
+    float: left;
+    width: 7em;
+    background: #FDD;
+}
+
+nav ul {
+     margin: 0;
+     padding: 0;
+     width: 7em;
+     background: white;
+     border: 1px solid;
+}
+
+nav li {
+     position: relative;
+     list-style: none;
+     margin: 0;
+     border-bottom: 1px solid #CCC;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 0;
+    left: 7em;
+    display: block;
+}
+
+nav li a {
+    display: block;
+    padding: 0.25em 0 0.25em 0.5em;
+    text-decoration: none;
+}
+
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Fundamentals of Web Programming&lt;/h1&gt;
+
+&lt;nav&gt;
+&lt;ul class='level1'&gt;
+ &lt;li&gt;&lt;a href='/'&gt;Home&lt;/a&gt;&lt;/li&gt;
+ &lt;li class='submenu'&gt;&lt;a href='#'&gt;Syllabus&lt;/a&gt;
+  &lt;ul class='level2'&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Text Book&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Office Hours&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Grading Policy&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Learning Goals&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href='#'&gt;Resources&lt;/a&gt;&lt;/li&gt;
+ &lt;li class='submenu'&gt;&lt;a href='#'&gt;Publications&lt;/a&gt;
+  &lt;ul class='level2'&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Articles&lt;/a&gt;&lt;/li&gt;
+   &lt;li class='submenu'&gt;&lt;a href='#'&gt;Tutorials&lt;/a&gt;
+    &lt;ul class='level3'&gt;
+     &lt;li&gt;&lt;a href='#'&gt;HTML&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href='#'&gt;CSS&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href='#'&gt;SVG&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href='#'&gt;XML&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+   &lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Assignments&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href='#'&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+&lt;p&gt;
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+&lt;/p&gt;
+
+&lt;/main&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+</listing>
+  </subsection>
+  <subsection xml:id="css_step-five">
+    <title>Step Five</title>
+    <p>Before moving on to the final set of new rules, modify the code above and just change the display property in the <c>nav ul ul</c> rule to none;  When you redisplay our page you will see that this makes all the submenus invisible.  I've made this change to that rule in the next step, but it's good to see how it works all by itself.</p>
+    <p>Finally we will bring everything together, with a few small rules.</p>
+    <p>Let's change the background color when we hover over any list item.</p>
+    <p>Let's also add a background image to indicate that something is a submenu.</p>
+    <p>The last rule makes a submenu visible!  <c>display: block;</c>  But we want to distinguish between the various levels by adding classes to them.  So we need to also modify our html to add classes to the ul's and the li's.</p>
+    <program language="css">
+      <input>
+nav li:hover {
+    background: #EBB;
+}
+
+nav li.submenu {
+    background: url(http://...submenu.gif) 95% 50% no-repeat;
+}
+
+nav li.submenu:hover {
+    background-color: #EDD;
+}
+
+nav ul.level1 li.submenu:hover ul.level2,
+nav ul.level2 li.submenu:hover ul.level3 {
+    display:block;
+}
+</input>
+    </program>
+    <p>The change we need to make is to</p>
+    <listing>
+        <caption>Menu 5</caption>
+    <program xml:id="menu_5" interactive="activecode" language="html" label="program-activecode-html-menu-5" include-source="yes">
+      <input>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;SubMenus&lt;/title&gt;
+&lt;style type='text/css'&gt;
+body {
+    background: #EEEEEE;
+    color: #000000;
+}
+
+h1 {
+    color: #AAA;
+    border-bottom: 1px solid;
+    margin-bottom: 0;
+}
+
+main {
+    color: #CCC;
+    margin-left: 7em;
+    padding: 1px 0 1px 5%;
+    border-left: 1px solid;
+}
+
+nav {
+    float: left;
+    width: 7em;
+    background: #FDD;
+}
+
+nav ul {
+     margin: 0;
+     padding: 0;
+     width: 7em;
+     background: white;
+     border: 1px solid;
+}
+
+nav li {
+     position: relative;
+     list-style: none;
+     margin: 0;
+     border-bottom: 1px solid #CCC;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 0;
+    left: 7em;
+    display: none;
+}
+
+nav li a {
+    display: block;
+    padding: 0.25em 0 0.25em 0.5em;
+    text-decoration: none;
+}
+
+nav li:hover {
+    background: #6F99F2;
+}
+
+nav li.submenu {
+    background: url(https://runestone.academy/ns/books/published/webfundamentals/_static/submenu.gif) 95% 50% no-repeat;
+}
+
+nav li.submenu:hover {
+    background-color: #EDD;
+}
+
+
+
+nav ul.level1 li.submenu:hover ul.level2,
+nav ul.level2 li.submenu:hover ul.level3 {
+    display:block;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Fundamentals of Web Programming&lt;/h1&gt;
+
+&lt;nav&gt;
+&lt;ul class='level1'&gt;
+ &lt;li&gt;&lt;a href='/'&gt;Home&lt;/a&gt;&lt;/li&gt;
+ &lt;li class='submenu'&gt;&lt;a href='#'&gt;Syllabus&lt;/a&gt;
+  &lt;ul class='level2'&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Text Book&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Office Hours&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Grading Policy&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Learning Goals&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href='#'&gt;Resources&lt;/a&gt;&lt;/li&gt;
+ &lt;li class='submenu'&gt;&lt;a href='#'&gt;Publications&lt;/a&gt;
+  &lt;ul class='level2'&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Articles&lt;/a&gt;&lt;/li&gt;
+   &lt;li class='submenu'&gt;&lt;a href='#'&gt;Tutorials&lt;/a&gt;
+    &lt;ul class='level3'&gt;
+     &lt;li&gt;&lt;a href='#'&gt;HTML&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href='#'&gt;CSS&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href='#'&gt;SVG&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href='#'&gt;XML&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+   &lt;/li&gt;
+   &lt;li&gt;&lt;a href='#'&gt;Assignments&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href='#'&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+&lt;p&gt;
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+&lt;/p&gt;
+
+&lt;/main&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+</listing>
+  </subsection>
+</section>

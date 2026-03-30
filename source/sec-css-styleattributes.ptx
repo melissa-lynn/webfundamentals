@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<section xml:id="css_changing-the-style-of-an-html-element">
+  <title>Changing the Style of an HTML Element</title>
+  <p>There are many ways that we can change the style of what we see in the browser.  In this section we will look at examples of the following:</p>
+  <p>
+    <ul>
+      <li>
+        <p>background</p>
+      </li>
+      <li>
+        <p>text</p>
+      </li>
+      <li>
+        <p>font</p>
+      </li>
+    </ul>
+  </p>
+  <p>But before we talk about these, we need to think about colors.  There are three different ways to specify the color.</p>
+  <p>
+    <ul>
+      <li>
+        <p>by name, like blue, red, green.  You can see a complete list of <url href="http://www.w3schools.com/cssref/css_colors.asp" visual="http://www.w3schools.com/cssref/css_colors.asp">color names</url> on the w3schools website.</p>
+      </li>
+      <li>
+        <p>using an RGB value like <c>rgb(255,0,0)</c></p>
+      </li>
+      <li>
+        <p>using a HEX value like <c>#ff0000</c></p>
+      </li>
+    </ul>
+  </p>
+  <p>Using either the RGB or the HEX value gives you total control to specify any of of 16 million different colors.  There is a bit of interesting computer science behind the RGB and HEX values.  The rgb function lets you specify a value between 0 and 255 for each component of red, green, and blue.  By mixing together a certain amount of red, green, and blue you can create <math>255 \cdot 255 \cdot 255</math> different colors, which is slightly more than 16.5 million.  Now where does the number 255 come from?  It is one less than <math>2^8</math>.  Computer scientists like powers of two because when you get deeply into the inner workings of the computer you see that everything is in binary (ones or zeros) which we call bits.  With eight bits we can specify 256 different values or 0 &#x2013; 255.  We call eight bits one byte.</p>
+  <p>Now the HEX specification of the number is directly related to the binary as follows:</p>
+  <table>
+    <tabular>
+      <row header="yes">
+        <cell>
+                            binary
+                        </cell>
+        <cell>
+                            hex
+                        </cell>
+        <cell>
+                            decimal
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            0000
+                        </cell>
+        <cell>
+                            0
+                        </cell>
+        <cell>
+                            0
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            0001
+                        </cell>
+        <cell>
+                            1
+                        </cell>
+        <cell>
+                            1
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            0010
+                        </cell>
+        <cell>
+                            2
+                        </cell>
+        <cell>
+                            2
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            0011
+                        </cell>
+        <cell>
+                            3
+                        </cell>
+        <cell>
+                            3
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            0100
+                        </cell>
+        <cell>
+                            4
+                        </cell>
+        <cell>
+                            4
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            0101
+                        </cell>
+        <cell>
+                            5
+                        </cell>
+        <cell>
+                            5
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            0110
+                        </cell>
+        <cell>
+                            6
+                        </cell>
+        <cell>
+                            6
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            0111
+                        </cell>
+        <cell>
+                            7
+                        </cell>
+        <cell>
+                            7
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            1000
+                        </cell>
+        <cell>
+                            8
+                        </cell>
+        <cell>
+                            8
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            1001
+                        </cell>
+        <cell>
+                            9
+                        </cell>
+        <cell>
+                            9
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            1010
+                        </cell>
+        <cell>
+                            a
+                        </cell>
+        <cell>
+                            10
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            1011
+                        </cell>
+        <cell>
+                            b
+                        </cell>
+        <cell>
+                            11
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            1100
+                        </cell>
+        <cell>
+                            c
+                        </cell>
+        <cell>
+                            12
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            1101
+                        </cell>
+        <cell>
+                            d
+                        </cell>
+        <cell>
+                            13
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            1110
+                        </cell>
+        <cell>
+                            e
+                        </cell>
+        <cell>
+                            14
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            1111
+                        </cell>
+        <cell>
+                            f
+                        </cell>
+        <cell>
+                            15
+                        </cell>
+      </row>
+    </tabular>
+  </table>
+  <p>When specifying a color using the HEX system the first two characters are for the red, the second two for the green, and the last are for the blue.  There are lots of color picking tools that you can use that will let you choose the color you want and then tell you the appropriate hex value.</p>
+  <subsection xml:id="css_background">
+    <title>Background</title>
+    <p>CSS has the following properties which we can use to change the background.</p>
+    <p>
+      <ul>
+        <li>
+          <p>background-color</p>
+        </li>
+        <li>
+          <p>background-image</p>
+        </li>
+        <li>
+          <p>background-repeat</p>
+        </li>
+        <li>
+          <p>background-attachment</p>
+        </li>
+        <li>
+          <p>background-position</p>
+        </li>
+      </ul>
+    </p>
+    <listing>
+    <program xml:id="css_bkgrd_1" interactive="activecode" language="html" label="program-activecode-css-bkgrd_1" include-source="yes">
+      <input>
+&lt;html&gt;
+   &lt;head&gt;
+      &lt;style&gt;
+      h1 {
+         color: blue;
+         font-size: 28pt;
+      }
+      body {
+          background-image: url("http://m.99wallpaper.com/images/7_1306/Black%20Background%20Wood%20-%202560x1600%20by%20Freeman.jpg")
+      }
+      &lt;/style&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      &lt;h1&gt;Hello World!!&lt;/h1&gt;
+      &lt;p&gt;The paragraph text should be unchanged&lt;/p&gt;
+      &lt;h2&gt;I am not blue!&lt;/h2&gt;
+      &lt;h1&gt;Hello Again&lt;/h1&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+  </subsection>
+  <subsection xml:id="css_text">
+    <title>Text</title>
+    <p>
+      <ul>
+        <li>
+          <p>text-color</p>
+        </li>
+        <li>
+          <p>text-align</p>
+        </li>
+        <li>
+          <p>text-decoration</p>
+        </li>
+        <li>
+          <p>text-transformation</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="css_font">
+    <title>Font</title>
+    <p>
+      <ul>
+        <li>
+          <p>font-family</p>
+        </li>
+        <li>
+          <p>font-style</p>
+        </li>
+        <li>
+          <p>font-size</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+</section>

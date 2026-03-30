@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="ch-css" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Chapter Title</title>
+  <title>Cascading Style Sheets</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    Add CSS intro.
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-section-name.ptx" />
+  <xi:include href="sec-css-intro.ptx" />
+  <xi:include href="sec-css-styleattributes.ptx" />
+  <xi:include href="sec-css-morematching.ptx" />
+  <xi:include href="sec-css-cssquiz.ptx" />
+  <xi:include href="sec-css-layoutattributes.ptx" />
+  <xi:include href="sec-css-positionquiz.ptx" />
+  <xi:include href="sec-css-csstricks.ptx" />
+  <xi:include href="sec-css-advancedmatching.ptx" />
+  <xi:include href="sec-css-grids.ptx" />
+  <xi:include href="sec-css-Exercises.ptx" />
 
 </chapter>

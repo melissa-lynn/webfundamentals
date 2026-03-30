@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<section xml:id="css_css-tricks">
+  <title>CSS Tricks</title>
+  <p><term>DRAFT</term>  This chapter is a work in progress.</p>
+  <p>CSS is used for all kinds of special effects that make web pages look good.  In this section we will investigate some
+            of them.</p>
+  <subsection xml:id="css_hover">
+    <title>Hover</title>
+    <listing>
+      <caption>Hover</caption>
+    <program xml:id="hover1" interactive="activecode" language="html" label="program-activecode-css-hover" include-source="yes">
+      <input>
+ &lt;html&gt;
+     &lt;head&gt;
+         &lt;title&gt;Home&lt;/title&gt;
+         &lt;style&gt;
+         header {
+             position: fixed;
+             background-color: #bbbbbb;
+             top: 0px;
+             left: 0px;
+             width: 100%;
+             height: 20px;
+         }
+         nav {
+             margin-top: 20px;
+             margin-bottom: 0px;
+             background-color: green;
+         }
+         nav li {
+            display: inline;
+         }
+
+         nav li:hover {
+            background-color: lightblue;
+         }
+         section {
+             float: left;
+             width: 20%;
+             height: 500px;
+             background-color: blue;
+             color: white;
+         }
+         aside {
+             float: left;
+             width: 80%;
+             height: 500px;
+             background-color: red;
+         }
+         footer {
+             clear: both;
+             background-color: yellow;
+         }
+         body {
+             background-color: black;
+             margin: 0px;
+         }
+         &lt;/style&gt;
+
+     &lt;/head&gt;
+     &lt;body&gt;
+         &lt;header&gt;
+             A header that stays stuck to the top.
+         &lt;/header&gt;
+         &lt;nav&gt;
+             &lt;ul&gt;
+             &lt;li&gt;About&lt;/li&gt;
+             &lt;li&gt;Papers&lt;/li&gt;
+             &lt;li&gt;Donate&lt;/li&gt;
+             &lt;/ul&gt;
+         &lt;/nav&gt;
+         &lt;section&gt;
+             This would be a good place for a table of contents
+         &lt;/section&gt;
+         &lt;aside&gt;
+             This is the main content area
+             &lt;img src="https://runestone.academy/ns/books/published/webfundamentals/_images/img_sem_elements.gif" /&gt;
+         &lt;/aside&gt;
+         &lt;footer&gt;
+             Copyright Area, Contact Us.
+         &lt;/footer&gt;
+     &lt;/body&gt;
+ &lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+    <p>
+      <ul>
+        <li>
+          <p>Add link with a :hover pseudo-class to the example above.</p>
+        </li>
+        <li>
+          <p>Add an <c>h2</c> with the title more info.  Underneath the h2 add  a <c>main</c> container with a paragraph.  The details element should be initially hidden and only appear when you hover the cursor over the h2.  Hint:  the <c>~</c> character allows you to write a selector that matches a sibling.</p>
+        </li>
+      </ul>
+    </p>
+    <p>The details tag is a semantic tag that has some very nice properties similar to our experiment above.</p>
+    <listing>
+      <caption>HTML Details</caption>
+    <program xml:id="html_details" interactive="activecode" language="html" label="program-activecode-css-html_details" include-source="yes">
+      <input>
+&lt;p&gt;The details tag contains a summary tag and the details.  The summary is displayed with a triangle next to it.  The details are initially hidden but then displayed when the triangle is clicked on.&lt;/p&gt;
+
+&lt;details&gt;
+    &lt;summary&gt;Show me More&lt;/summary&gt;
+    &lt;p&gt;This text will only show when the triangle is clicked on&lt;/p&gt;
+&lt;/details&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+  </subsection>
+  <subsection xml:id="css_animation">
+    <title>Animation</title>
+    <p>Using the <c>@keyframes</c> keyword we can create an animation and then apply that animation to other css elements.  Check out the following example
+                that animates the background color.  With keyframes we can specify a starting and and ending condition using
+                <c>from</c> and <c>to</c> or we can specify multiple points along the animation using <c>xx%</c>.</p>
+    <p>Animation should work as shown in all modern browsers.  Safari version 8 and earlier will require the <c>-webkit-</c> prefix to be added.</p>
+    <listing>
+      <caption>Animation</caption>
+    <program xml:id="animation1" interactive="activecode" language="html" label="program-activecode-css-Animation" include-source="yes">
+      <input>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+  @keyframes example {
+         from {background-color: red;}
+         to {background-color: yellow;}
+  }
+
+  div {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      animation-name: example;
+      animation-duration: 4s;
+  }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div&gt;
+&lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+    <p>Experiment with the following:</p>
+    <p>
+      <ul>
+        <li>
+          <p>
+            <c>animation-delay: 2s;</c>
+          </p>
+        </li>
+        <li>
+          <p>
+            <c>animation-iteration-count: infinite;</c>
+          </p>
+        </li>
+        <li>
+          <p>
+            <c>animation-direction: alternate;</c>
+          </p>
+        </li>
+      </ul>
+    </p>
+    <program language="css">
+      <input>
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+</input>
+    </program>
+    <program language="css">
+      <input>
+@keyframes moveit {
+    from {
+        top: 0px;
+        left: 0px;
+    }
+    to {
+        top: 300px;
+        left: 300px;
+    }
+}
+</input>
+    </program>
+    <p>
+      <ul>
+        <li>
+          <p>Add an image to the picture and make it spin infinitely.</p>
+        </li>
+        <li>
+          <p>try creating a scale animation</p>
+        </li>
+        <li>
+          <p>Use <c>animation-fill-mode: forwards;</c> to keep the element at the ending position.</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+</section>
