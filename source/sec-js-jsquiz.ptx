@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<section xml:id="javascript_javascript-quiz">
+  <title>Javascript Quiz</title>
+  <p>For the following question, you may use the textbook or your notes.  You may not google other references.  You have 30 minutes to complete this and you may test it as many times as you need to.</p>
+  <exercises line="11" runestone_options="{'subchapter': 'jsquiz', 'chapter': 'Javascript', 'basecourse': 'webfundamentals', 'optional': '', 'optclass': '', 'divid': 'js1timed', 'qnumber': '', 'question_label': '5.4.1'}" source="/Users/lynn5/WebDevBook/webfundamentals/_sources/Javascript/jsquiz.rst">
+    <exercise label="q3_5">
+      <statement>
+        <p>Q-1: Which of the following are legal?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>document.body.h1</p>
+          </statement>
+          <feedback>
+            <p>What if there are more than one h1?</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>document.h1</p>
+          </statement>
+          <feedback>
+            <p>No, at a minimum the h1 would be inside the body</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>document.body</p>
+          </statement>
+          <feedback>
+            <p>Yes</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>document.body.style</p>
+          </statement>
+          <feedback>
+            <p>Correct</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="q3_3">
+      <statement>
+        <p>Q-2: Given the following Javascript snippet, what will the alert box say?</p>
+        <blockquote>
+          <listing>
+          <program language="html">
+            <input>
+&lt;html&gt;
+&lt;ul&gt;
+   &lt;li id="d"&gt;dragon&lt;/li&gt;
+   &lt;li id="c"&gt;wizard&lt;/li&gt;
+   &lt;li id="b"&gt;castle&lt;/li&gt;
+   &lt;li id="a"&gt;dungeon&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script type="text/javascript"&gt;
+    myLi = document.querySelector('#c')
+    alert(myLi.innerHTML)
+&lt;/script&gt;
+&lt;/html&gt;
+</input>
+          </program>
+        </listing>
+        </blockquote>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>dragon</p>
+          </statement>
+          <feedback>
+            <p>Not far enough</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>wizard</p>
+          </statement>
+          <feedback>
+            <p>Good Job</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>castle</p>
+          </statement>
+          <feedback>
+            <p>Not quite, check the order of the ids</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>dungeon</p>
+          </statement>
+          <feedback>
+            <p>No, check the ids carefully</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="q3_4">
+      <statement>
+        <p>Q-3: Referring to the code in the previous question, what kind of thing is <c>myLi</c> referring to?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>a string</p>
+          </statement>
+          <feedback>
+            <p>No, the innerText attribute is a string</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>the string wizard</p>
+          </statement>
+          <feedback>
+            <p>No, the innerText attribute would be the string wizard</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>an HTML li element in the tree</p>
+          </statement>
+          <feedback>
+            <p>Good job</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>a CSS rule</p>
+          </statement>
+          <feedback>
+            <p>Nope, this has nothing to do with CSS yet.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </exercises>
+  <hint>
+    <p>
+      <ol label="1">
+        <li>
+          <p>Given the following HTML Add a button with a callback function that changes the <c>h1</c> from <q>Hello World</q> to <q>So Long CS130</q>  When you change the message you should also arrange it so the color of the text turns blue.  The rest of your page should remain unchanged.</p>
+        </li>
+      </ol>
+    </p>
+    <listing>
+    <program xml:id="jsquiz_1" interactive="activecode" language="html" label="jsquiz_1">
+      <input>
+&lt;html&gt;
+&lt;body&gt;
+&lt;h1 id="hello"&gt;Hello World&lt;/h1&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+  </hint>
+</section>

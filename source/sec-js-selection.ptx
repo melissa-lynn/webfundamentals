@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<section xml:id="javascript_selection">
+  <title>Selection</title>
+  <p>Selection allows us to ask questions, and take different actions depending on the answers.  We use selection every day as we go about our duties.  If it's cold out we put on some extra clothes.  If it's raining we grab our umbrella before we leave the house.  These are examples of the kinds of decisions we make.  More formally we can put this into an <c>if</c> statement.  <c>if</c> it is raining, <c>then</c> we take our umbrella.</p>
+  <p>Javascript allows us to ask questions like this  using an <c>if</c> statement as well.  An if statement is often used in Javascript to check an input value from
+            a text box to make sure that it is a good value.  For example if colors can only be in the range from 0 to 255 we could check the value of an input box as follows:</p>
+  <listing>
+            <program xml:id="select_1" interactive="activecode" language="html" label="select_1">
+    <input>
+&lt;html&gt;
+   &lt;label for="red"&gt;Red:&lt;/label&gt;
+   &lt;input id="red" type="text" onchange="checkme(this)" /&gt;
+   &lt;label for="green"&gt;Green:&lt;/label&gt;
+   &lt;input id="green" type="text" onchange="checkme(this)" /&gt;
+   &lt;label for="blue"&gt;Blue:&lt;/label&gt;
+   &lt;input id="blue" type="text" onchange="checkme(this)" /&gt;
+
+   &lt;script type="text/javascript"&gt;
+   checkme = function(textbox) {
+      if (textbox.value &gt; 255) {
+         alert("Value is too large, must be less than 256");
+         textbox.value = 255;
+      }
+   }
+   &lt;/script&gt;
+&lt;/html&gt;
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+</listing>
+  <p>In this example we have one function that can check the values for any of our color text input boxes.  Once again we have the interesting issue of how does the checkme function know which text box it is supposed to check?  When we are setting up a call from html we can pass <c>this</c> as a special parameter that refers to the object that the onchange is connected to.</p>
+  <p>If  you want to get a little practice, add another if statement to <c>checkme</c> that ensures the value entered by the user is greater than or equal to zero.</p>
+</section>

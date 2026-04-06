@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<section xml:id="javascript_html-elements-for-interaction">
+  <title>HTML Elements for Interaction</title>
+  <p>Building interactive web pages requires a variety of elements that allow your application to interact with the user.  The HTML5 standard provides us with many different elements from which we can construct an application.</p>
+  <subsection xml:id="javascript_button">
+    <title>Button</title>
+    <listing>
+    <program xml:id="html_button" interactive="activecode" language="html" label="html_button">
+      <input>
+&lt;button&gt;Click Me&lt;/button&gt;
+</input>
+    </program>
+  </listing>
+  </subsection>
+  <subsection xml:id="javascript_the-input-tag">
+    <title>The Input Tag</title>
+    <p>Many of the elements used in constructing a user interface use the <c>input</c> tag.  All of the <c>input</c> elements have a common set of attributes, the most important is the <c>type</c> attribute as that is what determines how the input element will look.</p>
+    <p>
+      <ul>
+        <li>
+          <p>type</p>
+        </li>
+        <li>
+          <p>name</p>
+        </li>
+        <li>
+          <p>id</p>
+        </li>
+        <li>
+          <p>value</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="javascript_text-input">
+    <title>Text Input</title>
+    <listing>
+    <program xml:id="html_text_input" interactive="activecode" language="html" label="html_text_input">
+      <input>
+&lt;input type="text" value="changeme" size="40"&gt;
+</input>
+    </program>
+  </listing>
+  </subsection>
+  <subsection xml:id="javascript_password">
+    <title>Password</title>
+    <listing>
+    <program xml:id="html_password" interactive="activecode" language="html" label="html_password">
+      <input>
+&lt;input type="password" value="secret" size="40"&gt;
+</input>
+    </program>
+  </listing>
+  </subsection>
+  <subsection xml:id="javascript_checkbox">
+    <title>Checkbox</title>
+    <listing>
+    <program xml:id="html_checkbox" interactive="activecode" language="html" label="html_checkbox">
+      <input>
+&lt;input type="checkbox" name="group1" value="audi"&gt;Audi&lt;br /&gt;
+&lt;input type="checkbox" name="group1" value="bmw"&gt;BMW&lt;br /&gt;
+&lt;input type="checkbox" name="group1" value="mercedes"&gt;Mercedes&lt;br /&gt;
+</input>
+    </program>
+  </listing>
+  </subsection>
+  <subsection xml:id="javascript_radio">
+    <title>Radio</title>
+    <listing>
+    <program xml:id="html_radio" interactive="activecode" language="html" label="html_radio">
+      <input>
+&lt;input type="radio" name="group1" value="audi"&gt;Audi&lt;br /&gt;
+&lt;input type="radio" name="group1" value="bmw"&gt;BMW&lt;br /&gt;
+&lt;input type="radio" name="group1" value="mercedes"&gt;Mercedes&lt;br /&gt;
+</input>
+    </program>
+  </listing>
+  </subsection>
+  <subsection xml:id="javascript_color">
+    <title>Color</title>
+    <p>Depending on the browser you are using this will either look like a generic text box or it will appear as a colored block which when you click on it will bring up a color picker.</p>
+    <listing>
+    <program xml:id="html_color" interactive="activecode" language="html" label="html_color">
+      <input>
+&lt;input type="color"&gt;
+</input>
+    </program>
+  </listing>
+  </subsection>
+  <subsection xml:id="javascript_range">
+    <title>Range</title>
+    <listing>
+    <program xml:id="html_range" interactive="activecode" language="html" label="html_range">
+      <input>
+&lt;input type="range" min=0 max=255 value=125&gt;
+</input>
+    </program>
+  </listing>
+  </subsection>
+  <subsection xml:id="javascript_date-stuff">
+    <title>Date Stuff</title>
+    <p>
+      <ul>
+        <li>
+          <p>month</p>
+        </li>
+        <li>
+          <p>datetime-local</p>
+        </li>
+        <li>
+          <p>week</p>
+        </li>
+        <li>
+          <p>time</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="javascript_drop-down-menus">
+    <title>Drop Down Menus</title>
+    <listing>
+    <program xml:id="html_drop_down" interactive="activecode" language="html" label="html_drop_down">
+      <input>
+&lt;select id="priority"&gt;
+    &lt;option&gt;High&lt;/option&gt;
+    &lt;option&gt;Medium&lt;/option&gt;
+    &lt;option&gt;low&lt;/option&gt;
+&lt;/select&gt;
+</input>
+    </program>
+  </listing>
+  </subsection>
+</section>

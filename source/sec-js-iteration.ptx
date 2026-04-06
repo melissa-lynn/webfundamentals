@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<section xml:id="javascript_iteration">
+  <title>Iteration</title>
+  <p>Iteration allows us to do things many times, or to process a <term>collection</term> of elements.  We'll look at collections shortly, for now let us just focus on the
+            basics of iteration.</p>
+  <p>Now this is not very exciting, but suppose we want to build a table that has a row for each number from 0 through 9.</p>
+  <listing>
+  <program xml:id="js_iter1" interactive="activecode" label="js_iter1" language="javascript">
+    <input>
+for(i = 0; i &lt; 10; i++) {
+    writeln("the number is " + i)
+}
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+</listing>
+  <p>Now that was pretty simple, but it illustrates a very important aspect of programming.  The key aspects of the example are:</p>
+  <p>
+    <ol label="1">
+      <li>
+        <p>The for statement,  is the statement that allows us to do things many times.</p>
+      </li>
+      <li>
+        <p>The number of times we do something is controlled by the three statements:
+                    1. <c>i = 0</c> this is our starting value
+                    2. <c>i &lt; 10</c> this is our stopping condition.  We will keep doing whatever is inside the for statement until <c>i &lt; 10</c> is no longer true.
+                    3.  <c>i++</c> this is really important as it changes the value of i and allows us to make progress towards the end.  Without this third component, i would never increase and we would do whatever is inside the loop forever.  This is called an <term>infinite loop</term>.</p>
+      </li>
+    </ol>
+  </p>
+  <p>Now let us look at how we can use the loop to add 10 rows to a table.</p>
+  <listing>
+  <program xml:id="js_iter2" interactive="activecode" label="js_iter2" language="htmlmixed">
+    <input>
+&lt;html&gt;
+&lt;table id="mytable"&gt;&lt;/table&gt;
+&lt;script&gt;
+tbl = document.querySelector("#mytable")
+for(i = 0; i &lt; 10; i++) {
+    row = document.createElement("tr")
+    cell = document.createElement("td")
+    cell.innerText = i
+    row.appendChild(cell)
+    tbl.appendChild(row)
+}
+
+&lt;/script&gt;
+&lt;/html&gt;
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+</listing>
+</section>

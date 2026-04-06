@@ -1,0 +1,82 @@
+<section xml:id="javascript_javascript-project-slot-machine">
+        <title>Javascript Project Slot Machine</title>
+        <image source="cherry.png" width="100px%"/>
+        <image source="seven.png" width="100px%"/>
+        <image source="watermellon.png" width="100px%"/>
+        <image source="bell.png" width="100px%"/>
+        <image source="bar.png" width="100px%"/>
+        <image source="diamond.png" width="100px%"/>
+        <p>Let's go to Vegas.   In this section we are going to create our own video slot machine.  Like all web projects we will start simple and work our way up to a more complicated project.  Ultimately what we build is going to look like the following:</p>
+        <p>Let's start by displaying one of two possible slot machine images, that we will randomly select.</p>
+
+        <listing>
+    <program xml:id="slot_1" interactive="activecode" label="slot_1" language="javascript">
+
+        <input>
+getImage = function() {
+   imgarray = Array("../_images/seven.png", "../_images/watermellon.png",
+   "../_images/cherry.png", "../_images/bell.png",
+   "../_images/diamond.png", "../_images/bar.png");
+
+   rNum = Math.floor(Math.random()*imgarray.length);
+   return imgarray[rNum];
+}
+
+d = document.getElementById("slot_1_js");
+iTag = document.createElement("img");
+iTag.src = getImage();
+d.innerHTML = "";
+d.appendChild(iTag);
+        </input>
+<tests>
+
+
+</tests>
+
+    </program>
+</listing>
+        <p>&lt;div id=<q>slot_1_js</q>&gt;</p>
+        <raw format="html" xml:space="preserve">&lt;div id="slot_1_js"&gt;&lt;/div&gt;</raw>
+        <p>&lt;/div&gt;</p>
+
+        <listing>
+    <program xml:id="slot_2" interactive="activecode" label="slot_2" language="javascript">
+
+        <input>
+count = 0;
+
+getImage = function() {
+   imgarray = Array("../_images/seven.png", "../_images/watermellon.png",
+   "../_images/cherry.png", "../_images/bell.png",
+   "../_images/diamond.png", "../_images/bar.png");
+
+   rNum = Math.floor(Math.random()*imgarray.length);
+   return imgarray[rNum];
+}
+
+swapImage = function() {
+    d = document.getElementById("slot_2_js");
+    iTag = document.createElement("img");
+    iTag.src = getImage();
+    d.innerHTML = "";
+    d.appendChild(iTag);
+    count++;
+    if(count &gt; 50) {
+        window.clearInterval(intId,100);
+    }
+ }
+
+ intId = window.setInterval(swapImage)
+        </input>
+<tests>
+
+
+</tests>
+
+    </program>
+</listing>
+        <p>&lt;div id=<q>slot_2_js</q>&gt;</p>
+        <raw format="html" xml:space="preserve">&lt;div id="slot_2_js"&gt;&lt;/div&gt;</raw>
+        <p>&lt;/div&gt;</p>
+    </section>
+

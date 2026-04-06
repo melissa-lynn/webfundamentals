@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<section xml:id="javascript_creating-elements-on-the-fly">
+  <title>Creating Elements on the Fly</title>
+  <p>The pattern in the previous example is a common one in web development.  You create a template using HTML and then you modify the template in response to events, gaining access to those elements using the <c>querySelector</c> method.</p>
+  <p>Modifying a template only gets us so far.   In many other cases you want to add content to your page dynamically.  For example, let's make a simple time application that records the date and time whenever you press the button.</p>
+  <listing>
+  <program xml:id="create_1" interactive="activecode" language="html" label="create_1">
+    <input>
+&lt;html&gt;
+   &lt;body&gt;
+       &lt;button onclick="savetime()"&gt;Time&lt;/button&gt;
+       &lt;table id="timetable"&gt;
+       &lt;/table&gt;
+       &lt;script type="text/javascript"&gt;
+          savetime = function() {
+             t = document.querySelector("#timetable")
+             trow = document.createElement("tr")
+             td = document.createElement("td")
+             contents = document.createTextNode(Date())
+             td.appendChild(contents)
+             trow.appendChild(td)
+             t.appendChild(trow)
+          }
+       &lt;/script&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+</listing>
+  <p>Although it's not a very useful application, it illustrates how we can create HTML elements in response to events.  Figure 1 shows the  DOM tree before the button is clicked.</p>
+  <figure align="" xml:id="id1-6">
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1, DOM tree before click</caption>
+    <image source="tree1.svg" width="50%"/>
+  </figure>
+  <p><term>Creating an Element</term>  The <c>document.createElement</c> function can be used to create any HTML element.  You can create an h1, a table, a paragraph, an input, even a button.  Once created, the new element is not yet part of our document tree. That is why we need to assign this newly created element a name.  In the example above, we create a <c>tr</c> and call it trow and a <c>td</c> which we name td.  We can assign values to any of the attributes of the element at this point.</p>
+  <p><term>Creating Text</term>  We also used the function <c>document.createTextNode</c> to create the text we are going to put in the table.  We could have also used <c>td.innerHTML</c> to accomplish the same thing, but creating a <c>textNode</c> is another way to do the job.</p>
+  <p><term>Adding to the Tree</term>  Now that we have our new pieces for our page we need to put things back together.  the <c>appendChild</c> function allows us to add to the tree by adding children one at a time.  Figure 2 shows the new DOM tree, and shows the order in which the nodes are connected together.</p>
+  <figure align="" xml:id="id2-1">
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2, DOM tree after click</caption>
+    <image source="tree2.svg" width="50%"/>
+  </figure>
+  <subsection xml:id="javascript_which-button">
+    <title>Which Button?</title>
+    <p>Consider the following code.  We have two buttons, we would like the attach the same function to
+                both buttons, but when we click we would also like our function to know which button was clicked.</p>
+                <listing>
+    <program xml:id="button_context_1" interactive="activecode" language="html" label="button_context_1">
+      <input>
+&lt;html&gt;
+   &lt;body&gt;
+       &lt;button onclick="hello()"&gt;Button1&lt;/button&gt;
+       &lt;button onclick="hello()"&gt;Button2&lt;/button&gt;
+       &lt;script type="text/javascript"&gt;
+          hello = function() {
+              alert("Hello, who am I?");
+          }
+       &lt;/script&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+    <p>How can we modify the example so that it knows which button was clicked?  We can use a parameter.</p>
+    <subsubsection xml:id="javascript_what-is-this">
+      <title>What is <c>this</c>?</title>
+      <p>The parameter we can use in our example above is <c>this</c>, which is a much used variable name in Javascript,
+                    but also quite confusing.  You can think of <c>this</c> as a self-reference.  This answers the <q>who am I?</q> question
+                    for an object.  From HTML we can pass this as a parameter to an onclick function, and because the onclick
+                    is part of the tag <c>this</c> refers to the tag.   Important Note:  In most cases we have said that the
+                    name of a variable does not matter;  <c>this</c> is the exception to that rule!</p>
+      <p>Modify the example above so that in each case you are calling <c>hello(this)</c>.  Now in your javascript change
+                    the alert to <c>alert("Hello I am " + me.innerHTML)</c></p>
+      <p>For comparison, let's create the same page as above but in Javascript.</p>
+      <listing>
+      <program xml:id="button_context_2" interactive="activecode" language="html" label="button_context_2">
+        <input>
+&lt;html&gt;
+   &lt;body&gt;
+       &lt;script type="text/javascript"&gt;
+          var b1 = document.createElement("button");
+          b1.innerHTML = "Button1";
+          var b2 = document.createElement("button");
+          b2.innerHTML = "Button2";
+
+          hello = function() {
+              alert("Hello, who am I?");
+          }
+
+          document.body.appendChild(b1);
+          document.body.appendChild(b2);
+          b1.onclick = hello;
+          b2.onclick = hello;
+       &lt;/script&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+        </input>
+        <tests>
+
+
+</tests>
+      </program>
+    </listing>
+      <p>When we are creating elements in Javascript our task is a bit easier.  Because the <c>this</c> variable
+                    is automatically set for us inside the function based on the object it is attached to.</p>
+    </subsubsection>
+  </subsection>
+  <subsection xml:id="javascript_attaching-events">
+    <title>Attaching Events</title>
+    <p>What if we want to attach an event to one of the objects we have created?  what if we want to use one function but attach it to many different elements, and have our function do something different depending on which element is clicked on?  This is the final topic for this section.  It's a tricky one, so pay close attention.  Let's start by attaching an onclick handler to each row of the table.</p>
+    <listing>
+    <program xml:id="create_2" interactive="activecode" language="html" label="create_2">
+      <input>
+&lt;html&gt;
+   &lt;body&gt;
+       &lt;button onclick="savetime()"&gt;Time&lt;/button&gt;
+       &lt;table id="timetable"&gt;
+       &lt;/table&gt;
+       &lt;script type="text/javascript"&gt;
+          clickon = function() {
+              alert("Hello!");
+          }
+          savetime = function() {
+             t = document.querySelector("#timetable");
+             trow = document.createElement("tr");
+             td = document.createElement("td");
+             contents = document.createTextNode(Date());
+             td.appendChild(contents);
+             td.onclick = clickon;
+             trow.appendChild(td);
+             t.appendChild(trow);
+          }
+       &lt;/script&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+    <p>This example has a new function called clickon, right now, all it does is pop up an alert dialog box that says Hello whenever you click on a row of the table.  The line that attaches this function to the row is <c>td.onclick = clickon;</c>  That is not a typo that line is correct.  clickon is just a name for a function so we can use that name to assign to other attributes.  It is only when the parenthesis are put after the name that we call the function.</p>
+    <note>
+      <title>Key Point</title>
+      <p>When an event handler is called, it's called within the context of the element that was clicked on. So, the identifier <c>this</c> will refer to the DOM element that you clicked on. You can then access attributes of the element using <c>this</c> as the identifier.  For example <c>this.className</c> will give the class of the element you click on.</p>
+    </note>
+    <p>Using the key point from above we can change our clickme function as follows:</p>
+    <listing>
+    <program language="javascript">
+      <input>
+clickon = function() {
+    message = this.innerText;
+    alert("the time is " + message);
+    alert("my parent is a " + this.parentNode.tagName)
+}
+</input>
+    </program>
+  </listing>
+    <p>Modify the code in the example to match the above and then run it.  Notice that when you click on different rows of the table, you get different messages in the alert dialog box.  Notice that it also knows where it lives in the DOM tree, and can get its parent or even its siblings.</p>
+  </subsection>
+</section>

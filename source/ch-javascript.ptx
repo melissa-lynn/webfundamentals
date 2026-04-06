@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-javascript" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>JavaScript</title>
+
+  <introduction>
+    <p>We have made excellent progress toward learning about Web Programming.  You have learned something about two of the three primary web programming languages.  We will continue to explore HTML and CSS in more detail, but it is now time to turn our attention to Javascript.</p>
+  <p>Although we have been calling HTML and CSS programming languages, they do not have nearly the power of Javascript.  Once you learn Javascript you could can write any program that could be written.</p>
+  <p>Javascript is a procedural language.  With HTML and especially CSS the order of things is not always important, but with Javascript, the order that you do things in is very important.  Javascript is also called an <term>object oriented</term> language.  That means that we will be working with objects in our imaginary world of the browser.  Objects can tell us things we want to know, and objects know how to do many things.  We only need to write a javascript program to ask or tell.</p>
+  <p>But, let's not get caught up in a bunch of formal talk about computer science and programming language theory, let's start with a simple example of one of the things that Javascript is good at doing, namely making buttons do interesting things.  For our first program let's make a button that changes the background color of our window.</p>
+  <program xml:id="js_first" interactive="activecode" language="htmlmixed">
+    <input>
+&lt;html&gt;
+   &lt;body&gt;
+      &lt;h1&gt;Hello World!!&lt;/h1&gt;
+      &lt;button onclick="changeThisPageFunc();"&gt;Click Me!&lt;/button&gt;
+      &lt;script type="text/javascript"&gt;
+         changeThisPageFunc = function() {
+            document.body.style.backgroundColor = "lightblue";
+            document.body.innerHTML = "&lt;h1&gt;I am a little blue today&lt;/h1&gt;";
+         }
+      &lt;/script&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+  <p>Now that example may look very complex to you, and in fact it does demonstrate <term>LOTS</term> of important aspects of programming.  But do not worry, we'll dissect this example carefully so that you fully understand what is going on.</p>
+  <p>Here are some questions that we should answer about the example above:</p>
+  <p>
+    <ol label="1">
+      <li>
+        <p>Button?  We haven't talked about a <c>button</c> tag before, whats the deal with that?</p>
+      </li>
+      <li>
+        <p>What is the <c>onclick</c> attribute for?</p>
+      </li>
+      <li>
+        <p>script tag?  Again this is a new one why a <c>script</c> tag?</p>
+      </li>
+      <li>
+        <p>What in the world does all of that stuff inside the script tag mean?</p>
+      </li>
+      <li>
+        <p>What happened to my button!?!</p>
+      </li>
+    </ol>
+  </p>
+  <p>Those are all very good questions, I'm glad you asked.  Let's take them one at a time right now, and then we'll expand upon the ideas in the next few sections.</p>
+  <p>The button tag is part of HTML that is going to allow us to make interactive websites.  In addition to buttons there are other things like check boxes, and text input, that we will talk about in the next section.  For now we will use the button as a simple example, of something we are all used to using every day.</p>
+  <p>The <c>onclick</c> attribute is the way we answer the question, <q>what should this button do when someone clicks on it.</q>  The answer in this case is may lead to confusion, but hopefully you at least get the idea that when the button is clicked we want to <q>change this page</q>.  The way we are going to do this is through a <term>function call</term>. You have used functions in math class many times, and these are not all that different.  The important thing to remember is that functions are <term>abstractions</term> of things that need doing.  We all use abstractions all the time in our everyday life.</p>
+  <p>For example, you may tell your friend, <q>I'm going to Computer Science now.</q> this is an abstraction of the following hypothetical steps:</p>
+  <p>
+    <ol label="1">
+      <li>
+        <p>Get out of bed.</p>
+      </li>
+      <li>
+        <p>Get dressed</p>
+      </li>
+      <li>
+        <p>Walk out of your room, down the hall and wait for the elevator.</p>
+      </li>
+      <li>
+        <p>Take the elevator to the fourth floor.</p>
+      </li>
+      <li>
+        <p>Walk out of the elevator, out of the door, and across campus to Olin hall.</p>
+      </li>
+      <li>
+        <p>Go in the door, and up the stairs to second floor, enter room 202 and find your favorite place to sit.</p>
+      </li>
+    </ol>
+  </p>
+  <p>That would be a long boring conversation if you responded with all 6 of those steps every time a friend asked you what you were doing. But your friend understands those steps are necessary when you say you are going to class.   Further more even step 1 is an abstraction of several smaller steps:  Sit up, remove the covers, slide my legs over the side of the bed, stand up (or climb down the ladder).</p>
+  <p>This brings us to the next question, the <c>script</c> tag is one way that we can include Javascript in our HTML.  But like CSS we will see that we can, and should, also include Javascript by putting it in its own file and including it.  More on that later.</p>
+  <p>The stuff inside the script tag is Javascript code. This code contains a <term>function definition</term> which is how we create our very own abstractions. Unlike your friend to naturally understands what it means to go to class, computers are very dumb, and very literal, they only do what you tell them.  In this case there are two steps to our abstraction.  One changes the background color of the body, and the second one changes our message.  These lines are also abstractions of a very complicated set of steps that we as programmers don't need to know the details of right now.  We just need to know which abstractions the browser understands.</p>
+  <p>Let's defer the question of what happened to the button for just a bit.  In the meantime experiment with the Javascript code by trying the following things:</p>
+  <p>
+    <ol label="1">
+      <li>
+        <p>Make the background light green</p>
+      </li>
+      <li>
+        <p>Experiment with different style elements we have learned about through CSS.  See if you can add a line that makes the text red.</p>
+      </li>
+      <li>
+        <p>Can you change the fontSize to 48pt?</p>
+      </li>
+      <li>
+        <p>What does that tell you about <c>document.body.style</c>?</p>
+      </li>
+      <li>
+        <p>Change the wording inside the <c>&lt;h1&gt;</c> tag in the Javascript.</p>
+      </li>
+      <li>
+        <p>What happens if you add <c>&lt;button&gt;Click Me&lt;/button&gt;</c> after the closing <c>&lt;/h1&gt;</c>?</p>
+      </li>
+    </ol>
+  </p>
+  <p>Let's look at a little different example that accomplishes the same thing, but illustrates how CSS, Javascript, and HTML all work together.
+            In this example rather than setting the color of the background directly, we will make the body have the class attribute <q>myclass</q> when the button is clicked.</p>
+  <p>Now,</p>
+  <program xml:id="js_second" interactive="activecode" language="htmlmixed">
+    <input>
+&lt;html&gt;
+   &lt;head&gt;
+      &lt;style&gt;
+      .myclass {
+         background-color: lightblue;
+      }
+      &lt;/style&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      &lt;h1&gt;Hello World!!&lt;/h1&gt;
+
+      &lt;button onclick="changeThisPageFunc();"&gt;Click Me!&lt;/button&gt;
+      &lt;script type="text/javascript"&gt;
+         changeThisPageFunc = function() {
+            alert("body has class = "+document.body.className);
+            document.body.className = "myclass";
+            alert("body has class = "+document.body.className);
+            document.body.innerHTML = "&lt;h1&gt;I am a little blue today&lt;/h1&gt;";
+         }
+      &lt;/script&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-js-objects.ptx" />
+  <xi:include href="sec-js-forms.ptx" />
+  <xi:include href="sec-js-jsquiz.ptx" />
+  <xi:include href="sec-js-events.ptx" />
+  <xi:include href="sec-js-context.ptx" />
+  <xi:include href="sec-js-iteration.ptx" />
+  <xi:include href="sec-js-selection.ptx" />
+  <xi:include href="sec-js-bandit.ptx" />
+  <xi:include href="sec-js-helpObjects.ptx" />
+  <xi:include href="sec-js-asyncJavascript.ptx" />
+  <xi:include href="sec-js-Exercises.ptx" />
+  <xi:include href="sec-js-finalquiz.ptx" />
+
+</chapter>

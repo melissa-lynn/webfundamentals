@@ -1,0 +1,434 @@
+<?xml version="1.0"?>
+<section xml:id="javascript_javascript-final-quiz">
+  <title>Javascript Final Quiz</title>
+  <p>For the following questions, you may use the textbook or your notes.  You may not google other references.  You have 30 minutes to complete both parts of the quiz.  Make sure that you complete the
+            multiple choice questions first, and click <q>Finish Exam</q> before you go on to do the coding question.</p>
+  <exercises line="12" runestone_options="{'subchapter': 'finalquiz', 'chapter': 'Javascript', 'basecourse': 'webfundamentals', 'optional': '', 'optclass': '', 'divid': 'js2timed', 'qnumber': '', 'question_label': '5.13.1'}" source="/Users/lynn5/WebDevBook/webfundamentals/_sources/Javascript/finalquiz.rst">
+    <exercise label="q4_1">
+      <statement>
+        <p>Q-1: Inside which HTML tag do we put Javascript code?</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>&lt;script&gt;</p>
+          </statement>
+          <feedback>
+            <p>Yes</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;scripting&gt;</p>
+          </statement>
+          <feedback>
+            <p>close</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;style&gt;</p>
+          </statement>
+          <feedback>
+            <p>style is for CSS</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;javascript&gt;</p>
+          </statement>
+          <feedback>
+            <p>no</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="q4_2">
+      <statement>
+        <p>Q-2: Which is the correct statement to change the following: <c>&lt;p id="demo"&gt;This is a demonstration.&lt;/p&gt;</c></p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>#demo.innerHTML = "Hello World!";</p>
+          </statement>
+          <feedback>
+            <p>No, this is an error</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>document.appendChild("p").innerHTML = "Hello World!";</p>
+          </statement>
+          <feedback>
+            <p>No</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>document.getElement("p").innerHTML = "Hello World!";</p>
+          </statement>
+          <feedback>
+            <p>No</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>document.querySelector("#demo").innerHTML = "Hello World!";</p>
+          </statement>
+          <feedback>
+            <p>Yes!</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="q4_3">
+      <statement>
+        <p>Q-3: Which event occurs when the user clicks on an HTML element?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>onchange</p>
+          </statement>
+          <feedback>
+            <p>No, this would work only with input elements</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>onclick</p>
+          </statement>
+          <feedback>
+            <p>Yes</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>onmouseover</p>
+          </statement>
+          <feedback>
+            <p>No, this event does not require a click</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>onmouseclick</p>
+          </statement>
+          <feedback>
+            <p>No, this is not an event</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="q4_4">
+      <statement>
+        <p>Q-4: Which javascript statement correctly creates a new entry for a list?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>document.body.ol.innerHTML = "&lt;li&gt;"</p>
+          </statement>
+          <feedback>
+            <p>No, There is no document.body.ol</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>myLi = "#newli"</p>
+          </statement>
+          <feedback>
+            <p>This just assigns a string to a variable</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>document.createElement("li")</p>
+          </statement>
+          <feedback>
+            <p>Yes</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>myOl.appendChild("li")</p>
+          </statement>
+          <feedback>
+            <p>No, appendChild does not create an element</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="q4_5">
+      <statement>
+        <p>Q-5: An external JavaScript file must contain the <c>&lt;script&gt;</c> tag.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>True</p>
+          </statement>
+          <feedback>
+            <p>No Feedback</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>False</p>
+          </statement>
+          <feedback>
+            <p>No Feedback</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="q4_6">
+      <statement>
+        <p>Q-6: How do you write <q>Hello World</q> in an alert box?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>msg("Hello World");</p>
+          </statement>
+          <feedback>
+            <p>No, there is no msg function</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>console.log("Hello World");</p>
+          </statement>
+          <feedback>
+            <p>This adds a message to the javascript console</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>alertBox("Hello World");</p>
+          </statement>
+          <feedback>
+            <p>There is no alertBox function</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>alert("Hello World");</p>
+          </statement>
+          <feedback>
+            <p>Yes!</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="q4_7">
+      <statement>
+        <p>Q-7: How do you create a function in JavaScript?</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>myFunction = function()</p>
+          </statement>
+          <feedback>
+            <p>Yes</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>myFunction()</p>
+          </statement>
+          <feedback>
+            <p>No, this calls myFunction</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>function:myFunction()</p>
+          </statement>
+          <feedback>
+            <p>No, the : is wrong</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;script&gt;function = {}&lt;/script&gt;</p>
+          </statement>
+          <feedback>
+            <p>No, this is syntactically all wrong</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="q4_8">
+      <statement>
+        <p>Q-8: Which statement correctly adds a tr element named myTr to the DOM tree?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>myTr.addParent(myRow);</p>
+          </statement>
+          <feedback>
+            <p>There is no addParent function</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>document.body.innerHTML = "&lt;tr&gt;&lt;tr&gt;&lt;/tr&gt;&lt;/td&gt;"</p>
+          </statement>
+          <feedback>
+            <p>No, this changes the entire body</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>myRow.appendChild(myTr);</p>
+          </statement>
+          <feedback>
+            <p>Yes</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>myTr.appendChild(myRow);</p>
+          </statement>
+          <feedback>
+            <p>No, you have parent and child backward</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="q4_9">
+      <statement>
+        <p>Q-9: What is the correct syntax for referring to an external script called <q>xxx.js</q>?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>&lt;script name="xxx.js"&gt;</p>
+          </statement>
+          <feedback>
+            <p>No, name is mainly used with input tags</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>&lt;script src="xxx.js"&gt;</p>
+          </statement>
+          <feedback>
+            <p>Yes</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;script href="xxx.js"&gt;</p>
+          </statement>
+          <feedback>
+            <p>href is used with the link tag</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>&lt;link href="xxx.js"&gt;</p>
+          </statement>
+          <feedback>
+            <p>No, link is used for including css</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="q4_10">
+      <statement>
+        <p>Q-10: Given the following HTML source, what is the parent of the element with the selector <q>#a4</q></p>
+        <listing>
+        <program language="html">
+          <input>
+&lt;body&gt;
+&lt;table id="a1"&gt;
+&lt;tr id="a2"&gt;
+   &lt;td id="a3"&gt;Hello&lt;/td&gt;
+   &lt;td id="a4"&gt;&lt;img id="a5" src="hello.jpg"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+</input>
+        </program>
+      </listing>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>a1</p>
+          </statement>
+          <feedback>
+            <p>No, a1 is the grand parent</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>a2</p>
+          </statement>
+          <feedback>
+            <p>Yes</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>a3</p>
+          </statement>
+          <feedback>
+            <p>No, a3 is a sibling</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>a5</p>
+          </statement>
+          <feedback>
+            <p>No, a5 is the child of a4</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </exercises>
+  <subsection xml:id="javascript_programming-question">
+    <title>Programming Question</title>
+    <blockquote>
+      <p>Write a function that <em>each time</em> it is clicked will do the following:</p>
+      <p>
+        <ol label="1">
+          <li>
+            <p>Turn the background of the page light blue.</p>
+          </li>
+          <li>
+            <p>Add another H1 to the page that says <q>So Long 130</q></p>
+          </li>
+          <li>
+            <p>Changes the font color for the H1 to red</p>
+          </li>
+        </ol>
+      </p>
+      <p>By each time, I mean that if the button is clicked 10 times there should be 10 H1's on the page.</p>
+    </blockquote>
+    <listing>
+    <program xml:id="q4_11" interactive="activecode" language="htmlmixed">
+      <input>
+&lt;html&gt;
+&lt;body&gt;
+    &lt;button onclick="finalquiz();"&gt;Click Me&lt;/button&gt;
+    &lt;script type="text/javascript"&gt;
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+  </subsection>
+</section>

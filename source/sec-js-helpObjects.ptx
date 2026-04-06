@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<section xml:id="javascript_helper-objects">
+  <title>Helper Objects</title>
+  <subsection xml:id="javascript_array">
+    <title>Array</title>
+    <p>An Array is used to hold a collection of elements. For example, if we wanted to work with all of the <c>li</c> elements in a list, we would keep track of them all by keeping them in an Array.  An array allows us to work with each element in turn because each element in the array can be accessed by its number.</p>
+    <p>Consider the following list.</p>
+    <raw format="html" xml:space="preserve">&lt;ul&gt;
+   &lt;li&gt;Luther&lt;/li&gt;
+   &lt;li&gt;Coe&lt;/li&gt;
+   &lt;li&gt;Simpson&lt;/li&gt;
+   &lt;li&gt;Central&lt;/li&gt;
+   &lt;li&gt;Wartburg&lt;/li&gt;
+&lt;/ul&gt;</raw>
+    <p>The first thing in our list is Luther: its position in the list is 0.  The second thing on the list is Coe: its position is 1. The last thing on the list (appropriately) is  Wartburg: its position is 4.</p>
+    <p>We can get the elements from the list and put them in an array using the <c>querySelectorAll</c> function.</p>
+    <listing>
+    <program xml:id="helper_array_1" interactive="activecode" language="html" label="helper_array_1">
+      <input>
+&lt;html&gt;
+&lt;body&gt;
+  &lt;ul&gt;
+     &lt;li&gt;Luther&lt;/li&gt;
+     &lt;li&gt;Coe&lt;/li&gt;
+     &lt;li&gt;Simpson&lt;/li&gt;
+     &lt;li&gt;Central&lt;/li&gt;
+     &lt;li&gt;Wartburg&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;script&gt;
+      theList = document.querySelectorAll('li')
+      alert(theList[0].innerText)
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+    <p>We can combine iteration and arrays to work with each element in an array as follows:</p>
+    <listing>
+    <program xml:id="helper_array_2" interactive="activecode" language="html" label="helper_array_2">
+      <input>
+&lt;html&gt;
+&lt;body&gt;
+  &lt;ul&gt;
+     &lt;li&gt;Luther&lt;/li&gt;
+     &lt;li&gt;Coe&lt;/li&gt;
+     &lt;li&gt;Simpson&lt;/li&gt;
+     &lt;li&gt;Central&lt;/li&gt;
+     &lt;li&gt;Wartburg&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;script&gt;
+      theList = document.querySelectorAll('li')
+      for(i=0; i&lt; theList.length; i++) {
+        alert(theList[i].innerText)
+      }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+  </subsection>
+  <subsection xml:id="javascript_string">
+    <title>String</title>
+  </subsection>
+</section>
