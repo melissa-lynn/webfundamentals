@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<section xml:id="flask_redirects-and-errors">
+  <title>Redirects and Errors</title>
+  <p>To redirect a user to another endpoint, use the <c classes="xref py py-func">redirect()</c>
+            function; to abort a request early with an error code, use the
+            <c classes="xref py py-func">abort()</c> function:</p>
+  <pre>from flask import abort, redirect, url_for
+
+@app.route('/')
+def index():
+    return redirect(url_for('login'))
+
+@app.route('/login')
+def login():
+    abort(401)
+    this_is_never_executed()</pre>
+  <p>This is a rather pointless example because a user will be redirected from
+            the index to a page they cannot access (401 means access denied) but it
+            shows how that works.</p>
+  <p>By default a black and white error page is shown for each error code.  If
+            you want to customize the error page, you can use the
+            <c classes="xref py py-meth">errorhandler()</c> decorator:</p>
+  <pre>from flask import render_template
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('page_not_found.html'), 404</pre>
+  <p>Note the <c>404</c> after the <c classes="xref py py-func">render_template()</c> call.  This
+            tells Flask that the status code of that page should be 404 which means
+            not found.  By default 200 is assumed which translates to: all went well.</p>
+  <p>See <inline classes="xref std std-ref">error-handlers</inline> for more details.</p>
+</section>

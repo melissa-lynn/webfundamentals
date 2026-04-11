@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<section xml:id="flask_about-responses-id1">
+  <title>About Responses</title>
+  <p>The return value from a view function is automatically converted into
+            a response object for you. If the return value is a string it's
+            converted into a response object with the string as response body, a
+            <c>200 OK</c> status code and a <literal_emphasis classes="mimetype">text/html</literal_emphasis> mimetype. If the
+            return value is a dict, <c classes="xref py py-func">jsonify()</c> is called to produce a response.
+            The logic that Flask applies to converting return values into response
+            objects is as follows:</p>
+  <p>
+    <ol label="1">
+      <li>
+        <p>If a response object of the correct type is returned it's directly
+                    returned from the view.</p>
+      </li>
+      <li>
+        <p>If it's a string, a response object is created with that data and
+                    the default parameters.</p>
+      </li>
+      <li>
+        <p>If it's a dict, a response object is created using <c>jsonify</c>.</p>
+      </li>
+      <li>
+        <p>If a tuple is returned the items in the tuple can provide extra
+                    information. Such tuples have to be in the form
+                    <c>(response, status)</c>, <c>(response, headers)</c>, or
+                    <c>(response, status, headers)</c>. The <c>status</c> value will override
+                    the status code and <c>headers</c> can be a list or dictionary of
+                    additional header values.</p>
+      </li>
+      <li>
+        <p>If none of that works, Flask will assume the return value is a
+                    valid WSGI application and convert that into a response object.</p>
+      </li>
+    </ol>
+  </p>
+  <p>If you want to get hold of the resulting response object inside the view
+            you can use the <c classes="xref py py-func">make_response()</c> function.</p>
+  <p>Imagine you have a view like this:</p>
+  <pre>from flask import render_template
+
+@app.errorhandler(404)
+def not_found(error):
+    return render_template('error.html'), 404</pre>
+  <p>You just need to wrap the return expression with
+            <c classes="xref py py-func">make_response()</c> and get the response object to modify it, then
+            return it:</p>
+  <pre>from flask import make_response
+
+@app.errorhandler(404)
+def not_found(error):
+    resp = make_response(render_template('error.html'), 404)
+    resp.headers['X-Something'] = 'A value'
+    return resp</pre>
+  <subsection xml:id="flask_apis-with-json">
+    <title>APIs with JSON</title>
+    <p>A common response format when writing an API is JSON. It's easy to get
+                started writing such an API with Flask. If you return a <c>dict</c> from a
+                view, it will be converted to a JSON response.</p>
+    <program language="python">
+      <input>
+@app.route("/me")
+def me_api():
+    user = get_current_user()
+    return {
+        "username": user.username,
+        "theme": user.theme,
+        "image": url_for("user_image", filename=user.image),
+    }
+</input>
+    </program>
+    <p>Depending on your API design, you may want to create JSON responses for
+                types other than <c>dict</c>. In that case, use the
+                <c classes="xref py py-func">jsonify()</c> function, which will serialize any supported
+                JSON data type. Or look into Flask community extensions that support
+                more complex applications.</p>
+    <program language="python">
+      <input>
+from flask import jsonify
+
+@app.route("/users")
+def users_api():
+    users = get_all_users()
+    return jsonify([user.to_json() for user in users])
+</input>
+    </program>
+  </subsection>
+</section>

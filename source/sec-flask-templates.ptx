@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<section xml:id="flask_rendering-templates">
+  <title>Rendering Templates</title>
+  <p>Generating HTML from within Python is not fun, and actually pretty
+            cumbersome because you have to do the HTML escaping on your own to keep
+            the application secure.  Because of that Flask configures the <url href="http://jinja.pocoo.org/" visual="http://jinja.pocoo.org/">Jinja2</url> template engine for you automatically.</p>
+  <p>To render a template you can use the <c classes="xref py py-func">render_template()</c>
+            method.  All you have to do is provide the name of the template and the
+            variables you want to pass to the template engine as keyword arguments.
+            Here's a simple example of how to render a template:</p>
+  <pre>from flask import render_template
+
+@app.route('/hello/')
+@app.route('/hello/&lt;name&gt;')
+def hello(name=None):
+    return render_template('hello.html', name=name)</pre>
+  <p>Flask will look for templates in the <c classes="file" role="file">templates</c> folder.  So if your
+            application is a module, this folder is next to that module, if it's a
+            package it's actually inside your package:</p>
+  <p><term>Case 1</term>: a module:</p>
+  <pre>/application.py
+/templates
+    /hello.html</pre>
+  <p><term>Case 2</term>: a package:</p>
+  <pre>/application
+    /__init__.py
+    /templates
+        /hello.html</pre>
+  <p>For templates you can use the full power of Jinja2 templates.  Head over
+            to the official <url href="http://jinja.pocoo.org/docs/templates/" visual="http://jinja.pocoo.org/docs/templates/">Jinja2 Template Documentation</url> for more information.</p>
+  <p>Here is an example template:</p>
+  <program language="html+jinja">
+    <input>
+&lt;!doctype html&gt;
+&lt;title&gt;Hello from Flask&lt;/title&gt;
+{&#x200E;% if name %}
+  &lt;h1&gt;Hello {&#x200E;{ name }}!&lt;/h1&gt;
+{&#x200E;% else %}
+  &lt;h1&gt;Hello, World!&lt;/h1&gt;
+{&#x200E;% endif %}
+</input>
+  </program>
+  <p>Inside templates you also have access to the <c classes="xref py py-class">request</c>,
+            <c classes="xref py py-class">session</c> and <c classes="xref py py-class">g</c> <footnote_reference auto="1" docname="Flask/templates" xml:id="flask_id1" refid="id2">1</footnote_reference> objects
+            as well as the <c classes="xref py py-func">get_flashed_messages()</c> function.</p>
+  <p>Templates are especially useful if inheritance is used.  If you want to
+            know how that works, head over to the <inline classes="xref std std-ref">template-inheritance</inline> pattern
+            documentation.  Basically template inheritance makes it possible to keep
+            certain elements on each page (like header, navigation and footer).</p>
+  <p>Automatic escaping is enabled, so if <c>name</c> contains HTML it will be escaped
+            automatically.  If you can trust a variable and you know that it will be
+            safe HTML (for example because it came from a module that converts wiki
+            markup to HTML) you can mark it as safe by using the
+            <c classes="xref py py-class">Markup</c> class or by using the <c>|safe</c> filter in the
+            template.  Head over to the Jinja 2 documentation for more examples.</p>
+  <p>Here is a basic introduction to how the <c classes="xref py py-class">Markup</c> class works:</p>
+  <pre>&gt;&gt;&gt; from markupsafe import Markup
+&gt;&gt;&gt; Markup('&lt;strong&gt;Hello %s!&lt;/strong&gt;') % '&lt;blink&gt;hacker&lt;/blink&gt;'
+Markup(u'&lt;strong&gt;Hello &amp;lt;blink&amp;gt;hacker&amp;lt;/blink&amp;gt;!&lt;/strong&gt;')
+&gt;&gt;&gt; Markup.escape('&lt;blink&gt;hacker&lt;/blink&gt;')
+Markup(u'&amp;lt;blink&amp;gt;hacker&amp;lt;/blink&amp;gt;')
+&gt;&gt;&gt; Markup('&lt;em&gt;Marked up&lt;/em&gt; &amp;raquo; HTML').striptags()
+u'Marked up \xbb HTML'</pre>
+  <versionmodified type="versionchanged" version="0.5">
+    <p translatable="False"><inline classes="versionmodified changed">Changed in version 0.5: </inline>Autoescaping is no longer enabled for all templates.  The following
+                extensions for templates trigger autoescaping: <c>.html</c>, <c>.htm</c>,
+                <c>.xml</c>, <c>.xhtml</c>.  Templates loaded from a string will have
+                autoescaping disabled.</p>
+  </versionmodified>
+  <footnote auto="1" backrefs="id1" docname="Flask/templates" xml:id="flask_id2" names="1">
+    <label>1</label>
+    <p>Unsure what that <c classes="xref py py-class">g</c> object is? It's something in which
+                you can store information for your own needs, check the documentation of
+                that object (<c classes="xref py py-class">g</c>) and the <inline classes="xref std std-ref">sqlite3</inline> for more
+                information.</p>
+  </footnote>
+</section>

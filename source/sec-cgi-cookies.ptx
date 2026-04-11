@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<section xml:id="cgi_cookies">
+  <title>Cookies</title>
+  <image source="Double-Stuf-Oreos.jpg" width="400px%"/>
+  <p>HTTP is a stateless protocol.  This means that from one request to the next HTTP does not know anything about the state of the webpage you are looking at.  This is a good thing, from the perspective of scale, but it does provide some challenges as well.  How does the server <q>know</q> your name every time you come back to Google or Amazon?</p>
+  <p>The answer is, of course, cookies.  Early on they were called <q>magic cookies,</q> but lately that has been shortened to just cookies.  A cookie is a small chunk of information (maximum 4096 bytes) that the web <term>browser</term> stores on behalf of the web <term>server.</term>  The information is sent to the server from the browser along with every request.</p>
+  <p>The cookie information is transferred back and forth as part of the header in the request and the response.  The server asks the browser to store some information using a <c>Set-Cookie</c> header, and the browser gives the information back to the server using a <c>cookie</c> header.</p>
+  <p>Here is an example of a Set-Cookie header:</p>
+  <pre>HTTP/1.0 200 OK
+Content-type: text/html
+Set-Cookie: name=value; Expires=Wed, 09 Jun 2021 07:21:14 GMT; Path=/</pre>
+  <p>Besides the name value pair for storing your application data, cookies may have the following attributes:</p>
+  <p>
+    <ul>
+      <li>
+        <p>Expires &#x2013; How long should the browser store this cookie?  By default the cookie will only be stored as long as the browser is open.  When you quit and restart the browser the cookie will be gone.  However you can set a date in the future that will cause the browser to store the cookie until that time.</p>
+      </li>
+      <li>
+        <p>Domain &#x2013; By defualt, the browser should only return the cookie to the domain that issued it.  For example, www.luther.edu  However the server may set luther.edu as the domain so that the cookie will be supplied to any server inside the luther.edu domain.</p>
+      </li>
+      <li>
+        <p>Path &#x2013; By default the path is / such that any URI on the server will get the cookie, but the server may restrict this by setting a path such as /api so that only requests that begin with /api will receive the cookie.</p>
+      </li>
+    </ul>
+  </p>
+  <p>The browser supplies the cookie information back to the server using a header like this:</p>
+  <pre>GET /interactivepython.html HTTP/1.1
+Host: www.luther.edu
+Cookie: name=value; name2=value2
+Accept: */*</pre>
+  <p>Let us make one final modification to our hello world cgi program and store the users name in a cookie.  This will allow us to avoid asking the user their name every time.</p>
+  <p>Our program logic gets just a bit more complicated yet again as now we need to check the <c>QUERY_STRING</c> to see if the name has been supplied there, and we also need to check for the cookie.  Cookie information is supplied to the CGI program through the environment variable <c>HTTP_COOKIE</c>.  The helper functions do not change, but the main logic of our program now looks like this:</p>
+  <program language="python">
+    <input>
+cookies = os.environ['HTTP_COOKIE']
+if not qs:
+    if cookies and 'firstname' in cookies:
+        sendHeaders()
+        cvalues = cookies.split(';')
+        for c in cvalues:
+            if 'firstname' in c:
+                name = c.split('=')[1]
+        sendPage(name)
+    else:
+        sendHeaders()
+        sendForm()
+else:
+    if 'firstname' in qs:
+        name = qs.split('=')[1]
+        headers.append("Set-Cookie: firstname=%s" % name)
+    else:
+        name = 'No Name Provided'
+    sendHeaders()
+    sendPage(name)
+</input>
+  </program>
+</section>

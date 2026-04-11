@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<section xml:id="flask_toward-modern-web-development">
+  <title>Toward Modern Web Development</title>
+  <p>A web framework is a software framework designed to simplify web development. Frameworks exist to save you from having to re-invent the wheel and reduce your workload when you are building a new site.</p>
+  <p>In this chapter we will look at some of the components of a web framework, and introduce some Python packages that implement those components.  Finally, we will introduce the Flask micro-framework which will tie together the individual components into a comprehensive whole.</p>
+  <p>Some of the components we will consider in the coming chapters include:</p>
+  <p>
+    <ul>
+      <li>
+        <p>Template Engines</p>
+      </li>
+      <li>
+        <p>Object Relational Mapping libraries</p>
+      </li>
+      <li>
+        <p>Routing or URL mapping</p>
+      </li>
+      <li>
+        <p>Form creation and processing</p>
+      </li>
+      <li>
+        <p>controllers that do not force you to write a separate Python program for every request.</p>
+      </li>
+      <li>
+        <p>Helper objects for decoding QUERY_STRINGS and managing Cookies and Sessions.</p>
+      </li>
+    </ul>
+  </p>
+  <subsection xml:id="flask_templates">
+    <title>Templates</title>
+    <p>If you have tried even one server side web project, you may already have recognized that there is a certain amount of tedium in developing pages.  First and formost among these are print statements!  Really, I can hear you say, <q>we really have to use print statements for everything when we make a web page?</q>  Although triple quoted strings are certainly one way to reduce some of the tedium, things can get really complicated when you need to concatenate together really big strings that have embedded quotes want to insert values from variables.</p>
+    <p>To solve this problem all web frameworks include a <term>template</term> engine.  Temmplates allow you to create files that are a simple mix of HTML and placeholders.  The template engine fills in the placeholders with values from your application.</p>
+  </subsection>
+  <subsection xml:id="flask_databases">
+    <title>Databases</title>
+    <p>Another big problem that all web frameworks solve is the persistence problem.  It's fine to write applications that have variables, but variables only exist for the life of the program.  Web servers are reliable, but they go down and need to be restarted fairly frequently.  So, there needs to be a way to store and retrieve information from long term storage.  I'm talking about databases here.  The authors of web frameworks realized very early on that web programmers did not want to become database experts in addition to everything else they have they have to know, so web frameworks provide an Object Relational Mapper, that makes it easy to go back and forth between the database and your Python application.</p>
+    <p>There are also an increasing number of non-relational databases that go under the heading of NOSQL databases that are used in web applications.</p>
+  </subsection>
+  <subsection xml:id="flask_forms-processing">
+    <title>Forms Processing</title>
+    <p>Creating forms is tedious in the extreme, and it turns out to be quite easy to automate.  Most frameworks therefore provide an easy way to map database tables or simple Python objects to forms.  When one of these automatically generated forms is submitted, the framework can take care of validating the submitted data as well as storing it in the database.</p>
+    <p>It sounds like there's almost no work left to do!  And that is the point, of frameworks to make it easy to get something minimal up and running very quickly!</p>
+  </subsection>
+  <subsection xml:id="flask_flask">
+    <title>Flask</title>
+    <p>To conclude this introductory section we will look at the Flask framework.  We will take one more lap through the hello world app from the CGI chapter and see how we would write this with a mimum amount of help from the framework.  At the end of all this we'll see how little work it would take to do our full hello world application using all of the components of the framework.</p>
+    <p>But First&#x2026;</p>
+    <note>
+      <title>Installing a Virtual Environment and Flask</title>
+      <p>For your own development purposes it is good to get in the habit of using a virtual environment.  Using Python 3.4 it is really easy.</p>
+      <p>
+        <ol label="1">
+          <li>
+            <p>Make a Folder in your home directory called Environments</p>
+          </li>
+          <li>
+            <p>run the command <c>python3 -m venv ~/Environments/flaskenv</c></p>
+          </li>
+          <li>
+            <p>Now run the command <c>. ~/Environments/flaskenv/bin/activate</c>  This activates the python virtual environment and sets up everything so that you will run a special Python contained in the virtual environment.  Best of all you now have permission to install any third party python packages into your own virtual environment without needing root permission.</p>
+          </li>
+          <li>
+            <p>run <c>pip install flask</c></p>
+          </li>
+        </ol>
+      </p>
+      <p>After installing flask you can verify that everything is good by running <c>pip list</c> you should see the following:</p>
+      <pre>Flask (0.10.1)
+itsdangerous (0.24)
+Jinja2 (2.7.3)
+MarkupSafe (0.23)
+pip (1.5.6)
+setuptools (2.1)
+Werkzeug (0.9.6)</pre>
+    </note>
+  </subsection>
+</section>

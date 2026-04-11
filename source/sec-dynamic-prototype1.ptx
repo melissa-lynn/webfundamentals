@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<section xml:id="dynamic_first-shopping-list-prototype">
+  <title>First Shopping List Prototype</title>
+  <p>Our first prototype looks like this:</p>
+  <image source="prototype1.png" width="50%"/>
+  <p>If you are not familiar with the document object model you may want to review the sections in the Javascript chapter on events and creating elements on the fly.</p>
+  <p>Here is the html for this page:</p>
+  <program language="html">
+    <input>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;!-- https://www.w3schools.com/bootstrap/bootstrap_get_started.asp --&gt;
+        &lt;title&gt;Shopping List Application&lt;/title&gt;
+        &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"&gt;
+        &lt;link rel="stylesheet" href="css/shoppingstyle.css"&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;div class="container"&gt;
+                &lt;nav class="navbar navbar-default"&gt;
+                        &lt;div class="container-fluid"&gt;
+                        &lt;div class="navbar-header"&gt;
+                            &lt;a class="navbar-brand" href="#"&gt;Shopping List&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;ul class="nav navbar-nav"&gt;
+                            &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Page 1&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Page 2&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Page 3&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;/div&gt;
+                    &lt;/nav&gt;
+            &lt;div class="panel panel-default col-md-12"&gt;
+                &lt;div class="panel-body"&gt;
+                &lt;div class="row form-inline"&gt;
+
+                &lt;div class="form-group"&gt;
+                    &lt;label for="itemname"&gt;Item Name&lt;/label&gt;
+                    &lt;input type=text class="form-control" name="itemname" id=itemname /&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                &lt;label for="qty"&gt;Quantity&lt;/label&gt;
+                &lt;select name="quantity" id="qty" class="form-control"&gt;
+                    &lt;option value="1"&gt;1&lt;/option&gt;
+                    &lt;option value="2"&gt;2&lt;/option&gt;
+                    &lt;option value="3"&gt;3&lt;/option&gt;
+                    &lt;option value="4"&gt;4&lt;/option&gt;
+                    &lt;option value="5"&gt;5&lt;/option&gt;
+                    &lt;option value="6"&gt;6&lt;/option&gt;
+                    &lt;option value="7"&gt;7&lt;/option&gt;
+                    &lt;option value="8"&gt;8&lt;/option&gt;
+                    &lt;option value="9"&gt;9&lt;/option&gt;
+                    &lt;option value="10"&gt;10&lt;/option&gt;
+                &lt;/select&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                &lt;label for="priority"&gt;Priority&lt;/label&gt;
+                &lt;select name="priority" id="priority" class="form-control"&gt;
+                    &lt;option value="low"&gt;low&lt;/option&gt;
+                    &lt;option value="medium"&gt;medium&lt;/option&gt;
+                    &lt;option value="high"&gt;high&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="row form-inline" style="margin-top: 20px; margin-bottom: 20px;"&gt;
+                    &lt;div class="form-group"&gt;
+                    &lt;label for="store"&gt;Store Name&lt;/label&gt;
+                    &lt;select name="store" id="store" class="form-control"&gt;
+                    &lt;/select&gt;
+                    &lt;/div&gt;
+                    &lt;div class="form-group"&gt;
+                    &lt;label for="category"&gt;Store Section&lt;/label&gt;
+                    &lt;select name="category" id="category" class="form-control"&gt;
+                    &lt;/select&gt;
+                    &lt;/div&gt;
+                    &lt;div class="form-group"&gt;
+                    &lt;label for="price"&gt;Price&lt;/label&gt;
+                    &lt;input type="text" name="price" id="price" class="form-control"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="form-inline" style="float: right;"&gt;
+                &lt;button onclick="clickedon()" class="btn btn-primary" id=gobutt&gt;Add Item&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-12"&gt;
+            &lt;table class="table table-bordered"&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;&lt;/th&gt;&lt;th&gt;Item&lt;/th&gt;&lt;th&gt;Quantity&lt;/th&gt;&lt;th&gt;Store&lt;/th&gt;&lt;th&gt;Section&lt;/th&gt;&lt;th&gt;Price&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody id="shoppinglist"&gt;&lt;/tbody&gt;
+            &lt;/table&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;
+        &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"&gt;&lt;/script&gt;
+        &lt;script src="js/shopping.js?x=2" type=text/javascript&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</input>
+  </program>
+  <p>A couple of things to note:  First notice that we've created an empty table with a <c>tbody</c> tag with an id of <c>shoppinglist</c> this gives us a place to start building our table.  Also notice that our add item button calls a function <c>clickedon</c> this function is defined in the shopping.js file and will handle creating a new row and appending it to the <c>tbody</c> each time we add an item.</p>
+  <p>Let's look more carefully at the code in shopping.js</p>
+  <program language="javascript">
+    <input>
+var stores = ['Fareway', 'Ace Hardware', 'Caseys', 'The Hatchery', 'Amundsens']
+var sections = ['Produce', 'Meats', 'Cereal', 'Canned Goods', 'Frozen Foods', 'Dairy', 'Liquor', 'Tools', 'Clothing']
+
+function clickedon() {
+    let rowcolids = ['itemname', 'qty', 'store', 'category', 'price']
+    let vals = []
+    for (let cid of rowcolids) {
+        vals.push(document.getElementById(cid).value)
+    }
+    makeRow(vals, document.getElementById('shoppinglist'))
+}
+
+function makeRow(valueList, parent) {
+    let row = document.createElement("tr")
+    row.classList.add(document.getElementById("priority").value)
+    let cb = document.createElement("input")
+    cb.type = "checkbox"
+    cb.classList.add("form-control")
+    row.appendChild(cb)
+
+    for (let val of valueList) {
+        let td = document.createElement("td")
+        td.innerHTML = val
+        row.appendChild(td)
+    }
+    parent.appendChild(row)
+}
+
+function populateSelect(selectId, sList) {
+    let sel = document.getElementById(selectId)
+    for (let s of sList) {
+        let opt = document.createElement("option")
+        opt.value = s
+        opt.innerHTML = s
+        sel.appendChild(opt)
+    }
+}
+
+$(document).ready(function () {
+    populateSelect('store', stores)
+    populateSelect('category', sections)
+})
+</input>
+  </program>
+  <p>There is plenty to think about in this example.  But let's begin with creating the select boxes.  For this bit of functionality I wrote a helper method called populate select.  This function can populate any select box given its id and a Javascript array of values.</p>
+  <program xml:id="select1" interactive="activecode" language="html">
+    <input>
+&lt;select id="myid"&gt;&lt;/select&gt;
+&lt;script type="text/javascript"&gt;
+    function populateSelect(selectId, sList) {
+        let sel = document.getElementById(selectId)
+        for (let s of sList) {
+            let opt = document.createElement("option")
+            opt.value = s
+            opt.innerHTML = s
+            sel.appendChild(opt)
+        }
+    }
+    populateSelect('myid', ['one', 'two', 'three', 'four'])
+&lt;/script&gt;
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+  <p>This is a simple illustration of three highly used functions getElementById, createElement and appendChild.  These methods allow us to have javascript dynamically create tags and add them into our live document object model.</p>
+  <p>Next let's look at the <c>clickedon</c> function.  This function also relies on a helper to make a row and add the row to the table.  it does this by creating an array of values one array entry per table row cell.  then it calls its helper function which sets up the class for coloring the row, makes a checkbox, and appends a bunch of <c>td</c> elements to the new <c>tr</c>.</p>
+  <p>The last few lines of this example show the use of jQuery to call the <c>populateSelect</c> functions after the rest of the page has been loaded and is ready to go.  This is a really common way of ensureing that you don't call Javascript functions that manipulate the DOM until the page is loaded and initially rendered.   Another way that many people do this is by using the <c>onload</c> event for the <c>body</c> tag.  But since we had to load jQuery for bootstrap I wanted to show this as well.  All this says is that when the ready event on the document object fires, call the function that populates the two select boxes.</p>
+  <p>That's it for this prototype. And you may be thinking that we are nearly done, let's just hack out a few more lines to handle the checkbox and we are good to go.  But hang on, we're going to complicate matters in the next couple of sections by diving into some good design patterns that will make getting back to this point a good deal more complicated.</p>
+</section>

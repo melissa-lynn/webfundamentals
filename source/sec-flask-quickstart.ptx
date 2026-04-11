@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<section xml:id="flask_quickstart-id1">
+  <title>Quickstart</title>
+  <p>Eager to get started? This page gives a good introduction to Flask.
+            Follow <inline classes="xref std std-doc">installation</inline> to set up a project and install Flask first.</p>
+  <subsection xml:id="flask_a-minimal-application">
+    <title>A Minimal Application</title>
+    <p>A minimal Flask application looks something like this:</p>
+    <program language="python">
+      <input>
+from flask import Flask
+from markupsafe import escape
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return f"&lt;p&gt;Hello, {escape(name)}!&lt;/p&gt;"
+</input>
+    </program>
+    <p>So what did that code do?</p>
+    <p>
+      <ol label="1">
+        <li>
+          <p>First we imported the <c classes="xref py py-class">Flask</c> class. An instance of
+                        this class will be our WSGI application.</p>
+        </li>
+        <li>
+          <p>Next we create an instance of this class. The first argument is the
+                        name of the application's module or package. <c>__name__</c> is a
+                        convenient shortcut for this that is appropriate for most cases.
+                        This is needed so that Flask knows where to look for resources such
+                        as templates and static files.</p>
+        </li>
+        <li>
+          <p>We then use the <c classes="xref py py-meth">route()</c> decorator to tell Flask
+                        what URL should trigger our function.</p>
+        </li>
+        <li>
+          <p>The function returns the message we want to display in the user's
+                        browser. The default content type is HTML, so HTML in the string
+                        will be rendered by the browser.</p>
+        </li>
+      </ol>
+    </p>
+    <note>
+      <p>HTML escaping</p>
+      <p>When returning HTML (the default response type in Flask), any user
+                    input rendered in the output must be escaped to protect from
+                    injection attacks. HTML templates in Jinja, introduced later, will
+                    do this automatically. <c classes="xref py py-func">escape()</c>, shown above, can
+                    be used manually. It's omitted for brevity in the examples below.</p>
+    </note>
+    <p>Save it as <c classes="file" role="file">hello.py</c> or something similar. Make sure to not call
+                your application <c classes="file" role="file">flask.py</c> because this would conflict with Flask
+                itself.</p>
+    <p>To run the application, use the <literal_strong classes="command">flask</literal_strong> command or
+                <literal_strong classes="command">python -m flask</literal_strong>. Before you can do that you need
+                to tell your terminal the application to work with by exporting the
+                <c>FLASK_APP</c> environment variable:</p>
+    <program language="text">
+      <input>
+$ export FLASK_APP=hello.py
+$ flask run
+ * Running on http://127.0.0.1:5000/
+</input>
+    </program>
+    <p>If you are on Windows, the environment variable syntax depends on command line
+                interpreter. On Command Prompt:</p>
+    <pre>C:\path\to\app&gt;set FLASK_APP=hello.py</pre>
+    <p>And on PowerShell:</p>
+    <pre>PS C:\path\to\app&gt; $env:FLASK_APP = "hello.py"</pre>
+    <p>This launches a very simple builtin server, which is good enough for testing
+                but probably not what you want to use in production. For deployment options see
+                <inline classes="xref std std-ref">deployment</inline>.</p>
+    <p>Now head over to <url href="http://127.0.0.1:5000/" visual="http://127.0.0.1:5000/">http://127.0.0.1:5000/</url>, and you should see your hello
+                world greeting.</p>
+    <note xml:id="flask_public-server">
+      <title>Externally Visible Server</title>
+      <p>If you run the server you will notice that the server is only accessible
+                    from your own computer, not from any other in the network.  This is the
+                    default because in debugging mode a user of the application can execute
+                    arbitrary Python code on your computer.</p>
+      <p>If you have the debugger disabled or trust the users on your network,
+                    you can make the server publicly available simply by adding
+                    <c>--host=0.0.0.0</c> to the command line:</p>
+      <pre>$ flask run --host=0.0.0.0</pre>
+      <p>This tells your operating system to listen on all public IPs.</p>
+    </note>
+  </subsection>
+  <subsection xml:id="flask_what-to-do-if-the-server-does-not-start">
+    <title>What to do if the Server does not Start</title>
+    <p>In case the <literal_strong classes="command">python -m flask</literal_strong> fails or <literal_strong classes="command">flask</literal_strong>
+                does not exist, there are multiple reasons this might be the case.
+                First of all you need to look at the error message.</p>
+    <subsubsection xml:id="flask_old-version-of-flask">
+      <title>Old Version of Flask</title>
+      <p>Versions of Flask older than 0.11 use to have different ways to start the
+                    application.  In short, the <literal_strong classes="command">flask</literal_strong> command did not exist, and
+                    neither did <literal_strong classes="command">python -m flask</literal_strong>.  In that case you have two options:
+                    either upgrade to newer Flask versions or have a look at the <inline classes="xref std std-ref">server</inline>
+                    docs to see the alternative method for running a server.</p>
+    </subsubsection>
+    <subsubsection xml:id="flask_invalid-import-name">
+      <title>Invalid Import Name</title>
+      <p>The <c>FLASK_APP</c> environment variable is the name of the module to import at
+                    <literal_strong classes="command">flask run</literal_strong>. In case that module is incorrectly named you will get an
+                    import error upon start (or if debug is enabled when you navigate to the
+                    application). It will tell you what it tried to import and why it failed.</p>
+      <p>The most common reason is a typo or because you did not actually create an
+                    <c>app</c> object.</p>
+    </subsubsection>
+  </subsection>
+  <subsection xml:id="flask_debug-mode-id2">
+    <title>Debug Mode</title>
+    <p>(Want to just log errors and stack traces? See <inline classes="xref std std-ref">application-errors</inline>)</p>
+    <p>The <literal_strong classes="command">flask</literal_strong> script is nice to start a local development server, but
+                you would have to restart it manually after each change to your code.
+                That is not very nice and Flask can do better.  If you enable debug
+                support the server will reload itself on code changes, and it will also
+                provide you with a helpful debugger if things go wrong.</p>
+    <p>To enable all development features (including debug mode) you can export
+                the <c>FLASK_ENV</c> environment variable and set it to <c>development</c>
+                before running the server:</p>
+    <pre>$ export FLASK_ENV=development
+$ flask run</pre>
+    <p>(On Windows you need to use <c>set</c> instead of <c>export</c>.)</p>
+    <p>This does the following things:</p>
+    <p>
+      <ol label="1">
+        <li>
+          <p>it activates the debugger</p>
+        </li>
+        <li>
+          <p>it activates the automatic reloader</p>
+        </li>
+        <li>
+          <p>it enables the debug mode on the Flask application.</p>
+        </li>
+      </ol>
+    </p>
+    <p>You can also control debug mode separately from the environment by
+                exporting <c>FLASK_DEBUG=1</c>.</p>
+    <p>There are more parameters that are explained in the <inline classes="xref std std-ref">server</inline> docs.</p>
+    <note>
+      <title>Attention</title>
+      <p>Even though the interactive debugger does not work in forking environments
+                    (which makes it nearly impossible to use on production servers), it still
+                    allows the execution of arbitrary code. This makes it a major security risk
+                    and therefore it <term>must never be used on production machines</term>.</p>
+    </note>
+    <p>Screenshot of the debugger in action:</p>
+    <image source="../_static/debugger.png" width="50%" alt="screenshot of debugger in action"/>
+    <p>More information on using the debugger can be found in the <url href="https://werkzeug.palletsprojects.com/debug/#using-the-debugger" visual="https://werkzeug.palletsprojects.com/debug/#using-the-debugger">Werkzeug
+                    documentation</url>.</p>
+    <p>Have another debugger in mind? See <inline classes="xref std std-ref">working-with-debuggers</inline>.</p>
+  </subsection>
+</section>

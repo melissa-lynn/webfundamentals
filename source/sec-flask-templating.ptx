@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<section xml:id="flask_templates-in-depth-templates">
+  <title>Templates in Depth</title>
+  <p>Flask leverages Jinja2 as template engine.  You are obviously free to use
+            a different template engine, but you still have to install Jinja2 to run
+            Flask itself.  This requirement is necessary to enable rich extensions.
+            An extension can depend on Jinja2 being present.</p>
+  <p>This section only gives a very quick introduction into how Jinja2
+            is integrated into Flask.  If you want information on the template
+            engine's syntax itself, head over to the official <url href="http://jinja.pocoo.org/docs/templates/" visual="http://jinja.pocoo.org/docs/templates/">Jinja2 Template
+                Documentation</url> for
+            more information.</p>
+  <subsection xml:id="flask_jinja-setup">
+    <title>Jinja Setup</title>
+    <p>Unless customized, Jinja2 is configured by Flask as follows:</p>
+    <p>
+      <ul>
+        <li>
+          <p>autoescaping is enabled for all templates ending in <c>.html</c>,
+                        <c>.htm</c>, <c>.xml</c> as well as <c>.xhtml</c> when using
+                        <c classes="xref py py-func">render_template()</c>.</p>
+        </li>
+        <li>
+          <p>autoescaping is enabled for all strings when using
+                        <c classes="xref py py-func">render_template_string()</c>.</p>
+        </li>
+        <li>
+          <p>a template has the ability to opt in/out autoescaping with the
+                        <c>{&#x200E;% autoescape %}</c> tag.</p>
+        </li>
+        <li>
+          <p>Flask inserts a couple of global functions and helpers into the
+                        Jinja2 context, additionally to the values that are present by
+                        default.</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="flask_standard-context">
+    <title>Standard Context</title>
+    <p>The following global variables are available within Jinja2 templates
+                by default:</p>
+    <desc classes="py data" desctype="data" domain="py" nocontentsentry="False" noindex="True" noindexentry="False" objtype="data">
+      <desc_signature _toc_name="config" _toc_parts="config" class="" classes="sig sig-object py sig sig-object" fullname="config" module="True">
+        <desc_name classes="sig-name descname sig-name descname" xml:space="preserve">config</desc_name>
+      </desc_signature>
+      <desc_content>
+        <p>The current configuration object (<c classes="xref py py-data">flask.config</c>)</p>
+        <versionmodified type="versionadded" version="0.6">
+          <p translatable="False">
+            <inline classes="versionmodified added">New in version 0.6.</inline>
+          </p>
+        </versionmodified>
+        <versionmodified type="versionchanged" version="0.10">
+          <p translatable="False"><inline classes="versionmodified changed">Changed in version 0.10: </inline>This is now always available, even in imported templates.</p>
+        </versionmodified>
+      </desc_content>
+    </desc>
+    <desc classes="py data" desctype="data" domain="py" nocontentsentry="False" noindex="True" noindexentry="False" objtype="data">
+      <desc_signature _toc_name="request" _toc_parts="request" class="" classes="sig sig-object py sig sig-object" fullname="request" module="True">
+        <desc_name classes="sig-name descname sig-name descname" xml:space="preserve">request</desc_name>
+      </desc_signature>
+      <desc_content>
+        <p>The current request object (<c classes="xref py py-class">flask.request</c>).  This variable is
+                        unavailable if the template was rendered without an active request
+                        context.</p>
+      </desc_content>
+    </desc>
+    <desc classes="py data" desctype="data" domain="py" nocontentsentry="False" noindex="True" noindexentry="False" objtype="data">
+      <desc_signature _toc_name="session" _toc_parts="session" class="" classes="sig sig-object py sig sig-object" fullname="session" module="True">
+        <desc_name classes="sig-name descname sig-name descname" xml:space="preserve">session</desc_name>
+      </desc_signature>
+      <desc_content>
+        <p>The current session object (<c classes="xref py py-class">flask.session</c>).  This variable
+                        is unavailable if the template was rendered without an active request
+                        context.</p>
+      </desc_content>
+    </desc>
+    <desc classes="py data" desctype="data" domain="py" nocontentsentry="False" noindex="True" noindexentry="False" objtype="data">
+      <desc_signature _toc_name="g" _toc_parts="g" class="" classes="sig sig-object py sig sig-object" fullname="g" module="True">
+        <desc_name classes="sig-name descname sig-name descname" xml:space="preserve">g</desc_name>
+      </desc_signature>
+      <desc_content>
+        <p>The request-bound object for global variables (<c classes="xref py py-data">flask.g</c>).  This
+                        variable is unavailable if the template was rendered without an active
+                        request context.</p>
+      </desc_content>
+    </desc>
+    <desc classes="py function" desctype="function" domain="py" nocontentsentry="False" noindex="True" noindexentry="False" objtype="function">
+      <desc_signature _toc_name="url_for()" _toc_parts="url_for" class="" classes="sig sig-object py sig sig-object" fullname="url_for" module="True">
+        <desc_name classes="sig-name descname sig-name descname" xml:space="preserve">url_for</desc_name>
+        <desc_parameterlist xml:space="preserve"/>
+      </desc_signature>
+      <desc_content>
+        <p>The <c classes="xref py py-func">flask.url_for()</c> function.</p>
+      </desc_content>
+    </desc>
+    <desc classes="py function" desctype="function" domain="py" nocontentsentry="False" noindex="True" noindexentry="False" objtype="function">
+      <desc_signature _toc_name="get_flashed_messages()" _toc_parts="get_flashed_messages" class="" classes="sig sig-object py sig sig-object" fullname="get_flashed_messages" module="True">
+        <desc_name classes="sig-name descname sig-name descname" xml:space="preserve">get_flashed_messages</desc_name>
+        <desc_parameterlist xml:space="preserve"/>
+      </desc_signature>
+      <desc_content>
+        <p>The <c classes="xref py py-func">flask.get_flashed_messages()</c> function.</p>
+      </desc_content>
+    </desc>
+    <note>
+      <title>The Jinja Context Behavior</title>
+      <p>These variables are added to the context of variables, they are not
+                    global variables.  The difference is that by default these will not
+                    show up in the context of imported templates.  This is partially caused
+                    by performance considerations, partially to keep things explicit.</p>
+      <p>What does this mean for you?  If you have a macro you want to import,
+                    that needs to access the request object you have two possibilities:</p>
+      <p>
+        <ol label="1">
+          <li>
+            <p>you explicitly pass the request to the macro as parameter, or
+                            the attribute of the request object you are interested in.</p>
+          </li>
+          <li>
+            <p>you import the macro <q>with context</q>.</p>
+          </li>
+        </ol>
+      </p>
+      <p>Importing with context looks like this:</p>
+      <program language="jinja">
+        <input>
+{&#x200E;% from '_helpers.html' import my_macro with context %}
+</input>
+      </program>
+    </note>
+  </subsection>
+  <subsection xml:id="flask_standard-filters">
+    <title>Standard Filters</title>
+    <p>These filters are available in Jinja2 additionally to the filters provided
+                by Jinja2 itself:</p>
+    <desc classes="py function" desctype="function" domain="py" nocontentsentry="False" noindex="True" noindexentry="False" objtype="function">
+      <desc_signature _toc_name="tojson()" _toc_parts="tojson" class="" classes="sig sig-object py sig sig-object" fullname="tojson" module="True">
+        <desc_name classes="sig-name descname sig-name descname" xml:space="preserve">tojson</desc_name>
+        <desc_parameterlist xml:space="preserve"/>
+      </desc_signature>
+      <desc_content>
+        <p>This function converts the given object into JSON representation.  This
+                        is for example very helpful if you try to generate JavaScript on the
+                        fly.</p>
+        <program language="html+jinja">
+          <input>
+&lt;script type=text/javascript&gt;
+    doSomethingWith({&#x200E;{ user.username|tojson }});
+&lt;/script&gt;
+</input>
+        </program>
+        <p>It is also safe to use the output of <title_reference>|tojson</title_reference> in a <em>single-quoted</em> HTML
+                        attribute:</p>
+        <program language="html+jinja">
+          <input>
+&lt;button onclick='doSomethingWith({&#x200E;{ user.username|tojson }})'&gt;
+    Click me
+&lt;/button&gt;
+</input>
+        </program>
+        <p>Note that in versions of Flask prior to 0.10, if using the output of
+                        <c>|tojson</c> inside <c>script</c>, make sure to disable escaping with <c>|safe</c>.
+                        In Flask 0.10 and above, this happens automatically.</p>
+      </desc_content>
+    </desc>
+  </subsection>
+  <subsection xml:id="flask_controlling-autoescaping">
+    <title>Controlling Autoescaping</title>
+    <p>Autoescaping is the concept of automatically escaping special characters
+                for you.  Special characters in the sense of HTML (or XML, and thus XHTML)
+                are <c>&amp;</c>, <c>&gt;</c>, <c>&lt;</c>, <c>"</c> as well as <c>'</c>.  Because these characters
+                carry specific meanings in documents on their own you have to replace them
+                by so called <q>entities</q> if you want to use them for text.  Not doing so
+                would not only cause user frustration by the inability to use these
+                characters in text, but can also lead to security problems.  (see
+                <inline classes="xref std std-ref">xss</inline>)</p>
+    <p>Sometimes however you will need to disable autoescaping in templates.
+                This can be the case if you want to explicitly inject HTML into pages, for
+                example if they come from a system that generates secure HTML like a
+                markdown to HTML converter.</p>
+    <p>There are three ways to accomplish that:</p>
+    <p>
+      <ul>
+        <li>
+          <p>In the Python code, wrap the HTML string in a <c classes="xref py py-class">Markup</c>
+                        object before passing it to the template.  This is in general the
+                        recommended way.</p>
+        </li>
+        <li>
+          <p>Inside the template, use the <c>|safe</c> filter to explicitly mark a
+                        string as safe HTML (<c>{&#x200E;{ myvariable|safe }}</c>)</p>
+        </li>
+        <li>
+          <p>Temporarily disable the autoescape system altogether.</p>
+        </li>
+      </ul>
+    </p>
+    <p>To disable the autoescape system in templates, you can use the <c>{&#x200E;%
+autoescape %}</c> block:</p>
+    <program language="html+jinja">
+      <input>
+{&#x200E;% autoescape false %}
+    &lt;p&gt;autoescaping is disabled here
+    &lt;p&gt;{&#x200E;{ will_not_be_escaped }}
+{&#x200E;% endautoescape %}
+</input>
+    </program>
+    <p>Whenever you do this, please be very cautious about the variables you are
+                using in this block.</p>
+  </subsection>
+  <subsection xml:id="flask_flask_registering-filters-id1">
+    <title>Registering Filters</title>
+    <p>If you want to register your own filters in Jinja2 you have two ways to do
+                that.  You can either put them by hand into the
+                <c classes="xref py py-attr">jinja_env</c> of the application or use the
+                <c classes="xref py py-meth">template_filter()</c> decorator.</p>
+    <p>The two following examples work the same and both reverse an object:</p>
+    <pre>@app.template_filter('reverse')
+def reverse_filter(s):
+    return s[::-1]
+
+def reverse_filter(s):
+    return s[::-1]
+app.jinja_env.filters['reverse'] = reverse_filter</pre>
+    <p>In case of the decorator the argument is optional if you want to use the
+                function name as name of the filter.  Once registered, you can use the filter
+                in your templates in the same way as Jinja2's builtin filters, for example if
+                you have a Python list in context called <title_reference>mylist</title_reference>:</p>
+    <pre>{&#x200E;% for x in mylist | reverse %}
+{&#x200E;% endfor %}</pre>
+  </subsection>
+  <subsection xml:id="flask_context-processors">
+    <title>Context Processors</title>
+    <p>To inject new variables automatically into the context of a template,
+                context processors exist in Flask.  Context processors run before the
+                template is rendered and have the ability to inject new values into the
+                template context.  A context processor is a function that returns a
+                dictionary.  The keys and values of this dictionary are then merged with
+                the template context, for all templates in the app:</p>
+    <pre>@app.context_processor
+def inject_user():
+    return dict(user=g.user)</pre>
+    <p>The context processor above makes a variable called <title_reference>user</title_reference> available in
+                the template with the value of <title_reference>g.user</title_reference>.  This example is not very
+                interesting because <title_reference>g</title_reference> is available in templates anyways, but it gives an
+                idea how this works.</p>
+    <p>Variables are not limited to values; a context processor can also make
+                functions available to templates (since Python allows passing around
+                functions):</p>
+    <pre>@app.context_processor
+def utility_processor():
+    def format_price(amount, currency=u'&#x20AC;'):
+        return u'{0:.2f}{1}'.format(amount, currency)
+    return dict(format_price=format_price)</pre>
+    <p>The context processor above makes the <title_reference>format_price</title_reference> function available to all
+                templates:</p>
+    <pre>{&#x200E;{ format_price(0.33) }}</pre>
+    <p>You could also build <title_reference>format_price</title_reference> as a template filter (see
+                <xref ref="flask_registering-filters"/>), but this demonstrates how to pass functions in a
+                context processor.</p>
+  </subsection>
+</section>

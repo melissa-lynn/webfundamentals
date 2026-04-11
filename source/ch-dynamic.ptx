@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-dynamic" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Dynamic Web Applications</title>
+
+  <introduction>
+    <p> Text before the first section. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-dynamic-dynintro.ptx" />
+  <xi:include href="sec-dynamic-spa.ptx" />
+  <xi:include href="sec-dynamic-prototype1.ptx" />
+  <xi:include href="sec-dynamic-mvc.ptx" />
+  <xi:include href="sec-dynamic-pubsub.ptx" />
+  <xi:include href="sec-dynamic-prototype2.ptx" />
+  <xi:include href="sec-dynamic-localstorage.ptx" />
+  <xi:include href="sec-dynamic-prototype3.ptx" />
+  <xi:include href="sec-dynamic-Exercises.ptx" />
+</chapter>

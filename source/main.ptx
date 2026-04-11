@@ -17,6 +17,11 @@
     <xi:include href="./ch-cloud.ptx" />
     <xi:include href="./ch-css.ptx" />
     <xi:include href="./ch-javascript.ptx" />
+    <xi:include href="./ch-dynamic.ptx" />
+    <xi:include href="./ch-advjs.ptx" />
+    <xi:include href="./ch-apis.ptx" />
+    <xi:include href="./ch-cgi.ptx" />
+    <xi:include href="./ch-flask.ptx" />
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />

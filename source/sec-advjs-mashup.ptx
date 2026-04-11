@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<section xml:id="advanced-javascript_interacting-with-other-services">
+  <title>Interacting with Other Services</title>
+  <introduction>
+  <p>Many websites make their data available for others to use. For example Amazon makes its information about products available, Google allows you to add information to your calendar through your own program, Yelp makes their reviews available, and <url href="https://github.com/toddmotto/public-apis" visual="https://github.com/toddmotto/public-apis">many more!</url> are available for free!  These data sources are often referred to as <term>Web APIs</term>.  Once a Javascript program has the data it is free to display that data in your browser in many different ways, or even to combine it with other data from other sites in what we call a mashup.</p>
+  <p>The key to interacting with other services is to have an efficient way to exchange data.  Using the HTTP protocol this data must be plain text.  One way to think about this is in terms of calling a remote function.  The name of the function is the URI.  But how do you pass parameters to this remote function?  There are two ways that a browser can send data to a server.</p>
+  <p>
+    <ul>
+      <li>
+        <p>As part of the URL known as a <term>QUERY_STRING</term></p>
+      </li>
+      <li>
+        <p>In the <term>body</term> of an HTTP request.</p>
+      </li>
+    </ul>
+  </p>
+</introduction>
+  <subsection xml:id="advanced-javascript_query-string-parameters">
+    <title>Query String Parameters</title>
+    <p>The query string is used to send data from the browser to the server when an HTTP GET request is made.  As the name suggests it is a special string that is appended to the end of the URL.  You have probably seen many query strings while using the web.  Here is an example:</p>
+    <pre>http://example.com/api/getdata?id=1234&amp;date=now&amp;apikey=1234567</pre>
+    <p>In the example above, the query string is everything after the <title_reference>?</title_reference>.  the string is composed of key value pairs separated by the <title_reference>&amp;</title_reference> character.  In the example above we have the following key value pairs</p>
+    <p>
+      <ul>
+        <li>
+          <p>id=1234</p>
+        </li>
+        <li>
+          <p>date=now</p>
+        </li>
+        <li>
+          <p>apikey=1234567</p>
+        </li>
+      </ul>
+    </p>
+    <p>Notice that the syntax is very regular to make it easy for a program to take the string and split it into the key value pairs.  In the early days of web programming the query string was provided to the web application in the form of an environment variable. The program had to split the string into key value pairs on its own.  In modern web frameworks the query string is automatically processed and provided to the program in the form of a dictionary.</p>
+  </subsection>
+    <subsection xml:id="advanced-javascript_check-your-understanding">
+      <title>Check your Understanding</title>
+      <exercise label="qs_ex1">
+        <statement>
+          <p>Write a python function that given a URL like <title_reference>http://example.com/api/getdata?id=1234&amp;date=now&amp;apikey=1234567</title_reference> returns a dictionary containing the correct keys and values.</p>
+        </statement>
+        <program xml:id="qs_ex1_editor" interactive="activecode" language="python">
+          <input>
+def query_string_parser(qs):
+    # your code Here
+        </input>
+          <tests>
+
+
+</tests>
+        </program>
+      </exercise>
+      <exercise label="qs_ex2">
+        <statement>
+          <p>Write a Javascript function that given a URL like <title_reference>http://example.com/api/getdata?id=1234&amp;date=now&amp;apikey=1234567</title_reference> returns a dictionary containing the correct keys and values.</p>
+        </statement>
+        <program xml:id="qs_ex2_editor" interactive="activecode" language="javascript">
+          <input>
+function query_string_parser(qs) {
+    // your code Here
+}
+        </input>
+          <tests>
+
+
+</tests>
+        </program>
+      </exercise>
+  </subsection>
+  <subsection xml:id="advanced-javascript_javascript-object-notation-json">
+    <title>Javascript Object Notation (JSON)</title>
+    <p>What if you want to pass more complicated data to the web api?  What if you have more data to pass to the api than you can do as part of the URL?  In that case you can send the data in the body of the http request.</p>
+    <p>Since we need to adhere to the HTTP protocol any large data or any complex data objec needs to be turned into a string before it can be sent as part of the body.  The process of turning an object from a program into a string is known as <term>serialization</term>.  Web programming uses two main formats to serialize data: XML and JSON.  JSON is highly convenient and is much more widely used today than XML, so we will focus on JSON.</p>
+    <p>Most of what you need to know about JSON is the two primary methods of the JSON object:  <title_reference>stringify</title_reference> and <title_reference>parse</title_reference>.  The <title_reference>stringify</title_reference> method takes a Javascript object and turns it into a string.  The <title_reference>parse</title_reference> method takes a string and turns it into a Javascript object.  There are some important limitations on what can and cannot be stringified.  For example, functions cannot be stringified, dates will be converted into strings, but there is no way to convert them back into Date objects again.</p>
+    <program xml:id="json_ex1" interactive="activecode" language="javascript">
+      <input>
+x = [1, 2, 3.1415, "Hello World"]
+y = {first_name: "Joe", salary: 104000.50 }
+
+sval = JSON.stringify(y)
+writeln(sval)
+sobj = JSON.parse(sval)
+writeln(sobj)
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+    <p>XMLHTTPRequest</p>
+    <p>fetch</p>
+  </subsection>
+</section>
