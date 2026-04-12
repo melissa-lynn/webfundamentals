@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<section xml:id="database_sorting">
+  <title>Sorting</title>
+  <p>So far, we've only looked at rows of data in the order of the query is
+            returning to us. What if we want to see the rows in a certain sorting
+            order? We use the <c>ORDER BY</c> command to sort them by some other
+            criteria.</p>
+  <p>For example, to see the bike trips in the order of the duration in
+            seconds:</p>
+  <program xml:id="sql_bikeshare_sorting_1" interactive="activecode" language="sql">
+    <input>
+SELECT
+  member_type, start_date, duration
+FROM
+  trip_data
+ORDER BY
+  duration
+LIMIT
+  10
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+  <p>Well, it turns out by default the sorting order is <term>ascending</term>. To
+            sort the rows in <term>descending</term> order, add the keyword <c>DESC</c>.</p>
+  <program xml:id="sql_bikeshare_sorting_2" interactive="activecode" language="sql">
+    <input>
+SELECT
+  member_type, start_date, duration
+FROM
+  trip_data
+ORDER BY
+  duration DESC
+LIMIT
+  10
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+  <p>Of course, we can mix <c>WHERE</c> and <c>ORDER BY</c>, to get only the bike
+            trips from Member type of Casual in the order of the duration.</p>
+  <program xml:id="sql_bikeshare_sorting_3" interactive="activecode" language="sql">
+    <input>
+SELECT
+  member_type, start_date, duration
+FROM
+  trip_data
+WHERE
+  member_type = "Casual"
+ORDER BY
+  duration
+LIMIT
+  10
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+  <subsection xml:id="database_practice-exercises">
+    <title>Practice Exercises</title>
+    <hint>
+      <program xml:id="sql_bikeshare_sorting_sol1" interactive="activecode" language="sql">
+        <input>
+SELECT
+duration, start_station, end_station
+FROM
+trip_data
+WHERE
+duration &gt;= 3600
+ORDER BY
+duration DESC
+LIMIT
+40
+        </input>
+        <tests>
+
+
+</tests>
+      </program>
+      <p>
+        <ol label="1">
+          <li>
+            <p>
+              <c>select bike_number, duration from trip_data order by duration desc limit 1;</c>
+            </p>
+          </li>
+          <li>
+            <p>
+              <c>select start_station, duration from trip_data where start_station = end_station order by duration desc limit 1;</c>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </hint>
+    <exercise label="sql_bikeshare_sorting_ex1">
+      <statement>
+        <p>Get the start and end station IDs for bike trips that are longer 60 minutes or longer, in the order of largest number of seconds first and display the top 40 results.</p>
+      </statement>
+      <program xml:id="sql_bikeshare_sorting_ex1_editor" interactive="activecode" language="sql">
+        <input>
+
+
+        </input>
+        <tests>
+assert 39,0 == 84190
+assert 39,2 == 31018
+</tests>
+      </program>
+    </exercise>
+    <exercise label="sql_bikeshare_sorting_ex2">
+      <statement>
+        <p>On which bike was longest bike ride? How many seconds long was that ride?</p>
+      </statement>
+      <program xml:id="sql_bikeshare_sorting_ex2_editor" interactive="activecode" language="sql">
+        <input>
+
+        </input>
+        <tests>
+assert 0,0 == W00379
+assert 0,1 == 86355
+</tests>
+      </program>
+    </exercise>
+    <exercise label="sql_bikeshare_sorting_ex3">
+      <statement>
+        <p>What is the starting station and duration of the longest ride starting and ending at the same station?</p>
+      </statement>
+      <program xml:id="sql_bikeshare_sorting_ex3_editor" interactive="activecode" language="sql">
+        <input>
+
+        </input>
+        <tests>
+assert 0,1 == 86337
+assert 0,0 == 31221
+</tests>
+      </program>
+    </exercise>
+  </subsection>
+</section>

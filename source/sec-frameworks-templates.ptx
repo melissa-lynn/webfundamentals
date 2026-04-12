@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<section xml:id="frameworks_template-engines">
+  <title>Template Engines</title>
+  <p>There are many benefits to using templates.</p>
+  <p>
+    <ul>
+      <li>
+        <p>Separation of the view from the controller and model code.</p>
+      </li>
+      <li>
+        <p>Increased productivity.</p>
+      </li>
+      <li>
+        <p>Ease of creating a site with a unified design.</p>
+      </li>
+      <li>
+        <p>Division of labor.  Designers can now work on template files using html plus a bit more without needing to know how to write Python.</p>
+      </li>
+    </ul>
+  </p>
+  <p>At the simplest level templates are not much different than a Python formatted string.  However they are much more convenient to use, and have many more features that we will explore shortly.  Here is a simple example:</p>
+  <program language="python">
+    <input>
+from jinja2 import Template
+template = Template('Hello {&#x200B;{ name }}!')
+template.render(name='John Doe')
+</input>
+  </program>
+  <p>A slightly more complicated example goes like this:</p>
+  <program language="python">
+    <input>
+from jinja2 import Environment, FileSystemLoader
+env = Environment(loader=FileSystemLoader('/path/to/templates))
+t = env.get_template('foo.html')
+t.render(name='Luther')
+</input>
+  </program>
+  <p>This example shows how we can set up an environment that can be shared among many functions.  This environment takes care of the details behind locating and reading our templates from a file when we want to use them.  The foo.html file could look like this:</p>
+  <program language="html">
+    <input>
+&lt;html&gt;
+    &lt;body&gt;
+    &lt;h1&gt;Hello {&#x200B;{ name }}&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</input>
+  </program>
+  <p>The values inside the double curlies are not limited to being string objects, although they must have an <c>__str__</c> method if they are going to be useful.  Consider an instance of a Student class that has instance variables for firstname, lastname, and gpa.  Let's change our template to look like the following:</p>
+  <program language="html">
+    <input>
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello {&#x200B;{ s.firstname }} {&#x200B;{ s.lastname }}&lt;/h1&gt;
+        &lt;p&gt;Your gpa is {&#x200B;{ s.gpa }}.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</input>
+  </program>
+  <p>Assuming we have a student object called joe we can render the template above with the line:  <c>t.render(s=joe)</c>  This would also work if joe was a dictionary and had keys firstname, lastname, and gpa.  The dot notation works for either attributes or items in a dictionary  (<c>__getattr__</c> or <c>__getitem__</c>) for those of you who like magic method speak.</p>
+  <subsection xml:id="frameworks_loops-in-templates">
+    <title>Loops in Templates</title>
+    <p>Let's suppose you want to make a table in a template.  The ideal would be to pass render a list of things, and have the template turn the list into a table.  (or an unordered list or whatever)  This is easy to do.</p>
+    <program language="html">
+      <input>
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;The first {&#x200B;{ plist|length }} prime numbers&lt;/h1&gt;
+        &lt;table&gt;
+            {&#x200B;% for i in plist: %&#x200B;}
+                &lt;tr&gt;&lt;td&gt;{&#x200B;{ i }}&lt;/td&gt;&lt;/tr&gt;
+            {&#x200B;% endfor %&#x200B;}
+        &lt;/table&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</input>
+    </program>
+    <p>This introduces several interesting new features of templates.</p>
+    <p>
+      <ol label="1">
+        <li>
+          <p>The <c>{&#x200B;% ... %&#x200B;}</c> notation is used to include a non-rendering bit of code in the template.  In this example we introduce a for loop.  Notice that since html does not require you to indent things we need an endfor to delimit the end of the for loop.</p>
+        </li>
+        <li>
+          <p>Jinja2 includes a huge number of filters that you can use on a variable.  The filter <c>plist|length</c> will render as the number of elements in the plist list.</p>
+        </li>
+      </ol>
+    </p>
+  </subsection>
+  <subsection xml:id="frameworks_conditionals-in-templates">
+    <title>Conditionals in Templates</title>
+    <p>In addition to loops you can also have a conditional in a template for example:</p>
+    <program language="html">
+      <input>
+&lt;html&gt;
+    &lt;body&gt;
+        {&#x200B;% if name %&#x200B;}
+        &lt;h1&gt;Hello {&#x200B;{ name }} &lt;/h1&gt;
+        {&#x200B;% else %&#x200B;}
+        &lt;h1&gt;Hello World&lt;/h1&gt;
+        {&#x200B;% endif %&#x200B;}
+    &lt;/body&gt;
+&lt;/html&gt;
+</input>
+    </program>
+  </subsection>
+  <subsection xml:id="frameworks_template-inheritance">
+    <title>Template Inheritance</title>
+    <p>The real power of templates comes when you use template inheritance.  The following scenario is very common:</p>
+    <p>1.  base.html  - This file contains the layout that will be used throughout the site, along with all of the links to css files and includes of javascript.  The base.html file will define a set of blocks that have default content, but can be overridden by other templates.
+                1.  index.html &#x2013;  The landing page, that inherits from base.html and customizes some blocks for the main page.
+                1.  other child pages, will also inherit from base.html annd make their own customizations.</p>
+    <p>For example let's suppose you have a base.html file that looks like this:</p>
+    <program language="html">
+      <input>
+&lt;html&gt;
+&lt;head&gt;
+    {&#x200B;% block head %&#x200B;}
+    &lt;link rel="stylesheet" href="static/style.css" /&gt;
+    &lt;title&gt;{&#x200B;% block title %&#x200B;}{&#x200B;% endblock %&#x200B;} - My Webpage&lt;/title&gt;
+    {&#x200B;% endblock %&#x200B;}
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;main&gt;{&#x200B;% block content %&#x200B;}{&#x200B;% endblock %&#x200B;}&lt;/main&gt;
+    &lt;footer&gt;
+        {&#x200B;% block footer %&#x200B;}
+        Creative Commons 2014 by &lt;a href="http://domain.invalid/"&gt;you&lt;/a&gt;.
+        {&#x200B;% endblock %&#x200B;}
+    &lt;/footer&gt;
+&lt;/body&gt;
+</input>
+    </program>
+    <p>Running this through the Jinja2 renderer gives us this:</p>
+    <program language="html">
+      <input>
+&lt;html&gt;
+&lt;head&gt;
+
+   &lt;link rel="stylesheet" href="static/style.css" /&gt;
+   &lt;title&gt; - My Webpage&lt;/title&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;main&gt;&lt;/main&gt;
+   &lt;footer&gt;
+
+       Creative Commons 2014 by &lt;a href="http://domain.invalid/"&gt;you&lt;/a&gt;.
+
+   &lt;/footer&gt;
+&lt;/body&gt;
+</input>
+    </program>
+    <p>Now let's create a child template that contains a title and some real content.</p>
+    <program language="html">
+      <input>
+.. code-block:: html
+
+   {&#x200B;% block content %&#x200B;}
+   &lt;h1&gt;Tempates are awesome for 10 reasons&lt;/h1&gt;
+   &lt;ol&gt;
+       {&#x200B;% for i in reasons: %&#x200B;}
+       &lt;li&gt;Reason {&#x200B;{ i }}&lt;/li&gt;
+       {&#x200B;% endfor %&#x200B;}
+   &lt;/ol&gt;
+   {&#x200B;% endblock %&#x200B;}
+</input>
+    </program>
+    <p>And render it with <c>render(reasons=[1,2,3,4,5])</c></p>
+    <program language="html">
+      <input>
+&lt;html&gt;
+&lt;head&gt;
+
+   &lt;link rel="stylesheet" href="static/style.css" /&gt;
+   &lt;title&gt;
+Great Title
+ - My Webpage&lt;/title&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;main&gt;
+&lt;h1&gt;Tempates are awesome for 5 reasons&lt;/h1&gt;
+&lt;ol&gt;
+
+    &lt;li&gt;Reason 1&lt;/li&gt;
+
+    &lt;li&gt;Reason 2&lt;/li&gt;
+
+    &lt;li&gt;Reason 3&lt;/li&gt;
+
+    &lt;li&gt;Reason 4&lt;/li&gt;
+
+    &lt;li&gt;Reason 5&lt;/li&gt;
+
+&lt;/ol&gt;
+&lt;/main&gt;
+   &lt;footer&gt;
+
+       Creative Commons 2014 by &lt;a href="http://domain.invalid/"&gt;you&lt;/a&gt;.
+
+   &lt;/footer&gt;
+&lt;/body&gt;
+</input>
+    </program>
+    <p>Notice that the header and footer are intact, however the child has the title <q>Great Title</q>  and the content of the child has been inserted into the content block.</p>
+  </subsection>
+  <subsection xml:id="frameworks_templates-in-flask">
+    <title>Templates in Flask</title>
+    <p>To use Jinja templates in flask is easy.</p>
+    <p>
+      <ol label="1">
+        <li>
+          <p>You need to make a templates subdirectory in your main project directory.</p>
+        </li>
+        <li>
+          <p>Add <c>from flask import render_template</c> to your Python.</p>
+        </li>
+        <li>
+          <p>Then from one of your controller functions, rather than returning a big string, you simple invoke the <c>render_template</c> function:  <c>return render_template('todo.html',todolist=todolist))</c></p>
+        </li>
+      </ol>
+    </p>
+    <p>Remember that in flask our controller functions return an iterable.  The render_template function returns such an interable.  It's just a string, so you can call the render_template function and print the results if you like.</p>
+  </subsection>
+</section>

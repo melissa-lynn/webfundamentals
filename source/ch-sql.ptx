@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-sql" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Introduction to SQL</title>
+
+  <introduction>
+    <p> Text before the first section. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-sql-introduction_to_SQL.ptx" />
+  <xi:include href="sec-sql-filtering_SQL.ptx" />
+  <xi:include href="sec-sql-sorting_SQL.ptx" />
+  <xi:include href="sec-sql-aggregation_SQL.ptx" />
+  <xi:include href="sec-sql-joining_SQL.ptx" />
+  <xi:include href="sec-sql-records.ptx" />
+  <xi:include href="sec-sql-sqlalchemy.ptx" />
+  <xi:include href="sec-sql-Exercises.ptx" />
+
+</chapter>

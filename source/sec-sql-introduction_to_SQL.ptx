@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<section xml:id="database_exploring-bike-rental-data-with-sql">
+  <title>Exploring Bike Rental Data with SQL</title>
+  <figure align="" xml:id="id1">
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">exploits_of_a_mom.png</caption>
+    <image source="https://imgs.xkcd.com/comics/exploits_of_a_mom.png" width="50%" alt="exploits_of_a_mom.png"/>
+  </figure>
+  <p>A lot of the data that we interact with today is stored in databases.
+            For example:</p>
+  <p>
+    <ul>
+      <li>
+        <p>Student records, including grades, at a school</p>
+      </li>
+      <li>
+        <p>Posts and friends in your favorite social network</p>
+      </li>
+      <li>
+        <p>News stories on a newspaper's website</p>
+      </li>
+      <li>
+        <p>Your contacts list on your mobile phone</p>
+      </li>
+      <li>
+        <p>All images that make up Google Maps</p>
+      </li>
+    </ul>
+  </p>
+  <p>All these bits of information are stored in various kinds of databases.
+            Some of these are stored in relational databases that are available as
+            open source tools like Postgresql, MySQL and SQLite, as well as
+            commercial databases such as <url href="https://cloud.google.com/bigquery/" visual="https://cloud.google.com/bigquery/">Google
+                BigQuery</url>,
+            <url href="https://www.oracle.com/database/technologies/" visual="https://www.oracle.com/database/technologies/">Oracle</url>, <url href="https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/" visual="https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/">Microsoft
+                SQL
+                Server</url>,
+            or <url href="https://aws.amazon.com/rds/aurora/" visual="https://aws.amazon.com/rds/aurora/">Amazon Aurora</url></p>
+  <p>Others are stored in proprietary systems like Google's
+            <url href="https://en.wikipedia.org/wiki/Bigtable" visual="https://en.wikipedia.org/wiki/Bigtable">BigTable</url> or Facebook's
+            <url href="https://code.fb.com/core-data/needle-in-a-haystack-efficient-storage-of-billions-of-photos/" visual="https://code.fb.com/core-data/needle-in-a-haystack-efficient-storage-of-billions-of-photos/">Haystack Object
+                Store</url>.</p>
+  <subsection xml:id="database_query-language">
+    <title>Query Language</title>
+    <p>Whatever the database might, there needs to be a way to extract data
+                from it and a lot of these systems have agreed on a shared language for
+                accessing data. For relational database, this language is called SQL
+                (Structured Query Language, pronounced like <q>sequel</q>).</p>
+    <p>Before you stress out about learning a new language, let's take a minute
+                and review the things you have already learned how to do with Pandas.</p>
+    <p>
+      <ul>
+        <li>
+          <p>You can change the shape of a DataFrame by <term>selecting</term> the columns
+                        you want or computing new columns.</p>
+        </li>
+        <li>
+          <p>You can filter a DataFrame by using conditions to <term>select</term> just the
+                        rows you want.</p>
+        </li>
+        <li>
+          <p>You can reorder a DataFrame by <term>sorting</term> on one or more columns.</p>
+        </li>
+        <li>
+          <p>You can <term>group by</term> one or more columns and compute aggregate
+                        summaries of other columns in the group.</p>
+        </li>
+        <li>
+          <p>You can <term>join</term> two dataframes together using the merge function.</p>
+        </li>
+      </ul>
+    </p>
+    <p>The operations just described comprise a basic set of tools that any
+                data manipulation language should support, and SQL supports these
+                operations very well, in a very natural way. You are not going to have
+                to learn any new concepts in this chapter you are just learning some new
+                query syntax that will open up whole new worlds of data access for you.
+                Most businesses run on a relational database of some kind, so it follows
+                that a lot of real world data analysis requires you to get data from
+                one. In this section we will teach you how to get started.</p>
+  </subsection>
+</section>

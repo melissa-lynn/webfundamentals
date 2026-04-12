@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<section xml:id="database_accessing-databases-from-python">
+  <title>Accessing Databases from Python</title>
+  <p>Python has a standard <url href="https://docs.python.org/2/library/sqlite3.html" visual="https://docs.python.org/2/library/sqlite3.html">database API</url> that will work for nearly any relational database, and it is quite easy to use, but not nearly as easy as the <url href="https://www.kennethreitz.org/essays/introducing-records-just-write-sql" visual="https://www.kennethreitz.org/essays/introducing-records-just-write-sql">records</url> package by Kenneth Reitz.</p>
+  <p>
+    <term>Records is a very simple, but powerful, library for making raw SQL queries
+                to most relational databases.</term>
+  </p>
+  <p>Just write SQL. No bells, no whistles. This common task can be
+            surprisingly difficult with the standard tools available.
+            This library strives to make this workflow as simple as possible,
+            while providing an elegant interface to work with your query results.</p>
+  <p>
+    <em>Database support includes RedShift, Postgres, MySQL, SQLite, Oracle, and MS-SQL (drivers not included).</em>
+  </p>
+  <transition/>
+  <subsection xml:id="database_the-basics">
+    <title>The Basics</title>
+    <p>We know how to write SQL, so let's send some to our database:</p>
+    <program language="python">
+      <input>
+import records
+
+db = records.Database('postgres://...')
+rows = db.query('select * from active_users')    # or db.query_file('sqls/active-users.sql')
+</input>
+    </program>
+    <p>Grab one row at a time:</p>
+    <program language="python">
+      <input>
+&gt;&gt;&gt; rows[0]
+&lt;Record {"username": "model-t", "active": true, "name": "Henry Ford", "user_email": "model-t@gmail.com", "timezone": "2016-02-06 22:28:23.894202"}&gt;
+</input>
+    </program>
+    <p>Or iterate over them:</p>
+    <program language="python">
+      <input>
+for r in rows:
+    print(r.name, r.user_email)
+</input>
+    </program>
+    <p>Values can be accessed many ways: <c>row.user_email</c>, <c>row['user_email']</c>, or <c>row[3]</c>.</p>
+    <p>Fields with non-alphanumeric characters (like spaces) are also fully supported.</p>
+    <p>Or store a copy of your record collection for later reference:</p>
+    <program language="python">
+      <input>
+&gt;&gt;&gt; rows.all()
+[&lt;Record {"username": ...}&gt;, &lt;Record {"username": ...}&gt;, &lt;Record {"username": ...}&gt;, ...]
+</input>
+    </program>
+    <p>If you're only expecting one result:</p>
+    <program language="python">
+      <input>
+&gt;&gt;&gt; rows.first()
+&lt;Record {"username": ...}&gt;
+</input>
+    </program>
+    <p>Other options include <c>rows.as_dict()</c> and <c>rows.as_dict(ordered=True)</c>.</p>
+  </subsection>
+</section>

@@ -258,7 +258,7 @@ def utility_processor():
                 templates:</p>
     <pre>{&#x200E;{ format_price(0.33) }}</pre>
     <p>You could also build <title_reference>format_price</title_reference> as a template filter (see
-                <xref ref="flask_registering-filters"/>), but this demonstrates how to pass functions in a
+                <xref ref="flask_flask_registering-filters-id1"/>), but this demonstrates how to pass functions in a
                 context processor.</p>
   </subsection>
 </section>

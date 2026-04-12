@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<section xml:id="database_filtering">
+  <title>Filtering</title>
+  <p>We've seen how to look only at certain columns of the table but it is
+            often useful to only look at certain rows in a table. For example, we
+            could want to look only at the bike trips which are at least a certain
+            number of minutes. Let's say you're only interested in bike trips of 60
+            minutes or more:</p>
+  <program xml:id="sql_bikeshare_filter_1" interactive="activecode" language="sql">
+    <input>
+SELECT
+  member_type, start_date, duration
+FROM
+  trip_data
+WHERE
+  duration &gt;= 3600
+LIMIT
+  10
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+  <p>It's also possible to filter by multiple criteria. For example to look
+            at only bike trips which are 60 minutes or more and only the subscriber
+            type of Member:</p>
+  <program xml:id="sql_bikeshare_filter_2" interactive="activecode" language="sql">
+    <input>
+SELECT
+  member_type, start_date, duration
+FROM
+  trip_data
+WHERE
+  duration &gt;= 3600
+AND
+  member_type = "Member"
+LIMIT
+  10
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+  <subsection xml:id="database_practice-exercises-3">
+    <title>Practice Exercises</title>
+    <hint>
+      <program xml:id="sql_bikeshare_filter_sol1" interactive="activecode" language="sql">
+        <input>
+select * from trip_data where bike_number = 'W01274' and duration &lt; 900
+        </input>
+        <tests>
+
+
+</tests>
+      </program>
+      <p>Question 2</p>
+      <program language="sql">
+        <input>
+select end_station, duration
+from trip_data
+where start_station = 31111 and duration &gt; 8 * 60 * 60
+</input>
+      </program>
+      <p>Question 3</p>
+      <program language="sql">
+        <input>
+select count(*)
+from trip_data
+where start_station = 31111 and duration &gt; 8 * 60 * 60 and  end_station = 31111
+</input>
+      </program>
+    </hint>
+    <exercise label="sql_bikeshare_filter_ex1">
+      <statement>
+        <p>Figure out how to get all the trips on the bike with id of <c>W01274</c>
+                and only include rides which are shorter than 15 minutes.</p>
+      </statement>
+      <program xml:id="sql_bikeshare_filter_ex1_editor" interactive="activecode" language="sql">
+        <input>
+
+        </input>
+        <tests>
+assert 0,1 == 828
+assert 1,1 == 594
+assert 12,1 == 669
+</tests>
+      </program>
+    </exercise>
+    <exercise label="sql_bikeshare_filter_ex2">
+      <statement>
+        <p>Get the ending station and the duration of all of the bike trips originating at station <c>31111</c> that lasted 8 hours or more.</p>
+      </statement>
+      <program xml:id="sql_bikeshare_filter_ex2_editor" interactive="activecode" language="sql">
+        <input>
+
+
+        </input>
+        <tests>
+assert 20,0 == 31100
+assert 20,1 == 40733
+assert 0,0 == 31202
+assert 0,1 == 45722
+</tests>
+      </program>
+    </exercise>
+    <exercise label="sql_bikeshare_filter_ex3">
+      <statement>
+        <p>How many trips longer than 8 hours started and ended and station 31111 by casual riders?</p>
+      </statement>
+      <program xml:id="sql_bikeshare_filter_ex3_editor" interactive="activecode" language="sql">
+        <input>
+
+        </input>
+        <tests>
+assert 0,0 == 4
+</tests>
+      </program>
+    </exercise>
+  </subsection>
+</section>

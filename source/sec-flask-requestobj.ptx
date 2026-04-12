@@ -129,7 +129,7 @@ def upload_file():
                 <c classes="xref py py-attr">cookies</c> attribute of request objects is a
                 dictionary with all the cookies the client transmits.  If you want to use
                 sessions, do not use the cookies directly but instead use the
-                <xref ref="flask_sessions"/> in Flask that add some security on top of cookies for you.</p>
+                <xref ref="flask_sessions-id1"/> in Flask that add some security on top of cookies for you.</p>
     <p>Reading cookies:</p>
     <pre>from flask import request
 
@@ -153,6 +153,6 @@ def index():
     <p>Sometimes you might want to set a cookie at a point where the response
                 object does not exist yet.  This is possible by utilizing the
                 <inline classes="xref std std-ref">deferred-callbacks</inline> pattern.</p>
-    <p>For this also see <xref ref="flask_responses"/>.</p>
+    <p>For this also see <xref ref="flask_about-responses-id1"/>.</p>
   </subsection>
 </section>

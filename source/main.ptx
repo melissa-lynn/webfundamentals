@@ -22,6 +22,8 @@
     <xi:include href="./ch-apis.ptx" />
     <xi:include href="./ch-cgi.ptx" />
     <xi:include href="./ch-flask.ptx" />
+    <xi:include href="./ch-sql.ptx" />
+    <xi:include href="./ch-frameworks.ptx" />
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />

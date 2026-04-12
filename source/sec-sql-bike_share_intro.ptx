@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<section xml:id="database_predicting-bike-rentals">
+  <title>Predicting Bike Rentals</title>
+  <p>The data we will use in this chapter is used with the permission of Capital
+            Bikeshare. You can download the data from
+            <url href="https://www.capitalbikeshare.com/system-data" visual="https://www.capitalbikeshare.com/system-data">their website</url>. We are using a
+            prepared version of this data that has already been augmented with additional
+            weather data which you can download from the
+            <url href="https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset#" visual="https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset#">UCI Machine Learning Repository</url>.</p>
+  <p>Predicting bike rental trends is very important from both an operational and
+            planning perspective. Bikeshare companies need to stay up to date on rental
+            trends to know where they should add new facilities, and how to reposition bikes
+            to get them to the locations with the highest demand. They do not want to wait
+            until all of the bikes are rented at a particular location before moving
+            additional bikes into position, as that is lost revenue for them.</p>
+  <p>Both <c>hour.csv</c> and <c>day.csv</c> have the following fields (with the exception
+            of <c>hr</c> which is not available in <c>day.csv</c>).</p>
+  <p>
+    <ul>
+      <li>
+        <p><c>instant</c>: record index</p>
+      </li>
+      <li>
+        <p><c>dteday</c>: date</p>
+      </li>
+      <li>
+        <p><c>season</c>: season (1:spring, 2:summer, 3:fall, 4:winter)</p>
+      </li>
+      <li>
+        <p><c>yr</c>: year (0: 2011, 1:2012)</p>
+      </li>
+      <li>
+        <p><c>mnth</c>: month (1 to 12)</p>
+      </li>
+      <li>
+        <p><c>hr</c>: hour (0 to 23)</p>
+      </li>
+      <li>
+        <p><c>holiday</c>: whether day is holiday or not</p>
+      </li>
+      <li>
+        <p><c>weekday</c>: day of the week</p>
+      </li>
+      <li>
+        <p><c>workingday</c>: 0 if day is either weekend nor holiday is 1, otherwise 1</p>
+      </li>
+      <li>
+        <p><c>weathersit</c>:</p>
+        <p>
+          <ul>
+            <li>
+              <p>1: Clear, Few clouds, Partly cloudy, Partly cloudy</p>
+            </li>
+            <li>
+              <p>2: Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist</p>
+            </li>
+            <li>
+              <p>3: Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain +
+                            Scattered clouds</p>
+            </li>
+            <li>
+              <p>4: Heavy Rain + Ice Pellets + Thunderstorm + Mist, Snow + Fog</p>
+            </li>
+          </ul>
+        </p>
+      </li>
+      <li>
+        <p><c>temp</c>: Normalized temperature in Celsius</p>
+      </li>
+      <li>
+        <p><c>atemp</c>: Normalized feeling temperature in Celsius</p>
+      </li>
+      <li>
+        <p><c>hum</c>: Normalized humidity</p>
+      </li>
+      <li>
+        <p><c>windspeed</c>: Normalized wind speed</p>
+      </li>
+      <li>
+        <p><c>casual</c>: count of casual users</p>
+      </li>
+      <li>
+        <p><c>registered</c>: count of registered users</p>
+      </li>
+      <li>
+        <p><c>cnt</c>: count of total rental bikes including both casual and registered</p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    <title_reference>You can read about UCI's work with this data set here. &lt;https://link.springer.com/article/10.1007/s13748-013-0040-3&gt;</title_reference>
+  </p>
+</section>

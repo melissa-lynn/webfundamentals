@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<section xml:id="database_records-sql-for-humans">
+  <title>Records: SQL for Humans&#x2122;</title>
+  <url href="https://pypi.python.org/pypi/records" visual="https://pypi.python.org/pypi/records">
+    <image source="https://img.shields.io/pypi/v/records.svg" width="50%"/>
+  </url>
+  <url href="https://travis-ci.org/kennethreitz/records" visual="https://travis-ci.org/kennethreitz/records">
+    <image source="https://travis-ci.org/kennethreitz/records.svg?branch=master" width="50%"/>
+  </url>
+  <url href="https://saythanks.io/to/kennethreitz" visual="https://saythanks.io/to/kennethreitz">
+    <image source="https://img.shields.io/badge/SayThanks.io-&#x263C;-1EAEDB.svg" width="50%"/>
+  </url>
+  <p>
+    <term>Records is a very simple, but powerful, library for making raw SQL queries
+                to most relational databases.</term>
+  </p>
+  <image source="https://farm1.staticflickr.com/569/33085227621_7e8da49b90_k_d.jpg" width="50%"/>
+  <p>Just write SQL. No bells, no whistles. This common task can be
+            surprisingly difficult with the standard tools available.
+            This library strives to make this workflow as simple as possible,
+            while providing an elegant interface to work with your query results.</p>
+  <p>
+    <em>Database support includes RedShift, Postgres, MySQL, SQLite, Oracle, and MS-SQL (drivers not included).</em>
+  </p>
+  <transition/>
+  <subsection xml:id="database_the-basics-1">
+    <title>&#x2624; The Basics</title>
+    <p>We know how to write SQL, so let's send some to our database:</p>
+    <program language="python">
+      <input>
+import records
+
+db = records.Database('postgres://...')
+rows = db.query('select * from active_users')    # or db.query_file('sqls/active-users.sql')
+</input>
+    </program>
+    <p>Grab one row at a time:</p>
+    <program language="python">
+      <input>
+&gt;&gt;&gt; rows[0]
+&lt;Record {"username": "model-t", "active": true, "name": "Henry Ford", "user_email": "model-t@gmail.com", "timezone": "2016-02-06 22:28:23.894202"}&gt;
+</input>
+    </program>
+    <p>Or iterate over them:</p>
+    <program language="python">
+      <input>
+for r in rows:
+    print(r.name, r.user_email)
+</input>
+    </program>
+    <p>Values can be accessed many ways: <c>row.user_email</c>, <c>row['user_email']</c>, or <c>row[3]</c>.</p>
+    <p>Fields with non-alphanumeric characters (like spaces) are also fully supported.</p>
+    <p>Or store a copy of your record collection for later reference:</p>
+    <program language="python">
+      <input>
+&gt;&gt;&gt; rows.all()
+[&lt;Record {"username": ...}&gt;, &lt;Record {"username": ...}&gt;, &lt;Record {"username": ...}&gt;, ...]
+</input>
+    </program>
+    <p>If you're only expecting one result:</p>
+    <program language="python">
+      <input>
+&gt;&gt;&gt; rows.first()
+&lt;Record {"username": ...}&gt;
+</input>
+    </program>
+    <p>Other options include <c>rows.as_dict()</c> and <c>rows.as_dict(ordered=True)</c>.</p>
+  </subsection>
+  <subsection xml:id="database_features">
+    <title>&#x2624; Features</title>
+    <p>
+      <ul>
+        <li>
+          <p>Iterated rows are cached for future reference.</p>
+        </li>
+        <li>
+          <p><c>$DATABASE_URL</c> environment variable support.</p>
+        </li>
+        <li>
+          <p>Convenience <c>Database.get_table_names</c> method.</p>
+        </li>
+        <li>
+          <p>Command-line <title_reference>records</title_reference> tool for exporting queries.</p>
+        </li>
+        <li>
+          <p>Safe parameterization: <c>Database.query('life=:everything', everything=42)</c>.</p>
+        </li>
+        <li>
+          <p>Queries can be passed as strings or filenames, parameters supported.</p>
+        </li>
+        <li>
+          <p>Transactions: <c>t = Database.transaction(); t.commit()</c>.</p>
+        </li>
+        <li>
+          <p>Bulk actions: <c>Database.bulk_query()</c> &amp; <c>Database.bulk_query_file()</c>.</p>
+        </li>
+      </ul>
+    </p>
+    <p>Records is proudly powered by <url href="http://www.sqlalchemy.org" visual="http://www.sqlalchemy.org">SQLAlchemy</url>
+                and <url href="http://docs.python-tablib.org/en/latest/" visual="http://docs.python-tablib.org/en/latest/">Tablib</url>.</p>
+  </subsection>
+  <subsection xml:id="database_data-export-functionality">
+    <title>&#x2624; Data Export Functionality</title>
+    <p>Records also features full Tablib integration, and allows you to export
+                your results to CSV, XLS, JSON, HTML Tables, YAML, or Pandas DataFrames with a single line of code.
+                Excellent for sharing data with friends, or generating reports.</p>
+    <program language="pycon">
+      <input>
+&gt;&gt;&gt; print(rows.dataset)
+username|active|name      |user_email       |timezone
+--------|------|----------|-----------------|--------------------------
+model-t |True  |Henry Ford|model-t@gmail.com|2016-02-06 22:28:23.894202
+...
+</input>
+    </program>
+    <p>
+      <term>Comma Separated Values (CSV)</term>
+    </p>
+    <program language="pycon">
+      <input>
+&gt;&gt;&gt; print(rows.export('csv'))
+username,active,name,user_email,timezone
+model-t,True,Henry Ford,model-t@gmail.com,2016-02-06 22:28:23.894202
+...
+</input>
+    </program>
+    <p>
+      <term>YAML Ain't Markup Language (YAML)</term>
+    </p>
+    <program language="python">
+      <input>
+&gt;&gt;&gt; print(rows.export('yaml'))
+- {active: true, name: Henry Ford, timezone: '2016-02-06 22:28:23.894202', user_email: model-t@gmail.com, username: model-t}
+...
+</input>
+    </program>
+    <p>
+      <term>JavaScript Object Notation (JSON)</term>
+    </p>
+    <program language="python">
+      <input>
+&gt;&gt;&gt; print(rows.export('json'))
+[{"username": "model-t", "active": true, "name": "Henry Ford", "user_email": "model-t@gmail.com", "timezone": "2016-02-06 22:28:23.894202"}, ...]
+</input>
+    </program>
+    <p>
+      <term>Microsoft Excel (xls, xlsx)</term>
+    </p>
+    <program language="python">
+      <input>
+with open('report.xls', 'wb') as f:
+    f.write(rows.export('xls'))
+</input>
+    </program>
+    <p>
+      <term>Pandas DataFrame</term>
+    </p>
+    <program language="python">
+      <input>
+&gt;&gt;&gt; rows.export('df')
+    username  active       name        user_email                   timezone
+0    model-t    True Henry Ford model-t@gmail.com 2016-02-06 22:28:23.894202
+</input>
+    </program>
+    <p>You get the point. All other features of Tablib are also available,
+                so you can sort results, add/remove columns/rows, remove duplicates,
+                transpose the table, add separators, slice data by column, and more.</p>
+    <p>See the <url href="http://docs.python-tablib.org/en/latest/" visual="http://docs.python-tablib.org/en/latest/">Tablib Documentation</url>
+                for more details.</p>
+  </subsection>
+  <subsection xml:id="database_installation">
+    <title>&#x2624; Installation</title>
+    <p>Of course, the recommended installation method is <url href="http://pipenv.org" visual="http://pipenv.org">pipenv</url>:</p>
+    <pre>$ pipenv install records[pandas]
+&#x2728;&#x1F370;&#x2728;</pre>
+  </subsection>
+  <subsection xml:id="database_command-line-tool">
+    <title>&#x2624; Command-Line Tool</title>
+    <p>As an added bonus, a <c>records</c> command-line tool is automatically
+                included. Here's a screenshot of the usage information:</p>
+    <image source="http://f.cl.ly/items/0S14231R3p0G3w3A0x2N/Screen%20Shot%202016-02-13%20at%202.43.21%20AM.png" width="50%" alt="Screenshot of Records Command-Line Interface."/>
+  </subsection>
+  <subsection xml:id="database_thank-you">
+    <title>&#x2624; Thank You</title>
+    <p>Thanks for checking this library out! I hope you find it useful.</p>
+    <p>Of course, there's always room for improvement. Feel free to <url href="https://github.com/kennethreitz/records/issues" visual="https://github.com/kennethreitz/records/issues">open an issue</url> so we can make Records better, stronger, faster.</p>
+  </subsection>
+</section>

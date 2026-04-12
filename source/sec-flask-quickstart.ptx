@@ -150,7 +150,7 @@ $ flask run</pre>
                     and therefore it <term>must never be used on production machines</term>.</p>
     </note>
     <p>Screenshot of the debugger in action:</p>
-    <image source="../_static/debugger.png" width="50%" alt="screenshot of debugger in action"/>
+    <image source="debugger.png" width="50%" alt="screenshot of debugger in action"/>
     <p>More information on using the debugger can be found in the <url href="https://werkzeug.palletsprojects.com/debug/#using-the-debugger" visual="https://werkzeug.palletsprojects.com/debug/#using-the-debugger">Werkzeug
                     documentation</url>.</p>
     <p>Have another debugger in mind? See <inline classes="xref std std-ref">working-with-debuggers</inline>.</p>

@@ -10,16 +10,16 @@
   <!-- include sections -->
   <xi:include href="sec-flask-frameworkintro.ptx" />
   <xi:include href="sec-flask-quickstart.ptx" />
-  <!--<xi:include href="sec-flask-routing.ptx" />   xref errors here -->
+  <xi:include href="sec-flask-routing.ptx" />
   <!-- missing static files? -->
-  <!--<xi:include href="sec-flask-templates.ptx" />
+  <xi:include href="sec-flask-templates.ptx" />
   <xi:include href="sec-flask-requestobj.ptx" />
   <xi:include href="sec-flask-redirects.ptx" />
   <xi:include href="sec-flask-responses.ptx" />
-  <xi:include href="sec-flask-sessions.ptx" />-->
+  <xi:include href="sec-flask-sessions.ptx" />
   <!-- missing message flashing? -->
-  <!--<xi:include href="sec-flask-logging.ptx" />
+  <xi:include href="sec-flask-logging.ptx" />
   <xi:include href="sec-flask-templating.ptx" />
-  <xi:include href="sec-flask-Exercises.ptx" />-->
+  <xi:include href="sec-flask-Exercises.ptx" />
 
 </chapter>

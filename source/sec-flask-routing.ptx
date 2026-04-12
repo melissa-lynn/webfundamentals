@@ -135,7 +135,7 @@ def about():
     <p>For example, here we use the <c classes="xref py py-meth">test_request_context()</c> method
                 to try out <c classes="xref py py-func">url_for()</c>. <c classes="xref py py-meth">test_request_context()</c>
                 tells Flask to behave as though it's handling a request even while we use a
-                Python shell. See <xref ref="flask_requestobj"/>.</p>
+                Python shell. See <xref ref="flask_accessing-request-data"/>.</p>
     <program language="python">
       <input>
 from flask import url_for

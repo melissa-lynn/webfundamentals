@@ -1,0 +1,365 @@
+<?xml version="1.0"?>
+<section xml:id="database_joining">
+  <title>Joining</title>
+  <p>It is frequently the case that the data we need is spread across
+            multiple tables in our database. For example, we might want to store
+            additional information about the starting and ending location of the
+            ride beside their IDs in a table called <c>bikeshare_stations</c>.</p>
+  <p>Here's the columns in table <c>bikeshare_stations</c></p>
+  <table>
+    <tabular>
+      <row header="yes">
+        <cell>
+                            Field name
+                        </cell>
+        <cell>
+                            Type
+                        </cell>
+        <cell>
+                            Description
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            station_id
+                        </cell>
+        <cell>
+                            INTEGER
+                        </cell>
+        <cell>
+                            Unique identifier of a station
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            name
+                        </cell>
+        <cell>
+                            STRING
+                        </cell>
+        <cell>
+                            Public name of the station
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            status
+                        </cell>
+        <cell>
+                            STRING
+                        </cell>
+        <cell>
+                            Status of the station, either open or closed
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            latitude
+                        </cell>
+        <cell>
+                            FLOAT
+                        </cell>
+        <cell>
+                            latitude of the station
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            longitude
+                        </cell>
+        <cell>
+                            FLOAT
+                        </cell>
+        <cell>
+                            longitude of the station
+                        </cell>
+      </row>
+    </tabular>
+  </table>
+  <program xml:id="sql_bikeshare_join_1" interactive="activecode" language="sql">
+    <input>
+SELECT
+  *
+FROM
+  bikeshare_stations
+LIMIT
+  10
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+  <p>This means that we now have the data to answer questions like <q>How many
+            bike trips originated from bike station that's at Van Ness Metro / UDC?</q>
+            but the data are spread across two tables?</p>
+  <p>We could imagine storing the <c>name</c> column in our <c>trip_data</c> table
+            since we list the start and end stations IDs for each trip but there are
+            a few important reasons why that's a bad idea:</p>
+  <p>
+    <ol label="1">
+      <li>
+        <p>We would waste space by duplicating data (This is not a big deal for this
+                    example but a real concern for large systems)</p>
+      </li>
+      <li>
+        <p>Updating data (for example status of station from active to closed)
+                    would require updating each row in <c>trip_data</c> that refers to that
+                    station ID. This is time-consuming and error-prone.</p>
+      </li>
+    </ol>
+  </p>
+  <p>Instead we leave the data in two separate tables and need a way to
+            &#x2018;join' the values together. We can do that by just listing multiple
+            table names but the result is a mess:</p>
+  <program xml:id="sql_bikeshare_join_2" interactive="activecode" language="sql">
+    <input>
+SELECT
+  *
+FROM
+  trip_data, bikeshare_stations
+
+LIMIT
+  10
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+  <p>If you look carefully you might notice that the rows are identical for
+            the first few columns and then start to differ after <c>duration</c>.
+            That's because SQL joins each row in the first table with each row in
+            the second table. With 144 rows in <c>bikeshare_stations</c> and 1,226,767
+            rows in <c>trips_data</c>, we end up with a table of 176,654,448 rows.</p>
+  <p>This rarely if ever is what we want. In most cases, we want to match up
+            some aspect of the rows in the first table with some aspect of the rows
+            in the second table. In most cases, we want to match up based on some
+            column being equal.</p>
+  <p>In our bike sharing example, the <c>station_id</c> column of
+            <c>bikeshare_stations</c> matches up with the <c>start_station</c> or
+            <c>end_station</c> column of <c>trip_data</c>. To force this match, we filter
+            out the ones that don't have the same value for both of these columns:</p>
+  <program xml:id="sql_bikeshare_join_3" interactive="activecode" language="sql">
+    <input>
+SELECT
+  *
+FROM
+  trip_data, bikeshare_stations
+WHERE
+  start_station = station_id
+LIMIT
+  10
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+  <p>Notice that the result looks more sensical: we end up with one row from
+            <c>trip_data</c> and the corresponding row from <c>bikeshare_stations</c>
+            (copied multiple times since there were only 144 rows in
+            <c>bikeshare_stations</c>).</p>
+  <p>We can check the size of the resulting table by running:</p>
+  <program xml:id="sql_bikeshare_join_4" interactive="activecode" language="sql">
+    <input>
+SELECT
+  COUNT(*)
+FROM
+  trip_data, bikeshare_stations
+WHERE
+  start_station = station_id
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+  <p>You might also see some cases where the comma between the table names is
+            replaced with the keyword <c>JOIN</c> and <c>WHERE</c> is replaced with
+            <c>ON</c>. This is synonymous but sometimes preferred to make it clear that
+            you are joining two tables and that your filters are there to specify
+            how those tables are to be joined:</p>
+  <program xml:id="sql_bikeshare_join_5" interactive="activecode" language="sql">
+    <input>
+SELECT
+  COUNT(*)
+FROM
+  trip_data JOIN bikeshare_stations ON start_station = station_id
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+  <p>We can now use all the SQL tools that we've learned on this combined
+            table. For example, to find out which <term>open</term> bike station which has
+            the highest bike trip counts so we can ensure there is always plenty of
+            bikes available, we can run:</p>
+  <program xml:id="sql_bikeshare_join_6" interactive="activecode" language="sql">
+    <input>
+SELECT
+  station_id, COUNT(*) AS trip_count
+FROM
+  trip_data join bikeshare_stations
+ON
+  start_station = station_id
+WHERE
+  duration &gt;= 3600
+  AND status = 'open'
+GROUP BY
+  station_id
+ORDER BY
+  trip_count DESC
+LIMIT
+  10
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+  <subsection xml:id="database_practice-exercises-1">
+    <title>Practice Exercises</title>
+    <hint>
+      <program xml:id="sql_bikeshare_join_sol1" interactive="activecode" language="python">
+        <input>
+SELECT
+station_id, AVG(duration)
+FROM
+trip_data JOIN bikeshare_stations
+ON
+start_station = station_id
+WHERE
+member_type = 'Member'
+AND start_station = end_station
+AND status = 'open'
+GROUP BY
+station_id
+LIMIT
+10
+        </input>
+        <tests>
+
+
+</tests>
+      </program>
+      <p>
+        <ol label="1">
+          <li>
+            <program language="sql">
+              <input>
+select name, count(*)
+from trip_data join bikeshare_stations on
+    start_station = station_id
+group by name
+order by count(*) desc
+limit 10
+</input>
+            </program>
+          </li>
+          <li>
+            <program language="sql">
+              <input>
+select name, count(*)
+from trip_data join bikeshare_stations on end_station = station_id
+group by name
+order by count(*) desc
+limit 10
+</input>
+            </program>
+          </li>
+          <li>
+            <program language="sql">
+              <input>
+select name, count(*)
+from trip_data join bikeshare_stations on end_station = station_id
+where start_station = end_station
+group by name
+order by count(*) desc
+limit 10
+</input>
+            </program>
+          </li>
+          <li>
+            <program language="sql">
+              <input>
+select name, count(*)
+from trip_data join bikeshare_stations on end_station = station_id
+where start_station = 31200
+group by name
+order by count(*) desc
+limit 10
+</input>
+            </program>
+          </li>
+        </ol>
+      </p>
+    </hint>
+    <exercise label="sql_bikeshare_join_ex1">
+      <statement>
+        <p>Use <c>JOIN</c> to show the station IDs of active stations and what's the average duration of bike trip originating and ending at the same station with member type Member.</p>
+      </statement>
+      <program xml:id="sql_bikeshare_join_ex1_editor" interactive="activecode" language="sql">
+        <input>
+
+        </input>
+        <tests>
+assert 0,1 == 1005
+</tests>
+      </program>
+    </exercise>
+    <exercise label="sql_bikeshare_join_ex2">
+      <statement>
+        <p>What is the name of the station where the most rides start?</p>
+      </statement>
+      <program xml:id="sql_bikeshare_join_ex2_editor" interactive="activecode" language="sql">
+        <input>
+
+        </input>
+        <tests>
+assert 0,0 == Massachusetts Ave  Dupont Circle NW
+</tests>
+      </program>
+    </exercise>
+    <exercise label="sql_bikeshare_join_ex3">
+      <statement>
+        <p>What is the name of the station where the most rides end?</p>
+      </statement>
+      <program xml:id="sql_bikeshare_join_ex3_editor" interactive="activecode" language="sql">
+        <input>
+
+        </input>
+        <tests>
+assert 0,0 == Massachusetts Ave  Dupont Circle NW
+</tests>
+      </program>
+    </exercise>
+    <exercise label="sql_bikeshare_join_ex4">
+      <statement>
+        <p>What is the name of the station where most rides both start and end?</p>
+      </statement>
+      <program xml:id="sql_bikeshare_join_ex4_editor" interactive="activecode" language="sql">
+        <input>
+
+        </input>
+        <tests>
+assert 0,0 ==  USDA / 12th  Independence Ave SW
+</tests>
+      </program>
+    </exercise>
+    <exercise label="sql_bikeshare_join_ex5">
+      <statement>
+        <p>What is the name of the most popular ending station for rides that begin at Massachusetts Ave  Dupont Circle NW (Station: 31200)?</p>
+      </statement>
+      <program xml:id="sql_bikeshare_join_ex5_editor" interactive="activecode" language="sql">
+        <input>
+
+        </input>
+        <tests>
+assert 0,0 == 15th  P St NW
+</tests>
+      </program>
+    </exercise>
+  </subsection>
+</section>
