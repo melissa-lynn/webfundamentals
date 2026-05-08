@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<section xml:id="flask_static">
+  <title>Static Files</title>
+  <p>Dynamic web applications also need static files.  That's usually where
+the CSS and JavaScript files are coming from.  Ideally your web server is
+configured to serve them for you, but during development Flask can do that
+as well.  Just create a folder called <c>static</c> in your package or next to
+your module and it will be available at <c>/static</c> on the application.</p>
+
+<p>To generate URLs for static files, use the special <c>'static'</c> endpoint name:</p>
+
+  <pre>url_for('static', filename='style.css')</pre>
+
+<p>The file has to be stored on the filesystem as <c>static/style.css</c>.</p>
+
+
+</section>

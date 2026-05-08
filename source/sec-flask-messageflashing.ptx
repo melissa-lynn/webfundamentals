@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<section xml:id="flask_messageflashing">
+  <title>Message Flashing</title>
+  
+  <p>Good applications and user interfaces are all about feedback.  If the user
+does not get enough feedback they will probably end up hating the
+application.  Flask provides a really simple way to give feedback to a
+user with the flashing system.  The flashing system basically makes it
+possible to record a message at the end of a request and access it on the next
+(and only the next) request.  This is usually combined with a layout
+template to expose the message.</p>
+
+<p>To flash a message use the <c>flash()</c> method, to get hold of the
+messages you can use <c>get_flashed_messages()</c> which is also
+available in the templates.  Check out the message-flashing-pattern
+for a full example.</p>
+
+
+</section>

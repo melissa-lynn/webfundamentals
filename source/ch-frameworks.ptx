@@ -4,11 +4,13 @@
   <title>Framework Development</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p>In this chapter we will take a look in more depth at the technologies and programming strategies that are behind the Flask framework.</p>
   </introduction>
 
   <!-- include sections -->
+  <xi:include href="sec-frameworks-decorators.ptx" />
   <xi:include href="sec-frameworks-deploying.ptx" />
+  <xi:include href="sec-frameworks-wsgi.ptx" />
   <xi:include href="sec-frameworks-templates.ptx" />
   <xi:include href="sec-frameworks-database.ptx" />
 
