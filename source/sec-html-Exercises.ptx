@@ -8,18 +8,43 @@
       </li>
     </ol>
   </p>
+  <listing xml:id="python-unittest-example">
+    <title>ActiveCode with Unit Tests</title>
+    <program interactive="activecode" language="python">
+        <input>
+def add(a, b):
+    return a + b
+        </input>
+        <tests>
+from unittest import TestCase
+
+class MyTests(TestCase):
+    def test_addition(self):
+        self.assertEqual(add(2, 3), 5, "Checking 2 + 3")
+        self.assertEqual(add(-1, 1), 0, "Checking -1 + 1")
+
+# The test runner is handled by Runestone automatically
+        </tests>
+    </program>
+</listing>
+
+
+
   <listing>
-  <program xml:id="ex_html_1" interactive="activecode" language="html" label="program-activecode-html-ex-1" include-source="yes">
+  <program xml:id="ex_html_1" interactive="activecode" language="html" label="program-activecode-html-ex-1">
     <prefix>
 
 
 </prefix>
     <input>
-
+      
 
         </input>
     <tests>
-
+      <script>
+        assertExists(document.querySelector('h1'), "Checking that there is an h1 element");
+        console.log("hello");
+      </script>
 
 </tests>
   </program>
