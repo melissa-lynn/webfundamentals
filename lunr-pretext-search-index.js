@@ -376,104 +376,113 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "2.4",
   "title": "Exercises",
-  "body": " Exercises     Make a little webpage to tell me a little about yourself. Use at least three levels of headings and some paragraphs.                  You can copy the URL of almost any image in a browser by right clicking on the image and choosing copy image URL or something similar. Write an html page in the activecode window for this exercise that includes a header element giving a title to some image you find, Then include the image in the page, sized appropriately, and a paragraph that describes the image.                  Make an outline that has capital roman numerals at the highest level of the outline. and lower case roman numerals for the second level items. List three new concepts we have covered in this class at the first level, and for each of those list two or three key points.                  Make a webpage that uses a table to create two columns. In the left column should be a bulleted list of 5 html tags you have learned about. In the right column should be a numbered list of 5 attributes of html tags you have learned about.                  Make a table that looks like this:       Hint, this is going to require both rowspan and columnspan. Also, Do not try to do this all at once. Start with the header, then move on to the rest of the table, working in small parts                Make a webpage that links to four of your favorite websites.                  Make a webpage with a link at the bottom that when clicked will jump you all the way to the top of the page.                  Make a webpage with a link at the top of it that when clicked will jump all the way to the bottom of the page. At the bottom of the page there should be a link to jump back to the top of the page.                  Make a webpage with an image that has a border of size 2, a width of 200, and a height of 200.                  Make a webpage with five different images. Skip two lines between each image. Each image should have a title.                  Make a webpage with an image that when clicked will link to a search engine of your choice               "
+  "body": " Exercises     Make a little webpage to tell me a little about yourself. Use at least three levels of headings and some paragraphs.      ActiveCode with Unit Tests   def add(a, b): return a + b  from unittest import TestCase class MyTests(TestCase): def test_addition(self): self.assertEqual(add(2, 3), 5, \"Checking 2 + 3\") self.assertEqual(add(-1, 1), 0, \"Checking -1 + 1\") # The test runner is handled by Runestone automatically           assertExists(document.querySelector('h1'), \"Checking that there is an h1 element\"); console.log(\"hello\");        You can copy the URL of almost any image in a browser by right clicking on the image and choosing copy image URL or something similar. Write an html page in the activecode window for this exercise that includes a header element giving a title to some image you find, Then include the image in the page, sized appropriately, and a paragraph that describes the image.                  Make an outline that has capital roman numerals at the highest level of the outline. and lower case roman numerals for the second level items. List three new concepts we have covered in this class at the first level, and for each of those list two or three key points.                  Make a webpage that uses a table to create two columns. In the left column should be a bulleted list of 5 html tags you have learned about. In the right column should be a numbered list of 5 attributes of html tags you have learned about.                  Make a table that looks like this:       Hint, this is going to require both rowspan and columnspan. Also, Do not try to do this all at once. Start with the header, then move on to the rest of the table, working in small parts                Make a webpage that links to four of your favorite websites.                  Make a webpage with a link at the bottom that when clicked will jump you all the way to the top of the page.                  Make a webpage with a link at the top of it that when clicked will jump all the way to the bottom of the page. At the bottom of the page there should be a link to jump back to the top of the page.                  Make a webpage with an image that has a border of size 2, a width of 200, and a height of 200.                  Make a webpage with five different images. Skip two lines between each image. Each image should have a title.                  Make a webpage with an image that when clicked will link to a search engine of your choice               "
 },
 {
-  "id": "html_exercises-3",
+  "id": "python-unittest-example",
   "level": "2",
-  "url": "html_exercises.html#html_exercises-3",
+  "url": "html_exercises.html#python-unittest-example",
   "type": "Listing",
   "number": "2.4.1",
-  "title": "",
-  "body": "         "
+  "title": "ActiveCode with Unit Tests",
+  "body": " ActiveCode with Unit Tests   def add(a, b): return a + b  from unittest import TestCase class MyTests(TestCase): def test_addition(self): self.assertEqual(add(2, 3), 5, \"Checking 2 + 3\") self.assertEqual(add(-1, 1), 0, \"Checking -1 + 1\") # The test runner is handled by Runestone automatically   "
 },
 {
-  "id": "html_exercises-5",
+  "id": "html_exercises-4",
   "level": "2",
-  "url": "html_exercises.html#html_exercises-5",
+  "url": "html_exercises.html#html_exercises-4",
   "type": "Listing",
   "number": "2.4.2",
   "title": "",
-  "body": "         "
+  "body": "       assertExists(document.querySelector('h1'), \"Checking that there is an h1 element\"); console.log(\"hello\");    "
 },
 {
-  "id": "html_exercises-7",
+  "id": "html_exercises-6",
   "level": "2",
-  "url": "html_exercises.html#html_exercises-7",
+  "url": "html_exercises.html#html_exercises-6",
   "type": "Listing",
   "number": "2.4.3",
   "title": "",
   "body": "         "
 },
 {
-  "id": "html_exercises-9",
+  "id": "html_exercises-8",
   "level": "2",
-  "url": "html_exercises.html#html_exercises-9",
+  "url": "html_exercises.html#html_exercises-8",
   "type": "Listing",
   "number": "2.4.4",
   "title": "",
   "body": "         "
 },
 {
-  "id": "html_exercises-12",
+  "id": "html_exercises-10",
   "level": "2",
-  "url": "html_exercises.html#html_exercises-12",
+  "url": "html_exercises.html#html_exercises-10",
   "type": "Listing",
   "number": "2.4.5",
   "title": "",
   "body": "         "
 },
 {
-  "id": "html_exercises-14",
+  "id": "html_exercises-13",
   "level": "2",
-  "url": "html_exercises.html#html_exercises-14",
+  "url": "html_exercises.html#html_exercises-13",
   "type": "Listing",
   "number": "2.4.6",
   "title": "",
   "body": "         "
 },
 {
-  "id": "html_exercises-16",
+  "id": "html_exercises-15",
   "level": "2",
-  "url": "html_exercises.html#html_exercises-16",
+  "url": "html_exercises.html#html_exercises-15",
   "type": "Listing",
   "number": "2.4.7",
   "title": "",
   "body": "         "
 },
 {
-  "id": "html_exercises-18",
+  "id": "html_exercises-17",
   "level": "2",
-  "url": "html_exercises.html#html_exercises-18",
+  "url": "html_exercises.html#html_exercises-17",
   "type": "Listing",
   "number": "2.4.8",
   "title": "",
   "body": "         "
 },
 {
-  "id": "html_exercises-20",
+  "id": "html_exercises-19",
   "level": "2",
-  "url": "html_exercises.html#html_exercises-20",
+  "url": "html_exercises.html#html_exercises-19",
   "type": "Listing",
   "number": "2.4.9",
   "title": "",
   "body": "         "
 },
 {
-  "id": "html_exercises-22",
+  "id": "html_exercises-21",
   "level": "2",
-  "url": "html_exercises.html#html_exercises-22",
+  "url": "html_exercises.html#html_exercises-21",
   "type": "Listing",
   "number": "2.4.10",
   "title": "",
   "body": "         "
 },
 {
-  "id": "html_exercises-24",
+  "id": "html_exercises-23",
   "level": "2",
-  "url": "html_exercises.html#html_exercises-24",
+  "url": "html_exercises.html#html_exercises-23",
   "type": "Listing",
   "number": "2.4.11",
+  "title": "",
+  "body": "         "
+},
+{
+  "id": "html_exercises-25",
+  "level": "2",
+  "url": "html_exercises.html#html_exercises-25",
+  "type": "Listing",
+  "number": "2.4.12",
   "title": "",
   "body": "         "
 },
@@ -1970,6 +1979,978 @@ var ptx_lunr_docs = [
   "number": "5.12.2",
   "title": "",
   "body": "  <html> <body> <button onclick=\"finalquiz();\">Click Me<\/button> <script type=\"text\/javascript\"> <\/script> <\/body> <\/html>     "
+},
+{
+  "id": "dynamic_modern-web-application-architecture",
+  "level": "1",
+  "url": "dynamic_modern-web-application-architecture.html",
+  "type": "Section",
+  "number": "6.1",
+  "title": "Modern Web Application Architecture",
+  "body": " Modern Web Application Architecture   The diagram below illustrates a pretty standard web archictecture for the year 2018. The tools and buzzwords may change but the basic structure has been the same for several years now.     CGI Stack  CGI stands for Common Gateway Interface, and in the beginning (circa 1992) this was how dynamic webpages were generated. The webserver would notice that the URL contained cgi-bin as part of the path and automatically spin off a perl script. The perl script would do something like this:   print \"Content-Type: text\/html\\n\\n\" print <<HTML; <html> <body> <h1>Hello World<\/h1> <\/body> <\/html> HTML exit;   The odd syntax (called a HEREDOC) not withstanding you can see that the script is basically just a couple print statements that follow the HTTP protocol and spew out HTML. The output from the print statement is directed back across the network rather than to a terminal screen. On the other end of the wire the browser just knows it is getting HTML it has no idea that it came from a program rather than a file. Since the program is just printing out a string, where that string comes from and how that string is constructed gives you all the power you could ever want to generate a page on the fly. The script could access a database, the script could compute anything you want and display the results using HTML to format them.    LAMP Stack  writing programs that generate web pages using print statements was OK, but definitely not something that many programmers wanted to do full time. The rise in popularity of linux and other open source components such as the Apache web server, MySQL, and the PHP programming language brought about a real revolution in web development. This combination of components became known as the LAMP stack, and has been a dominant architecture for developing web applications since around 2000.     Linux    Apache    MySQL    PHP     In this setup the web server would notice that that the URL ended in .php rather than .html and then send the file ending in .php through a php interpreter. The php interpreter even came to be embedded in the web server so that there was no need to spin off a new process for every request. The benefit\/curse of php was that it mixed HTML and a programming language with many of the same features as perl or python.   <!DOCTYPE HTML> <html> <head> <title>Example<\/title> <\/head> <body> <?php echo \"Hi, I'm a PHP script!\"; ?> <\/body> <\/html>   In the example above you can see that we don't need print statements for the vanilla HTML. But when we want to compute something or retrieve something from a database we do that inside the special <?php ... ?> tag. Just as in the cgi world the output from this php file were sent back to the unsuspecting browser as if it had just received a static page.  Over the years the LAMP stack has become an archetype for lots of different systems. Nginx, Postgres and Python could replace Apache, MySQL and PHP and nobody would fault you for calling your setup a LAMP stack.  As web development got more and more sophisticated over the years many different programming languages developed more sophisticated app servers. The web server was relegated to serving static pages, and then handing off more complicated requests to a separate application server. You have heard of many of these such as Ruby on Rails (Ruby), Django or Flask (Python), Tomcat (Java) and many others.    MEAN \/ MERN Stack     Mongo DB    Express.js    Angular.js \/ React.js \/ Vue.js    Node.js     The LAMP stack was very good for generating pages and provided a certain level of interactivity, mainly through forms, but for many people the cycle of     Look at a page    Fill out a form    Submit the form    See the results     Although this is interactive for many people this felt like one step forward and 10 steps back for interface design. This model of interactiviy was more popular in the 70's and early 80's. People wanted their menus and highly interactive interfaces. This became possible when web browsers embedded the Javascript language. This allowed a LOT of the computing to be moved the browser itself, and with the computing being closer to the user this allowed for a lot more interactive experience. This gave rise to all kinds of applications that we use every day starting with gmail, Google Docs, Google Sheets and many others. This gave rise to what many refer to today as the MEAN stack. This follows the same basic architecture as the original diagram but the application server is primarily responsible for providing data to the javascript application that runs in the browser. The MEAN acronym puts elements in a different order than LAMP and you can kind of think of Node.js taking the place of Linux, Mongo DB takes the place of MySQL, Express.js takes the place of the web server\/application server, and Angular takes the place of PHP but it runs in the client rather than the server. Another advantage (some say) of the MEAN stack is that every component is based on Javascript so as a developer you are primarily working in the same programming language.  Like the LAMP stack there are many tools that can fulfill the roles occupied by Mongo, Express Angular and Node.js. You can write an app just as MEAN using Flask, Postgresql and Vue.js.    Becoming a Full Stack developer  The rest of this book aims at moving you toward becoming a full stack developer, that is that you can write Javascript to create a user interface in the browser and then move your way down the stack to the back end to create API's (Application Programmer Interfaces) for the javascript to offload computing and storage tasks to the back end.   "
+},
+{
+  "id": "dynamic_cgi-stack-4",
+  "level": "2",
+  "url": "dynamic_modern-web-application-architecture.html#dynamic_cgi-stack-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "is "
+},
+{
+  "id": "dynamic_a-trip-to-the-spa",
+  "level": "1",
+  "url": "dynamic_a-trip-to-the-spa.html",
+  "type": "Section",
+  "number": "6.2",
+  "title": "A trip to the SPA",
+  "body": " A trip to the SPA  Many smaller modern apps reside mostly in the browser using Javascript to make the application highly interactive. These applications have come to have the acronym SPA which stands for Single Page Application. The name comes from the fact that you only load the page from the server once and the Javascript takes care of the rest.  The approach we will take in the next several sections will be to build a shopping list application from the ground up. We'll start really simple (really really) and work our way towards something much better. If this is your first time using Javascript this will introduce you to many of the key Javascript functions used to dynamically create interactive pages.  Let's start with a high level design and then we'll iterate through many different improvements.  Here is a sketch of what the interface should look like.   We will have an upper panel for data input where we can type in the item name, select a quantity from a dropdown menu, set a priority as well as a store, section, and price of the item. When the user clicks on the add button a new entry will be made in the table in the lower panel with the following requirements:     Add a checkbox on the left so the item can be marked as purchased.    Use the priority to color code each item.    In the future we'll add a mechanism to edit an entry in the table.     Otherwise just display the information in a table as shown in the diagram.  In the upper panel it's OK to hardcode the quantity as the number 1 through 10 and the priorities as high, medium and low. But we will want to make the selections for stores and store section configurable so we will dynamically generate those elements. In addition we'll use some bootstrap to add a bit of style to our page.  Finally, we are going to want to be able to save our shopping list. We'll ignore this requirement for the first couple of iterations and then come back and add it.  "
+},
+{
+  "id": "dynamic_first-shopping-list-prototype",
+  "level": "1",
+  "url": "dynamic_first-shopping-list-prototype.html",
+  "type": "Section",
+  "number": "6.3",
+  "title": "First Shopping List Prototype",
+  "body": " First Shopping List Prototype  Our first prototype looks like this:   If you are not familiar with the document object model you may want to review the sections in the Javascript chapter on events and creating elements on the fly.  Here is the html for this page:   <html> <head> <!-- https:\/\/www.w3schools.com\/bootstrap\/bootstrap_get_started.asp --> <title>Shopping List Application<\/title> <link rel=\"stylesheet\" href=\"https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.3.7\/css\/bootstrap.min.css\"> <link rel=\"stylesheet\" href=\"css\/shoppingstyle.css\"> <\/head> <body> <div class=\"container\"> <nav class=\"navbar navbar-default\"> <div class=\"container-fluid\"> <div class=\"navbar-header\"> <a class=\"navbar-brand\" href=\"#\">Shopping List<\/a> <\/div> <ul class=\"nav navbar-nav\"> <li class=\"active\"><a href=\"#\">Home<\/a><\/li> <li><a href=\"#\">Page 1<\/a><\/li> <li><a href=\"#\">Page 2<\/a><\/li> <li><a href=\"#\">Page 3<\/a><\/li> <\/ul> <\/div> <\/nav> <div class=\"panel panel-default col-md-12\"> <div class=\"panel-body\"> <div class=\"row form-inline\"> <div class=\"form-group\"> <label for=\"itemname\">Item Name<\/label> <input type=text class=\"form-control\" name=\"itemname\" id=itemname \/> <\/div> <div class=\"form-group\"> <label for=\"qty\">Quantity<\/label> <select name=\"quantity\" id=\"qty\" class=\"form-control\"> <option value=\"1\">1<\/option> <option value=\"2\">2<\/option> <option value=\"3\">3<\/option> <option value=\"4\">4<\/option> <option value=\"5\">5<\/option> <option value=\"6\">6<\/option> <option value=\"7\">7<\/option> <option value=\"8\">8<\/option> <option value=\"9\">9<\/option> <option value=\"10\">10<\/option> <\/select> <\/div> <div class=\"form-group\"> <label for=\"priority\">Priority<\/label> <select name=\"priority\" id=\"priority\" class=\"form-control\"> <option value=\"low\">low<\/option> <option value=\"medium\">medium<\/option> <option value=\"high\">high<\/option> <\/select> <\/div> <\/div> <div class=\"row form-inline\" style=\"margin-top: 20px; margin-bottom: 20px;\"> <div class=\"form-group\"> <label for=\"store\">Store Name<\/label> <select name=\"store\" id=\"store\" class=\"form-control\"> <\/select> <\/div> <div class=\"form-group\"> <label for=\"category\">Store Section<\/label> <select name=\"category\" id=\"category\" class=\"form-control\"> <\/select> <\/div> <div class=\"form-group\"> <label for=\"price\">Price<\/label> <input type=\"text\" name=\"price\" id=\"price\" class=\"form-control\"> <\/div> <\/div> <div class=\"form-inline\" style=\"float: right;\"> <button onclick=\"clickedon()\" class=\"btn btn-primary\" id=gobutt>Add Item<\/button> <\/div> <\/div> <\/div> <div class=\"col-md-12\"> <table class=\"table table-bordered\"> <thead> <tr> <th><\/th><th>Item<\/th><th>Quantity<\/th><th>Store<\/th><th>Section<\/th><th>Price<\/th> <\/tr> <\/thead> <tbody id=\"shoppinglist\"><\/tbody> <\/table> <\/div> <\/div> <script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/3.3.1\/jquery.min.js\"><\/script> <script src=\"https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.3.7\/js\/bootstrap.min.js\"><\/script> <script src=\"js\/shopping.js?x=2\" type=text\/javascript><\/script> <\/body> <\/html>   A couple of things to note: First notice that we've created an empty table with a tbody tag with an id of shoppinglist this gives us a place to start building our table. Also notice that our add item button calls a function clickedon this function is defined in the shopping.js file and will handle creating a new row and appending it to the tbody each time we add an item.  Let's look more carefully at the code in shopping.js   var stores = ['Fareway', 'Ace Hardware', 'Caseys', 'The Hatchery', 'Amundsens'] var sections = ['Produce', 'Meats', 'Cereal', 'Canned Goods', 'Frozen Foods', 'Dairy', 'Liquor', 'Tools', 'Clothing'] function clickedon() { let rowcolids = ['itemname', 'qty', 'store', 'category', 'price'] let vals = [] for (let cid of rowcolids) { vals.push(document.getElementById(cid).value) } makeRow(vals, document.getElementById('shoppinglist')) } function makeRow(valueList, parent) { let row = document.createElement(\"tr\") row.classList.add(document.getElementById(\"priority\").value) let cb = document.createElement(\"input\") cb.type = \"checkbox\" cb.classList.add(\"form-control\") row.appendChild(cb) for (let val of valueList) { let td = document.createElement(\"td\") td.innerHTML = val row.appendChild(td) } parent.appendChild(row) } function populateSelect(selectId, sList) { let sel = document.getElementById(selectId) for (let s of sList) { let opt = document.createElement(\"option\") opt.value = s opt.innerHTML = s sel.appendChild(opt) } } $(document).ready(function () { populateSelect('store', stores) populateSelect('category', sections) })   There is plenty to think about in this example. But let's begin with creating the select boxes. For this bit of functionality I wrote a helper method called populate select. This function can populate any select box given its id and a Javascript array of values.   <select id=\"myid\"><\/select> <script type=\"text\/javascript\"> function populateSelect(selectId, sList) { let sel = document.getElementById(selectId) for (let s of sList) { let opt = document.createElement(\"option\") opt.value = s opt.innerHTML = s sel.appendChild(opt) } } populateSelect('myid', ['one', 'two', 'three', 'four']) <\/script>     This is a simple illustration of three highly used functions getElementById, createElement and appendChild. These methods allow us to have javascript dynamically create tags and add them into our live document object model.  Next let's look at the clickedon function. This function also relies on a helper to make a row and add the row to the table. it does this by creating an array of values one array entry per table row cell. then it calls its helper function which sets up the class for coloring the row, makes a checkbox, and appends a bunch of td elements to the new tr .  The last few lines of this example show the use of jQuery to call the populateSelect functions after the rest of the page has been loaded and is ready to go. This is a really common way of ensureing that you don't call Javascript functions that manipulate the DOM until the page is loaded and initially rendered. Another way that many people do this is by using the onload event for the body tag. But since we had to load jQuery for bootstrap I wanted to show this as well. All this says is that when the ready event on the document object fires, call the function that populates the two select boxes.  That's it for this prototype. And you may be thinking that we are nearly done, let's just hack out a few more lines to handle the checkbox and we are good to go. But hang on, we're going to complicate matters in the next couple of sections by diving into some good design patterns that will make getting back to this point a good deal more complicated.  "
+},
+{
+  "id": "dynamic_model-view-controller",
+  "level": "1",
+  "url": "dynamic_model-view-controller.html",
+  "type": "Section",
+  "number": "6.4",
+  "title": "Model View Controller",
+  "body": " Model View Controller  Let's critique our first prototype a bit.     How are we doing with respect to keeping the visual look of the site separate from the programming logic? Not bad at this point. The only javascript is simply included through a script tag and the creation of the select boxes as well as the table rows is only connected through the ids of the blank elements.    When we want to add more functionality such as totaling our costs or sorting our shopping list, do we have a good way of accessing the data? The answer to this one is an emphatic NO our data is now fully entwined with our html. The only way we have to retrieve our shopping list to do something with it is to iterate over the table rows and extract the values from the tags in each table row. Ugh!!     Let's fix this second problem right now. The way we are going to do this is to redesign our application to follow the Model View Controller paradigm. The MVC paradigm is a tried and tested way of making applications that gives you a nice separation of concerns and will solve the problem we identified in our critique. The following diagram gives you a good idea of what is going on.   We will divide our coding into three distinct blocks:     Model: the model will be two classes to represent the primary data structures we want to work with in our application. An Item class that will represent things we want to put on our shopping list, and a ShoppingList class that will represent the entire list, and be the main point of intersection for our controller.    View: The view will provide us with an HTML representation of the model. That is what we have now, but rather than being the only place that stores the information the View will now simply be there to provide us with a visual representation of the things that are in our model.    Controller: As the diagram shows the user interacts with the controller. Right now our only ‘controller' is the clicked on function. When a button is clicked the clickedon function is called to update the table.     In the next revision of our program the controller will no longer directly manipulate the html that we see on the page but rather will manipulate our model. When a user clicks on the Add button the controller will create an Item and then call a method on our ShoppingList object to add the item to a list.  Here is the code for our new model:   'use strict'; class Item { constructor(name, quantity, priority, store, section, price) { this.name = name; this.quantity = quantity; this.priority = priority; this.store = store; this.section = section; this.price = price; this._purchased = false; } } class ShoppingList { constructor() { this.newItems = [] this.oldItems = []; } addItem(it) { this.newItems.push(it) } }   Now, our controller should simply look like this:   var shoppingModel = new ShoppingList() function clickedon() { let rowcolids = ['itemname', 'qty', 'store', 'category', 'price', 'priority'] let vals = {} for (let cid of rowcolids) { vals[cid] = document.getElementById(cid).value; } let it = new Item(vals.itemname, vals.qty, vals.priority, vals.store, vals.category, vals.price) shoppingModel.addItem(it) }   Now all the controller does is create a new item and add it to the list. Nice!  The remaining question is how does the Model let the View know that it has a new item and that new item should be added to the html table so our user can see it there? We will tackle that problem in the next couple of sections.  "
+},
+{
+  "id": "dynamic_model-view-controller-7",
+  "level": "2",
+  "url": "dynamic_model-view-controller.html#dynamic_model-view-controller-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "only "
+},
+{
+  "id": "dynamic_the-publish-and-subscribe-design-pattern",
+  "level": "1",
+  "url": "dynamic_the-publish-and-subscribe-design-pattern.html",
+  "type": "Section",
+  "number": "6.5",
+  "title": "The Publish and Subscribe Design Pattern",
+  "body": " The Publish and Subscribe Design Pattern  You have already seen an example of a callback function in action, specifically, clickedon function that is called when the add button is pressed. This is very common in event based programming. Basic Javascript has the limitation that you can only assign one function to a particular event, and that assignment is closely tied to the creation of the HTML element.  What happens if you want multiple things to happen when an event happens? What if you want to be able to add new callback functions some time after you the original element is created? There is a design pattern called Publish and Subscribe that handles just such a situation. the following diagram shows how this publish and subscribe pattern works.   In this first phase, we have one Subject in which three observers are interested. The observers want to know when some event happens to the subject. Not unlike you subscribing to your friends on facebook or following them on twitter. The point is that when they post something you want to be notified so you can see what happend.  The next diagram shows that notification process. However the difference is that when notification happens the observers conceptually call a function.   In the case of our web app, the subject is our model, specifically our shoppingList. The observer, at the moment anyway, is the View. Whenever an item gets added or subtracted from the shopping list the View wants to know about it so it can reddraw the table.  The following diagram gives you a better idea how this is implemented:   In essence when an observer subscribes to a subject it gives the subject a function to call back when some event happens later. The subject keeps track of these various functions without having to even worry about which function belongs to which observer, and then when an event does happen it just iterates over the array of functions calling them one after the other.  Let's make a really simple example.   class Subject { constructor() { this.handlers = [] } subscribe(fn) { this.handlers.push(fn); } unsubscribe(fn) { this.handlers = this.handlers.filter( function(item) { if (item !== fn) { return item; } } ); } publish(msg, someobj) { var scope = someobj || window; for (let fn of this.handlers) { fn(scope, msg) } } } function callback1(a,msg) { alert(\"callback1: the message is \"+ msg) } function callback2(a,msg) { alert(\"callback2: the message is \"+ msg) } sub = new Subject() sub.subscribe(callback1) \/\/ time passes sub.publish(\"event 1 happened\") sub.subscribe(callback1) sub.publish(\"event 2 happened\")     For the first event there was only one subscriber. Then we added a second subscriber and both were called. The Subject class is very useful and can be used as a parent for any class that you want to act as a subject. In our project the shopping list will be that subject and will inherit from the Subject class.  "
+},
+{
+  "id": "dynamic_the-publish-and-subscribe-design-pattern-2",
+  "level": "2",
+  "url": "dynamic_the-publish-and-subscribe-design-pattern.html#dynamic_the-publish-and-subscribe-design-pattern-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "callback function "
+},
+{
+  "id": "dynamic_our-second-prototype",
+  "level": "1",
+  "url": "dynamic_our-second-prototype.html",
+  "type": "Section",
+  "number": "6.6",
+  "title": "Our Second Prototype",
+  "body": " Our Second Prototype  In this section I'll include the code for the three javascript files that make up our model, view and controller, and we will implement the publish subscribe pattern described in the previous section.  In this code the shopping view subscribes to the model so that when the model changes the view is automatically updated Specifically the View provides the redrawList method to the view as the method to call when new items are added to or removed from the shopping list.   Model Code   'use strict'; class Item { constructor(name, quantity, priority, store, section, price) { this.name = name; this.quantity = quantity; this.priority = priority; this.store = store; this.section = section; this.price = price; this._purchased = false; } get purchased() { return this._purchased; } set purchased(nv) { this._purchased = nv; alert(`${this.name} was purchased`) } } class Subject { constructor() { this.handlers = [] } subscribe(fn) { this.handlers.push(fn); } unsubscribe(fn) { this.handlers = this.handlers.filter( function(item) { if (item !== fn) { return item; } } ); } publish(msg, someobj) { var scope = someobj || window; for (let fn of this.handlers) { fn(scope, msg) } } } class ShoppingList extends Subject { constructor() { super() this.newItems = [] this.oldItems = []; } addItem(it) { this.newItems.push(it) this.publish('newitem', this) } }     View Code   class ShoppingView { constructor(model) { \/\/ The bind() method creates a new function that, when called, has its this keyword set to the provided value. model.subscribe(this.redrawList.bind(this)) } redrawList(shoppingList, msg) { let tbl = document.getElementById(\"shoppinglist\") tbl.innerHTML = \"\" for (let item of shoppingList.newItems) { this.addRow(item, tbl) } } addRow(item, parent) { let row = document.createElement(\"tr\") row.classList.add(item.priority) let cb = document.createElement(\"input\") cb.type = \"checkbox\" cb.classList.add(\"form-control\") cb.onclick = function() { item.purchased = true; } row.appendChild(cb) for (let val of ['name', 'quantity', 'store', 'section', 'price']) { let td = document.createElement(\"td\") td.innerHTML = item[val] row.appendChild(td) } parent.appendChild(row) } }     Controller Code   var stores = ['Fareway', 'Ace Hardware', 'Caseys', 'The Hatchery', 'Amundsens'] var sections = ['Produce', 'Meats', 'Cereal', 'Canned Goods', 'Frozen Foods', 'Dairy', 'Liquor', 'Tools', 'Clothing'] var shoppingModel = new ShoppingList() var myView = new ShoppingView(shoppingModel) function clickedon() { let rowcolids = ['itemname', 'qty', 'store', 'category', 'price', 'priority'] let vals = {} for (let cid of rowcolids) { vals[cid] = document.getElementById(cid).value; } let it = new Item(vals.itemname, vals.qty, vals.priority, vals.store, vals.category, vals.price) shoppingModel.addItem(it) } function populateSelect(selectId, sList) { let sel = document.getElementById(selectId, sList) for (let s of sList) { let opt = document.createElement(\"option\") opt.value = s opt.innerHTML = s sel.appendChild(opt) } } $(document).ready(function () { populateSelect('store', stores) populateSelect('category', sections) })   Let's trace through precisely what happens when an item is added to the shopping list.     User fills out the form with information about the item to be added.    User clicks on the Add Item button. Clicking causes the clickedon function in the controller to be invoked.     The clickedon function creates a new Item    Then clickedon calls shoppingModel.addItem which adds the newly created item to the model     The addItem method of the model appends the new item to the list of items.    Then addItem calls the publish method which invokes all of the functions that have registered to know about changes to the model.         In this case the only function that is registered for changes is the redrawList method of the view, which erases and rebuilds the list            This is really kind of beautiful. The controller calls a method which adds a new item to the model . The model then automatically invokes methods that the view has told it about in order to update what the user sees. The beauty is that it is all loosely coupled through the publish \/ subscribe pattern. This makes it nice and extendable in case other parts of the view need to be updated in response to other changes in the model.   "
+},
+{
+  "id": "dynamic_controller-code-5",
+  "level": "2",
+  "url": "dynamic_our-second-prototype.html#dynamic_controller-code-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "controller model view "
+},
+{
+  "id": "dynamic_serializing-and-localstorage",
+  "level": "1",
+  "url": "dynamic_serializing-and-localstorage.html",
+  "type": "Section",
+  "number": "6.7",
+  "title": "Serializing and LocalStorage",
+  "body": " Serializing and LocalStorage  Now we have a really well architected application. But it is still lacking one big feature. Persistence. Each time we bring up our web page, or even refresh the page, our list dissappears! That is bad and nobdy is going to buy our app if they have to start over from the beginning each time. What we need is a way to store the data. Our first step on the journey to persistence is to make use of the localStorage of the browser. Before we dive into a new prototype we need to learn about two new concepts.     localStorage    JavaScript Object Notation (JSON)      Using JavaScript Object Notation (JSON)  When you exchange messages between the browser and the server those messages are plain text messages. However if you have an object in memory, such as a number or a Javascript object or a Python dictionary, those objects are stored in memory in a non-text format (binary). In order for the browser and the server to share information the in-memory objects must be serialized . Serialization means that an object is converted into a string.  JSON is an important standard for serializing objects. Most programming languages have a library or module that supports serializing an object to JSON as well as the reverse process – deserialization – of converting a JSON string back to a native object. JSON is nice because it is easy for humans to read, and for many programming languages JSON strings are easy to convert into native formats. If you know a bit of Python you will see that many things look just like dictionaries. The same is true for JavaScript, but in JavaScript we don't call them dictionaries we just call them objects.  Here is an activecode example. The primary methods of the JSON object are stringify and parse . The stringify method takes an object as a parameter and returns a JSON string.   x = JSON.stringify([1,2,3.1415, 4]) write(\"x is a\") writeln(typeof x) writeln(x) y = JSON.parse(x) write(\"y is a \") writeln(typeof y) writeln(y) y.push(5) writeln(y)     Notice that there is nothing to import, the JSON object is always available for you to use.  Python is very similar, but the names of the methods are different. In python you call the dumps method to serialize an object, and you call loads to deserialize the string to an object.   import json print(json.dumps({'foo': 1, 'bar':2})) x = json.dumps([1,2,3,4]) print(\"x is a \", type(x)) print(x) y = json.loads(x) print(\"y is a \", type(y)) y.append(5) print(y)      Not everything can be serialized! For example, functions and methods cannot be serialized.   For custom objects, that is instances of classes that we create, the default behavior for JSON.stringify is to serialize the properties of the object but not the methods.  For example, take the Item class from our shopping list application. If we serialize this using JSON.stringify we will get an object literal that contains the properties name, quantity, priority, store, section, etc. But none of the methods will be serialzed.   class Item { constructor(name, quantity, priority, store, section, price) { this.name = name; this.quantity = quantity; this.priority = priority; this.store = store; this.section = section; this.price = price; this._purchased = false; } plainMethod() { alert(\"hello from a plain method\"); } get purchased() { return this._purchased; } set purchased(nv) { this._purchased = nv; alert(`${this.name} was purchased`) } } x = new Item('bread', 1, 'High', 'Fareway', 'Bakery', 3.99); writeln(x.constructor.name) y = JSON.stringify(x) writeln(y) z = JSON.parse(y) writeln(z) writeln(z.constructor.name) z.purchased = 10 \/\/ Note no alert! z.plainMethod() \/\/ Error!!     If we want our object to have some special behavior when we serialze it, we can write a method for our object called toJSON The method takes no parameters and returns a string. Note that this string should be deserializable by the JSON.parse method.    Q-4: In the above example the type of x is and the type of z is .         Is the correct answer      Well, it is an Object but be more specific.      Try running the code and looking at the output.        Is the correct answer      Is not correct. JSON has no way to remember the user defined type of an object.      Try running the code and looking at the output.         Using the localStorage Object  Before HTML5 the only way to store data in the browser was in a cookie. That had a lot of limits in terms of size, and cookies are sent to the server with each request, so they were sent out into the internet over a potentially unsecure connection. In HTML5 localStorage was added to accomodate the needs to keep information persistent, and web storage objects were created.  There are two main web storage objects:     localStorage can hold at least 5MB of data with no expiration date.    sessionStorage stores data for one session – data is erased with the browser tab is closed.     localStorage is subject to some security constraints. Only pages from the same origin and protocol can access a local storage object. This prevents javascript on a page loaded from site A and javascript on a page loaded from site B from sharing a localstorage object. It also means that a page loaded over http from site A and a page loaded over https from site A will also be unable to share. Practically speaking it also means that if you are testing your page using file:\/\/\/page\/to\/page that your local storage will not be shareable when you load it over either http or https.  Using localStorage is as easy as using a python dictionary or a key value lookup on a javascript object. The difference is that the keys and the values you store in localStorage must be strings. Good thing you just learned about JSON!  The localStorage object has three important methods:      localStorage.setItem(key, value)      localStorage.getItem(key)      localStorage.removeItem(key)      You can also access a key in localStorage directly using localStorage.key  Run the following example a few times.   counter = localStorage.counter writeln(\"counter is \" + counter); if (! counter) { counter = 1 } else { counter += 1 } localStorage.counter = counter writeln(\"counter is now \" + localStorage.counter)     Do you see anything wrong? Now reload the page and run it again. Notice that it keeps counting from where it left off.  Exercise Fix the counter so that it counts using the decimal number system.   "
+},
+{
+  "id": "dynamic_using-javascript-object-notation-json-2",
+  "level": "2",
+  "url": "dynamic_serializing-and-localstorage.html#dynamic_using-javascript-object-notation-json-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "serialized "
+},
+{
+  "id": "dynamic_using-javascript-object-notation-json-3",
+  "level": "2",
+  "url": "dynamic_serializing-and-localstorage.html#dynamic_using-javascript-object-notation-json-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "deserialization "
+},
+{
+  "id": "dynamic_using-javascript-object-notation-json-9",
+  "level": "2",
+  "url": "dynamic_serializing-and-localstorage.html#dynamic_using-javascript-object-notation-json-9",
+  "type": "Warning",
+  "number": "6.7.1",
+  "title": "",
+  "body": " Not everything can be serialized! For example, functions and methods cannot be serialized.  "
+},
+{
+  "id": "json_types",
+  "level": "2",
+  "url": "dynamic_serializing-and-localstorage.html#json_types",
+  "type": "Checkpoint",
+  "number": "6.7.2",
+  "title": "",
+  "body": "  Q-4: In the above example the type of x is and the type of z is .         Is the correct answer      Well, it is an Object but be more specific.      Try running the code and looking at the output.        Is the correct answer      Is not correct. JSON has no way to remember the user defined type of an object.      Try running the code and looking at the output.      "
+},
+{
+  "id": "dynamic_using-the-localstorage-object-13",
+  "level": "2",
+  "url": "dynamic_serializing-and-localstorage.html#dynamic_using-the-localstorage-object-13",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Exercise "
+},
+{
+  "id": "dynamic_prototype-3-storing-the-list-in-the-browser",
+  "level": "1",
+  "url": "dynamic_prototype-3-storing-the-list-in-the-browser.html",
+  "type": "Section",
+  "number": "6.8",
+  "title": "Prototype 3 Storing the List in the Browser",
+  "body": " Prototype 3 Storing the List in the Browser  With this new information about localStorage and how to serialize javascript objects we are now ready to update our application. The wonderful thing about this next step is that we are adding some major new functionality to our app, but it's not going to require a reorganization of our existing code. Let's look at list of steps:     Write a new class called LocalStorageSaver with the following capabilities.     Write a saveAll method to serialize our shopping list and save the serialized list to localStorage.    Make this class a client of the model. So that whenever the model changes we save it.          Q-1: What is the best way to arrange for our new LocalStorageSaver class to be a client of the model?      Make LocalStorageSaver a subclass of ShoppingList    No, although this could work it would tightly couple the model to a particular method of persistent storage.      Make the LocalStorage object a property of our model.    No, although we could make this work as well, it's not the best solution for our architecture.      Have the LocalStorageSaver object subscribe to the model    Corrrect!      The benefit of keeping the LocalStorageSaver class independent is that it now makes it easy for us to save our model without modifying any of the existing model code, and we could even add additional xxxSaver classes if we want to store our data some other way. – We'll eventually have to get there anyway!   \"use strict\" class LocalStorageSaver { constructor(model,lsname) { this.lsname = lsname; let self = this model.subscribe(function(slist, msg) { self.saveAll(slist) }) \/\/ now restore from localstorage let restore_list = JSON.parse(localStorage.getItem(self.lsname)) for(let vals of restore_list) { let it = new Item(vals.name, vals.quantity, vals.priority, vals.store, vals.section, vals.price) model.addItem(it) } } saveAll(slist) { let ls_list = JSON.stringify(slist.newItems) localStorage.setItem(this.lsname, ls_list) } }   Exercise Add this class definition to your project, and make sure you instantiate an instance somewhere. confirm that the app now remembers your list even after a page refresh.  "
+},
+{
+  "id": "localstore_client",
+  "level": "2",
+  "url": "dynamic_prototype-3-storing-the-list-in-the-browser.html#localstore_client",
+  "type": "Checkpoint",
+  "number": "6.8.1",
+  "title": "",
+  "body": "  Q-1: What is the best way to arrange for our new LocalStorageSaver class to be a client of the model?      Make LocalStorageSaver a subclass of ShoppingList    No, although this could work it would tightly couple the model to a particular method of persistent storage.      Make the LocalStorage object a property of our model.    No, although we could make this work as well, it's not the best solution for our architecture.      Have the LocalStorageSaver object subscribe to the model    Corrrect!     "
+},
+{
+  "id": "dynamic_prototype-3-storing-the-list-in-the-browser-7",
+  "level": "2",
+  "url": "dynamic_prototype-3-storing-the-list-in-the-browser.html#dynamic_prototype-3-storing-the-list-in-the-browser-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Exercise "
+},
+{
+  "id": "dynamic_exercises",
+  "level": "1",
+  "url": "dynamic_exercises.html",
+  "type": "Exercises",
+  "number": "6.9",
+  "title": "Exercises",
+  "body": " Exercises  This page is a placeholder for now.  "
+},
+{
+  "id": "advanced-javascript_javascript-prototypes",
+  "level": "1",
+  "url": "advanced-javascript_javascript-prototypes.html",
+  "type": "Section",
+  "number": "7.1",
+  "title": "Javascript Prototypes",
+  "body": " Javascript Prototypes   Object Creation   x = Object.create(null) x.foo = 1 x.bar = 2 alert(x['bar'])     To try:   x = Object.create(null) x.bar = 1 x.foo = function() { console.log(this.bar) } x.foo() y = Object.create(x) y.foo() y.bar=2 y.foo() z = function() { this.bar = 2 this.foo = function() { console.log(this.bar) } return this } z1 = z() z1.foo() myClass = function() { this.bar = 22 this.foo = function() { console.log(this.bar) } } z2 = new myClass() z2.foo() console.log(z2.prototype) MyClass = function(x,y,z) { var priv = x this.pub = y \/\/if (z == undefined) { \/\/ z = 'default value' \/\/} this.something = z var innerFunc = function() { priv = priv + 1 } this.publicFunction =function(z) { priv = priv + z return priv } } MyClass.prototype.outerfunction = function(a) { this.pub = this.pub + a \/\/priv = priv + 1 return this.pub } foo = new MyClass(10,20,30) console.log(foo.outerfunction(99)) console.log(foo.publicFunction(99)) \/\/foo.innerFunc()     Exercise  Create a Person class, they should have private ivars for ssn and weight. public ivars for age and name. public methods for gainWeight, getSSN, and getWeight. add a prototype method for birthday that adds one to the age, and also returns the new age.   \/\/ your code here      "
+},
+{
+  "id": "advanced-javascript_interacting-with-other-services",
+  "level": "1",
+  "url": "advanced-javascript_interacting-with-other-services.html",
+  "type": "Section",
+  "number": "7.2",
+  "title": "Interacting with Other Services",
+  "body": " Interacting with Other Services   Many websites make their data available for others to use. For example Amazon makes its information about products available, Google allows you to add information to your calendar through your own program, Yelp makes their reviews available, and many more! are available for free! These data sources are often referred to as Web APIs . Once a Javascript program has the data it is free to display that data in your browser in many different ways, or even to combine it with other data from other sites in what we call a mashup.  The key to interacting with other services is to have an efficient way to exchange data. Using the HTTP protocol this data must be plain text. One way to think about this is in terms of calling a remote function. The name of the function is the URI. But how do you pass parameters to this remote function? There are two ways that a browser can send data to a server.     As part of the URL known as a QUERY_STRING    In the body of an HTTP request.       Query String Parameters  The query string is used to send data from the browser to the server when an HTTP GET request is made. As the name suggests it is a special string that is appended to the end of the URL. You have probably seen many query strings while using the web. Here is an example:  http:\/\/example.com\/api\/getdata?id=1234&date=now&apikey=1234567  In the example above, the query string is everything after the ? . the string is composed of key value pairs separated by the & character. In the example above we have the following key value pairs     id=1234    date=now    apikey=1234567     Notice that the syntax is very regular to make it easy for a program to take the string and split it into the key value pairs. In the early days of web programming the query string was provided to the web application in the form of an environment variable. The program had to split the string into key value pairs on its own. In modern web frameworks the query string is automatically processed and provided to the program in the form of a dictionary.    Check your Understanding    Write a python function that given a URL like http:\/\/example.com\/api\/getdata?id=1234&date=now&apikey=1234567 returns a dictionary containing the correct keys and values.    def query_string_parser(qs): # your code Here        Write a Javascript function that given a URL like http:\/\/example.com\/api\/getdata?id=1234&date=now&apikey=1234567 returns a dictionary containing the correct keys and values.    function query_string_parser(qs) { \/\/ your code Here }        Javascript Object Notation (JSON)  What if you want to pass more complicated data to the web api? What if you have more data to pass to the api than you can do as part of the URL? In that case you can send the data in the body of the http request.  Since we need to adhere to the HTTP protocol any large data or any complex data objec needs to be turned into a string before it can be sent as part of the body. The process of turning an object from a program into a string is known as serialization . Web programming uses two main formats to serialize data: XML and JSON. JSON is highly convenient and is much more widely used today than XML, so we will focus on JSON.  Most of what you need to know about JSON is the two primary methods of the JSON object: stringify and parse . The stringify method takes a Javascript object and turns it into a string. The parse method takes a string and turns it into a Javascript object. There are some important limitations on what can and cannot be stringified. For example, functions cannot be stringified, dates will be converted into strings, but there is no way to convert them back into Date objects again.   x = [1, 2, 3.1415, \"Hello World\"] y = {first_name: \"Joe\", salary: 104000.50 } sval = JSON.stringify(y) writeln(sval) sobj = JSON.parse(sval) writeln(sobj)     XMLHTTPRequest  fetch   "
+},
+{
+  "id": "advanced-javascript_interacting-with-other-services-2-1",
+  "level": "2",
+  "url": "advanced-javascript_interacting-with-other-services.html#advanced-javascript_interacting-with-other-services-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Web APIs "
+},
+{
+  "id": "advanced-javascript_interacting-with-other-services-2-3",
+  "level": "2",
+  "url": "advanced-javascript_interacting-with-other-services.html#advanced-javascript_interacting-with-other-services-2-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "QUERY_STRING body "
+},
+{
+  "id": "qs_ex1",
+  "level": "2",
+  "url": "advanced-javascript_interacting-with-other-services.html#qs_ex1",
+  "type": "Checkpoint",
+  "number": "7.2.1",
+  "title": "",
+  "body": "  Write a python function that given a URL like http:\/\/example.com\/api\/getdata?id=1234&date=now&apikey=1234567 returns a dictionary containing the correct keys and values.    def query_string_parser(qs): # your code Here     "
+},
+{
+  "id": "qs_ex2",
+  "level": "2",
+  "url": "advanced-javascript_interacting-with-other-services.html#qs_ex2",
+  "type": "Checkpoint",
+  "number": "7.2.2",
+  "title": "",
+  "body": "  Write a Javascript function that given a URL like http:\/\/example.com\/api\/getdata?id=1234&date=now&apikey=1234567 returns a dictionary containing the correct keys and values.    function query_string_parser(qs) { \/\/ your code Here }     "
+},
+{
+  "id": "advanced-javascript_javascript-object-notation-json-3",
+  "level": "2",
+  "url": "advanced-javascript_interacting-with-other-services.html#advanced-javascript_javascript-object-notation-json-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "serialization "
+},
+{
+  "id": "advanced-javascript_exercises",
+  "level": "1",
+  "url": "advanced-javascript_exercises.html",
+  "type": "Exercises",
+  "number": "7.3",
+  "title": "Exercises",
+  "body": " Exercises  This page is a placeholder for now.  "
+},
+{
+  "id": "web_apis_using-web-apis-in-your-application",
+  "level": "1",
+  "url": "web_apis_using-web-apis-in-your-application.html",
+  "type": "Section",
+  "number": "8.1",
+  "title": "Using Web APIs in your Application",
+  "body": " Using Web APIs in your Application  Coming soon. To include a section on CORS and security.  "
+},
+{
+  "id": "web_apis_implementing-a-web-api",
+  "level": "1",
+  "url": "web_apis_implementing-a-web-api.html",
+  "type": "Section",
+  "number": "8.2",
+  "title": "Implementing a Web API",
+  "body": " Implementing a Web API  Coming soon  "
+},
+{
+  "id": "web_apis_a-restful-api",
+  "level": "1",
+  "url": "web_apis_a-restful-api.html",
+  "type": "Section",
+  "number": "8.3",
+  "title": "A RESTful API",
+  "body": " A RESTful API  Coming Soon  "
+},
+{
+  "id": "web_apis_prototype-4-storing-our-list-on-a-server",
+  "level": "1",
+  "url": "web_apis_prototype-4-storing-our-list-on-a-server.html",
+  "type": "Section",
+  "number": "8.4",
+  "title": "Prototype 4 - Storing our List on a Server",
+  "body": " Prototype 4 - Storing our List on a Server     implementing a simple server to save and load data     "
+},
+{
+  "id": "web_apis_exercises",
+  "level": "1",
+  "url": "web_apis_exercises.html",
+  "type": "Exercises",
+  "number": "8.5",
+  "title": "Exercises",
+  "body": " Exercises  This page is a placeholder for now.  "
+},
+{
+  "id": "cgi_server-side-programming",
+  "level": "1",
+  "url": "cgi_server-side-programming.html",
+  "type": "Section",
+  "number": "9.1",
+  "title": "Server Side Programming",
+  "body": " Server Side Programming  Before Javascript, the only way to make your web application interactive and dynamic was to use forms and have a program that worked with your web server generate HTML on the fly. This is one of the most important ideas in web programming. We don't have to limit our thinking about a web server returning the contents of a static file. It is all just text after all, so it does not have to come from a file, it could just as well be generated by a bunch of print statements in a program.  In fact that will be our starting point. All the other web development work since the mid 1990's has been to improve upon the idea that a web page can be generated from some print statements.  Let's look at a hello world style example.   #!\/usr\/bin\/python print(\"Content-type: text\/html\\n\") print(\"<html>\") print(\"<body>\") print(\"<h1>Hello %s<\/h1>\" % \"World\") print(\"<\/body>\") print(\"<\/html>\")     This should be pretty self explanatory. When you run this program it generates the text that looks just like the text you might find in a file named hello.html.  Now the next question is to ask how does this happen? How can I get this hello program to generate code and serve my own browser? The first thing you need to do is create a folder called www . In the www folder make a second folder called cgi-bin and place a hello.py file in that folder.  From the command line make sure that you are in the www folder and run the following command:   python3 -m http.server --cgi 8000   Then in your browser open the url: http:\/\/localhost:8000\/cgi-bin\/hello.py  When the web server sees a URL that is in the cgi-bin folder it knows that instead of just returning the contents of the file, it should execute the program and direct the output from that program back to the browser. Cool right?!  The program can be as complicated as you want, as long as the output of the program comprises html that constitutes a complete web page.  —   Note:   If the browser displays an error instead of the print() output, this might probably be either of the following:   Error code 403. Message: CGI script is not executable ('\/cgi-bin\/hello.py'). Error code explanation: 403 = Request forbidden -- authorization will not help.   Move into the cgi-bin directory and type (for UNIX systems):   chmod a+x hello.py   This will make the hello.py script executable and allow the server to run it.  Or, you might get another error:   OSError: [Errno 8] Exec format error   This probably means that your default python executable is pointing to a different version of python than the program requires. Try to update the first line of the script to #!\/usr\/bin\/python3 to point it to python 3.  —  Exercise: Write a program that calculates the first 25 fibonacci numbers and displays the output in a table.  "
+},
+{
+  "id": "cgi_server-side-programming-14",
+  "level": "2",
+  "url": "cgi_server-side-programming.html#cgi_server-side-programming-14",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Note: "
+},
+{
+  "id": "cgi_processing-user-input",
+  "level": "1",
+  "url": "cgi_processing-user-input.html",
+  "type": "Section",
+  "number": "9.2",
+  "title": "Processing user Input",
+  "body": " Processing user Input  In the Javascript chapter we looked at a number of HTML tags for processing user input. If that user input needs to go back to the web server, then we need to enclose our input elements, and a submit button inside a form .  When we submit a form, the browser packages up all of the data we have entered into the input elements and sends them back to the server, and your program for processing.  Let's change the hello.py program we wrote earlier to have a form where you can enter your name. After you click on the submit button the page will display Hello yourname rather than Hello World . Although it sounds simple, this program will provide us with several avenues to further explore the relationship between the browser, the server, and our cgi program.  Let's start with a basic page with a form.   <html> <body> <form action='cgi-bin\/hello2.py' method='get'> <label for=\"myname\">Enter Your Name<\/label> <input id=\"myname\" type=\"text\" name=\"firstname\" value=\"Nada\" \/> <input type=\"submit\"> <\/form> <\/body> <\/html>   There are two important attributes on the form tag:     method: this tells the browser which http method to use when submitting the form back to the server. The options are get or post .    action: This tells the browser the URL to use when submitting the form.     The input type submit renders as a button in the form. The purpose of this input type is to cause the form to be submitted back to the web server.   #!\/usr\/bin\/env python import os print \"Content-type: text\/html\\n\" qs = os.environ['QUERY_STRING'] if 'firstname' in qs: name = qs.split('=')[1] else: name = 'No Name Provided' print \"<html>\" print \"<body>\" print \"<h1>Hello %s<\/h1>\" % name print \"<\/pre>\" print \"<\/body>\" print \"<\/html>\"   The new cgi script must now check to see if the QUERY_STRING environment variable contains the string firstname. Note that that firstname in the query string corresponds to the name attribute of the input element.  When you press the submit button for a form, the web browser iterates over all of the input elements in the form, and collects the name value attributes of each. These are put together into a string that becomes part of the URL. The name value pairs are added after the usual URL information using the form: ?firstname=Sheldon&lastname=Cooper The ? separates the query string information from the URL itself. The & separates each name value pair.  The following figure gives you a good sense for the flow of how our little application works.    Combining into One File  Let's now combine our application into a single file. Using the following flow:     If there is no QUERY_STRING simply return the HTML for the form.    If there is a QUERY_STRING then do not display the form, simply display the Hello greeting to the name stored in the QUERY STRING.     Along the way we will clean up our code and refactor it into a couple of functions.   #!\/usr\/bin\/env python import os headers = [\"Content-type: text\/html\"] qs = os.environ['QUERY_STRING'] def sendHeaders(): for h in headers: print h print \"\\n\" def sendForm(): print ''' <html> <body> <form action='cgi-bin\/hellobetter.py' method='get'> <label for=\"myname\">Enter Your Name<\/label> <input id=\"myname\" type=\"text\" name=\"firstname\" value=\"Nada\" \/> <input type=\"submit\"> <\/form> <\/body> <\/html> ''' def sendPage(name): print ''' <html> <body> <h1>Hello {0}<\/h1> <\/body> <\/html> '''.format(name) if not qs: sendHeaders() sendForm() else: if 'firstname' in qs: name = qs.split('=')[1] else: name = 'No Name Provided' sendHeaders() sendPage(name)   The headers list is to set us up with a pattern that will be useful later. Sometimes we don't know right away what headers we may want to send. We'll see that in the next section. So we can defer sending the headers until we have done all of our processing and are ready to send back the results. To add a header to our response we can simply append the string to the list of headers.  The other functions, sendPage and sendForm reduce the number of print statements we need by making use of Python's triple quoted strings, and string formatting .   "
+},
+{
+  "id": "cgi_cookies",
+  "level": "1",
+  "url": "cgi_cookies.html",
+  "type": "Section",
+  "number": "9.3",
+  "title": "Cookies",
+  "body": " Cookies   HTTP is a stateless protocol. This means that from one request to the next HTTP does not know anything about the state of the webpage you are looking at. This is a good thing, from the perspective of scale, but it does provide some challenges as well. How does the server know your name every time you come back to Google or Amazon?  The answer is, of course, cookies. Early on they were called magic cookies, but lately that has been shortened to just cookies. A cookie is a small chunk of information (maximum 4096 bytes) that the web browser stores on behalf of the web server. The information is sent to the server from the browser along with every request.  The cookie information is transferred back and forth as part of the header in the request and the response. The server asks the browser to store some information using a Set-Cookie header, and the browser gives the information back to the server using a cookie header.  Here is an example of a Set-Cookie header:  HTTP\/1.0 200 OK Content-type: text\/html Set-Cookie: name=value; Expires=Wed, 09 Jun 2021 07:21:14 GMT; Path=\/  Besides the name value pair for storing your application data, cookies may have the following attributes:     Expires – How long should the browser store this cookie? By default the cookie will only be stored as long as the browser is open. When you quit and restart the browser the cookie will be gone. However you can set a date in the future that will cause the browser to store the cookie until that time.    Domain – By defualt, the browser should only return the cookie to the domain that issued it. For example, www.luther.edu However the server may set luther.edu as the domain so that the cookie will be supplied to any server inside the luther.edu domain.    Path – By default the path is \/ such that any URI on the server will get the cookie, but the server may restrict this by setting a path such as \/api so that only requests that begin with \/api will receive the cookie.     The browser supplies the cookie information back to the server using a header like this:  GET \/interactivepython.html HTTP\/1.1 Host: www.luther.edu Cookie: name=value; name2=value2 Accept: *\/*  Let us make one final modification to our hello world cgi program and store the users name in a cookie. This will allow us to avoid asking the user their name every time.  Our program logic gets just a bit more complicated yet again as now we need to check the QUERY_STRING to see if the name has been supplied there, and we also need to check for the cookie. Cookie information is supplied to the CGI program through the environment variable HTTP_COOKIE . The helper functions do not change, but the main logic of our program now looks like this:   cookies = os.environ['HTTP_COOKIE'] if not qs: if cookies and 'firstname' in cookies: sendHeaders() cvalues = cookies.split(';') for c in cvalues: if 'firstname' in c: name = c.split('=')[1] sendPage(name) else: sendHeaders() sendForm() else: if 'firstname' in qs: name = qs.split('=')[1] headers.append(\"Set-Cookie: firstname=%s\" % name) else: name = 'No Name Provided' sendHeaders() sendPage(name)   "
+},
+{
+  "id": "cgi_cookies-4",
+  "level": "2",
+  "url": "cgi_cookies.html#cgi_cookies-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "browser server. "
+},
+{
+  "id": "cgi_exercises",
+  "level": "1",
+  "url": "cgi_exercises.html",
+  "type": "Exercises",
+  "number": "9.4",
+  "title": "Exercises",
+  "body": " Exercises  This page is a placeholder for now.  "
+},
+{
+  "id": "flask_toward-modern-web-development",
+  "level": "1",
+  "url": "flask_toward-modern-web-development.html",
+  "type": "Section",
+  "number": "10.1",
+  "title": "Toward Modern Web Development",
+  "body": " Toward Modern Web Development  A web framework is a software framework designed to simplify web development. Frameworks exist to save you from having to re-invent the wheel and reduce your workload when you are building a new site.  In this chapter we will look at some of the components of a web framework, and introduce some Python packages that implement those components. Finally, we will introduce the Flask micro-framework which will tie together the individual components into a comprehensive whole.  Some of the components we will consider in the coming chapters include:     Template Engines    Object Relational Mapping libraries    Routing or URL mapping    Form creation and processing    controllers that do not force you to write a separate Python program for every request.    Helper objects for decoding QUERY_STRINGS and managing Cookies and Sessions.      Templates  If you have tried even one server side web project, you may already have recognized that there is a certain amount of tedium in developing pages. First and formost among these are print statements! Really, I can hear you say, we really have to use print statements for everything when we make a web page? Although triple quoted strings are certainly one way to reduce some of the tedium, things can get really complicated when you need to concatenate together really big strings that have embedded quotes want to insert values from variables.  To solve this problem all web frameworks include a template engine. Temmplates allow you to create files that are a simple mix of HTML and placeholders. The template engine fills in the placeholders with values from your application.    Databases  Another big problem that all web frameworks solve is the persistence problem. It's fine to write applications that have variables, but variables only exist for the life of the program. Web servers are reliable, but they go down and need to be restarted fairly frequently. So, there needs to be a way to store and retrieve information from long term storage. I'm talking about databases here. The authors of web frameworks realized very early on that web programmers did not want to become database experts in addition to everything else they have they have to know, so web frameworks provide an Object Relational Mapper, that makes it easy to go back and forth between the database and your Python application.  There are also an increasing number of non-relational databases that go under the heading of NOSQL databases that are used in web applications.    Forms Processing  Creating forms is tedious in the extreme, and it turns out to be quite easy to automate. Most frameworks therefore provide an easy way to map database tables or simple Python objects to forms. When one of these automatically generated forms is submitted, the framework can take care of validating the submitted data as well as storing it in the database.  It sounds like there's almost no work left to do! And that is the point, of frameworks to make it easy to get something minimal up and running very quickly!    Flask  To conclude this introductory section we will look at the Flask framework. We will take one more lap through the hello world app from the CGI chapter and see how we would write this with a mimum amount of help from the framework. At the end of all this we'll see how little work it would take to do our full hello world application using all of the components of the framework.  But First…   Installing a Virtual Environment and Flask  For your own development purposes it is good to get in the habit of using a virtual environment. Using Python 3.4 it is really easy.     Make a Folder in your home directory called Environments    run the command python3 -m venv ~\/Environments\/flaskenv    Now run the command . ~\/Environments\/flaskenv\/bin\/activate This activates the python virtual environment and sets up everything so that you will run a special Python contained in the virtual environment. Best of all you now have permission to install any third party python packages into your own virtual environment without needing root permission.    run pip install flask     After installing flask you can verify that everything is good by running pip list you should see the following:  Flask (0.10.1) itsdangerous (0.24) Jinja2 (2.7.3) MarkupSafe (0.23) pip (1.5.6) setuptools (2.1) Werkzeug (0.9.6)    "
+},
+{
+  "id": "flask_templates-3",
+  "level": "2",
+  "url": "flask_toward-modern-web-development.html#flask_templates-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "template "
+},
+{
+  "id": "flask_flask-4",
+  "level": "2",
+  "url": "flask_toward-modern-web-development.html#flask_flask-4",
+  "type": "Note",
+  "number": "10.1.1",
+  "title": "Installing a Virtual Environment and Flask.",
+  "body": " Installing a Virtual Environment and Flask  For your own development purposes it is good to get in the habit of using a virtual environment. Using Python 3.4 it is really easy.     Make a Folder in your home directory called Environments    run the command python3 -m venv ~\/Environments\/flaskenv    Now run the command . ~\/Environments\/flaskenv\/bin\/activate This activates the python virtual environment and sets up everything so that you will run a special Python contained in the virtual environment. Best of all you now have permission to install any third party python packages into your own virtual environment without needing root permission.    run pip install flask     After installing flask you can verify that everything is good by running pip list you should see the following:  Flask (0.10.1) itsdangerous (0.24) Jinja2 (2.7.3) MarkupSafe (0.23) pip (1.5.6) setuptools (2.1) Werkzeug (0.9.6)  "
+},
+{
+  "id": "flask_quickstart-id1",
+  "level": "1",
+  "url": "flask_quickstart-id1.html",
+  "type": "Section",
+  "number": "10.2",
+  "title": "Quickstart",
+  "body": " Quickstart  Eager to get started? This page gives a good introduction to Flask. Follow installation to set up a project and install Flask first.   A Minimal Application  A minimal Flask application looks something like this:   from flask import Flask from markupsafe import escape app = Flask(__name__) @app.route(\"\/\") def hello_world(): return f\"<p>Hello, {escape(name)}!<\/p>\"   So what did that code do?     First we imported the Flask class. An instance of this class will be our WSGI application.    Next we create an instance of this class. The first argument is the name of the application's module or package. __name__ is a convenient shortcut for this that is appropriate for most cases. This is needed so that Flask knows where to look for resources such as templates and static files.    We then use the route() decorator to tell Flask what URL should trigger our function.    The function returns the message we want to display in the user's browser. The default content type is HTML, so HTML in the string will be rendered by the browser.      HTML escaping  When returning HTML (the default response type in Flask), any user input rendered in the output must be escaped to protect from injection attacks. HTML templates in Jinja, introduced later, will do this automatically. escape() , shown above, can be used manually. It's omitted for brevity in the examples below.   Save it as hello.py or something similar. Make sure to not call your application flask.py because this would conflict with Flask itself.  To run the application, use the flask command or python -m flask . Before you can do that you need to tell your terminal the application to work with by exporting the FLASK_APP environment variable:   $ export FLASK_APP=hello.py $ flask run * Running on http:\/\/127.0.0.1:5000\/   If you are on Windows, the environment variable syntax depends on command line interpreter. On Command Prompt:  C:\\path\\to\\app>set FLASK_APP=hello.py  And on PowerShell:  PS C:\\path\\to\\app> $env:FLASK_APP = \"hello.py\"  This launches a very simple builtin server, which is good enough for testing but probably not what you want to use in production. For deployment options see deployment .  Now head over to http:\/\/127.0.0.1:5000\/ , and you should see your hello world greeting.   Externally Visible Server  If you run the server you will notice that the server is only accessible from your own computer, not from any other in the network. This is the default because in debugging mode a user of the application can execute arbitrary Python code on your computer.  If you have the debugger disabled or trust the users on your network, you can make the server publicly available simply by adding --host=0.0.0.0 to the command line:  $ flask run --host=0.0.0.0  This tells your operating system to listen on all public IPs.     What to do if the Server does not Start  In case the python -m flask fails or flask does not exist, there are multiple reasons this might be the case. First of all you need to look at the error message.   Old Version of Flask  Versions of Flask older than 0.11 use to have different ways to start the application. In short, the flask command did not exist, and neither did python -m flask . In that case you have two options: either upgrade to newer Flask versions or have a look at the server docs to see the alternative method for running a server.    Invalid Import Name  The FLASK_APP environment variable is the name of the module to import at flask run . In case that module is incorrectly named you will get an import error upon start (or if debug is enabled when you navigate to the application). It will tell you what it tried to import and why it failed.  The most common reason is a typo or because you did not actually create an app object.     Debug Mode  (Want to just log errors and stack traces? See application-errors )  The flask script is nice to start a local development server, but you would have to restart it manually after each change to your code. That is not very nice and Flask can do better. If you enable debug support the server will reload itself on code changes, and it will also provide you with a helpful debugger if things go wrong.  To enable all development features (including debug mode) you can export the FLASK_ENV environment variable and set it to development before running the server:  $ export FLASK_ENV=development $ flask run  (On Windows you need to use set instead of export .)  This does the following things:     it activates the debugger    it activates the automatic reloader    it enables the debug mode on the Flask application.     You can also control debug mode separately from the environment by exporting FLASK_DEBUG=1 .  There are more parameters that are explained in the server docs.   Attention  Even though the interactive debugger does not work in forking environments (which makes it nearly impossible to use on production servers), it still allows the execution of arbitrary code. This makes it a major security risk and therefore it must never be used on production machines .   Screenshot of the debugger in action:   More information on using the debugger can be found in the Werkzeug documentation .  Have another debugger in mind? See working-with-debuggers .   "
+},
+{
+  "id": "flask_a-minimal-application-6",
+  "level": "2",
+  "url": "flask_quickstart-id1.html#flask_a-minimal-application-6",
+  "type": "Note",
+  "number": "10.2.1",
+  "title": "",
+  "body": " HTML escaping  When returning HTML (the default response type in Flask), any user input rendered in the output must be escaped to protect from injection attacks. HTML templates in Jinja, introduced later, will do this automatically. escape() , shown above, can be used manually. It's omitted for brevity in the examples below.  "
+},
+{
+  "id": "flask_public-server",
+  "level": "2",
+  "url": "flask_quickstart-id1.html#flask_public-server",
+  "type": "Note",
+  "number": "10.2.2",
+  "title": "Externally Visible Server.",
+  "body": " Externally Visible Server  If you run the server you will notice that the server is only accessible from your own computer, not from any other in the network. This is the default because in debugging mode a user of the application can execute arbitrary Python code on your computer.  If you have the debugger disabled or trust the users on your network, you can make the server publicly available simply by adding --host=0.0.0.0 to the command line:  $ flask run --host=0.0.0.0  This tells your operating system to listen on all public IPs.  "
+},
+{
+  "id": "flask_debug-mode-id2-11",
+  "level": "2",
+  "url": "flask_quickstart-id1.html#flask_debug-mode-id2-11",
+  "type": "Note",
+  "number": "10.2.3",
+  "title": "Attention.",
+  "body": " Attention  Even though the interactive debugger does not work in forking environments (which makes it nearly impossible to use on production servers), it still allows the execution of arbitrary code. This makes it a major security risk and therefore it must never be used on production machines .  "
+},
+{
+  "id": "flask_routing",
+  "level": "1",
+  "url": "flask_routing.html",
+  "type": "Section",
+  "number": "10.3",
+  "title": "Routing",
+  "body": " Routing  Modern web applications use meaningful URLs to help users. Users are more likely to like a page and come back if the page uses a meaningful URL they can remember and use to directly visit a page.  Use the route() decorator to bind a function to a URL.  @app.route('\/') def index(): return 'Index Page' @app.route('\/hello') def hello(): return 'Hello, World'  You can do more! You can make parts of the URL dynamic and attach multiple rules to a function.   Variable Rules  You can add variable sections to a URL by marking sections with <variable_name> . Your function then receives the <variable_name> as a keyword argument. Optionally, you can use a converter to specify the type of the argument like <converter:variable_name> .  @app.route('\/user\/<username>') def show_user_profile(username): # show the user profile for that user return f'User {username}' @app.route('\/post\/<int:post_id>') def show_post(post_id): # show the post with the given id, the id is an integer return f'Post {post_id}' @app.route('\/path\/<path:subpath>') def show_subpath(subpath): # show the subpath after \/path\/ return f'Subpath {subpath}'  Converter types:      string   (default) accepts any text without a slash     int   accepts positive integers     float   accepts positive floating point values     path   like string but also accepts slashes     uuid   accepts UUID strings       Unique URLs \/ Redirection Behavior  The following two rules differ in their use of a trailing slash.  @app.route('\/projects\/') def projects(): return 'The project page' @app.route('\/about') def about(): return 'The about page'  The canonical URL for the projects endpoint has a trailing slash. It's similar to a folder in a file system. If you access the URL without a trailing slash, Flask redirects you to the canonical URL with the trailing slash.  The canonical URL for the about endpoint does not have a trailing slash. It's similar to the pathname of a file. Accessing the URL with a trailing slash produces a 404 Not Found error. This helps keep URLs unique for these resources, which helps search engines avoid indexing the same page twice.    URL Building  To build a URL to a specific function, use the url_for() function. It accepts the name of the function as its first argument and any number of keyword arguments, each corresponding to a variable part of the URL rule. Unknown variable parts are appended to the URL as query parameters.  Why would you want to build URLs using the URL reversing function url_for() instead of hard-coding them into your templates?     Reversing is often more descriptive than hard-coding the URLs.    You can change your URLs in one go instead of needing to remember to manually change hard-coded URLs.    URL building handles escaping of special characters and Unicode data transparently.    The generated paths are always absolute, avoiding unexpected behavior of relative paths in browsers.    If your application is placed outside the URL root, for example, in \/myapplication instead of \/ , url_for() properly handles that for you.     For example, here we use the test_request_context() method to try out url_for() . test_request_context() tells Flask to behave as though it's handling a request even while we use a Python shell. See .   from flask import url_for @app.route('\/') def index(): return 'index' @app.route('\/login') def login(): return 'login' @app.route('\/user\/<username>') def profile(username): return f'{username}\\'s profile' with app.test_request_context(): print(url_for('index')) print(url_for('login')) print(url_for('login', next='\/')) print(url_for('profile', username='John Doe'))    \/ \/login \/login?next=\/ \/user\/John%20Doe     HTTP Methods  Web applications use different HTTP methods when accessing URLs. You should familiarize yourself with the HTTP methods as you work with Flask. By default, a route only answers to GET requests. You can use the methods argument of the route() decorator to handle different HTTP methods.  from flask import request @app.route('\/login', methods=['GET', 'POST']) def login(): if request.method == 'POST': return do_the_login() else: return show_the_login_form()  If GET is present, Flask automatically adds support for the HEAD method and handles HEAD requests according to the HTTP RFC . Likewise, OPTIONS is automatically implemented for you.   "
+},
+{
+  "id": "flask_variable-rules-5",
+  "level": "2",
+  "url": "flask_routing.html#flask_variable-rules-5",
+  "type": "Table",
+  "number": "10.3.1",
+  "title": "",
+  "body": "    string   (default) accepts any text without a slash     int   accepts positive integers     float   accepts positive floating point values     path   like string but also accepts slashes     uuid   accepts UUID strings    "
+},
+{
+  "id": "flask_static",
+  "level": "1",
+  "url": "flask_static.html",
+  "type": "Section",
+  "number": "10.4",
+  "title": "Static Files",
+  "body": " Static Files  Dynamic web applications also need static files. That's usually where the CSS and JavaScript files are coming from. Ideally your web server is configured to serve them for you, but during development Flask can do that as well. Just create a folder called static in your package or next to your module and it will be available at \/static on the application.  To generate URLs for static files, use the special 'static' endpoint name:  url_for('static', filename='style.css')  The file has to be stored on the filesystem as static\/style.css .  "
+},
+{
+  "id": "flask_rendering-templates",
+  "level": "1",
+  "url": "flask_rendering-templates.html",
+  "type": "Section",
+  "number": "10.5",
+  "title": "Rendering Templates",
+  "body": " Rendering Templates  Generating HTML from within Python is not fun, and actually pretty cumbersome because you have to do the HTML escaping on your own to keep the application secure. Because of that Flask configures the Jinja2 template engine for you automatically.  To render a template you can use the render_template() method. All you have to do is provide the name of the template and the variables you want to pass to the template engine as keyword arguments. Here's a simple example of how to render a template:  from flask import render_template @app.route('\/hello\/') @app.route('\/hello\/<name>') def hello(name=None): return render_template('hello.html', name=name)  Flask will look for templates in the templates folder. So if your application is a module, this folder is next to that module, if it's a package it's actually inside your package:  Case 1 : a module:  \/application.py \/templates \/hello.html  Case 2 : a package:  \/application \/__init__.py \/templates \/hello.html  For templates you can use the full power of Jinja2 templates. Head over to the official Jinja2 Template Documentation for more information.  Here is an example template:   <!doctype html> <title>Hello from Flask<\/title> {‎% if name %} <h1>Hello {‎{ name }}!<\/h1> {‎% else %} <h1>Hello, World!<\/h1> {‎% endif %}   Inside templates you also have access to the request , session and g  1 objects as well as the get_flashed_messages() function.  Templates are especially useful if inheritance is used. If you want to know how that works, head over to the template-inheritance pattern documentation. Basically template inheritance makes it possible to keep certain elements on each page (like header, navigation and footer).  Automatic escaping is enabled, so if name contains HTML it will be escaped automatically. If you can trust a variable and you know that it will be safe HTML (for example because it came from a module that converts wiki markup to HTML) you can mark it as safe by using the Markup class or by using the |safe filter in the template. Head over to the Jinja 2 documentation for more examples.  Here is a basic introduction to how the Markup class works:  >>> from markupsafe import Markup >>> Markup('<strong>Hello %s!<\/strong>') % '<blink>hacker<\/blink>' Markup(u'<strong>Hello &lt;blink&gt;hacker&lt;\/blink&gt;!<\/strong>') >>> Markup.escape('<blink>hacker<\/blink>') Markup(u'&lt;blink&gt;hacker&lt;\/blink&gt;') >>> Markup('<em>Marked up<\/em> &raquo; HTML').striptags() u'Marked up \\xbb HTML'   Changed in version 0.5: Autoescaping is no longer enabled for all templates. The following extensions for templates trigger autoescaping: .html , .htm , .xml , .xhtml . Templates loaded from a string will have autoescaping disabled.    1  Unsure what that g object is? It's something in which you can store information for your own needs, check the documentation of that object ( g ) and the sqlite3 for more information.   "
+},
+{
+  "id": "flask_rendering-templates-6",
+  "level": "2",
+  "url": "flask_rendering-templates.html#flask_rendering-templates-6",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Case 1 "
+},
+{
+  "id": "flask_rendering-templates-8",
+  "level": "2",
+  "url": "flask_rendering-templates.html#flask_rendering-templates-8",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Case 2 "
+},
+{
+  "id": "flask_accessing-request-data",
+  "level": "1",
+  "url": "flask_accessing-request-data.html",
+  "type": "Section",
+  "number": "10.6",
+  "title": "Accessing Request Data",
+  "body": " Accessing Request Data  For web applications it's crucial to react to the data a client sends to the server. In Flask this information is provided by the global request object. If you have some experience with Python you might be wondering how that object can be global and how Flask manages to still be threadsafe. The answer is context locals:   Context Locals   Insider Information  If you want to understand how that works and how you can implement tests with context locals, read this section, otherwise just skip it.   Certain objects in Flask are global objects, but not of the usual kind. These objects are actually proxies to objects that are local to a specific context. What a mouthful. But that is actually quite easy to understand.  Imagine the context being the handling thread. A request comes in and the web server decides to spawn a new thread (or something else, the underlying object is capable of dealing with concurrency systems other than threads). When Flask starts its internal request handling it figures out that the current thread is the active context and binds the current application and the WSGI environments to that context (thread). It does that in an intelligent way so that one application can invoke another application without breaking.  So what does this mean to you? Basically you can completely ignore that this is the case unless you are doing something like unit testing. You will notice that code which depends on a request object will suddenly break because there is no request object. The solution is creating a request object yourself and binding it to the context. The easiest solution for unit testing is to use the test_request_context() context manager. In combination with the with statement it will bind a test request so that you can interact with it. Here is an example:  from flask import request with app.test_request_context('\/hello', method='POST'): # now you can do something with the request until the # end of the with block, such as basic assertions: assert request.path == '\/hello' assert request.method == 'POST'  The other possibility is passing a whole WSGI environment to the request_context() method:  with app.request_context(environ): assert request.method == 'POST'    The Request Object  The request object is documented in the API section and we will not cover it here in detail (see Request ). Here is a broad overview of some of the most common operations. First of all you have to import it from the flask module:  from flask import request  The current request method is available by using the method attribute. To access form data (data transmitted in a POST or PUT request) you can use the form attribute. Here is a full example of the two attributes mentioned above:  @app.route('\/login', methods=['POST', 'GET']) def login(): error = None if request.method == 'POST': if valid_login(request.form['username'], request.form['password']): return log_the_user_in(request.form['username']) else: error = 'Invalid username\/password' # the code below is executed if the request method # was GET or the credentials were invalid return render_template('login.html', error=error)  What happens if the key does not exist in the form attribute? In that case a special KeyError is raised. You can catch it like a standard KeyError but if you don't do that, a HTTP 400 Bad Request error page is shown instead. So for many situations you don't have to deal with that problem.  To access parameters submitted in the URL ( ?key=value ) you can use the args attribute:  searchword = request.args.get('key', '')  We recommend accessing URL parameters with get or by catching the KeyError because users might change the URL and presenting them a 400 bad request page in that case is not user friendly.  For a full list of methods and attributes of the request object, head over to the Request documentation.    File Uploads  You can handle uploaded files with Flask easily. Just make sure not to forget to set the enctype=\"multipart\/form-data\" attribute on your HTML form, otherwise the browser will not transmit your files at all.  Uploaded files are stored in memory or at a temporary location on the filesystem. You can access those files by looking at the files attribute on the request object. Each uploaded file is stored in that dictionary. It behaves just like a standard Python file object, but it also has a save() method that allows you to store that file on the filesystem of the server. Here is a simple example showing how that works:  from flask import request @app.route('\/upload', methods=['GET', 'POST']) def upload_file(): if request.method == 'POST': f = request.files['the_file'] f.save('\/var\/www\/uploads\/uploaded_file.txt') ...  If you want to know how the file was named on the client before it was uploaded to your application, you can access the filename attribute. However please keep in mind that this value can be forged so never ever trust that value. If you want to use the filename of the client to store the file on the server, pass it through the secure_filename() function that Werkzeug provides for you:  from werkzeug.utils import secure_filename @app.route('\/upload', methods=['GET', 'POST']) def upload_file(): if request.method == 'POST': f = request.files['the_file'] f.save('\/var\/www\/uploads\/' + secure_filename(f.filename)) ...  For some better examples, checkout the uploading-files pattern.    Cookies  To access cookies you can use the cookies attribute. To set cookies you can use the set_cookie method of response objects. The cookies attribute of request objects is a dictionary with all the cookies the client transmits. If you want to use sessions, do not use the cookies directly but instead use the in Flask that add some security on top of cookies for you.  Reading cookies:  from flask import request @app.route('\/') def index(): username = request.cookies.get('username') # use cookies.get(key) instead of cookies[key] to not get a # KeyError if the cookie is missing.  Storing cookies:  from flask import make_response @app.route('\/') def index(): resp = make_response(render_template(...)) resp.set_cookie('username', 'the username') return resp  Note that cookies are set on response objects. Since you normally just return strings from the view functions Flask will convert them into response objects for you. If you explicitly want to do that you can use the make_response() function and then modify it.  Sometimes you might want to set a cookie at a point where the response object does not exist yet. This is possible by utilizing the deferred-callbacks pattern.  For this also see .   "
+},
+{
+  "id": "flask_context-locals-id1-2",
+  "level": "2",
+  "url": "flask_accessing-request-data.html#flask_context-locals-id1-2",
+  "type": "Note",
+  "number": "10.6.1",
+  "title": "Insider Information.",
+  "body": " Insider Information  If you want to understand how that works and how you can implement tests with context locals, read this section, otherwise just skip it.  "
+},
+{
+  "id": "flask_redirects-and-errors",
+  "level": "1",
+  "url": "flask_redirects-and-errors.html",
+  "type": "Section",
+  "number": "10.7",
+  "title": "Redirects and Errors",
+  "body": " Redirects and Errors  To redirect a user to another endpoint, use the redirect() function; to abort a request early with an error code, use the abort() function:  from flask import abort, redirect, url_for @app.route('\/') def index(): return redirect(url_for('login')) @app.route('\/login') def login(): abort(401) this_is_never_executed()  This is a rather pointless example because a user will be redirected from the index to a page they cannot access (401 means access denied) but it shows how that works.  By default a black and white error page is shown for each error code. If you want to customize the error page, you can use the errorhandler() decorator:  from flask import render_template @app.errorhandler(404) def page_not_found(error): return render_template('page_not_found.html'), 404  Note the 404 after the render_template() call. This tells Flask that the status code of that page should be 404 which means not found. By default 200 is assumed which translates to: all went well.  See error-handlers for more details.  "
+},
+{
+  "id": "flask_about-responses-id1",
+  "level": "1",
+  "url": "flask_about-responses-id1.html",
+  "type": "Section",
+  "number": "10.8",
+  "title": "About Responses",
+  "body": " About Responses  The return value from a view function is automatically converted into a response object for you. If the return value is a string it's converted into a response object with the string as response body, a 200 OK status code and a text\/html mimetype. If the return value is a dict, jsonify() is called to produce a response. The logic that Flask applies to converting return values into response objects is as follows:     If a response object of the correct type is returned it's directly returned from the view.    If it's a string, a response object is created with that data and the default parameters.    If it's a dict, a response object is created using jsonify .    If a tuple is returned the items in the tuple can provide extra information. Such tuples have to be in the form (response, status) , (response, headers) , or (response, status, headers) . The status value will override the status code and headers can be a list or dictionary of additional header values.    If none of that works, Flask will assume the return value is a valid WSGI application and convert that into a response object.     If you want to get hold of the resulting response object inside the view you can use the make_response() function.  Imagine you have a view like this:  from flask import render_template @app.errorhandler(404) def not_found(error): return render_template('error.html'), 404  You just need to wrap the return expression with make_response() and get the response object to modify it, then return it:  from flask import make_response @app.errorhandler(404) def not_found(error): resp = make_response(render_template('error.html'), 404) resp.headers['X-Something'] = 'A value' return resp   APIs with JSON  A common response format when writing an API is JSON. It's easy to get started writing such an API with Flask. If you return a dict from a view, it will be converted to a JSON response.   @app.route(\"\/me\") def me_api(): user = get_current_user() return { \"username\": user.username, \"theme\": user.theme, \"image\": url_for(\"user_image\", filename=user.image), }   Depending on your API design, you may want to create JSON responses for types other than dict . In that case, use the jsonify() function, which will serialize any supported JSON data type. Or look into Flask community extensions that support more complex applications.   from flask import jsonify @app.route(\"\/users\") def users_api(): users = get_all_users() return jsonify([user.to_json() for user in users])    "
+},
+{
+  "id": "flask_sessions-id1",
+  "level": "1",
+  "url": "flask_sessions-id1.html",
+  "type": "Section",
+  "number": "10.9",
+  "title": "Sessions",
+  "body": " Sessions  In addition to the request object there is also a second object called session which allows you to store information specific to a user from one request to the next. This is implemented on top of cookies for you and signs the cookies cryptographically. What this means is that the user could look at the contents of your cookie but not modify it, unless they know the secret key used for signing.  In order to use sessions you have to set a secret key. Here is how sessions work:  from flask import session # Set the secret key to some random bytes. Keep this really secret! app.secret_key = b'_5#y2L\"F4Q8z\\n\\xec]\/' @app.route('\/') def index(): if 'username' in session: return f'Logged in as {session[\"username\"]}' return 'You are not logged in' @app.route('\/login', methods=['GET', 'POST']) def login(): if request.method == 'POST': session['username'] = request.form['username'] return redirect(url_for('index')) return ''' <form method=\"post\"> <p><input type=text name=username> <p><input type=submit value=Login> <\/form> ''' @app.route('\/logout') def logout(): # remove the username from the session if it's there session.pop('username', None) return redirect(url_for('index'))   How to generate good secret keys  A secret key should be as random as possible. Your operating system has ways to generate pretty random data based on a cryptographic random generator. Use the following command to quickly generate a value for Flask.secret_key (or SECRET_KEY ):  $ python -c 'import os; print(os.urandom(16))' b'_5#y2L\"F4Q8z\\n\\xec]\/'   A note on cookie-based sessions: Flask will take the values you put into the session object and serialize them into a cookie. If you are finding some values do not persist across requests, cookies are indeed enabled, and you are not getting a clear error message, check the size of the cookie in your page responses compared to the size supported by web browsers.  Besides the default client-side based sessions, if you want to handle sessions on the server-side instead, there are several Flask extensions that support this.  "
+},
+{
+  "id": "flask_sessions-id1-5",
+  "level": "2",
+  "url": "flask_sessions-id1.html#flask_sessions-id1-5",
+  "type": "Note",
+  "number": "10.9.1",
+  "title": "How to generate good secret keys.",
+  "body": " How to generate good secret keys  A secret key should be as random as possible. Your operating system has ways to generate pretty random data based on a cryptographic random generator. Use the following command to quickly generate a value for Flask.secret_key (or SECRET_KEY ):  $ python -c 'import os; print(os.urandom(16))' b'_5#y2L\"F4Q8z\\n\\xec]\/'  "
+},
+{
+  "id": "flask_messageflashing",
+  "level": "1",
+  "url": "flask_messageflashing.html",
+  "type": "Section",
+  "number": "10.10",
+  "title": "Message Flashing",
+  "body": " Message Flashing  Good applications and user interfaces are all about feedback. If the user does not get enough feedback they will probably end up hating the application. Flask provides a really simple way to give feedback to a user with the flashing system. The flashing system basically makes it possible to record a message at the end of a request and access it on the next (and only the next) request. This is usually combined with a layout template to expose the message.  To flash a message use the flash() method, to get hold of the messages you can use get_flashed_messages() which is also available in the templates. Check out the message-flashing-pattern for a full example.  "
+},
+{
+  "id": "flask_logging",
+  "level": "1",
+  "url": "flask_logging.html",
+  "type": "Section",
+  "number": "10.11",
+  "title": "Logging",
+  "body": " Logging    New in version 0.3.    Sometimes you might be in a situation where you deal with data that should be correct, but actually is not. For example you may have some client-side code that sends an HTTP request to the server but it's obviously malformed. This might be caused by a user tampering with the data, or the client code failing. Most of the time it's okay to reply with 400 Bad Request in that situation, but sometimes that won't do and the code has to continue working.  You may still want to log that something fishy happened. This is where loggers come in handy. As of Flask 0.3 a logger is preconfigured for you to use.  Here are some example log calls:  app.logger.debug('A value for debugging') app.logger.warning('A warning occurred (%d apples)', 42) app.logger.error('An error occurred')  The attached logger is a standard logging Logger , so head over to the official logging docs for more information.  "
+},
+{
+  "id": "flask_templates-in-depth-templates",
+  "level": "1",
+  "url": "flask_templates-in-depth-templates.html",
+  "type": "Section",
+  "number": "10.12",
+  "title": "Templates in Depth",
+  "body": " Templates in Depth  Flask leverages Jinja2 as template engine. You are obviously free to use a different template engine, but you still have to install Jinja2 to run Flask itself. This requirement is necessary to enable rich extensions. An extension can depend on Jinja2 being present.  This section only gives a very quick introduction into how Jinja2 is integrated into Flask. If you want information on the template engine's syntax itself, head over to the official Jinja2 Template Documentation for more information.   Jinja Setup  Unless customized, Jinja2 is configured by Flask as follows:     autoescaping is enabled for all templates ending in .html , .htm , .xml as well as .xhtml when using render_template() .    autoescaping is enabled for all strings when using render_template_string() .    a template has the ability to opt in\/out autoescaping with the {‎% autoescape %} tag.    Flask inserts a couple of global functions and helpers into the Jinja2 context, additionally to the values that are present by default.       Standard Context  The following global variables are available within Jinja2 templates by default:    config    The current configuration object ( flask.config )    New in version 0.6.     Changed in version 0.10: This is now always available, even in imported templates.       request    The current request object ( flask.request ). This variable is unavailable if the template was rendered without an active request context.      session    The current session object ( flask.session ). This variable is unavailable if the template was rendered without an active request context.      g    The request-bound object for global variables ( flask.g ). This variable is unavailable if the template was rendered without an active request context.      url_for     The flask.url_for() function.      get_flashed_messages     The flask.get_flashed_messages() function.     The Jinja Context Behavior  These variables are added to the context of variables, they are not global variables. The difference is that by default these will not show up in the context of imported templates. This is partially caused by performance considerations, partially to keep things explicit.  What does this mean for you? If you have a macro you want to import, that needs to access the request object you have two possibilities:     you explicitly pass the request to the macro as parameter, or the attribute of the request object you are interested in.    you import the macro with context .     Importing with context looks like this:   {‎% from '_helpers.html' import my_macro with context %}      Standard Filters  These filters are available in Jinja2 additionally to the filters provided by Jinja2 itself:    tojson     This function converts the given object into JSON representation. This is for example very helpful if you try to generate JavaScript on the fly.   <script type=text\/javascript> doSomethingWith({‎{ user.username|tojson }}); <\/script>   It is also safe to use the output of |tojson in a single-quoted HTML attribute:   <button onclick='doSomethingWith({‎{ user.username|tojson }})'> Click me <\/button>   Note that in versions of Flask prior to 0.10, if using the output of |tojson inside script , make sure to disable escaping with |safe . In Flask 0.10 and above, this happens automatically.      Controlling Autoescaping  Autoescaping is the concept of automatically escaping special characters for you. Special characters in the sense of HTML (or XML, and thus XHTML) are & , > , < , \" as well as ' . Because these characters carry specific meanings in documents on their own you have to replace them by so called entities if you want to use them for text. Not doing so would not only cause user frustration by the inability to use these characters in text, but can also lead to security problems. (see xss )  Sometimes however you will need to disable autoescaping in templates. This can be the case if you want to explicitly inject HTML into pages, for example if they come from a system that generates secure HTML like a markdown to HTML converter.  There are three ways to accomplish that:     In the Python code, wrap the HTML string in a Markup object before passing it to the template. This is in general the recommended way.    Inside the template, use the |safe filter to explicitly mark a string as safe HTML ( {‎{ myvariable|safe }} )    Temporarily disable the autoescape system altogether.     To disable the autoescape system in templates, you can use the {‎% autoescape %} block:   {‎% autoescape false %} <p>autoescaping is disabled here <p>{‎{ will_not_be_escaped }} {‎% endautoescape %}   Whenever you do this, please be very cautious about the variables you are using in this block.    Registering Filters  If you want to register your own filters in Jinja2 you have two ways to do that. You can either put them by hand into the jinja_env of the application or use the template_filter() decorator.  The two following examples work the same and both reverse an object:  @app.template_filter('reverse') def reverse_filter(s): return s[::-1] def reverse_filter(s): return s[::-1] app.jinja_env.filters['reverse'] = reverse_filter  In case of the decorator the argument is optional if you want to use the function name as name of the filter. Once registered, you can use the filter in your templates in the same way as Jinja2's builtin filters, for example if you have a Python list in context called mylist :  {‎% for x in mylist | reverse %} {‎% endfor %}    Context Processors  To inject new variables automatically into the context of a template, context processors exist in Flask. Context processors run before the template is rendered and have the ability to inject new values into the template context. A context processor is a function that returns a dictionary. The keys and values of this dictionary are then merged with the template context, for all templates in the app:  @app.context_processor def inject_user(): return dict(user=g.user)  The context processor above makes a variable called user available in the template with the value of g.user . This example is not very interesting because g is available in templates anyways, but it gives an idea how this works.  Variables are not limited to values; a context processor can also make functions available to templates (since Python allows passing around functions):  @app.context_processor def utility_processor(): def format_price(amount, currency=u'€'): return u'{0:.2f}{1}'.format(amount, currency) return dict(format_price=format_price)  The context processor above makes the format_price function available to all templates:  {‎{ format_price(0.33) }}  You could also build format_price as a template filter (see ), but this demonstrates how to pass functions in a context processor.   "
+},
+{
+  "id": "flask_standard-context-9",
+  "level": "2",
+  "url": "flask_templates-in-depth-templates.html#flask_standard-context-9",
+  "type": "Note",
+  "number": "10.12.1",
+  "title": "The Jinja Context Behavior.",
+  "body": " The Jinja Context Behavior  These variables are added to the context of variables, they are not global variables. The difference is that by default these will not show up in the context of imported templates. This is partially caused by performance considerations, partially to keep things explicit.  What does this mean for you? If you have a macro you want to import, that needs to access the request object you have two possibilities:     you explicitly pass the request to the macro as parameter, or the attribute of the request object you are interested in.    you import the macro with context .     Importing with context looks like this:   {‎% from '_helpers.html' import my_macro with context %}   "
+},
+{
+  "id": "flask_exercises",
+  "level": "1",
+  "url": "flask_exercises.html",
+  "type": "Exercises",
+  "number": "10.13",
+  "title": "Exercises",
+  "body": " Exercises  This page is a placeholder for now.  "
+},
+{
+  "id": "database_exploring-bike-rental-data-with-sql",
+  "level": "1",
+  "url": "database_exploring-bike-rental-data-with-sql.html",
+  "type": "Section",
+  "number": "11.1",
+  "title": "Exploring Bike Rental Data with SQL",
+  "body": " Exploring Bike Rental Data with SQL   exploits_of_a_mom.png    A lot of the data that we interact with today is stored in databases. For example:     Student records, including grades, at a school    Posts and friends in your favorite social network    News stories on a newspaper's website    Your contacts list on your mobile phone    All images that make up Google Maps     All these bits of information are stored in various kinds of databases. Some of these are stored in relational databases that are available as open source tools like Postgresql, MySQL and SQLite, as well as commercial databases such as Google BigQuery , Oracle , Microsoft SQL Server , or Amazon Aurora  Others are stored in proprietary systems like Google's BigTable or Facebook's Haystack Object Store .   Query Language  Whatever the database might, there needs to be a way to extract data from it and a lot of these systems have agreed on a shared language for accessing data. For relational database, this language is called SQL (Structured Query Language, pronounced like sequel ).  Before you stress out about learning a new language, let's take a minute and review the things you have already learned how to do with Pandas.     You can change the shape of a DataFrame by selecting the columns you want or computing new columns.    You can filter a DataFrame by using conditions to select just the rows you want.    You can reorder a DataFrame by sorting on one or more columns.    You can group by one or more columns and compute aggregate summaries of other columns in the group.    You can join two dataframes together using the merge function.     The operations just described comprise a basic set of tools that any data manipulation language should support, and SQL supports these operations very well, in a very natural way. You are not going to have to learn any new concepts in this chapter you are just learning some new query syntax that will open up whole new worlds of data access for you. Most businesses run on a relational database of some kind, so it follows that a lot of real world data analysis requires you to get data from one. In this section we will teach you how to get started.   "
+},
+{
+  "id": "id1",
+  "level": "2",
+  "url": "database_exploring-bike-rental-data-with-sql.html#id1",
+  "type": "Figure",
+  "number": "11.1.1",
+  "title": "",
+  "body": " exploits_of_a_mom.png   "
+},
+{
+  "id": "database_query-language-4",
+  "level": "2",
+  "url": "database_exploring-bike-rental-data-with-sql.html#database_query-language-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "selecting select sorting group by join "
+},
+{
+  "id": "database_bikestart",
+  "level": "1",
+  "url": "database_bikestart.html",
+  "type": "Section",
+  "number": "11.2",
+  "title": "Getting Started with the Bike Data",
+  "body": " Getting Started with the Bike Data   In this Lesson, we will be hands on and try out SQL with the Capital bike sharing dataset, hosted on a SQLLite database. You don't have to do anything as we have a full version of the SQLLite database management system running the browser.    Verify access to the dataset  Let's verify that you have access to the dataset by running a simple SQL query.  The code snippet contains a few lines: \\* The first line of that code block is just a magic invocation that lets Jupyter know that this cell contains SQL and not Python. \\* The second line introduces SQL syntax for the first time. To help you understand the SQL commands we are using, the SQL syntax words are listed in CAPITAL letters, the lowercase words are the names of tables or columns. The SQL statement translates to: grab (SELECT) all the values (*) in the table called trip_data but only show me the first ten (LIMIT 10).   > SELECT * FROM trip_data LIMIT 10     The trip_data table is composed of several columns:  index BIGINT, duration BIGINT, start_date DATETIME, end_date DATETIME, start_station BIGINT, end_station BIGINT, bike_number TEXT, member_type TEXT  We don't always want to read all the columns in a table. For example, if we just want the subscriber type, start time, and duration in minutes columns we could select:   SELECT member_type, start_date, duration FROM trip_data LIMIT 10     **Tips:** SQL doesn't care about line breaks so we can spread a SQL query over multiple lines just to make it easier to read.  It's also really easy to forget the exact names of all of the columns in a table, especially when you are just getting started with a new database. Here's a handy one-liner that will remind you of the names of your tables and all of their columns and types:   select name, sql from sqlite_master     Note, this works fine for SQLITE but will not work for Postgresql or MySQL or other databases, each database has their own query for things like this, and once you get more experience you'll be able to easily find them on the internet.   "
+},
+{
+  "id": "database_filtering",
+  "level": "1",
+  "url": "database_filtering.html",
+  "type": "Section",
+  "number": "11.3",
+  "title": "Filtering",
+  "body": " Filtering  We've seen how to look only at certain columns of the table but it is often useful to only look at certain rows in a table. For example, we could want to look only at the bike trips which are at least a certain number of minutes. Let's say you're only interested in bike trips of 60 minutes or more:   SELECT member_type, start_date, duration FROM trip_data WHERE duration >= 3600 LIMIT 10     It's also possible to filter by multiple criteria. For example to look at only bike trips which are 60 minutes or more and only the subscriber type of Member:   SELECT member_type, start_date, duration FROM trip_data WHERE duration >= 3600 AND member_type = \"Member\" LIMIT 10      Practice Exercises    select * from trip_data where bike_number = 'W01274' and duration < 900     Question 2   select end_station, duration from trip_data where start_station = 31111 and duration > 8 * 60 * 60   Question 3   select count(*) from trip_data where start_station = 31111 and duration > 8 * 60 * 60 and end_station = 31111      Figure out how to get all the trips on the bike with id of W01274 and only include rides which are shorter than 15 minutes.      assert 0,1 == 828 assert 1,1 == 594 assert 12,1 == 669      Get the ending station and the duration of all of the bike trips originating at station 31111 that lasted 8 hours or more.      assert 20,0 == 31100 assert 20,1 == 40733 assert 0,0 == 31202 assert 0,1 == 45722      How many trips longer than 8 hours started and ended and station 31111 by casual riders?      assert 0,0 == 4     "
+},
+{
+  "id": "sql_bikeshare_filter_ex1",
+  "level": "2",
+  "url": "database_filtering.html#sql_bikeshare_filter_ex1",
+  "type": "Checkpoint",
+  "number": "11.3.1",
+  "title": "",
+  "body": "  Figure out how to get all the trips on the bike with id of W01274 and only include rides which are shorter than 15 minutes.      assert 0,1 == 828 assert 1,1 == 594 assert 12,1 == 669   "
+},
+{
+  "id": "sql_bikeshare_filter_ex2",
+  "level": "2",
+  "url": "database_filtering.html#sql_bikeshare_filter_ex2",
+  "type": "Checkpoint",
+  "number": "11.3.2",
+  "title": "",
+  "body": "  Get the ending station and the duration of all of the bike trips originating at station 31111 that lasted 8 hours or more.      assert 20,0 == 31100 assert 20,1 == 40733 assert 0,0 == 31202 assert 0,1 == 45722   "
+},
+{
+  "id": "sql_bikeshare_filter_ex3",
+  "level": "2",
+  "url": "database_filtering.html#sql_bikeshare_filter_ex3",
+  "type": "Checkpoint",
+  "number": "11.3.3",
+  "title": "",
+  "body": "  How many trips longer than 8 hours started and ended and station 31111 by casual riders?      assert 0,0 == 4   "
+},
+{
+  "id": "database_sorting",
+  "level": "1",
+  "url": "database_sorting.html",
+  "type": "Section",
+  "number": "11.4",
+  "title": "Sorting",
+  "body": " Sorting  So far, we've only looked at rows of data in the order of the query is returning to us. What if we want to see the rows in a certain sorting order? We use the ORDER BY command to sort them by some other criteria.  For example, to see the bike trips in the order of the duration in seconds:   SELECT member_type, start_date, duration FROM trip_data ORDER BY duration LIMIT 10     Well, it turns out by default the sorting order is ascending . To sort the rows in descending order, add the keyword DESC .   SELECT member_type, start_date, duration FROM trip_data ORDER BY duration DESC LIMIT 10     Of course, we can mix WHERE and ORDER BY , to get only the bike trips from Member type of Casual in the order of the duration.   SELECT member_type, start_date, duration FROM trip_data WHERE member_type = \"Casual\" ORDER BY duration LIMIT 10      Practice Exercises    SELECT duration, start_station, end_station FROM trip_data WHERE duration >= 3600 ORDER BY duration DESC LIMIT 40         select bike_number, duration from trip_data order by duration desc limit 1;      select start_station, duration from trip_data where start_station = end_station order by duration desc limit 1;         Get the start and end station IDs for bike trips that are longer 60 minutes or longer, in the order of largest number of seconds first and display the top 40 results.      assert 39,0 == 84190 assert 39,2 == 31018      On which bike was longest bike ride? How many seconds long was that ride?      assert 0,0 == W00379 assert 0,1 == 86355      What is the starting station and duration of the longest ride starting and ending at the same station?      assert 0,1 == 86337 assert 0,0 == 31221     "
+},
+{
+  "id": "database_sorting-5",
+  "level": "2",
+  "url": "database_sorting.html#database_sorting-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "ascending descending "
+},
+{
+  "id": "sql_bikeshare_sorting_ex1",
+  "level": "2",
+  "url": "database_sorting.html#sql_bikeshare_sorting_ex1",
+  "type": "Checkpoint",
+  "number": "11.4.1",
+  "title": "",
+  "body": "  Get the start and end station IDs for bike trips that are longer 60 minutes or longer, in the order of largest number of seconds first and display the top 40 results.      assert 39,0 == 84190 assert 39,2 == 31018   "
+},
+{
+  "id": "sql_bikeshare_sorting_ex2",
+  "level": "2",
+  "url": "database_sorting.html#sql_bikeshare_sorting_ex2",
+  "type": "Checkpoint",
+  "number": "11.4.2",
+  "title": "",
+  "body": "  On which bike was longest bike ride? How many seconds long was that ride?      assert 0,0 == W00379 assert 0,1 == 86355   "
+},
+{
+  "id": "sql_bikeshare_sorting_ex3",
+  "level": "2",
+  "url": "database_sorting.html#sql_bikeshare_sorting_ex3",
+  "type": "Checkpoint",
+  "number": "11.4.3",
+  "title": "",
+  "body": "  What is the starting station and duration of the longest ride starting and ending at the same station?      assert 0,1 == 86337 assert 0,0 == 31221   "
+},
+{
+  "id": "database_aggregation-or-group-by",
+  "level": "1",
+  "url": "database_aggregation-or-group-by.html",
+  "type": "Section",
+  "number": "11.5",
+  "title": "Aggregation or Group By",
+  "body": " Aggregation or Group By  One very powerful feature of SQL is that it allows us to create summary information by grouping rows together. For example, we could ask ourselves how many bike trips were taken for each subscriber type, and which subscriber type has the most bike trips.   SELECT member_type, COUNT(*) FROM trip_data GROUP BY member_type ORDER BY COUNT(*) DESC LIMIT 10     GROUP BY member_type takes all the rows with a given member_type and produces a single row in the result. This means that we need to tell SQL how we want to combine the other columns' values into a single row. The above example uses COUNT(*) which reports the number of rows that were combined.  Aggregating the values for member_type is not hard, since they are all the same, SQL just gives us a single copy of the publisher name. Other columns, we need to either ignore (causing them to be omitted from the output) or specify a way to aggregate them.  We must specify an aggregate function for any column that we SELECT in our query (except the column that we're grouping by) in order for the command to succeed. If we don't specify a way to aggregate the value most database servers will complain. However, SQLITE does not. SQLite lets you do silly things without giving you an error. For example, the following query will work, but you have no idea what the results actually mean.   SELECT duration, count(*) FROM trip_data GROUP BY member_type ORDER BY COUNT(*) DESC     Here you have grouped by member_type , but without member_type in the select clause you have no idea which rows correspond to which member type. That is why most databases will flag this as a error. Furthermore the duration field may be the first duration in the group or maybe the last duration in the group or possibly in between, But it's not defined. The best practices for writing group by queries that work well across database systems are as follows:     Always include the GROUP BY column(s) in your SELECT clause.    If you include a column that is not in the GROUP BY clause in your SELECT clause you must do some form of aggregation on the values in that column. For example, min, max, mean, count, etc.     Let's go back briefly to the first query in the Aggregation section. The top result was the count of bike trips for member_type Member :     member_type  COUNT(*)    Member  979814     If you'd like to get a more granular break down of the count, you may specify multiple columns to aggregate within the GROUP BY clause, for example: further breakdown the aggregate count by the start station IDs:   SELECT member_type, start_station, count(*) FROM trip_data WHERE member_type = 'Casual' GROUP BY member_type, start_station ORDER BY COUNT(*) DESC LIMIT 20     Great! Now that you're familiar with how to aggregate data using SQL query by using COUNT() as your aggregation function, let' take a look at other aggregation functions.  There are many such functions . Some common ones include:     SUM : To add the values together    AVG : To compute the mean of the values    MIN or MAX : To compute the minimum and maximum respectively     So we could for example compute the total number of minutes of all bike trips for all subscriber types   SELECT member_type, SUM(duration) FROM trip_data GROUP BY member_type LIMIT 10      Practice Exercises    SELECT start_station, AVG(duration) FROM trip_data GROUP BY start_station ORDER BY AVG(duration) DESC LIMIT 10         select bike_number, count(*) from trip_data group by bike_number order by count(*) desc`      select member_type, count(*) from trip_data group by member_type;      select start_station, count(*) from trip_data where start_station = end_station group by start_station order by count(*) desc         Compute the average duration of bike trips for each starting station id and list the results in order of highest average to lowest average for the 10 stations with the highest average. What is the highest average duration?      assert 0,1 == 40669.5      What is the bike_number and count of the bike with the most rides?      assert 0,0 == W00893 assert 0,1 == 1584      How many total rides by Members and Casual users?      assert 0,0 == Casual assert 0,1 == 246949 assert 1,0 == Member assert 1,1 == 979814      What is the station that has the most rides that start and end at the same station? How many rides started there?      assert 0,0 == 31217 assert 0,1 == 3135     "
+},
+{
+  "id": "database_aggregation-or-group-by-9",
+  "level": "2",
+  "url": "database_aggregation-or-group-by.html#database_aggregation-or-group-by-9",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "not "
+},
+{
+  "id": "database_aggregation-or-group-by-11",
+  "level": "2",
+  "url": "database_aggregation-or-group-by.html#database_aggregation-or-group-by-11",
+  "type": "Table",
+  "number": "11.5.1",
+  "title": "",
+  "body": "   member_type  COUNT(*)    Member  979814    "
+},
+{
+  "id": "database_aggregation-or-group-by-17",
+  "level": "2",
+  "url": "database_aggregation-or-group-by.html#database_aggregation-or-group-by-17",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "total "
+},
+{
+  "id": "sql_bikeshare_agg_ex1",
+  "level": "2",
+  "url": "database_aggregation-or-group-by.html#sql_bikeshare_agg_ex1",
+  "type": "Checkpoint",
+  "number": "11.5.2",
+  "title": "",
+  "body": "  Compute the average duration of bike trips for each starting station id and list the results in order of highest average to lowest average for the 10 stations with the highest average. What is the highest average duration?      assert 0,1 == 40669.5   "
+},
+{
+  "id": "sql_bikeshare_agg_ex2",
+  "level": "2",
+  "url": "database_aggregation-or-group-by.html#sql_bikeshare_agg_ex2",
+  "type": "Checkpoint",
+  "number": "11.5.3",
+  "title": "",
+  "body": "  What is the bike_number and count of the bike with the most rides?      assert 0,0 == W00893 assert 0,1 == 1584   "
+},
+{
+  "id": "sql_bikeshare_agg_ex3",
+  "level": "2",
+  "url": "database_aggregation-or-group-by.html#sql_bikeshare_agg_ex3",
+  "type": "Checkpoint",
+  "number": "11.5.4",
+  "title": "",
+  "body": "  How many total rides by Members and Casual users?      assert 0,0 == Casual assert 0,1 == 246949 assert 1,0 == Member assert 1,1 == 979814   "
+},
+{
+  "id": "sql_bikeshare_agg_ex4",
+  "level": "2",
+  "url": "database_aggregation-or-group-by.html#sql_bikeshare_agg_ex4",
+  "type": "Checkpoint",
+  "number": "11.5.5",
+  "title": "",
+  "body": "  What is the station that has the most rides that start and end at the same station? How many rides started there?      assert 0,0 == 31217 assert 0,1 == 3135   "
+},
+{
+  "id": "database_joining",
+  "level": "1",
+  "url": "database_joining.html",
+  "type": "Section",
+  "number": "11.6",
+  "title": "Joining",
+  "body": " Joining  It is frequently the case that the data we need is spread across multiple tables in our database. For example, we might want to store additional information about the starting and ending location of the ride beside their IDs in a table called bikeshare_stations .  Here's the columns in table bikeshare_stations     Field name  Type  Description    station_id  INTEGER  Unique identifier of a station    name  STRING  Public name of the station    status  STRING  Status of the station, either open or closed    latitude  FLOAT  latitude of the station    longitude  FLOAT  longitude of the station      SELECT * FROM bikeshare_stations LIMIT 10     This means that we now have the data to answer questions like How many bike trips originated from bike station that's at Van Ness Metro \/ UDC? but the data are spread across two tables?  We could imagine storing the name column in our trip_data table since we list the start and end stations IDs for each trip but there are a few important reasons why that's a bad idea:     We would waste space by duplicating data (This is not a big deal for this example but a real concern for large systems)    Updating data (for example status of station from active to closed) would require updating each row in trip_data that refers to that station ID. This is time-consuming and error-prone.     Instead we leave the data in two separate tables and need a way to ‘join' the values together. We can do that by just listing multiple table names but the result is a mess:   SELECT * FROM trip_data, bikeshare_stations LIMIT 10     If you look carefully you might notice that the rows are identical for the first few columns and then start to differ after duration . That's because SQL joins each row in the first table with each row in the second table. With 144 rows in bikeshare_stations and 1,226,767 rows in trips_data , we end up with a table of 176,654,448 rows.  This rarely if ever is what we want. In most cases, we want to match up some aspect of the rows in the first table with some aspect of the rows in the second table. In most cases, we want to match up based on some column being equal.  In our bike sharing example, the station_id column of bikeshare_stations matches up with the start_station or end_station column of trip_data . To force this match, we filter out the ones that don't have the same value for both of these columns:   SELECT * FROM trip_data, bikeshare_stations WHERE start_station = station_id LIMIT 10     Notice that the result looks more sensical: we end up with one row from trip_data and the corresponding row from bikeshare_stations (copied multiple times since there were only 144 rows in bikeshare_stations ).  We can check the size of the resulting table by running:   SELECT COUNT(*) FROM trip_data, bikeshare_stations WHERE start_station = station_id     You might also see some cases where the comma between the table names is replaced with the keyword JOIN and WHERE is replaced with ON . This is synonymous but sometimes preferred to make it clear that you are joining two tables and that your filters are there to specify how those tables are to be joined:   SELECT COUNT(*) FROM trip_data JOIN bikeshare_stations ON start_station = station_id     We can now use all the SQL tools that we've learned on this combined table. For example, to find out which open bike station which has the highest bike trip counts so we can ensure there is always plenty of bikes available, we can run:   SELECT station_id, COUNT(*) AS trip_count FROM trip_data join bikeshare_stations ON start_station = station_id WHERE duration >= 3600 AND status = 'open' GROUP BY station_id ORDER BY trip_count DESC LIMIT 10      Practice Exercises    SELECT station_id, AVG(duration) FROM trip_data JOIN bikeshare_stations ON start_station = station_id WHERE member_type = 'Member' AND start_station = end_station AND status = 'open' GROUP BY station_id LIMIT 10         select name, count(*) from trip_data join bikeshare_stations on start_station = station_id group by name order by count(*) desc limit 10      select name, count(*) from trip_data join bikeshare_stations on end_station = station_id group by name order by count(*) desc limit 10      select name, count(*) from trip_data join bikeshare_stations on end_station = station_id where start_station = end_station group by name order by count(*) desc limit 10      select name, count(*) from trip_data join bikeshare_stations on end_station = station_id where start_station = 31200 group by name order by count(*) desc limit 10         Use JOIN to show the station IDs of active stations and what's the average duration of bike trip originating and ending at the same station with member type Member.      assert 0,1 == 1005      What is the name of the station where the most rides start?      assert 0,0 == Massachusetts Ave Dupont Circle NW      What is the name of the station where the most rides end?      assert 0,0 == Massachusetts Ave Dupont Circle NW      What is the name of the station where most rides both start and end?      assert 0,0 == USDA \/ 12th Independence Ave SW      What is the name of the most popular ending station for rides that begin at Massachusetts Ave Dupont Circle NW (Station: 31200)?      assert 0,0 == 15th P St NW     "
+},
+{
+  "id": "database_joining-4",
+  "level": "2",
+  "url": "database_joining.html#database_joining-4",
+  "type": "Table",
+  "number": "11.6.1",
+  "title": "",
+  "body": "   Field name  Type  Description    station_id  INTEGER  Unique identifier of a station    name  STRING  Public name of the station    status  STRING  Status of the station, either open or closed    latitude  FLOAT  latitude of the station    longitude  FLOAT  longitude of the station    "
+},
+{
+  "id": "database_joining-20",
+  "level": "2",
+  "url": "database_joining.html#database_joining-20",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "open "
+},
+{
+  "id": "sql_bikeshare_join_ex1",
+  "level": "2",
+  "url": "database_joining.html#sql_bikeshare_join_ex1",
+  "type": "Checkpoint",
+  "number": "11.6.2",
+  "title": "",
+  "body": "  Use JOIN to show the station IDs of active stations and what's the average duration of bike trip originating and ending at the same station with member type Member.      assert 0,1 == 1005   "
+},
+{
+  "id": "sql_bikeshare_join_ex2",
+  "level": "2",
+  "url": "database_joining.html#sql_bikeshare_join_ex2",
+  "type": "Checkpoint",
+  "number": "11.6.3",
+  "title": "",
+  "body": "  What is the name of the station where the most rides start?      assert 0,0 == Massachusetts Ave Dupont Circle NW   "
+},
+{
+  "id": "sql_bikeshare_join_ex3",
+  "level": "2",
+  "url": "database_joining.html#sql_bikeshare_join_ex3",
+  "type": "Checkpoint",
+  "number": "11.6.4",
+  "title": "",
+  "body": "  What is the name of the station where the most rides end?      assert 0,0 == Massachusetts Ave Dupont Circle NW   "
+},
+{
+  "id": "sql_bikeshare_join_ex4",
+  "level": "2",
+  "url": "database_joining.html#sql_bikeshare_join_ex4",
+  "type": "Checkpoint",
+  "number": "11.6.5",
+  "title": "",
+  "body": "  What is the name of the station where most rides both start and end?      assert 0,0 == USDA \/ 12th Independence Ave SW   "
+},
+{
+  "id": "sql_bikeshare_join_ex5",
+  "level": "2",
+  "url": "database_joining.html#sql_bikeshare_join_ex5",
+  "type": "Checkpoint",
+  "number": "11.6.6",
+  "title": "",
+  "body": "  What is the name of the most popular ending station for rides that begin at Massachusetts Ave Dupont Circle NW (Station: 31200)?      assert 0,0 == 15th P St NW   "
+},
+{
+  "id": "database_accessing-databases-from-python",
+  "level": "1",
+  "url": "database_accessing-databases-from-python.html",
+  "type": "Section",
+  "number": "11.7",
+  "title": "Accessing Databases from Python",
+  "body": " Accessing Databases from Python  Python has a standard database API that will work for nearly any relational database, and it is quite easy to use, but not nearly as easy as the records package by Kenneth Reitz.   Records is a very simple, but powerful, library for making raw SQL queries to most relational databases.   Just write SQL. No bells, no whistles. This common task can be surprisingly difficult with the standard tools available. This library strives to make this workflow as simple as possible, while providing an elegant interface to work with your query results.   Database support includes RedShift, Postgres, MySQL, SQLite, Oracle, and MS-SQL (drivers not included).     The Basics  We know how to write SQL, so let's send some to our database:   import records db = records.Database('postgres:\/\/...') rows = db.query('select * from active_users') # or db.query_file('sqls\/active-users.sql')   Grab one row at a time:   >>> rows[0] <Record {\"username\": \"model-t\", \"active\": true, \"name\": \"Henry Ford\", \"user_email\": \"model-t@gmail.com\", \"timezone\": \"2016-02-06 22:28:23.894202\"}>   Or iterate over them:   for r in rows: print(r.name, r.user_email)   Values can be accessed many ways: row.user_email , row['user_email'] , or row[3] .  Fields with non-alphanumeric characters (like spaces) are also fully supported.  Or store a copy of your record collection for later reference:   >>> rows.all() [<Record {\"username\": ...}>, <Record {\"username\": ...}>, <Record {\"username\": ...}>, ...]   If you're only expecting one result:   >>> rows.first() <Record {\"username\": ...}>   Other options include rows.as_dict() and rows.as_dict(ordered=True) .   "
+},
+{
+  "id": "database_accessing-databases-from-python-3",
+  "level": "2",
+  "url": "database_accessing-databases-from-python.html#database_accessing-databases-from-python-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Records is a very simple, but powerful, library for making raw SQL queries to most relational databases. "
+},
+{
+  "id": "database_object-relational-mapping-with-sqlalchemy",
+  "level": "1",
+  "url": "database_object-relational-mapping-with-sqlalchemy.html",
+  "type": "Section",
+  "number": "11.8",
+  "title": "Object Relational Mapping with SQLAlchemy",
+  "body": " Object Relational Mapping with SQLAlchemy  Coming Soon  "
+},
+{
+  "id": "database_exercises",
+  "level": "1",
+  "url": "database_exercises.html",
+  "type": "Exercises",
+  "number": "11.9",
+  "title": "Exercises",
+  "body": " Exercises  This page is a placeholder for now.  "
+},
+{
+  "id": "frameworks_python-decorators",
+  "level": "1",
+  "url": "frameworks_python-decorators.html",
+  "type": "Section",
+  "number": "12.1",
+  "title": "Python Decorators",
+  "body": " Python Decorators  One of the cool things about learning Python Frameworks is that you get to dig into some advanced Python features. In our hello world example we mapped Python functions to URL's using Python decorators. Now it's time to see how decorators work, and a simplified implementation of how Flask uses the concept to call a particular function based on a URL.  Before we go there, lets look at a simpler example of a decorator to get an idea of how they work. First lets start with a definition. A decorator is a callable that takes a function as an argument and returns a replacement function .  Let's write a simple decorator that we can use so that a function can automatically keep track of the number of times it has been called. This can sometimes be very useful for performance testing or debugging.  The call_counter function in the code below is a decorator, it takes a function as an argument, and returns a replacement function. The replacement function, called wrap , is defined inside the call_counter function.  First we define the wrap function which does two things. First, it increments a counter attribute of itself, and then returns the result of calling func , passing along any and all arguments. *args allows you to define a function that accepts a variable number of parameters, and **kwargs allows you to have any number of named parameters. This topic could be another whole chapter, but for now you can read a nice concise description here.  You may be confused by the line wrap.counter += 1 . But remember that in Python functions are objects like any other object. We can always add attributes to objects by just using the dot notation and assigning. Alternatively we could be really explicit about adding an attribute using setattr(wrap,'counter',0) . So all the wrap function does is add the ability to increment a private counter each time wrap is called, and then call the original function.  Here is the real key @call_counter notation before the definition of fib, is the equivalent of adding the line fib = call_counter(fib) after the function is defined. You can comment out the @call_counter line and prove this to yourself.   def call_counter(func): def wrap(*args, **kwargs): wrap.counter += 1 return func(*args,**kwargs) wrap.counter = 0 return wrap def fib(n): if n <= 1: return 1 else: return fib(n-1) + fib(n-2) fib = call_counter(fib) for i in range(20): print(fib(i), fib.counter) fib.counter = 0     The key to understanding the example above is the line: fib = call_counter(fib) . So, call_counter takes a function as a parameter defines a wrap function and adds a counter attribute on the function (functions are objects like any other object after all) The wrap function's only job when it is called is to increment the counter and then call the orginal function internally remembered as func . The call_counter function then returns the newly created function which contains a reference to the original function and assigns the function internally known as wrap to the variable fib this effectively replaces the reference that fib had to the original fib function with the wrap function.  All decorators do is add some syntactic sugar so that we can avoid the line fib = call_counter(fib) . You will see below how that works:   def call_counter(func): def wrap(*args, **kwargs): wrap.counter += 1 return func(*args,**kwargs) wrap.counter = 0 return wrap @call_counter def fib(n): if n <= 1: return 1 else: return fib(n-1) + fib(n-2) for i in range(20): print(fib(i), fib.counter) fib.counter = 0     The idea of wrapping a function like this may seem awkward at first but it is a really cool feature, and one that you will use more often once you become familiar with it. In the functional programming world functions that take other functions as arguments and manipulate them in some way are called higher order functions.  Think about the wrap function in the previous example more generally:  def decorator(func) # set up an environment def wrap(*args, **kwargs): # manipulate any arguments # use the environment res = func(*args, **kwargs) # manipulate the result # change the environment return res return wrap  OK, hopefully you are still with me. Let's look at another way of implementing the same functionality as the call_counter decorator but we will do it in a slightly different way. In the definition of a decorator I used the term callable . In Python callable means any object that understands the use of the () as call operators. Huh? Take a look at this example:   class MyClass: def __init__(self, name ): self.ivar1 = name def __call__(self, x, y): print(\"Hello: {0}\".format(self.ivar1)) sum = x+y print(\"the sum is {0}\".format(sum)) return sum foo = MyClass('brad') foo(2,9)     In the example above foo is clearly an instance of MyClass . But because we implement the \"dunder method\" __call__ we can treat this instance of the class just like a function.  Let's write a new version of our call counter as a class:   class BetterDecor: def __init__(self,func): self.counter = 0 self.func = func def __call__(self, *args, **kwargs): self.counter += 1 return self.func(*args,**kwargs) @BetterDecor def fib(n): if n <= 1: return 1 else: return fib(n-1) + fib(n-2) @BetterDecor def fact(n): if n <= 1: return 1 else: return n * fact(n-1) fib(20) fact(100) print(fib.counter) print(fact.counter)     The use of a class in this way is nice because we don't have to clutter our function object with extraneous attributes. We also don't have to define functions within functions because the __init__ method for the BetterDecor class serves as the outer layer of the decorator, it accepts the function as its parameter and stores away the function in an instance variable!  I recommend you take a short break at this point, especially if your head is spinning from the last few examples. The next part is even more head spinning.  Consider the decorator used in our hello world flask example. Oh yeah, this was supposed to be about flask and web programming right? @app.route('\/user\/<name>') Do you see anything wrong with this picture? If a decorator is a function that takes another function as an argument then what is the deal with the ('\/user\/<name>') part of the equation. It looks like we have used up our allotment of parameters with the string, where does the function go?  In this case the decorator is a callable that takes some other arguments and returns a callable that accepts a function as a parameter and returns a replacement for the function. Holy levels of abstraction batman.  Here is a simple example that may actually be easier to understand than the previous few sentences:  def argdec(x,y,z): a = x + y + z def wrap(func): def wrapped_f(*args, **kwargs): print('the original args were ', x, y, z) print('remember good old a', a) func(*args, **kwargs) return wrapped_f return wrap  Functions within functions within functions. When the line @argdec(1,2,3) is executed The @ operator evaluates whatever comes after it. In the first examples what came after the @ was the name of a function which simply evaluates to the function the name refers to. In this case we evaluate an actual function call which happens to return a function. during evaluation the argdec function is called passing the parameters 1,2,3. The call to argdec computes a value for a and defines wrap. It then returns wrap. Remember that nothing inside the wrap function is executed just yet. Next the result of evaluating argdec(1,2,3) is called passing along the function we are decorating. which causes the wrapped_f function to be defined and returned.  Recall that for the non argument version of a decorator foo, for function bar we said it was equivalent to writing bar = foo(bar) In the case of using argdec to wrap bar it would be equivalent to writing bar = argdec(1,2,3)(bar) This might look funny, but if you think about evaluating the right hand side of the assignment statement from left to right it actually makes sense. evaluate argdec(1,2,3) which returns wrap, now call wrap(bar) which returns wrapped_f.  Using classes to implement decorators that take arguments is actually quite nice because we can use the constructor for our class as the outer layer and the __call__ method to do the wrapping.  It's a little bit off the wall, but let's say we want to implement our call counter to take an initial value, and the time at which the function was defined.   class ccc: def __init__(self,start_val, current_time): self.counter = start_val self.define_time = current_time def __call__(self, func): def wrap(*args, **kwargs): self.counter += 1 return func(*args, **kwargs) wrap.wrapper = self return wrap import time @ccc(0,time.time()) def fib(n): if n <= 1: return 1 else: return fib(n-1) + fib(n-2) print(fib(30)) print(fib.wrapper.counter) print(fib.wrapper.define_time)     Finally, let's consider what our app.route decorator does. The app object is our Flask application object, and it will be used to dispatch the correct function based on the URL. So this decorator is not even really going to wrap the function in question, but rather store away a reference to the original function in a dictionary.   class funcmapper: def __init__(self): self.funcdict = {} def route(self,pattern): def wrap(func): self.funcdict[pattern] = func return func return wrap def call_by_route(self,name, *args, **kwargs): if name in self.funcdict: self.funcdict[name](*args,**kwargs) app = funcmapper() @app.route('\/') def hello(): print(\"hello world\") app.call_by_route('\/') print(hello)     "
+},
+{
+  "id": "frameworks_deploying-a-server-in-the-cloud",
+  "level": "1",
+  "url": "frameworks_deploying-a-server-in-the-cloud.html",
+  "type": "Section",
+  "number": "12.2",
+  "title": "Deploying a Server in the Cloud",
+  "body": " Deploying a Server in the Cloud  "
+},
+{
+  "id": "frameworks_wsgi",
+  "level": "1",
+  "url": "frameworks_wsgi.html",
+  "type": "Section",
+  "number": "12.3",
+  "title": "Web Server Gateway Interface",
+  "body": " Web Server Gateway Interface   The Web Server Gateway Interface (WSGI) and pronounced Whiskey (what else would you put in your Flask?). Is a standard defined by the Python Software Foundation that describes how a web server communicates with a web application. In addition the specification allows for applications to be layered in order to respond to a single request.  A web server that is WSGI compliant only receives a request and passes the request on to an application object, it then forwards the response from the object back to the browser.  From our perspective as application builders, WSGI is very simple. It has the following four features:    WSGI applications are callable python objects (functions or classes with an __call__ method that are passed two arguments: a WSGI environment as first argument and a function that starts the response.    The application has to start a response using the function provided and return an iterable where each yielded item means writing and flushing.    The WSGI environment is like a CGI environment just with some additional keys that are either provided by the server or a middleware.    You can add functionality to your application in a general way by wrapping the application in another WSGI compliant application.      The Application Callable  The app object created by app = Flask(__name__) is a WSGI compliant object, meaning that it is a callable, that takes two parameters, an environment dictionary and a function. It returns an iterable. It is quite complex and does a lot of work for us behind the scenes. To get a better appreciation for that, lets look at a simpler version of a WSGI compliant object, a function called hello_world .  from cgi import parse_qs def hello_world(environ, start_response): # parse_qs turns QUERY_STRING into a nice dictionary parameters = parse_qs(environ.get('QUERY_STRING', '')) if 'subject' in parameters: # all values are lists, to accommodate checkboxes subject = parameters['subject'][0] else: subject = 'World' start_response('200 OK', [('Content-Type', 'text\/html')]) return ['''Hello {subject} Hello {subject} '''.format(subject=subject)] if __name__ == '__main__': from wsgiref.simple_server import make_server srv = make_server('', 8000, hello_world) srv.serve_forever()  First, an example of parse_qs:  >>> parse_qs(\"foo=bar&blah=baz\") {'foo': ['bar'], 'blah': ['baz']} >>> parse_qs(\"foo=bar&blah=baz&foo=sdfsdf\") {'foo': ['bar', 'sdfsdf'], 'blah': ['baz']} >>>     Run the example above in a terminal window. What does your browser display?       Correct!      Not quite, look closer      Incorrect, try again.        The wsgiref.simple_server is a simple web server instance that acts as a container for our WSGI object. Every time a request comes in, the hello world function is called passing in the environ object and a function that it provides that we can call to provide our response status as well as any headers we want to set up.  In our hello_world function we check to see if there is a name called subject in the QUERY_STRING. We then call the start_response function to set up our response code and content-type header. Finally we return an iterable -- in this case a string -- that will be returned to the browser to be rendered.  Lest you think this is overly simple, we can even do some routing in this function by looking at the PATH_INFO environment variable. Try this yourself. Modify the hello world function to return Hello, if the route is \/hello and Goodbye if the route is \/bye .  Write a single function with a big long if statement is not a very scalable way to build a web development framework. So lets make some improvments. First instead of a function lets create a class where the instances of the class are callable .  Our app object in Flask is an instance of the Flask class. Lets look at a simpler class based implementation of a WSGI app, and then look at another example that points us in the direction of how Flask extends the idea into a full framework.  We will do this by implementing a base class that implements most of the WSGI deails and leaves the actual application code up to us. All we will need to do is write a class that inherits from our class and implements a get method.  from cgi import parse_qs class WSGIRequestHandler: def __init__(self): self.request = {} self.response = {'Content-Type':'text\/plain'} def __call__(self, environ, start_response): appiter = None self.request['args'] = parse_qs(environ['QUERY_STRING']) appiter = self.get() start_response('200 OK',list(self.response.items())) for item in appiter: yield item # wsgi applications might have a close function. If it exists # it *must* be called. if hasattr(appiter, 'close'): appiter.close() class Hello(WSGIRequestHandler): def get(self): name = self.request['args'].get('subject','world') return ['Hello {0}'.format(name)] if __name__ == '__main__': from wsgiref.simple_server import make_server srv = make_server('localhost', 8080, Hello()) srv.serve_forever()  This example illustrates an instance of a class as a callable, that implements the WSGI interface. Further it shows a way that we can hide much of the details of the WSGI interface from application programmers by using inheritance.  The WSGIRequestHandler class implements an __call__ method that relies on a subclass that implements a get method to build the actual page. Different applications can implement many subclasses of the WSGIRequestHandler class to handle the various requests.  The __init__ method creates two instance variables to handle response headers, as well as incoming environment variables such as cookies and arguments from a submitted form.  The main program in this script imports a make_server function which assembles a web server to handle WSGI requests, on a host, port. It also needs a callable application object. In this case an instance of the Hello class. We will shortly look at how add dispatch functionality to the example to show how to make a WSGI server that can map URLs to classes so thate it can respond to a variety of requests.  There are two big things that we want to add to our WSGI application:   URL mapping  Error Handling   In the decorators module we looked at how Flask uses decorators to associate a function with a particular URL pattern. In this section we will not use a decorator but will just create a list of URL to callable mappings directly and see how that works with the rest of our implementation.  urls = [ (r'^$', Index), (r'hello\/?$', Hello), (r'goodbye\/?)$', Goodbye) ]  This list of tuples maps three differnt patterns to 3 different callables that provide a simple response. All of them are very similar to the Hello class shown above.  Given that list we need an WSGI compliant callable that can examine the incoming request and forward the call to the appropriate class.  def router(environ, start_response): path = environ.get('PATH_INFO', '').lstrip('\/') for regex, callback in urls: match = re.search(regex, path) if match is not None: environ['myapp.url_args'] = match.groups() return callback()(environ, start_response) return not_found(environ, start_response) def not_found(environ, start_response): \"\"\"Called if no URL matches.\"\"\" start_response('404 NOT FOUND', [('Content-Type', 'text\/plain')]) return ['Not Found']  Now the main program looks like this:  if __name__ == '__main__': from wsgiref.simple_server import make_server srv = make_server('localhost', 8080, router) srv.serve_forever()  The router callable is passed in to the server as the main application object. The keys to the router function are as follows:    Extract the path from the incoming PATH_INFO environment variable    Match that path against the regular expressions provided in the urls list.    Forward the request to the callable that should handle it using the following: return callback()(environ,start_response)     That last line looks a bit crazy, so let's break it down. Remember that WSGI compliant callables must accept an environment and a start_response function, and they must return an iterable. So the return statement must first evaluate its argument: callback()(environ,start_response) . This is evaluated from left to right. The reference callback is set in the for loop and will be set to the callable that matches the current regular expression. In our class This will be a class. So callback() creates an instance of the class that matches the regular expression. As soon as the instance is created its __call__ method is invoked by the (environ,start_resonse) operator. Which in turn will invoke the get method on the class which returns an iterable. That iterable is returned by the return statement in the router function.  OK, so now that we can call the right function, let's look at how to handle errors the WSGI way. Error handling is a nice example of how you can use middleware. Or you can think of it in Shrek terms: Applications are like Ogres, they have layers. To implement a middleware layer we simply implement another WSGI compliant class, that takes an inner WSGI object as a parameter for its constructor. Each outer layer has access to the results of the layer below it, and can modify the results of the layer below it before returning it to the layer above.  class ExceptionMiddleware: \"\"\"The middleware we use.\"\"\" def __init__(self, app): self.app = app def __call__(self, environ, start_response): \"\"\"Call the application can catch exceptions.\"\"\" appiter = None # just call the application and send the output back # unchanged but catch exceptions try: appiter = self.app(environ, start_response) for item in appiter: yield item # if an exception occours we get the exception information # and prepare a traceback we can render except: e_type, e_value, tb = exc_info() traceback = ['Traceback (most recent call last):'] traceback += format_tb(tb) traceback.append('%s: %s' % (e_type.__name__, e_value)) # we might have not a stated response by now. try # to start one with the status code 500 or ignore an # raised exception if the application already started one. try: start_response('500 INTERNAL SERVER ERROR', [ ('Content-Type', 'text\/plain')]) except: pass yield '\\n'.join(traceback) # wsgi applications might have a close function. If it exists # it *must* be called. if hasattr(appiter, 'close'): appiter.close()  You will notice that this is a very similar class to the base class for WSGI applications except that it handles the call to the lower layer inside a try\/except block. If any of the lower layers fail they will be caught by the try except at this layer and the traceback will be rendered on the browser page, along with the 500 internal server error message. There are many uses for middleware including session management, form authentication, You can find a list of open source WSGI middleware handling user login\/logouts, and more you can find a list here . Although for our continued use of Flask these are not necessary, as we will be using some extensions that are specific to flask, which may very well be implemented using the middleware pattern.   "
+},
+{
+  "id": "first_wsgi",
+  "level": "2",
+  "url": "frameworks_wsgi.html#first_wsgi",
+  "type": "Exercise",
+  "number": "12.3.1.1",
+  "title": "",
+  "body": "  Run the example above in a terminal window. What does your browser display?       Correct!      Not quite, look closer      Incorrect, try again.      "
+},
+{
+  "id": "frameworks_template-engines",
+  "level": "1",
+  "url": "frameworks_template-engines.html",
+  "type": "Section",
+  "number": "12.4",
+  "title": "Template Engines",
+  "body": " Template Engines  There are many benefits to using templates.     Separation of the view from the controller and model code.    Increased productivity.    Ease of creating a site with a unified design.    Division of labor. Designers can now work on template files using html plus a bit more without needing to know how to write Python.     At the simplest level templates are not much different than a Python formatted string. However they are much more convenient to use, and have many more features that we will explore shortly. Here is a simple example:   from jinja2 import Template template = Template('Hello {​{ name }}!') template.render(name='John Doe')   A slightly more complicated example goes like this:   from jinja2 import Environment, FileSystemLoader env = Environment(loader=FileSystemLoader('\/path\/to\/templates)) t = env.get_template('foo.html') t.render(name='Luther')   This example shows how we can set up an environment that can be shared among many functions. This environment takes care of the details behind locating and reading our templates from a file when we want to use them. The foo.html file could look like this:   <html> <body> <h1>Hello {​{ name }}<\/h1> <\/body> <\/html>   The values inside the double curlies are not limited to being string objects, although they must have an __str__ method if they are going to be useful. Consider an instance of a Student class that has instance variables for firstname, lastname, and gpa. Let's change our template to look like the following:   <html> <body> <h1>Hello {​{ s.firstname }} {​{ s.lastname }}<\/h1> <p>Your gpa is {​{ s.gpa }}.<\/p> <\/body> <\/html>   Assuming we have a student object called joe we can render the template above with the line: t.render(s=joe) This would also work if joe was a dictionary and had keys firstname, lastname, and gpa. The dot notation works for either attributes or items in a dictionary ( __getattr__ or __getitem__ ) for those of you who like magic method speak.   Loops in Templates  Let's suppose you want to make a table in a template. The ideal would be to pass render a list of things, and have the template turn the list into a table. (or an unordered list or whatever) This is easy to do.   <html> <body> <h1>The first {​{ plist|length }} prime numbers<\/h1> <table> {​% for i in plist: %​} <tr><td>{​{ i }}<\/td><\/tr> {​% endfor %​} <\/table> <\/body> <\/html>   This introduces several interesting new features of templates.     The {​% ... %​} notation is used to include a non-rendering bit of code in the template. In this example we introduce a for loop. Notice that since html does not require you to indent things we need an endfor to delimit the end of the for loop.    Jinja2 includes a huge number of filters that you can use on a variable. The filter plist|length will render as the number of elements in the plist list.       Conditionals in Templates  In addition to loops you can also have a conditional in a template for example:   <html> <body> {​% if name %​} <h1>Hello {​{ name }} <\/h1> {​% else %​} <h1>Hello World<\/h1> {​% endif %​} <\/body> <\/html>     Template Inheritance  The real power of templates comes when you use template inheritance. The following scenario is very common:  1. base.html - This file contains the layout that will be used throughout the site, along with all of the links to css files and includes of javascript. The base.html file will define a set of blocks that have default content, but can be overridden by other templates. 1. index.html – The landing page, that inherits from base.html and customizes some blocks for the main page. 1. other child pages, will also inherit from base.html annd make their own customizations.  For example let's suppose you have a base.html file that looks like this:   <html> <head> {​% block head %​} <link rel=\"stylesheet\" href=\"static\/style.css\" \/> <title>{​% block title %​}{​% endblock %​} - My Webpage<\/title> {​% endblock %​} <\/head> <body> <main>{​% block content %​}{​% endblock %​}<\/main> <footer> {​% block footer %​} Creative Commons 2014 by <a href=\"http:\/\/domain.invalid\/\">you<\/a>. {​% endblock %​} <\/footer> <\/body>   Running this through the Jinja2 renderer gives us this:   <html> <head> <link rel=\"stylesheet\" href=\"static\/style.css\" \/> <title> - My Webpage<\/title> <\/head> <body> <main><\/main> <footer> Creative Commons 2014 by <a href=\"http:\/\/domain.invalid\/\">you<\/a>. <\/footer> <\/body>   Now let's create a child template that contains a title and some real content.   .. code-block:: html {​% block content %​} <h1>Tempates are awesome for 10 reasons<\/h1> <ol> {​% for i in reasons: %​} <li>Reason {​{ i }}<\/li> {​% endfor %​} <\/ol> {​% endblock %​}   And render it with render(reasons=[1,2,3,4,5])   <html> <head> <link rel=\"stylesheet\" href=\"static\/style.css\" \/> <title> Great Title - My Webpage<\/title> <\/head> <body> <main> <h1>Tempates are awesome for 5 reasons<\/h1> <ol> <li>Reason 1<\/li> <li>Reason 2<\/li> <li>Reason 3<\/li> <li>Reason 4<\/li> <li>Reason 5<\/li> <\/ol> <\/main> <footer> Creative Commons 2014 by <a href=\"http:\/\/domain.invalid\/\">you<\/a>. <\/footer> <\/body>   Notice that the header and footer are intact, however the child has the title Great Title and the content of the child has been inserted into the content block.    Templates in Flask  To use Jinja templates in flask is easy.     You need to make a templates subdirectory in your main project directory.    Add from flask import render_template to your Python.    Then from one of your controller functions, rather than returning a big string, you simple invoke the render_template function: return render_template('todo.html',todolist=todolist))     Remember that in flask our controller functions return an iterable. The render_template function returns such an interable. It's just a string, so you can call the render_template function and print the results if you like.   "
+},
+{
+  "id": "frameworks_persistent-data-and-databases",
+  "level": "1",
+  "url": "frameworks_persistent-data-and-databases.html",
+  "type": "Section",
+  "number": "12.5",
+  "title": "Persistent Data and Databases",
+  "body": " Persistent Data and Databases  In the three legged stool of web applications, we have covered both the view and the controller. We have even built simple apps with very simple models. But now it is time to look at a real model, and how a database management system is used in a web application. We will divide this chapter into three modules:     Data Modeling and Creating a Database    Querying the database using Python's DBAPI    Using an Object Relational Mapping layer such as SQLAlchemy      Data Modeling  Let me begin with the statement that data modeling could be the most important skill you learn in your computer science career. If you understand your (or your customer's) data, and can effectively communicate to your customer about their data you have already won half the battle. Data modeling is an excellent communications tool, both to help you uncover hidden requirements and assumptions, and to facilitate good understanding between you and those you are working with.  A data model will help us uncover and describe the entities that are important to our application. These entities will become the tables in our database. The things we need to remember about the entities or the attributes of our entities will become the columns in our table.  Let's use an example of keeping track of college courses to illustrate what we mean. To start out very simply we think of the nouns or things that are important to registering for courses at college.     student    course    grade    professor    department    major    requirement    pre-requisite    classroom    time     When doing a data model we often create a diagram to represent the data model called a logical data structure (LDS) An LDS is a simple notation that aids in the modeling and design task without being so complicated as to get in the way.  Looking at our list, the first thing we may want to investigate is the course. What is it about a course that uniquely identifies it? What other things do we want to remember about a course. At most colleges courses have unique identifiers that consist of the department and a number such as CS101 or BIO423. For a course we may also want to remember the title of the course, the course description, how many credits the course is worth.  Other attributes of the course may be the professor who teaches it, the room the course meets in, and the time. However these are slightly problematic in that these things change from time to time. Now if we don't care about that and only want to remember the most current room or professor it's not a problem, but if we want to be able to look back and find out who taught a course where and when we'll have to defer these attributes for a while.  Let's begin our LDS diagram by drawing out the Course entity along with its attributes.   An LDS with one entity    To continue thinkgin about the course another idea that may have occured to you is that we want to remember the students that took the course. So, student is an attribute of course. However, when you think about student you can probably think of many things ou wold want to remember about a student, so it's no ordinary attribute. In fact it is another entity.  A student is uniquely identified by their student id, and there are lots of things to remember: first Name, last name, the year they enrolled, their major, their email address, and potentially much more. However, how do we indicate that there is a relationship between a student and a course? What kind of relationship? There are three different relationships to consider:     one to one    one to many    many to many     To figure out the kind of relationship we have we need to ask the following questions: Does a course have only one student. Most of the time no. Does a course have many students? Yes. So we know that this relationship is at least a one to many relationship. But now we need to ask the question from the other perspective. Does a student take just one course? Probably not. Does a student take many courses. Yes. So we have a many to many relationship. This looks like the following figure:   An LDS with a many to many relationship    In the case of a many to many relationship we are almost never done at this point. Inevitably, there is more that we want to remember about this relationship, or there is a name we want to assign to the relationship. In this case the many to many relationship represents a student enrolling in a course. So an enrollment is a new and important entity. The enrollment represents a student taking a course. Now there are things we want to remember about this occurrance. When did the student take the course? What grade did they receive? What room was the course taught in? Who taught the course? With this in mind, we evolve or LDS to look like the following:   An LDS with an evolved many to many relationship    OK, we've barely scratched the surface of data modeling, and yet this example is illustrative of a huge fraction of the kinds of relationships that you will see in the real world. If you don't know any more than this, you can already model a lot of applications.    The Physical Database  Having looked at the logical structure of our course application let us know think about its physical representation, that is how it is represented in the computer or on the disk of the computer. For purposes of this chapter we will consider the physical representation in a relational database such as Postgresql, Mysql, or Sqlite3.  Each of the entities in our logical data structure becomes a table in the relational database. That is each instance of an entity is a row in the table and each of the attributes are a column. For example some instances of our course entity would look like this:     Course_id  title  description  credits    CS150  Intro to Computer Science  A great class  4    CS130  Web Programming  description  2    BIO101  Something about Biology  it bleeds  4    CHEM1  Chemistry  it smells  4     You should be able to draw a similar table for a student. But what about the enrollment table? The enrollment table is a bit different because it is the target of two one to many relationships. In a one to many relationship the identifier from the one side of the relationship must be added to the table on the many side. If we have student 1234 who has taken CS150, and CHEM1, and student 4567 who has taken CS130 and CHEM1 our enrollment table would look like this:     Course_id  Student_id  Grade  Professor  Classroom  Semester    CS150  1234  B+  Miller  Olin 202  Fall14    CHEM1  1234  B  Rinco  Valders 117  Spr14    CS130  4567  A  Miller  Olin 112  Fall14    CHEM1  4567  B  Rinco  Valders 117  Spr13      "
+},
+{
+  "id": "id1-7",
+  "level": "2",
+  "url": "frameworks_persistent-data-and-databases.html#id1-7",
+  "type": "Figure",
+  "number": "12.5.1",
+  "title": "",
+  "body": " An LDS with one entity   "
+},
+{
+  "id": "id2-2",
+  "level": "2",
+  "url": "frameworks_persistent-data-and-databases.html#id2-2",
+  "type": "Figure",
+  "number": "12.5.2",
+  "title": "",
+  "body": " An LDS with a many to many relationship   "
+},
+{
+  "id": "id3",
+  "level": "2",
+  "url": "frameworks_persistent-data-and-databases.html#id3",
+  "type": "Figure",
+  "number": "12.5.3",
+  "title": "",
+  "body": " An LDS with an evolved many to many relationship   "
+},
+{
+  "id": "frameworks_the-physical-database-3",
+  "level": "2",
+  "url": "frameworks_persistent-data-and-databases.html#frameworks_the-physical-database-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "table "
+},
+{
+  "id": "frameworks_the-physical-database-4",
+  "level": "2",
+  "url": "frameworks_persistent-data-and-databases.html#frameworks_the-physical-database-4",
+  "type": "Table",
+  "number": "12.5.4",
+  "title": "",
+  "body": "   Course_id  title  description  credits    CS150  Intro to Computer Science  A great class  4    CS130  Web Programming  description  2    BIO101  Something about Biology  it bleeds  4    CHEM1  Chemistry  it smells  4    "
+},
+{
+  "id": "frameworks_the-physical-database-6",
+  "level": "2",
+  "url": "frameworks_persistent-data-and-databases.html#frameworks_the-physical-database-6",
+  "type": "Table",
+  "number": "12.5.5",
+  "title": "",
+  "body": "   Course_id  Student_id  Grade  Professor  Classroom  Semester    CS150  1234  B+  Miller  Olin 202  Fall14    CHEM1  1234  B  Rinco  Valders 117  Spr14    CS130  4567  A  Miller  Olin 112  Fall14    CHEM1  4567  B  Rinco  Valders 117  Spr13    "
 },
 {
   "id": "backmatter-2",

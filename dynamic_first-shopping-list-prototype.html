@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>First Shopping List Prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Fundamentals of Web Programming">
+<meta property="book:author" content="Brad Miller and Friends">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.1.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Fundamentals of Web Programming</span> <span class="subtitle">The PreTeXt Interactive Edition</span></a></h1>
+<p class="byline">Brad Miller and Friends</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="dynamic_a-trip-to-the-spa.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-dynamic.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="dynamic_model-view-controller.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="front-back-matter_preface.html" class="internal"><span class="codenumber">1</span> <span class="title">Preface</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="front-back-matter_the-content-and-structure-of-this-book.html" class="internal"><span class="codenumber">1.1</span> <span class="title">The Content and Structure of this Book</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="front-back-matter_learning-zones.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Learning Zones</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-www.html" class="internal"><span class="codenumber">1</span> <span class="title">The World Wide Web</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="www_history.html" class="internal"><span class="codenumber">1.1</span> <span class="title">History</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="www_the-technology-of-the-web.html" class="internal"><span class="codenumber">1.2</span> <span class="title">The Technology of the Web</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="www_the-technology-of-the-web.html#www_an-http-request" class="internal"><span class="codenumber">1.2.1</span> <span class="title">An HTTP Request</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="www_the-technology-of-the-web.html#www_an-http-response" class="internal"><span class="codenumber">1.2.2</span> <span class="title">An HTTP Response</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="www_exercises.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-html.html" class="internal"><span class="codenumber">2</span> <span class="title">HTML Basics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="html_basic-html-tags.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Basic HTML Tags</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_basic-html-tags.html#html_headings" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Headings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_basic-html-tags.html#html_paragraphs" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Paragraphs</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_basic-html-tags.html#html_images" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Images</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_basic-html-tags.html#html_links" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Links</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_basic-html-tags.html#html_simple-text-formatting" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Simple Text Formatting</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="html_advanced-html-tags.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Advanced HTML Tags</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_advanced-html-tags.html#html_unordered-lists" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Unordered Lists</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_advanced-html-tags.html#html_ordered-lists" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Ordered Lists</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_advanced-html-tags.html#html_description-lists" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Description Lists</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_advanced-html-tags.html#html_nesting-lists" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Nesting Lists</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_advanced-html-tags.html#html_tables" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Tables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_advanced-html-tags.html#html_audio" class="internal"><span class="codenumber">2.2.6</span> <span class="title">Audio</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_advanced-html-tags.html#html_video" class="internal"><span class="codenumber">2.2.7</span> <span class="title">Video</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="html_advanced-html-tags.html#html_iframes" class="internal"><span class="codenumber">2.2.8</span> <span class="title">IFrames</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="html_semantic-html-tags.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Semantic HTML Tags</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="html_exercises.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="html_html-quiz.html" class="internal"><span class="codenumber">2.5</span> <span class="title">HTML Quiz</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="html_html-quiz.html#html_html-quiz-3" class="internal"><span class="codenumber">2.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-cloud.html" class="internal"><span class="codenumber">3</span> <span class="title">Publishing a Web Page in the Cloud</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cloud_exercises.html" class="internal"><span class="codenumber">3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-css.html" class="internal"><span class="codenumber">4</span> <span class="title">Cascading Style Sheets</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="css_introduction-to-css.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction to CSS</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_introduction-to-css.html#css_css-syntax" class="internal"><span class="codenumber">4.1.1</span> <span class="title">CSS Syntax</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_introduction-to-css.html#css_including-css-in-your-page" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Including CSS in Your Page</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_introduction-to-css.html#css_cascading" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Cascading</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="css_changing-the-style-of-an-html-element.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Changing the Style of an HTML Element</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_changing-the-style-of-an-html-element.html#css_background" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Background</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_changing-the-style-of-an-html-element.html#css_text" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Text</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_changing-the-style-of-an-html-element.html#css_font" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Font</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="css_more-on-matching.html" class="internal"><span class="codenumber">4.3</span> <span class="title">More on Matching</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_more-on-matching.html#css_matching-multiple-tags" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Matching multiple tags</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_more-on-matching.html#css_using-an-id-attribute-in-a-rule" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Using an id attribute in a rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_more-on-matching.html#css_using-the-class-attribute-in-a-rule" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Using the class attribute in a rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_more-on-matching.html#css_matching-children" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Matching Children</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="css_quiz-two.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Quiz Two</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="css_quiz-two.html#css_quiz-two-2" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="css_changing-your-page-layout.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Changing your page layout</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_changing-your-page-layout.html#css_the-css-box-model" class="internal"><span class="codenumber">4.5.1</span> <span class="title">The CSS Box Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_changing-your-page-layout.html#css_display" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Display</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_changing-your-page-layout.html#css_floating" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Floating</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="css_changing-your-page-layout.html#css_positioning" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Positioning</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="css_changing-your-page-layout.html#css_fixed" class="internal"><span class="codenumber">4.5.4.1</span> <span class="title">Fixed</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="css_changing-your-page-layout.html#css_relative" class="internal"><span class="codenumber">4.5.4.2</span> <span class="title">Relative</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_changing-your-page-layout.html#css_absolute" class="internal"><span class="codenumber">4.5.5</span> <span class="title">Absolute</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_changing-your-page-layout.html#css_full-page-layout" class="internal"><span class="codenumber">4.5.6</span> <span class="title">Full Page Layout</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="css_positioning-quiz.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Positioning Quiz</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="css_css-tricks.html" class="internal"><span class="codenumber">4.7</span> <span class="title">CSS Tricks</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_css-tricks.html#css_hover" class="internal"><span class="codenumber">4.7.1</span> <span class="title">Hover</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_css-tricks.html#css_animation" class="internal"><span class="codenumber">4.7.2</span> <span class="title">Animation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="css_the-dropdown-menu-project.html" class="internal"><span class="codenumber">4.8</span> <span class="title">The Dropdown Menu Project</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_the-dropdown-menu-project.html#css_step-one" class="internal"><span class="codenumber">4.8.1</span> <span class="title">Step One</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_the-dropdown-menu-project.html#css_step-two" class="internal"><span class="codenumber">4.8.2</span> <span class="title">Step Two</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_the-dropdown-menu-project.html#css_step-three" class="internal"><span class="codenumber">4.8.3</span> <span class="title">Step Three</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_the-dropdown-menu-project.html#css_step-four" class="internal"><span class="codenumber">4.8.4</span> <span class="title">Step Four</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="css_the-dropdown-menu-project.html#css_step-five" class="internal"><span class="codenumber">4.8.5</span> <span class="title">Step Five</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="css_grid-layout.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Grid Layout</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="css_css-exercises.html" class="internal"><span class="codenumber">4.10</span> <span class="title">CSS Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-javascript.html" class="internal"><span class="codenumber">5</span> <span class="title">JavaScript</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="javascript_objects-attributes-and-methods.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Objects Attributes and Methods</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="javascript_html-elements-for-interaction.html" class="internal"><span class="codenumber">5.2</span> <span class="title">HTML Elements for Interaction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="javascript_html-elements-for-interaction.html#javascript_button" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Button</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="javascript_html-elements-for-interaction.html#javascript_the-input-tag" class="internal"><span class="codenumber">5.2.2</span> <span class="title">The Input Tag</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="javascript_html-elements-for-interaction.html#javascript_text-input" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Text Input</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="javascript_html-elements-for-interaction.html#javascript_password" class="internal"><span class="codenumber">5.2.4</span> <span class="title">Password</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="javascript_html-elements-for-interaction.html#javascript_checkbox" class="internal"><span class="codenumber">5.2.5</span> <span class="title">Checkbox</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="javascript_html-elements-for-interaction.html#javascript_radio" class="internal"><span class="codenumber">5.2.6</span> <span class="title">Radio</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="javascript_html-elements-for-interaction.html#javascript_color" class="internal"><span class="codenumber">5.2.7</span> <span class="title">Color</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="javascript_html-elements-for-interaction.html#javascript_range" class="internal"><span class="codenumber">5.2.8</span> <span class="title">Range</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="javascript_html-elements-for-interaction.html#javascript_date-stuff" class="internal"><span class="codenumber">5.2.9</span> <span class="title">Date Stuff</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="javascript_html-elements-for-interaction.html#javascript_drop-down-menus" class="internal"><span class="codenumber">5.2.10</span> <span class="title">Drop Down Menus</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="javascript_javascript-quiz.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Javascript Quiz</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="javascript_javascript-quiz.html#javascript_javascript-quiz-3" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="javascript_javascript-events-jsevents.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Javascript Events</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="javascript_javascript-events-jsevents.html#javascript_events-used-in-this-section" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Events Used in this Section</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="javascript_creating-elements-on-the-fly.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Creating Elements on the Fly</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="javascript_creating-elements-on-the-fly.html#javascript_which-button" class="internal"><span class="codenumber">5.5.1</span> <span class="title">Which Button?</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="javascript_creating-elements-on-the-fly.html#javascript_what-is-this" class="internal"><span class="codenumber">5.5.1.1</span> <span class="title">What is <code class="code-inline tex2jax_ignore">this</code>?</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="javascript_creating-elements-on-the-fly.html#javascript_attaching-events" class="internal"><span class="codenumber">5.5.2</span> <span class="title">Attaching Events</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="javascript_iteration.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Iteration</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="javascript_selection.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Selection</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="javascript_javascript-project-slot-machine.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Javascript Project Slot Machine</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="javascript_helper-objects.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Helper Objects</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="javascript_helper-objects.html#javascript_array" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Array</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="javascript_helper-objects.html#javascript_string" class="internal"><span class="codenumber">5.9.2</span> <span class="title">String</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="javascript_asynchronous-programming.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Asynchronous Programming</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="javascript_asynchronous-programming.html#javascript_promises" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Promises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="javascript_asynchronous-programming.html#javascript_async-await" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Async / Await</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="javascript_asynchronous-programming.html#javascript_promises-in-depth" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Promises in Depth</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="javascript_javascript-exercises.html" class="internal"><span class="codenumber">5.11</span> <span class="title">Javascript Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="javascript_javascript-final-quiz.html" class="internal"><span class="codenumber">5.12</span> <span class="title">Javascript Final Quiz</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="javascript_javascript-final-quiz.html#javascript_javascript-final-quiz-3" class="internal"><span class="codenumber">5.12.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="javascript_javascript-final-quiz.html#javascript_programming-question" class="internal"><span class="codenumber">5.12.2</span> <span class="title">Programming Question</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-dynamic.html" class="internal"><span class="codenumber">6</span> <span class="title">Dynamic Web Applications</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="dynamic_modern-web-application-architecture.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Modern Web Application Architecture</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="dynamic_modern-web-application-architecture.html#dynamic_cgi-stack" class="internal"><span class="codenumber">6.1.1</span> <span class="title">CGI Stack</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="dynamic_modern-web-application-architecture.html#dynamic_lamp-stack" class="internal"><span class="codenumber">6.1.2</span> <span class="title">LAMP Stack</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="dynamic_modern-web-application-architecture.html#dynamic_mean-mern-stack" class="internal"><span class="codenumber">6.1.3</span> <span class="title">MEAN / MERN Stack</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="dynamic_modern-web-application-architecture.html#dynamic_becoming-a-full-stack-developer" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Becoming a Full Stack developer</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="dynamic_a-trip-to-the-spa.html" class="internal"><span class="codenumber">6.2</span> <span class="title">A trip to the SPA</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="dynamic_first-shopping-list-prototype.html" class="internal"><span class="codenumber">6.3</span> <span class="title">First Shopping List Prototype</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="dynamic_model-view-controller.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Model View Controller</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="dynamic_the-publish-and-subscribe-design-pattern.html" class="internal"><span class="codenumber">6.5</span> <span class="title">The Publish and Subscribe Design Pattern</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="dynamic_our-second-prototype.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Our Second Prototype</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="dynamic_our-second-prototype.html#dynamic_model-code" class="internal"><span class="codenumber">6.6.1</span> <span class="title">Model Code</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="dynamic_our-second-prototype.html#dynamic_view-code" class="internal"><span class="codenumber">6.6.2</span> <span class="title">View Code</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="dynamic_our-second-prototype.html#dynamic_controller-code" class="internal"><span class="codenumber">6.6.3</span> <span class="title">Controller Code</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="dynamic_serializing-and-localstorage.html" class="internal"><span class="codenumber">6.7</span> <span class="title">Serializing and LocalStorage</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="dynamic_serializing-and-localstorage.html#dynamic_using-javascript-object-notation-json" class="internal"><span class="codenumber">6.7.1</span> <span class="title">Using JavaScript Object Notation (JSON)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="dynamic_serializing-and-localstorage.html#dynamic_using-the-localstorage-object" class="internal"><span class="codenumber">6.7.2</span> <span class="title">Using the localStorage Object</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="dynamic_prototype-3-storing-the-list-in-the-browser.html" class="internal"><span class="codenumber">6.8</span> <span class="title">Prototype 3 Storing the List in the Browser</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="dynamic_exercises.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-advjs.html" class="internal"><span class="codenumber">7</span> <span class="title">Advanced JavaScript</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="advanced-javascript_javascript-prototypes.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Javascript Prototypes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="advanced-javascript_javascript-prototypes.html#advanced-javascript_object-creation" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Object Creation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="advanced-javascript_javascript-prototypes.html#advanced-javascript_exercise" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Exercise</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="advanced-javascript_interacting-with-other-services.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Interacting with Other Services</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="advanced-javascript_interacting-with-other-services.html#advanced-javascript_query-string-parameters" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Query String Parameters</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="advanced-javascript_interacting-with-other-services.html#advanced-javascript_check-your-understanding" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Check your Understanding</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="advanced-javascript_interacting-with-other-services.html#advanced-javascript_javascript-object-notation-json" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Javascript Object Notation (JSON)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="advanced-javascript_exercises.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-apis.html" class="internal"><span class="codenumber">8</span> <span class="title">Web Application Programmer Interfaces (APIs)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="web_apis_using-web-apis-in-your-application.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Using Web APIs in your Application</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="web_apis_implementing-a-web-api.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Implementing a Web API</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="web_apis_a-restful-api.html" class="internal"><span class="codenumber">8.3</span> <span class="title">A RESTful API</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="web_apis_prototype-4-storing-our-list-on-a-server.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Prototype 4 - Storing our List on a Server</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="web_apis_exercises.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-cgi.html" class="internal"><span class="codenumber">9</span> <span class="title">Common Gateway Interface</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cgi_server-side-programming.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Server Side Programming</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cgi_processing-user-input.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Processing user Input</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="cgi_processing-user-input.html#cgi_combining-into-one-file" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Combining into One File</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cgi_cookies.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Cookies</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cgi_exercises.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-flask.html" class="internal"><span class="codenumber">10</span> <span class="title">The Flask Framework</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="flask_toward-modern-web-development.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Toward Modern Web Development</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_toward-modern-web-development.html#flask_templates" class="internal"><span class="codenumber">10.1.1</span> <span class="title">Templates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_toward-modern-web-development.html#flask_databases" class="internal"><span class="codenumber">10.1.2</span> <span class="title">Databases</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_toward-modern-web-development.html#flask_forms-processing" class="internal"><span class="codenumber">10.1.3</span> <span class="title">Forms Processing</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_toward-modern-web-development.html#flask_flask" class="internal"><span class="codenumber">10.1.4</span> <span class="title">Flask</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="flask_quickstart-id1.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Quickstart</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_quickstart-id1.html#flask_a-minimal-application" class="internal"><span class="codenumber">10.2.1</span> <span class="title">A Minimal Application</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="flask_quickstart-id1.html#flask_what-to-do-if-the-server-does-not-start" class="internal"><span class="codenumber">10.2.2</span> <span class="title">What to do if the Server does not Start</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="flask_quickstart-id1.html#flask_old-version-of-flask" class="internal"><span class="codenumber">10.2.2.1</span> <span class="title">Old Version of Flask</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="flask_quickstart-id1.html#flask_invalid-import-name" class="internal"><span class="codenumber">10.2.2.2</span> <span class="title">Invalid Import Name</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_quickstart-id1.html#flask_debug-mode-id2" class="internal"><span class="codenumber">10.2.3</span> <span class="title">Debug Mode</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="flask_routing.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Routing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_routing.html#flask_variable-rules" class="internal"><span class="codenumber">10.3.1</span> <span class="title">Variable Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_routing.html#flask_unique-urls-redirection-behavior" class="internal"><span class="codenumber">10.3.2</span> <span class="title">Unique URLs / Redirection Behavior</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_routing.html#flask_url-building-id1" class="internal"><span class="codenumber">10.3.3</span> <span class="title">URL Building</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_routing.html#flask_http-methods" class="internal"><span class="codenumber">10.3.4</span> <span class="title">HTTP Methods</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="flask_static.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Static Files</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="flask_rendering-templates.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Rendering Templates</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="flask_accessing-request-data.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Accessing Request Data</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_accessing-request-data.html#flask_context-locals-id1" class="internal"><span class="codenumber">10.6.1</span> <span class="title">Context Locals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_accessing-request-data.html#flask_the-request-object" class="internal"><span class="codenumber">10.6.2</span> <span class="title">The Request Object</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_accessing-request-data.html#flask_file-uploads" class="internal"><span class="codenumber">10.6.3</span> <span class="title">File Uploads</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_accessing-request-data.html#flask_cookies" class="internal"><span class="codenumber">10.6.4</span> <span class="title">Cookies</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="flask_redirects-and-errors.html" class="internal"><span class="codenumber">10.7</span> <span class="title">Redirects and Errors</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="flask_about-responses-id1.html" class="internal"><span class="codenumber">10.8</span> <span class="title">About Responses</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_about-responses-id1.html#flask_apis-with-json" class="internal"><span class="codenumber">10.8.1</span> <span class="title">APIs with JSON</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="flask_sessions-id1.html" class="internal"><span class="codenumber">10.9</span> <span class="title">Sessions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="flask_messageflashing.html" class="internal"><span class="codenumber">10.10</span> <span class="title">Message Flashing</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="flask_logging.html" class="internal"><span class="codenumber">10.11</span> <span class="title">Logging</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="flask_templates-in-depth-templates.html" class="internal"><span class="codenumber">10.12</span> <span class="title">Templates in Depth</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_templates-in-depth-templates.html#flask_jinja-setup" class="internal"><span class="codenumber">10.12.1</span> <span class="title">Jinja Setup</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_templates-in-depth-templates.html#flask_standard-context" class="internal"><span class="codenumber">10.12.2</span> <span class="title">Standard Context</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_templates-in-depth-templates.html#flask_standard-filters" class="internal"><span class="codenumber">10.12.3</span> <span class="title">Standard Filters</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_templates-in-depth-templates.html#flask_controlling-autoescaping" class="internal"><span class="codenumber">10.12.4</span> <span class="title">Controlling Autoescaping</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_templates-in-depth-templates.html#flask_flask_registering-filters-id1" class="internal"><span class="codenumber">10.12.5</span> <span class="title">Registering Filters</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="flask_templates-in-depth-templates.html#flask_context-processors" class="internal"><span class="codenumber">10.12.6</span> <span class="title">Context Processors</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="flask_exercises.html" class="internal"><span class="codenumber">10.13</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-sql.html" class="internal"><span class="codenumber">11</span> <span class="title">Introduction to SQL</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="database_exploring-bike-rental-data-with-sql.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Exploring Bike Rental Data with SQL</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="database_exploring-bike-rental-data-with-sql.html#database_query-language" class="internal"><span class="codenumber">11.1.1</span> <span class="title">Query Language</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="database_bikestart.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Getting Started with the Bike Data</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="database_bikestart.html#database_verify_access" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Verify access to the dataset</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="database_filtering.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Filtering</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="database_filtering.html#database_practice-exercises-3" class="internal"><span class="codenumber">11.3.1</span> <span class="title">Practice Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="database_sorting.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Sorting</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="database_sorting.html#database_practice-exercises" class="internal"><span class="codenumber">11.4.1</span> <span class="title">Practice Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="database_aggregation-or-group-by.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Aggregation or Group By</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="database_aggregation-or-group-by.html#database_practice-exercises-2" class="internal"><span class="codenumber">11.5.1</span> <span class="title">Practice Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="database_joining.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Joining</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="database_joining.html#database_practice-exercises-1" class="internal"><span class="codenumber">11.6.1</span> <span class="title">Practice Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="database_accessing-databases-from-python.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Accessing Databases from Python</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="database_accessing-databases-from-python.html#database_the-basics" class="internal"><span class="codenumber">11.7.1</span> <span class="title">The Basics</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="database_object-relational-mapping-with-sqlalchemy.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Object Relational Mapping with SQLAlchemy</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="database_exercises.html" class="internal"><span class="codenumber">11.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-frameworks.html" class="internal"><span class="codenumber">12</span> <span class="title">Framework Development</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="frameworks_python-decorators.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Python Decorators</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="frameworks_deploying-a-server-in-the-cloud.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Deploying a Server in the Cloud</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="frameworks_wsgi.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Web Server Gateway Interface</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="frameworks_wsgi.html#frameworks_wsgi_app_callable" class="internal"><span class="codenumber">12.3.1</span> <span class="title">The Application Callable</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="frameworks_wsgi.html#first_wsgi" class="internal"><span class="codenumber">12.3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="frameworks_template-engines.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Template Engines</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="frameworks_template-engines.html#frameworks_loops-in-templates" class="internal"><span class="codenumber">12.4.1</span> <span class="title">Loops in Templates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="frameworks_template-engines.html#frameworks_conditionals-in-templates" class="internal"><span class="codenumber">12.4.2</span> <span class="title">Conditionals in Templates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="frameworks_template-engines.html#frameworks_template-inheritance" class="internal"><span class="codenumber">12.4.3</span> <span class="title">Template Inheritance</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="frameworks_template-engines.html#frameworks_templates-in-flask" class="internal"><span class="codenumber">12.4.4</span> <span class="title">Templates in Flask</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="frameworks_persistent-data-and-databases.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Persistent Data and Databases</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="frameworks_persistent-data-and-databases.html#frameworks_data-modeling" class="internal"><span class="codenumber">12.5.1</span> <span class="title">Data Modeling</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="frameworks_persistent-data-and-databases.html#frameworks_the-physical-database" class="internal"><span class="codenumber">12.5.2</span> <span class="title">The Physical Database</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="dynamic_first-shopping-list-prototype"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">First Shopping List Prototype</span>
+</h2>
+<div class="para" id="dynamic_first-shopping-list-prototype-2">Our first prototype looks like this:<div class="autopermalink" data-description="Paragraph"><a href="#dynamic_first-shopping-list-prototype-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/prototype1.png" class="contained"></div>
+<div class="para" id="dynamic_first-shopping-list-prototype-4">If you are not familiar with the document object model you may want to review the sections in the Javascript chapter on events and creating elements on the fly.<div class="autopermalink" data-description="Paragraph"><a href="#dynamic_first-shopping-list-prototype-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="dynamic_first-shopping-list-prototype-5">Here is the html for this page:<div class="autopermalink" data-description="Paragraph"><a href="#dynamic_first-shopping-list-prototype-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="code-box"><pre class="program clipboardable"><code class="language-html">&lt;html&gt;
+    &lt;head&gt;
+        &lt;!-- https://www.w3schools.com/bootstrap/bootstrap_get_started.asp --&gt;
+        &lt;title&gt;Shopping List Application&lt;/title&gt;
+        &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"&gt;
+        &lt;link rel="stylesheet" href="css/shoppingstyle.css"&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;div class="container"&gt;
+                &lt;nav class="navbar navbar-default"&gt;
+                        &lt;div class="container-fluid"&gt;
+                        &lt;div class="navbar-header"&gt;
+                            &lt;a class="navbar-brand" href="#"&gt;Shopping List&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;ul class="nav navbar-nav"&gt;
+                            &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Page 1&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Page 2&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Page 3&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;/div&gt;
+                    &lt;/nav&gt;
+            &lt;div class="panel panel-default col-md-12"&gt;
+                &lt;div class="panel-body"&gt;
+                &lt;div class="row form-inline"&gt;
+
+                &lt;div class="form-group"&gt;
+                    &lt;label for="itemname"&gt;Item Name&lt;/label&gt;
+                    &lt;input type=text class="form-control" name="itemname" id=itemname /&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                &lt;label for="qty"&gt;Quantity&lt;/label&gt;
+                &lt;select name="quantity" id="qty" class="form-control"&gt;
+                    &lt;option value="1"&gt;1&lt;/option&gt;
+                    &lt;option value="2"&gt;2&lt;/option&gt;
+                    &lt;option value="3"&gt;3&lt;/option&gt;
+                    &lt;option value="4"&gt;4&lt;/option&gt;
+                    &lt;option value="5"&gt;5&lt;/option&gt;
+                    &lt;option value="6"&gt;6&lt;/option&gt;
+                    &lt;option value="7"&gt;7&lt;/option&gt;
+                    &lt;option value="8"&gt;8&lt;/option&gt;
+                    &lt;option value="9"&gt;9&lt;/option&gt;
+                    &lt;option value="10"&gt;10&lt;/option&gt;
+                &lt;/select&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                &lt;label for="priority"&gt;Priority&lt;/label&gt;
+                &lt;select name="priority" id="priority" class="form-control"&gt;
+                    &lt;option value="low"&gt;low&lt;/option&gt;
+                    &lt;option value="medium"&gt;medium&lt;/option&gt;
+                    &lt;option value="high"&gt;high&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="row form-inline" style="margin-top: 20px; margin-bottom: 20px;"&gt;
+                    &lt;div class="form-group"&gt;
+                    &lt;label for="store"&gt;Store Name&lt;/label&gt;
+                    &lt;select name="store" id="store" class="form-control"&gt;
+                    &lt;/select&gt;
+                    &lt;/div&gt;
+                    &lt;div class="form-group"&gt;
+                    &lt;label for="category"&gt;Store Section&lt;/label&gt;
+                    &lt;select name="category" id="category" class="form-control"&gt;
+                    &lt;/select&gt;
+                    &lt;/div&gt;
+                    &lt;div class="form-group"&gt;
+                    &lt;label for="price"&gt;Price&lt;/label&gt;
+                    &lt;input type="text" name="price" id="price" class="form-control"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="form-inline" style="float: right;"&gt;
+                &lt;button onclick="clickedon()" class="btn btn-primary" id=gobutt&gt;Add Item&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-12"&gt;
+            &lt;table class="table table-bordered"&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;&lt;/th&gt;&lt;th&gt;Item&lt;/th&gt;&lt;th&gt;Quantity&lt;/th&gt;&lt;th&gt;Store&lt;/th&gt;&lt;th&gt;Section&lt;/th&gt;&lt;th&gt;Price&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody id="shoppinglist"&gt;&lt;/tbody&gt;
+            &lt;/table&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;
+        &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"&gt;&lt;/script&gt;
+        &lt;script src="js/shopping.js?x=2" type=text/javascript&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<div class="para" id="dynamic_first-shopping-list-prototype-7">A couple of things to note:  First notice that we’ve created an empty table with a <code class="code-inline tex2jax_ignore">tbody</code> tag with an id of <code class="code-inline tex2jax_ignore">shoppinglist</code> this gives us a place to start building our table.  Also notice that our add item button calls a function <code class="code-inline tex2jax_ignore">clickedon</code> this function is defined in the shopping.js file and will handle creating a new row and appending it to the <code class="code-inline tex2jax_ignore">tbody</code> each time we add an item.<div class="autopermalink" data-description="Paragraph"><a href="#dynamic_first-shopping-list-prototype-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="dynamic_first-shopping-list-prototype-8">Let’s look more carefully at the code in shopping.js<div class="autopermalink" data-description="Paragraph"><a href="#dynamic_first-shopping-list-prototype-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="code-box"><pre class="program clipboardable"><code class="language-javascript">var stores = ['Fareway', 'Ace Hardware', 'Caseys', 'The Hatchery', 'Amundsens']
+var sections = ['Produce', 'Meats', 'Cereal', 'Canned Goods', 'Frozen Foods', 'Dairy', 'Liquor', 'Tools', 'Clothing']
+
+function clickedon() {
+    let rowcolids = ['itemname', 'qty', 'store', 'category', 'price']
+    let vals = []
+    for (let cid of rowcolids) {
+        vals.push(document.getElementById(cid).value)
+    }
+    makeRow(vals, document.getElementById('shoppinglist'))
+}
+
+function makeRow(valueList, parent) {
+    let row = document.createElement("tr")
+    row.classList.add(document.getElementById("priority").value)
+    let cb = document.createElement("input")
+    cb.type = "checkbox"
+    cb.classList.add("form-control")
+    row.appendChild(cb)
+
+    for (let val of valueList) {
+        let td = document.createElement("td")
+        td.innerHTML = val
+        row.appendChild(td)
+    }
+    parent.appendChild(row)
+}
+
+function populateSelect(selectId, sList) {
+    let sel = document.getElementById(selectId)
+    for (let s of sList) {
+        let opt = document.createElement("option")
+        opt.value = s
+        opt.innerHTML = s
+        sel.appendChild(opt)
+    }
+}
+
+$(document).ready(function () {
+    populateSelect('store', stores)
+    populateSelect('category', sections)
+})
+</code></pre></div>
+<div class="para" id="dynamic_first-shopping-list-prototype-10">There is plenty to think about in this example.  But let’s begin with creating the select boxes.  For this bit of functionality I wrote a helper method called populate select.  This function can populate any select box given its id and a Javascript array of values.<div class="autopermalink" data-description="Paragraph"><a href="#dynamic_first-shopping-list-prototype-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="rs-select1"><textarea data-lang="html" data-audio="" data-coach="true" style="visibility: hidden;" id="rs-select1_editor" data-question_label="" data-codelens="false" data-timelimit="25000">&lt;select id="myid"&gt;&lt;/select&gt;
+&lt;script type="text/javascript"&gt;
+    function populateSelect(selectId, sList) {
+        let sel = document.getElementById(selectId)
+        for (let s of sList) {
+            let opt = document.createElement("option")
+            opt.value = s
+            opt.innerHTML = s
+            sel.appendChild(opt)
+        }
+    }
+    populateSelect('myid', ['one', 'two', 'three', 'four'])
+&lt;/script&gt;
+</textarea></div></div></div>
+<div class="para" id="dynamic_first-shopping-list-prototype-12">This is a simple illustration of three highly used functions getElementById, createElement and appendChild.  These methods allow us to have javascript dynamically create tags and add them into our live document object model.<div class="autopermalink" data-description="Paragraph"><a href="#dynamic_first-shopping-list-prototype-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="dynamic_first-shopping-list-prototype-13">Next let’s look at the <code class="code-inline tex2jax_ignore">clickedon</code> function.  This function also relies on a helper to make a row and add the row to the table.  it does this by creating an array of values one array entry per table row cell.  then it calls its helper function which sets up the class for coloring the row, makes a checkbox, and appends a bunch of <code class="code-inline tex2jax_ignore">td</code> elements to the new <code class="code-inline tex2jax_ignore">tr</code>.<div class="autopermalink" data-description="Paragraph"><a href="#dynamic_first-shopping-list-prototype-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="dynamic_first-shopping-list-prototype-14">The last few lines of this example show the use of jQuery to call the <code class="code-inline tex2jax_ignore">populateSelect</code> functions after the rest of the page has been loaded and is ready to go.  This is a really common way of ensureing that you don’t call Javascript functions that manipulate the DOM until the page is loaded and initially rendered.   Another way that many people do this is by using the <code class="code-inline tex2jax_ignore">onload</code> event for the <code class="code-inline tex2jax_ignore">body</code> tag.  But since we had to load jQuery for bootstrap I wanted to show this as well.  All this says is that when the ready event on the document object fires, call the function that populates the two select boxes.<div class="autopermalink" data-description="Paragraph"><a href="#dynamic_first-shopping-list-prototype-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="dynamic_first-shopping-list-prototype-15">That’s it for this prototype. And you may be thinking that we are nearly done, let’s just hack out a few more lines to handle the checkbox and we are good to go.  But hang on, we’re going to complicate matters in the next couple of sections by diving into some good design patterns that will make getting back to this point a good deal more complicated.<div class="autopermalink" data-description="Paragraph"><a href="#dynamic_first-shopping-list-prototype-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 6.3: First Shopping List Prototype"><a href="#dynamic_first-shopping-list-prototype" title="Copy heading and permalink for Section 6.3: First Shopping List Prototype" aria-label="Copy heading and permalink for Section 6.3: First Shopping List Prototype">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="dynamic_a-trip-to-the-spa.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="dynamic_model-view-controller.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
