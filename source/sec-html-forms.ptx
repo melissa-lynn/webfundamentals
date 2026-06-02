@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<section xml:id="html_forms" class="section">
+  <title>HTML Forms</title>
+  <p>HTML forms are used to collect user input. They provide a way for users to interact with a web page and submit data to a server (or possibly to be processed in the browser using JavaScript). They are crucial for creating interactive web applications. You've probably filled out many web forms in your life, so you are familiar with their use. Now we need to learn how to build them.</p>
+  <p>Forms consist of various input elements such as text fields, drop-down menus, checkboxes, radio buttons, and submit buttons. These elements allow users to enter and submit information. Technically, these are called form controls, but since many of them use the <c>input</c> tag, we will just call them inputs.</p>
+  <p>Here is an example of an HTML form that uses some of these elements, though not all, to allow the user to order a pizza:</p>
+  <listing>
+    <caption>Pizza HTML Form</caption>
+    <program xml:id="pizza_form" interactive="activecode" language="html" label="program-activecode-html-pizza-form" include-source="yes">
+      <input>
+&lt;form class="example"
+      id="pizza-form"
+      method="GET"
+      action="https://cs.wellesley.edu/~cs304flask/cgi-bin/dump.cgi"&gt;
+  &lt;p&gt;&lt;label&gt;Customer name: &lt;input name="customer"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;Telephone: &lt;input type=tel name="phone"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;E-mail address: &lt;input type=email name="addr"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label for="select_size"&gt;Size:&lt;/label&gt;
+      &lt;select id="select_size" name="size"&gt;
+        &lt;option value=""&gt;choose size&lt;/option&gt;
+        &lt;option value="small"&gt;small (10-inch)&lt;/option&gt;
+        &lt;option value="medium"&gt;medium (12-inch)&lt;/option&gt;
+        &lt;option value="large"&gt;large (14-inch)&lt;/option&gt;
+      &lt;/select&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;Preferred delivery time:
+      &lt;input name="due" type=time min="11:00" max="21:00" step="900"&gt;
+  &lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label for="textarea_instructions"&gt;Delivery instructions:&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;textarea id="textarea_instructions"
+                name="instructions"
+                rows="3" cols="30"&gt;&lt;/textarea&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;button type="submit"&gt;Submit order&lt;/button&gt;&lt;/p&gt;
+&lt;/form&gt;
+      </input>
+    </program>
+  </listing>
+<p>Note that the form is not very pretty, but it is functional.  We will learn how to make it look better in the chapter on CSS. Now let's explore the different types of input elements you can use in forms.</p>
+</section>
