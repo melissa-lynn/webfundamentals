@@ -11,7 +11,7 @@
 &lt;form class="example"
       id="pizza-form"
       method="GET"
-      action="https://cs.wellesley.edu/~cs304flask/cgi-bin/dump.cgi"&gt;
+      action="/cgi-bin/dump.cgi"&gt;
   &lt;p&gt;&lt;label&gt;Customer name: &lt;input name="customer"&gt;&lt;/label&gt;&lt;/p&gt;
   &lt;p&gt;&lt;label&gt;Telephone: &lt;input type=tel name="phone"&gt;&lt;/label&gt;&lt;/p&gt;
   &lt;p&gt;&lt;label&gt;E-mail address: &lt;input type=email name="addr"&gt;&lt;/label&gt;&lt;/p&gt;
