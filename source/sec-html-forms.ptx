@@ -46,6 +46,7 @@
       </p>
     </li>
     <li><p>There are some <c>input</c> tags that create empty boxes, such as <c>customer</c> for the user to fill out. </p></li>
+    <li><p>Each <c>input</c> element has a <c>name</c> attribute.</p></li>
     <li><p>There is some text next to the <c>input</c> tags, such as <c>"Customer name"</c>.</p></li>
       <li><p>There is a <c>label</c> tag that is new to us; we'll talk about that soon.</p></li>
     <li><p>There is a <c>button</c> at the end of the form that allows the data to be submitted (to wherever the <c>action</c> specifies).</p></li>
@@ -53,19 +54,85 @@
   </ul>
 </p>
 </subsection>
-<subsection>
-  <title>Labels</title>
+<subsection><title>Labels</title>
   
   
 </subsection>
-<subsection>
-  <title>WAVE Validation</title>
+<subsection><title>WAVE Validation</title>
   
   
 </subsection>
-<subsection>
-  <title>The INPUT tag</title>
+<subsection><title>The INPUT tag</title>
   
+  <p>The <c>input</c> tag is fairly straightforward, but you can
+specify the type of input you are looking for by using the
+<c>TYPE</c> attribute.  There are many possible types, and we will not
+try to cover all of them; consult <url href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input" visual="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input">the MDN page on the input element</url>.</p>
+  
+  <p>Here are a few of the most common ones:</p>
+<p>
+
+<ul>
+
+   <li><c>text</c>: allows the user to enter a word
+   or short phrase. This is extremely common in web forms. It gives you a short box (there are ways to control its size) for entering information such as your name, street address, city, state, phone number, and so on.</li>
+            
+   <li><p><c>password</c>: allows the user to enter in a word or
+   phrase, but its value isn't <em>displayed,</em> so no one can look
+   over their shoulder and see it.</p></li>
+            
+    <li><c>email</c>:  similar to the <c>text</c> type, but the browser may check to see that the value looks like an
+     email address, which helps to prevent data entry errors.</li>
+
+     <li><c>date</c>: for entering dates.  The browser will often provide a "date picker" widget to make it easy to click on a relevant date, rather than entering it from the keyboard. If the browser doesn't provide a date picker, this type is just like a <c>text</c> input. Ideally, your form should indicate the desired format for the date, such as YYYY-MM-DD.</li>
+
+     <li><c>time</c>: for entering times. As with dates, the browser may provide a widget make it easy to enter times. You can specify what increments you allow (every 5 minutes? every 15 minutes?) and other constraints. As with dates, you should also indicate the desired format, in case the browser falls back on a basic <c>text</c> input.</li>
+
+    </ul></p>
+
+    <p>The <em>purpose</em> of a form is to collect information from the user, and that information is represented as name:value <em>pairs</em>. You can think of it like a little table. For example, the pizza form might be filled out like this.</p>
+      <table>
+  <title>Sample Data from the Pizza Form</title>
+  <tabular halign="center">
+    <row header="yes" bottom="minor" >
+      <cell>Name</cell>
+      <cell>Value</cell>
+    </row>
+    <row>
+      <cell>customer</cell>
+      <cell>Hermione Granger</cell>
+    </row>
+    <row>
+      <cell>phone</cell>
+      <cell>202-555-1212</cell>
+    </row>
+    <row>
+      <cell>addr</cell>
+      <cell>hgranger@hogwarts.ac.uk</cell>
+    </row>
+    <row>
+      <cell>size</cell>
+      <cell>small</cell>
+    </row>
+       <row>
+      <cell>due</cell>
+      <cell>20:00</cell>
+    </row>
+       <row>
+      <cell>instructions</cell>
+      <cell>Please give to Hedwig, not Errol.</cell>
+    </row>
+  </tabular>
+
+</table>
+
+
+    <p>As we mentioned in that list, it can be helpful to show the user what 
+    </p>
+
+
+
+
   
 </subsection>
 <subsection>
@@ -75,6 +142,11 @@
 </subsection>
 <subsection>
   <title>The TEXTAREA tag</title>
+  
+  
+</subsection>
+<subsection>
+  <title>Radio Buttons and Checkboxes</title>
   
   
 </subsection>
