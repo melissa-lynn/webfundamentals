@@ -8,8 +8,7 @@
     <caption>Pizza HTML Form</caption>
     <program xml:id="pizza_form" interactive="activecode" language="html" label="program-activecode-html-pizza-form" include-source="yes">
       <input>
-&lt;form class="example"
-      id="pizza-form"
+&lt;form 
       method="GET"
       action="/cgi-bin/dump.cgi"&gt;
   &lt;p&gt;&lt;label&gt;Customer name: &lt;input name="customer"&gt;&lt;/label&gt;&lt;/p&gt;
@@ -35,4 +34,49 @@
     </program>
   </listing>
 <p>Note that the form is not very pretty, but it is functional.  We will learn how to make it look better in the chapter on CSS. Now let's explore the different types of input elements you can use in forms.</p>
+<subsection xml:id="html-forms-anatomy">
+  <title>Anatomy of an HTML Form</title>
+  <p>Before we dig into the details of forms, let's look at the overall structure. Look carefully at the code above and notice:</p>
+  <p>
+  <ul>
+    <li>There is a <c>form</c> tag that surrounds the entire form. It has some attributes including <c>method</c> and <c>action</c> that we will discuss in more detail later. For now, you should know that these have to do with <em>where</em> the data will be sent and <em>how</em> it will be sent </li>
+
+    <li>
+      <p>There are some <c>p</c> tags that mean that the form's input are arranged vertically on the page. You can use pretty much any of the HTML language in creating your form (one exception is that you cannot nest a form with another form), but we've kept this one simple.
+      </p>
+    </li>
+    <li><p>There are some <c>input</c> tags that create empty boxes, such as <c>customer</c> for the user to fill out. </p></li>
+    <li><p>There is some text next to the <c>input</c> tags, such as <c>"Customer name"</c>.</p></li>
+      <li><p>There is a <c>label</c> tag that is new to us; we'll talk about that soon.</p></li>
+    <li><p>There is a <c>button</c> at the end of the form that allows the data to be submitted (to wherever the <c>action</c> specifies).</p></li>
+      
+  </ul>
+</p>
+</subsection>
+<subsection>
+  <title>Labels</title>
+  
+  
+</subsection>
+<subsection>
+  <title>WAVE Validation</title>
+  
+  
+</subsection>
+<subsection>
+  <title>The INPUT tag</title>
+  
+  
+</subsection>
+<subsection>
+  <title>The SELECT tag</title>
+  
+  
+</subsection>
+<subsection>
+  <title>The TEXTAREA tag</title>
+  
+  
+</subsection>
+
 </section>
