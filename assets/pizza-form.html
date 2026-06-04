@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <title>Pizza Form</title>
+</head>
+<body>
+<form method="GET"
+      action="/cgi-bin/echo.cgi">
+  <p><label>Customer name: <input name="customer"></label></p>
+  <p><label>Telephone: <input type=tel name="phone"></label></p>
+  <p><label>E-mail address: <input type=email name="addr"></label></p>
+  <p><label for="select_size">Size:</label>
+      <select id="select_size" name="size">
+        <option value="">choose size</option>
+        <option value="small">small (10-inch)</option>
+        <option value="medium">medium (12-inch)</option>
+        <option value="large">large (14-inch)</option>
+      </select></p>
+  <p><label>Preferred delivery time:
+      <input name="due" type=time min="11:00" max="21:00" step="900">
+  </label></p>
+  <p><label for="textarea_instructions">Delivery instructions:</label></p>
+  <p><textarea id="textarea_instructions"
+                name="instructions"
+                rows="3" cols="30"></textarea></p>
+  <p><button type="submit">Submit order</button></p>
+</form>
+
+</body>
+</html>

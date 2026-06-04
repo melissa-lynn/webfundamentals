@@ -59,7 +59,27 @@
   
 </subsection>
 <subsection><title>WAVE Validation</title>
-  
+<p>Because it's so important to ensure that your web forms are accessible, 
+  a number of tools have been created to check. This section introduces
+  the <url href="https://wave.webaim.org/" visual="https://wave.webaim.org/">
+    WAVE Web Accessibility Evaluation Tools</url>. Visit that page and
+    you'll see a box labeled (literally) "web page address". That's how you
+    can submit a form for validation.</p>
+<p>To see it in action, first take a look at this 
+  <url href="external/pizza-form.html">Pizza Form</url>, which
+  is structured as a standalone web page (rather than being embedded within
+  this reading). 
+  Copy/paste the URL for the pizza form standalone page into the box on the WAVE page
+  and submit (pressing the "enter" key or clicking the arrow will do). 
+  In a short time, a report will come back assessing the
+  accessibility of the page with the pizza form. </p>
+  <p>Now, view this <url href="external/pizza-form-unlabeled.html">Unlabeled Pizza Form</url>. 
+    It will probably look identical to you, but we've removed the <c>label</c>
+  elements. 
+</p><p>  Copy its url into the WAVE tool and get a report. You'll get a lot of complaints about unlabeled inputs. That's what we are trying to avoid, since
+  unlabeled forms will be much harder to work with for users of screen readers.
+</p><p>As easy as the WAVE tool is to use, we recommend taking a minute or two to install the <url href="https://wave.webaim.org/extension/" visual="https://wave.webaim.org/extension/">WAVE browser plug-in</url>. There are plugins for many popular browsers, it's quick to install, and once you have it, there's a button on your browser that will generate a report for your current page. 
+    Furthermore, the browser plugin doesn't require the page to have a public URL, so if you are developing a web site (the purpose of this book), you can test the accessibility of pages that are still under development.</p>
   
 </subsection>
 <subsection><title>The INPUT tag</title>
