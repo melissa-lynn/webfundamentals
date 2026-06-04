@@ -8,10 +8,9 @@
     <caption>Pizza HTML Form</caption>
     <program xml:id="pizza_form" interactive="activecode" language="html" label="program-activecode-html-pizza-form" include-source="yes">
       <input>
-&lt;form 
-      method="GET"
-      action="/cgi-bin/dump.cgi"&gt;
-  &lt;p&gt;&lt;label&gt;Customer name: &lt;input name="customer"&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;form method="GET"
+         action="/cgi-bin/dump.cgi"&gt;
+  &lt;p&gt;&lt;label&gt;Customer name: &lt;input type="text" name="customer"&gt;&lt;/label&gt;&lt;/p&gt;
   &lt;p&gt;&lt;label&gt;Telephone: &lt;input type=tel name="phone"&gt;&lt;/label&gt;&lt;/p&gt;
   &lt;p&gt;&lt;label&gt;E-mail address: &lt;input type=email name="addr"&gt;&lt;/label&gt;&lt;/p&gt;
   &lt;p&gt;&lt;label for="select_size"&gt;Size:&lt;/label&gt;
@@ -113,7 +112,7 @@ try to cover all of them; consult <url href="https://developer.mozilla.org/en-US
     <p>The <em>purpose</em> of a form is to collect information from the user, and that information is represented as name:value <em>pairs</em>. You can think of it like a little table. For example, the pizza form might be filled out like this.</p>
       <table>
   <title>Sample Data from the Pizza Form</title>
-  <tabular halign="center">
+  <tabular halign="left">
     <row header="yes" bottom="minor" >
       <cell>Name</cell>
       <cell>Value</cell>
@@ -146,10 +145,56 @@ try to cover all of them; consult <url href="https://developer.mozilla.org/en-US
 
 </table>
 
-
-    <p>As we mentioned in that list, it can be helpful to show the user what 
-    </p>
-
+<p>The consequence of this data representation is that pretty much every input should have a <c>name</c> that is unique within within that form. For example, if you have a form where the user is "signing up" for your web
+  application, so you ask them to type their password twice, the html code might look like this.</p>
+  <listing>
+    <caption>Signup Form</caption>
+    <program xml:id="signup_form" interactive="activecode" language="html" label="program-activecode-html-signup-form" include-source="yes">
+      <input>
+&lt;form 
+      method="GET"
+      action="/cgi-bin/dump.cgi"&gt;
+  &lt;p&gt;&lt;label&gt;user name: &lt;input type="text" name="username"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;password: &lt;input type="password" name="pwd1"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;password again: &lt;input type="password" name="pwd2"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;button&gt;sign up&lt;/button&gt;
+  &lt;/form&gt;
+      </input></program></listing>
+<p>We've said that the purpose of a form is to collect name/value pairs from the user (where you as the 
+  form designer have chosen the names of the inputs). Often, you have reason to expect that there is a default
+  value for some input, and you want to "seed" the form with that value, both to save time for the vast majority for whom the default is correct, and to help avoid typos. You can do that by supplying a <c>value</c> attribute
+  for the input. For example, Hermione might make the following form for her classmates:</p>
+  <listing>
+    <caption>Form with Default</caption>
+    <program xml:id="form_with_defaults" interactive="activecode" language="html" label="program-activecode-html-form-with-defaults" include-source="yes">
+      <input>
+&lt;form method="GET"
+      action="/cgi-bin/echo.cgi"&gt;
+  &lt;p&gt;&lt;label&gt;Name: &lt;input type=text name="username"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;House: &lt;input type=text name="house" value="Gryffindor"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;School: &lt;input type=text name="school" value="Hogwarts"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;button type="submit"&gt;Submit&lt;/button&gt;&lt;/p&gt;
+&lt;/form&gt;
+      </input></program></listing>
+    <p>Hermione's friends in Ravenclaw or even at Durmstrang can just edit the value before submitting.
+      (Of course, the downside is that someone might forget to edit the value.)</p>
+  <p>An alternative to seeding a particular value is to indicate an example of the kind of value that is wanted.
+    This is called <em>placeholder</em> text and given with the <c>placeholder</c> attribute. The placeholder text is only shown by the browser if the input is empty. Note that placeholder text does <em>not</em> substitute for proper labels, but can be helpful in some cases. For example:
+  </p>
+  <listing>
+    <caption>Form with placeholder</caption>
+    <program xml:id="form_with_placeholder" interactive="activecode" language="html" label="program-activecode-html-form-with-placeholder" include-source="yes">
+      <input>
+  &lt;form method="GET"
+      action="/cgi-bin/echo.cgi"&gt;
+  &lt;p&gt;&lt;label&gt;Name: &lt;input type=text name="username"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;nicknames? 
+      &lt;input type=text name="nick_names" 
+          placeholder="e.g moony or padfoot"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;button type="submit"&gt;Submit&lt;/button&gt;&lt;/p&gt;
+&lt;/form&gt;
+      </input></program></listing>
+      
 
 
 
