@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+
+if [[ -n "$1" ]]; then
+    mdfile="$1"
+else
+    mdfile=$(ls -1t *.md 2>/dev/null | head -n 1)
+fi
+
+if [[ -z "$mdfile" || ! -f "$mdfile" ]]; then
+    echo "No markdown file found."
+    exit 1
+fi
+
+ptxfile="${mdfile%.md}.ptx"
+
+echo "Converting $mdfile -> $ptxfile"
+pandoc "$mdfile" -t /workspaces/webfundamentals/pretext.lua -o "$ptxfile"
