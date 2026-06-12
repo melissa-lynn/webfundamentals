@@ -12,7 +12,7 @@
     <program interactive="activecode" language="html" include-source="yes">
       <input>
 &lt;form method="GET"
-         action="/cgi-bin/dump.cgi"&gt;
+         action="/cgi-bin/echo.cgi"&gt;
   &lt;p&gt;&lt;label&gt;Customer name: &lt;input type="text" name="customer"&gt;&lt;/label&gt;&lt;/p&gt;
   &lt;p&gt;&lt;label&gt;Telephone: &lt;input type=tel name="phone"&gt;&lt;/label&gt;&lt;/p&gt;
   &lt;p&gt;&lt;label&gt;E-mail address: &lt;input type=email name="addr"&gt;&lt;/label&gt;&lt;/p&gt;
@@ -154,7 +154,7 @@ try to cover all of them; consult <url href="https://developer.mozilla.org/en-US
       <input>
 &lt;form 
       method="GET"
-      action="/cgi-bin/dump.cgi"&gt;
+      action="/cgi-bin/echo.cgi"&gt;
   &lt;p&gt;&lt;label&gt;user name: &lt;input type="text" name="username"&gt;&lt;/label&gt;&lt;/p&gt;
   &lt;p&gt;&lt;label&gt;password: &lt;input type="password" name="pwd1"&gt;&lt;/label&gt;&lt;/p&gt;
   &lt;p&gt;&lt;label&gt;password again: &lt;input type="password" name="pwd2"&gt;&lt;/label&gt;&lt;/p&gt;
@@ -195,6 +195,7 @@ try to cover all of them; consult <url href="https://developer.mozilla.org/en-US
 <xi:include href="subsec-textarea.ptx" />
 <xi:include href="subsec-radio-buttons.ptx" />
 <xi:include href="subsec-buttons.ptx" />
+<xi:include href="subsec-datalist.ptx" />
 <subsection>
   <title>Extras</title>
   <p><ul>
@@ -203,13 +204,10 @@ try to cover all of them; consult <url href="https://developer.mozilla.org/en-US
     <li>required attribute</li>
     <li>selected attribute</li>
     <li>tabindex?</li>
+    <li>file input? We'll need this eventually, but it's a big change. Does it go here, or with the Flask section?</li>
     <li>anything else?</li>
   </ul></p>
   
 </subsection>
-<subsection>
-  <title>Summary</title>
-
-  
-</subsection>
+<xi:include href="subsec-html-forms-summary.ptx" />
 </section>

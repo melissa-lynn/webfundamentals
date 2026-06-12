@@ -5,7 +5,7 @@ They are not value-bearing inputs per se, but can still be important in using a 
 
 ### Submit Buttons
 
-Let's start with a *submit* button:
+Let's start with a *submit* button. Here's an example from our pizza form:
 
 ```htmla
 <form method="get"
