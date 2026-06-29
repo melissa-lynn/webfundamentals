@@ -9,7 +9,13 @@
 		</p>
 
 		<p>
-			Here is an example of an HTML code example:
+			You can also use <url href="https://www.markdownguide.org/">Markdown</url>
+			syntax for URLs.
+		</p>
+
+		<p>
+			Here is an example of an HTML code example, which can be <q>executed</q> to
+			create a live example.
 		</p>
 
 		<program interactive="activecode" language="html" include-source="yes">
@@ -24,4 +30,13 @@
 &lt;/datalist&gt;
 			</input>
 		</program>
+
+		<p>
+			Here’s a chunk of Python code. It gets fontified, but is not executable:
+		</p>
+
+		<pre>import math
+
+def foo(x,y):
+    return Math.sqrt(x*x+y*y)</pre>
 	</subsection>

@@ -2,7 +2,9 @@
 
 Paragraph of text. The text can use *asterisks* or **double asterisks** or `backticks`.
 
-Here is an example of an HTML code example:
+You can also use [Markdown](https://www.markdownguide.org/) syntax for URLs.
+
+Here is an example of an HTML code example, which can be "executed" to create a live example.
 
 ```htmla
 <p><label> state: <input type="text" name="state" list="state_list"></label>
@@ -15,5 +17,13 @@ Here is an example of an HTML code example:
 </datalist>
 ```
 
+Here's a chunk of Python code. It gets fontified, but is not executable:
+
+```python
+import math
+
+def foo(x,y):
+    return Math.sqrt(x*x+y*y)
+```
 
 
