@@ -25,6 +25,8 @@
   <xi:include href="sec-flask-messageflashing.ptx" />
   <xi:include href="sec-flask-logging.ptx" />
   <xi:include href="sec-flask-templating.ptx" />
+  <xi:include href="sec-flask-file-upload.ptx" />
+  <xi:include href="sec-flask-cookies.ptx" />
 <!-- the following are new sections that are not in the original book; 
   Scott volunteered to write the first draft.-->
   <xi:include href="sec-flask-url_for.ptx" />
