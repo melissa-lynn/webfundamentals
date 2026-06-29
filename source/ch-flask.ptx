@@ -4,7 +4,12 @@
   <title>The Flask Framework</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p> The "back-end" of a web application has a number of 
+      routine tasks to do, regardless of the programming language (Python,
+      JavaScript, Perl, etc) and so libraries/modules and other software
+      infrastructure have been created to make this routine work easier.
+      <strong>Flask</strong> is one such framework. There are others,
+    such as Django and Pyramid. We'll cover Flask.</p>
   </introduction>
 
   <!-- include sections -->
@@ -20,6 +25,14 @@
   <xi:include href="sec-flask-messageflashing.ptx" />
   <xi:include href="sec-flask-logging.ptx" />
   <xi:include href="sec-flask-templating.ptx" />
+<!-- the following are new sections that are not in the original book; 
+  Scott volunteered to write the first draft.-->
+  <xi:include href="sec-flask-url_for.ptx" />
+  <xi:include href="sec-flask-passwords.ptx" />
+  <xi:include href="sec-flask-backend-form-validation.ptx" />
+  <xi:include href="sec-flask-http-methods.ptx" />
+  <xi:include href="sec-flask-rest-api.ptx" />
+  <xi:include href="sec-flask-context-locals.ptx" />
   <xi:include href="sec-flask-Exercises.ptx" />
 
 </chapter>
