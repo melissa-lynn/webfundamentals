@@ -4,13 +4,15 @@
   <subsection xml:id="html_unordered-lists">
     <title>Unordered Lists</title>
 
+    <p>We can use the <c>&lt;ul&gt;</c> tag to create an <term>unordered list</term>, which is a list of text items. Within the unordered list, the items are created using the <c>&lt;li&gt;</c> (list item) tag, as children of the unordered list. By default, the items in the list are displayed with bullet points, but this can be changed with styling.</p>
+
     <listing>
       <caption>Unordered Lists</caption>
     <program xml:id="advhtml_ul" interactive="activecode" language="html" label="program-activecode-html-unordered-list" include-source="yes">
       <input>
 &lt;ul&gt;
 &lt;li&gt;This is an unordered list&lt;/li&gt;
-&lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ul&lt;/code&gt; tags
+&lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ul&lt;/code&gt; tags&lt;/li&gt;
 &lt;/ul&gt;
         </input>
       <tests>
@@ -22,14 +24,17 @@
   </subsection>
   <subsection xml:id="html_ordered-lists">
     <title>Ordered Lists</title>
+
+    <p>Similarly, we can make an <term>ordered list</term> using the <c>&lt;ol&gt;</c> tag, containing <c>&lt;li&gt;</c> children. In an ordered list, the items are numbered or lettered to label their order. By default, items in an ordered list will be numbered starting at 1.</p>
+
     <listing>
       <caption>Ordered Lists</caption>
     <program xml:id="advhtml_ol" interactive="activecode" language="html" label="program-activecode-html-ordered-list" include-source="yes">
       <input>
 &lt;ol&gt;
 &lt;li&gt;This is an ordered list&lt;/li&gt;
-&lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ol&lt;/code&gt; tags
-&lt;li&gt;Notice that the &lt;code&gt;li&lt;/code&gt; tags are used for both.
+&lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ol&lt;/code&gt; tags&lt;/li&gt;
+&lt;li&gt;Notice that the &lt;code&gt;li&lt;/code&gt; tags are used for both.&lt;/li&gt;
 &lt;/ol&gt;
         </input>
       <tests>
@@ -38,38 +43,59 @@
 </tests>
     </program>
   </listing>
-    <p>The <c>ol</c> tag can also have a type attribute.  The type attribute can be one of the following values</p>
+    <p>We can use the <c>type</c> attribute of the <c>&lt;ol&gt;</c> tag to control how the list is labeled.</p>
     <p>
       <ul>
         <li>
-          <p>1 This will cause the list to be numbered with numbers</p>
+          <p><c>type="1"</c> will cause the list to be numbered with numbers (this is the default, if the <c>type</c> attribute is not used).</p>
         </li>
         <li>
-          <p>A This will cause the list to be ordered with upper case letters</p>
+          <p><c>type="A"</c> will cause the list to be ordered with upper case letters.</p>
         </li>
         <li>
-          <p>a This will cause the list to be ordered with lower case letters</p>
+          <p><c>type="a"</c> will cause the list to be ordered with lower case letters.</p>
         </li>
         <li>
-          <p>I This will cause the list to be ordered with upper case roman numerals</p>
+          <p><c>type="I"</c> will cause the list to be ordered with upper case roman numerals.</p>
         </li>
         <li>
-          <p>i This will cause the list to be ordered with lower case roman numerals</p>
+          <p><c>type="i"</c> will cause the list to be ordered with lower case roman numerals.</p>
         </li>
       </ul>
     </p>
-    <p>Try it yourself.</p>
+    <p>Try it yourself, by changing the value of the <c>type</c> attribute below.</p>
+
+<listing>
+      <caption>The type Attribute</caption>
+    <program xml:id="advhtml_ol_type" interactive="activecode" language="html" label="program-activecode-html-ordered-list-type" include-source="yes">
+      <input>
+&lt;ol type="a"&gt;
+&lt;li&gt;This is an ordered list&lt;/li&gt;
+&lt;li&gt;Try changing the value of the type attribute&lt;/li&gt;
+&lt;li&gt;To see how the labeling of the list items changes&lt;/li&gt;
+&lt;/ol&gt;
+        </input>
+      <tests>
+
+
+</tests>
+    </program>
+  </listing>
+
   </subsection>
   <subsection xml:id="html_description-lists">
     <title>Description Lists</title>
+
+    <p>Another type of list we can use is a <term>description list</term>. A description list is used to create a list of terms or items and their descriptions. We create a description list using the <c>&lt;dl&gt;</c> tag. Within the list, the terms are creating using <c>&lt;dt&gt;</c> tags, followed by a <c>&lt;dd&gt;</c> tag containing the description of the term or item.</p>
+
     <listing>
       <caption>Description Lists</caption>
     <program xml:id="advhtml_dl" interactive="activecode" language="html" label="program-activecode-html-description-lists" include-source="yes">
       <input>
 &lt;dl&gt;
-&lt;dt&gt;Description list&lt;/dt&gt;&lt;dd&gt;A list for defining terms&lt;/dd&gt;
-&lt;dt&gt;dt&lt;/dt&gt;&lt;dd&gt;The &lt;code&gt;dt&lt;/code&gt; tags are for the term&lt;/dd&gt;
-&lt;dt&gt;dd&lt;/dt&gt;&lt;dd&gt;The &lt;code&gt;dd&lt;/code&gt; tags are for the description&lt;/dd&gt;
+&lt;dt&gt;HTML&lt;/dt&gt;&lt;dd&gt;A markup language used to structure content for webpages.&lt;/dd&gt;
+&lt;dt&gt;Browser&lt;/dt&gt;&lt;dd&gt;An application for viewing and interacting with websites.&lt;/dd&gt;
+&lt;dt&gt;Bowser&lt;/dt&gt;&lt;dd&gt;A large turtle-like creature that is frequently harassed by a plumber.&lt;/dd&gt;
 &lt;/dl&gt;
         </input>
       <tests>
@@ -81,7 +107,7 @@
   </subsection>
   <subsection xml:id="html_nesting-lists">
     <title>Nesting Lists</title>
-    <p>Lists can be inside of other lists. Too.  This is very much true of most HTML tags.</p>
+    <p>We can include list elements within other list elements, to create nested lists or sublists.  This is true of many HTML elements; they can often be nested in similar ways.</p>
     <listing>
       <caption>Nesting Lists</caption>
     <program xml:id="advhtml_nested" interactive="activecode" language="html" label="program-activecode-html-nested-lists" include-source="yes">
@@ -106,21 +132,22 @@
   </subsection>
   <subsection xml:id="html_tables">
     <title>Tables</title>
-    <p>Tables have many uses, you can use them for organizing data as you normally would in a report where you have rows and columns of numbers or other information, but you can also use tables invisibly to influence how your page is displayed.  In the early days of html it was common to use a table to create a two column page layout.  We can still do that but now it is <term>much more acceptable</term> to use CSS for that purpose.</p>
+    <!-- delete? <p>Tables have many uses, you can use them for organizing data as you normally would in a report where you have rows and columns of numbers or other information, but you can also use tables invisibly to influence how your page is displayed.  In the early days of html it was common to use a table to create a two column page layout.  We can still do that but now it is <term>much more acceptable</term> to use CSS for that purpose.</p> --> 
+     <p>We can use a <term>table</term> to organize and display data in rows and columns. As you'd expect, a table can contain numbers or text, but it can also contain a wide variety of other HTML elements, including images, lists, additional tables, and more!</p>
     <p>Here is a complete example that illustrates the use of the following table specific tags</p>
     <p>
       <ul>
         <li>
-          <p>table  &#x2013; This is the main tag for a table</p>
+          <p><c>&lt;table&gt;</c> is the main tag for a table, and contains the rows as children.</p>
         </li>
         <li>
-          <p>tr  &#x2013; every row in a table starts with a tr tag</p>
+          <p><c>&lt;tr&gt;</c> creates a row in the table. It will have table entries (or data) as children.</p>
         </li>
         <li>
-          <p>td &#x2013; every column in a row is delineated by a <c>td</c> tag</p>
+          <p><c>&lt;td&gt;</c> creates an entry within a row of a table. Dividing a row into <c>&lt;td&gt;</c> elements divides the row into columns</p>
         </li>
         <li>
-          <p>th &#x2013; You can use the <c>th</c> tag in place of the <c>td</c> tag in the first row to make headings</p>
+          <p><c>&lt;th&gt;</c> is used instead of <c>&lt;td&gt;</c> when an entry is a heading label rather than data item. In the example below, you see that "Number" is a heading, so we use the <c>&lt;th&gt;</c> tag. Typically, the first row of a table will have headings.</p>
         </li>
       </ul>
     </p>
@@ -168,26 +195,14 @@
 </tests>
     </program>
   </listing>
-    <p>There are many attributes you can use with the various table tags.</p>
+    <p>The following attributes allow us further control over the structure of our tables.</p>
     <p>
       <ul>
-        <li>
-          <p><c>table</c>
-                        * width - you can specify a width as a percentage or as a number of pixels.  This attribute is useful for right now, but it's use is not encouraged, as you are better off to use CSS to control the look of your table.  We say that this attribute is <term>deprecated</term>
-                        * border - you can add borders to your tables as in the example above, but this tag is deprecated as well.
-                        * The spacing between the cells of the table.  Also deprecated.</p>
-        </li>
-        <li>
-          <p><c>td</c>
-                        * colspan  &#x2013; if you have a particular table where you need an extra wide column in some rows you can make a cell of your table span more than one column using the colspan attribute.  Its value is the number of columns.</p>
-        </li>
-        <li>
-          <p><c>tr</c>
-                        * rowspan &#x2013; If you have a particular table where you need an column to span multiple rows you can make a cell of your table span more than one row using the rowspan attribute.  Its value is the number of rows.</p>
-        </li>
+        <li><p><c>colspan</c> is an attribute of <c>&lt;td&gt;</c> or <c>&lt;th&gt;</c>, which can be used to make an extra wide entry spanning more than one column. Its value is the number of columns.</p></li>
+        <li><p><c>rowspan</c> is an attribute of <c>&lt;td&gt;</c> or <c>&lt;th&gt;</c>, which can be used to make an extra tall entry spanning more than one row. Its value is the number of rows.</p></li>
       </ul>
     </p>
-    <p>Experiment with a table.  What kinds of tags can you include inside each <c>td</c>?  Can you make a table inside another table?</p>
+    <p>There are additional attributes that can be used to control the appearance of tables. However, many of them are deprecated, and it is preferred to control those aspects of tables using CSS.</p>
   </subsection>
   <subsection xml:id="html_audio">
     <title>Audio</title>
@@ -205,11 +220,11 @@
 </input>
     </program>
   </listing>
-    <p>The <c>controls</c> attribute provides start/stop/fast-forward/rewind buttons for the listener.  The <c>source</c> tags inside the <c>audio</c> tag allow you to provide several different audio formats.  This is because different browsers support different kinds of audio The browser will go through the list, in order, until it finds a format it understands, or else, it will replace the controller with the message at the end.</p>
+    <p>The <c>controls</c> attribute provides start/stop/fast-forward/rewind buttons for the user.  The <c>&lt;source&gt;</c> tags inside the <c>&lt;audio&gt;</c> tag allow you to provide several different audio formats.  This is desirable because different browsers support different kinds of audio. The browser will go through the list, in order, until it finds a format it can use. If it does not find a format it can play, it will replace the controller with the message at the end.</p>
   </subsection>
   <subsection xml:id="html_video">
     <title>Video</title>
-    <p>Embedding video in your webpage allows you to link to various files containing movies.</p>
+    <p>Similarly, you can embed video in a webpage as follows.</p>
     <listing>
       <caption>Video</caption>
     <program interactive="activecode" language="html" label="program-activecode-html-video" include-source="yes">
@@ -222,10 +237,37 @@
 </input>
     </program>
   </listing>
-    <p>The <c>controls</c> attribute provides start/stop/fast-forward/rewind buttons for the listener.  The <c>source</c> tags inside the <c>video</c> tag allow you to provide several different video formats.  This is because different browsers support different kinds of video The browser will go through the list, in order, until it finds a format it understands, or else, it will replace the controller with the message at the end.</p>
+    <p>The <c>controls</c> attribute provides start/stop/fast-forward/rewind buttons for the user.  The <c>&lt;source&gt;</c> tags inside the <c>&lt;video&gt;</c> tag allow you to provide several different video formats. The browser will go through the list, in order, until it finds a format it supports. If it does not find a format it can support, it will replace the controller with the message at the end.</p>
   </subsection>
   <subsection xml:id="html_iframes">
-    <title>IFrames</title>
-    <p>IFrames allow you to embed a webpage within another webpage.  The activecode examples in this book use an iframe to allow you to experiment with the html, by creating a page within a page.</p>
+    <title>Inline Frames</title>
+    <p>An <term>Inline Frame</term>, or <term>iframe</term>, allows you to embed a webpage within another webpage.  The activecode examples in this book use an iframe to allow you to experiment with the html, by creating a page within a page. The <c>&lt;iframe&gt;</c> element is used with the following attributes to create an iframe.</p>
+    <ul>
+      <li>
+        <p>
+          The <c>src</c> attribute allows you to specify the webpage to embed.
+        </p>
+      </li>
+      <li>
+        <p>
+          The <c>title</c> attribute is used to provide a clear description of the content for screen readers. 
+        </p>
+      </li>
+      <li>
+        <p>
+          The <c>width</c> and <c>height</c> attributes are used to specify the dimensions of the iframe. They can be specified in pixels or as percentages.
+        </p>
+      </li>
+    </ul>
+
+    <listing>
+      <caption>iframes</caption>
+    <program interactive="activecode" language="html" label="program-activecode-iframe" include-source="yes">
+      <input>
+&lt;iframe src="https://example.com" title="An example iframe" width="300" height="200"&gt; &lt;/iframe&gt;
+
+</input>
+    </program>
+  </listing>
   </subsection>
 </section>
