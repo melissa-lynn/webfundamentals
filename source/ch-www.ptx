@@ -33,10 +33,10 @@
   <p>
     <ul>
       <li>
-        <p>HTML &#x2013; Hyper Text Markup Language &#x2013; HTML describes the content of the page, giving the page some sctructure including common things like headings, and sections, and lists of things.</p>
+        <p>HTML &#x2013; Hyper Text Markup Language &#x2013; HTML describes the content of the page, giving the page some structure including common things like headings, and sections, and lists of things.</p>
       </li>
       <li>
-        <p>CSS &#x2013; Cascading Style Sheets &#x2013; CSS desribes the <q>look</q> of the page, the colors, the fonts, the margins, etc.</p>
+        <p>CSS &#x2013; Cascading Style Sheets &#x2013; CSS describes the <q>look</q> of the page, the colors, the fonts, the margins, etc.</p>
       </li>
       <li>
         <p>Javascript is used to change the behavior of the page.  What happens when  you click on a button, or scroll a scrollbar, or hover over something with your mouse.</p>

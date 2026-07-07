@@ -5,7 +5,7 @@
 
   <introduction>
     <p>As we noted in the previous chapter, HTML is the language of the web for expressing content. But before we dive into the specifics of HTML, let's look at what we mean by a markup language in general.  A markup language is a language that <term>annotates</term> text so that the computer can manipulate it for some purpose.  Most markup languages are readable by humans and are designed to be written with a plain text editor as rather than a fancy word processor like Microsoft Word.</p>
-  <p>This book is written using a markup language called <url href="http://sphinx-doc.org/rest.html" visual="http://sphinx-doc.org/rest.html">restructuredText</url> restructuredText is similar to another very popular markup language called <url href="http://daringfireball.net/projects/markdown/syntax" visual="http://daringfireball.net/projects/markdown/syntax">Markdown</url>.  Both of these languages are designed to be easily readable by humans, and yet easily translate into our language of choice for this class, HTML.  Now you know about three markup languages:</p>
+  <p>This book is written using a markup language called <url href="https://pretextbook.org/documentation.html" visual="https://pretextbook.org/documentation.html">PreTeXt</url>. PreTeXt is similar to another very popular markup language called <url href="http://daringfireball.net/projects/markdown/syntax" visual="http://daringfireball.net/projects/markdown/syntax">Markdown</url>.  Both of these languages are designed to be easily readable by humans, and yet easily translate into our language of choice for this class, HTML.  Now you know about three markup languages:</p>
   <p>
     <ul>
       <li>
@@ -15,11 +15,12 @@
         <p>Markdown</p>
       </li>
       <li>
-        <p>restructuredText</p>
+        <p>PreTeXt</p>
       </li>
     </ul>
   </p>
-  <p>The restructutedText markup for the content in this chapter so far looks like this:</p>
+  <!-- Jos stopped here needs to edit further -->
+  <p>The restructuredText markup for the content in this chapter so far looks like this:</p>
   <program language="rst">
     <input>
 The HyperText Markup Language
