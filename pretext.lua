@@ -158,7 +158,7 @@ end
 
 -- No <bold> tag in PreTeXt, but <term> gives bold look.  Assume bold in source document denotes a term, otherwise author could search for <term> and fix case-by-case. 
 function Strong(s)
-  return "<strong>" .. s .. "</strong>"
+  return "<em class='strong'>" .. s .. "</em>"
 end
 
 function Subscript(s)
