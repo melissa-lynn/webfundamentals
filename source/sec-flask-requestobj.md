@@ -27,9 +27,8 @@ can either be `GET` or `POST`. Here's a simple example:
    <input id="user" required type="text" name="user" size="50" placeholder="Arthur, King of the Britons">
 </p>
 
-<p><label for="quest">Quest:</label>
-    <textarea id="quest" required name="quest" rows="3" cols="50" placeholder="To seek the grail"></textarea>
-</p>
+<p><label for="quest">Quest:</label></p>
+<p><textarea id="quest" required name="quest" rows="3" cols="50" placeholder="To seek the grail"></textarea></p>
 
 <p><label for="color">Favorite Color?<label>
    <select id="color" required name="color">
@@ -199,8 +198,72 @@ def pizza_order():
         pass
 ```
 
-The HTTP method is stored in `request.method`. 
+The HTTP method for each request is stored in `request.method`. 
 
+Let's be clear about what happens here, since students often get confused. Here's a sequence of events:
+
+1. User visits a completely different page, maybe the home page of the pizza shop. On that page is 
+   a simple link to the page for ordering: `<a href="/pizza-order">order a pizza</a>`. They click on that link.
+1. Consequently, the browser makes a GET request to the server: `GET /pizza`. 
+1. Flask routes the request to this handler, which notices that the method is `GET` and so it sends 
+   a response that is a page with an empty pizza form.
+1. The browser receives that form and renders it.
+1. The user fills it out and clicks the "submit order" button.
+1. The browser makes a POST request to the server: `POST /pizza` (because the form has `method=post`). The
+   body of that request has the size, toppings, etc.
+1. Flask routes the request to this handler, which notices that the method is `POST` and so it reads out
+   the details of the order and so forth.
 
 **NOTE TO Co-authors: I have an example of a generic form-echoing back end. I'm not sure it's worth sharing. Thoughts?**
+
+
+## Other REQUEST Properties
+
+There are many other properties of the `request` object, some of which we will get into in great detail later, 
+and others which are only rarely useful and which we won't cover at all. 
+
+The following are the most common and important:
+
+| Attribute            | Why you need it                     |
+| -------------------- | ----------------------------------- |
+| `request.method`     | Is this a GET or POST?              |
+| `request.args`       | GET form/query parameters.          |
+| `request.form`       | POST form parameters.               |
+| `request.files`      | Uploaded files.                     |
+| `request.cookies`    | Read cookies.                       |
+| `request.get_json()` | Read JSON requests from JavaScript. |
+
+We've just covered the first three, and we'll cover the rest in other sections. 
+
+The following are less common; you might never need them.
+
+| Attribute             | Typical use                                          |
+| --------------------- | ---------------------------------------------------- |
+| `request.headers`     | Read User-Agent, Authorization, custom headers, etc. |
+| `request.path`        | "What page was requested?"                           |
+| `request.url`         | Redirects, debugging, logging.                       |
+| `request.referrer`    | "Where did the user come from?"                      |
+| `request.remote_addr` | Logging client IPs (with caveats if behind proxies). |
+| `request.view_args`   | Access variables captured from the URL.              |
+
+## Summary
+
+Lots of important information about each request is contained in the `request` object. 
+
+* This variable must be imported from the `flask` package
+* The Flask infrastructure parses the HTTP request and puts important information in that object.
+* `request.method` is a string with a value like `GET` or `POST`, saying what HTTP method the request used.
+* `request.args` has a dictionary-like object of name/value pairs from the query string, 
+  which is where data from a form with `method=get` goes.
+* `request.form` has a dictionary-like object of name/value pairs from the body of the 
+  HTTP request, which is where data from a form with `method=post` goes.
+* If a request has multiple values for a given name, which is allowed and 
+  happens with checklists and multiple-selection `<select>` menus, you can get a list of the
+  values with `data.getlist(input_name)`, where `data` is either `request.args` or `request.form`.
+
+
+
+
+
+
 
