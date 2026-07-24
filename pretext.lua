@@ -522,24 +522,38 @@ local function escape_xml(s)
     :gsub(">", "&gt;")
 end
 
-function RawBlock(el)
-  if el.format == "pretext" then
-    -- insert as actual PreTeXt markup
-    return el.text .. "\n"
-  elseif el.format == "html" then
-    -- useful inside <input> or examples
-    return escape_xml(el.text) .. "\n"
+-- see comments on RawInline for how this is modified to pass through known PreTeXt elements, and escape other HTML.
+
+function RawBlock(format, text)
+  if format == "pretext" then
+    return text .. "\n"
+
+  elseif format == "html" then
+    return escape_xml(text) .. "\n"
+
   else
-    -- probably safer not to pass unknown raw formats through
     return ""
   end
 end
 
-function RawInline(el)
-  if el.format == "pretext" then
-    return el.text
-  elseif el.format == "html" then
-    return escape_xml(el.text)
+-- modified to pass through known PreTeXt inline elements, and to escape other HTML. 
+-- First up is <xref>, which is used for cross-references.  
+-- Other PreTeXt inline elements could be added here as needed.
+
+-- Pass through selected PreTeXt inline elements, while escaping
+-- other raw HTML so it appears as example text.
+function RawInline(format, text)
+  if format == "pretext" then
+    return text
+
+  elseif format == "html" then
+    -- Pandoc classifies XML-looking markup as raw HTML.
+    if text:match("^<xref%s") then
+      return text
+    end
+
+    return escape_xml(text)
+
   else
     return ""
   end
