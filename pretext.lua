@@ -85,20 +85,58 @@ local function escape(s, in_attribute)
 end
 
 -- helper function to wrap paragraphs and such. Scott/ChatGPT
+-- Wrap text without inserting line breaks inside inline code elements.
 function wrap_text(s, width)
   width = width or 80
+
+  local tokens = {}
+  local position = 1
+
+  -- Add ordinary whitespace-separated words to the token list.
+  local function add_words(text)
+    for word in text:gmatch("%S+") do
+      table.insert(tokens, word)
+    end
+  end
+
+  while position <= #s do
+    local code_start, code_open_end = s:find("<c>", position, true)
+
+    if not code_start then
+      -- No more inline-code elements.
+      add_words(s:sub(position))
+      break
+    end
+
+    -- Add the ordinary text before <c>.
+    add_words(s:sub(position, code_start - 1))
+
+    local code_close_start, code_end =
+      s:find("</c>", code_open_end + 1, true)
+
+    if not code_close_start then
+      -- Malformed input: preserve the remainder rather than losing it.
+      add_words(s:sub(code_start))
+      break
+    end
+
+    -- Keep the complete <c>...</c> element as one token, including
+    -- any spaces inside the code.
+    table.insert(tokens, s:sub(code_start, code_end))
+    position = code_end + 1
+  end
 
   local out = {}
   local line = ""
 
-  for word in string.gmatch(s, "%S+") do
+  for _, token in ipairs(tokens) do
     if line == "" then
-      line = word
-    elseif string.len(line) + 1 + string.len(word) <= width then
-      line = line .. " " .. word
+      line = token
+    elseif #line + 1 + #token <= width then
+      line = line .. " " .. token
     else
       table.insert(out, line)
-      line = word
+      line = token
     end
   end
 
@@ -249,7 +287,8 @@ end
 
 -- rewritten by Scott/ChatGPT
 function Para(s)
-  -- here and below: tabs and tabsp(lus) are strings that add enough tab characters to make the output indented nicely.  Since "indents" changes each time these functions are called, these local variables need to be redefined each time.
+  -- here and below: tabs and tabsp(lus) are strings that add enough tab characters to make the output indented nicely.  
+  -- Since "indents" changes each time these functions are called, these local variables need to be redefined each time.
   local tabs = string.rep("\t", indents)
   local tabsp = string.rep("\t", indents+1)
 
@@ -315,26 +354,79 @@ function CodeBlock(s, attr)
   end
 end
 
-function BulletList(items)
+-- Chat GPT helped replace definitions of BulletList and OrderedList with a single function that handles both, since they are so similar.  DefinitionList is still separate, since it is different enough.
+
+local function trim(s)
+  return (s:gsub("^%s+", ""):gsub("%s+$", ""))
+end
+
+local function renderList(items, tag)
   local tabs = string.rep("\t", indents)
-  local tabsp = string.rep("\t", indents+1)
+  local item_tabs = string.rep("\t", indents + 1)
+  local content_tabs = string.rep("\t", indents + 2)
   local buffer = {}
-  for _, item in pairs(items) do
-    item = string.gsub(item, "\n", "\n"..tabsp)
-    table.insert(buffer, tabsp.."<li>\n"..tabsp .. item .. "\n"..tabsp.."</li>\n")
+
+  for _, item in ipairs(items) do
+    item = trim(item)
+
+    -- A list item may contain ordinary text followed by a nested
+    -- unordered or ordered list.
+    local ul_start = item:find("<ul[%s>]")
+    local ol_start = item:find("<ol[%s>]")
+    local nested_list_start
+
+    if ul_start and ol_start then
+      nested_list_start = math.min(ul_start, ol_start)
+    else
+      nested_list_start = ul_start or ol_start
+    end
+
+    local item_content
+
+    if nested_list_start then
+      local introductory_text =
+        trim(item:sub(1, nested_list_start - 1))
+
+      local nested_list =
+        trim(item:sub(nested_list_start))
+
+      if introductory_text ~= "" then
+        item_content =
+          "<p>" .. introductory_text .. "</p>\n" ..
+          nested_list
+      else
+        item_content = nested_list
+      end
+    else
+      -- Even a simple PreTeXt list item should contain structured
+      -- content rather than bare text.
+      item_content = "<p>" .. item .. "</p>"
+    end
+
+    -- Indent every line after the first line of the item body.
+    item_content =
+      item_content:gsub("\n", "\n" .. content_tabs)
+
+    table.insert(
+      buffer,
+      item_tabs .. "<li>\n" ..
+      content_tabs .. item_content .. "\n" ..
+      item_tabs .. "</li>"
+    )
   end
-  return tabs.."<p><ul>\n" .. table.concat(buffer, "\n") .. "\n"..tabs.."</ul></p>"
+
+  return
+    tabs .. "<" .. tag .. ">\n" ..
+    table.concat(buffer, "\n\n") .. "\n" ..
+    tabs .. "</" .. tag .. ">"
+end
+
+function BulletList(items)
+  return renderList(items, "ul")
 end
 
 function OrderedList(items)
-  local tabs = string.rep("\t", indents)
-  local tabsp = string.rep("\t", indents+1)
-  local buffer = {}
-  for _, item in pairs(items) do
-    item = string.gsub(item, "\n", "\n"..tabsp)
-    table.insert(buffer, tabsp.."<li>\n" .. tabsp  .. item .. "\n".. tabsp.."</li>\n")
-  end
-  return tabs.."<p><ol>\n"..table.concat(buffer, "\n").."\n"..tabs.."</ol></p>"
+  return renderList(items, "ol")
 end
 
 function DefinitionList(items)
