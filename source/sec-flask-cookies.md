@@ -166,9 +166,9 @@ the following vulnerabilities:
     * They can do that via a browser, a JavaScript, and custom apps. 
     * They can change the cookie to `deadbeat-customer=false`.
 * The cookie value is sent along with the HTTP request and response,
-which are not encrypted, so the cookie value is easily seen by anyone
-with a network packet sniffer. (Elsewhere in the course, we'll see how to
-use HTTPS so that both directions are encrypted.)
+  which are not encrypted, so the cookie value is easily seen by anyone
+  with a network packet sniffer. (Elsewhere in the course, we'll see how to
+  use HTTPS so that both directions are encrypted.)
 
 In Flask's *sessions*, we will see how Flask introduces 
 safeguards to protect against some of these insecurities.
