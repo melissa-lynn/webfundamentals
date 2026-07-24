@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -e
+
+/workspaces/webfundamentals/md2ptx converter-test-content.md
+cp converter-test-content.ptx source/converter-test-content.ptx
+pretext build converter-test

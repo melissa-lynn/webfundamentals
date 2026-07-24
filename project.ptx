@@ -7,6 +7,16 @@
   <targets>
     <target name="web" format="html"/>
     <target name="print" format="pdf" />
+    <target
+    name="converter-web"
+    format="html"
+    source="converter-test.ptx"
+    output-dir="converter-test"/>
+  <target
+    name="converter-pdf"
+    format="pdf"
+    source="converter-test.ptx"
+    output-dir="converter-test-pdf"/>
   </targets>
 </project>
 
