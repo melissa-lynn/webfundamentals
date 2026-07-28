@@ -136,6 +136,8 @@ The submitted URL might look like this:
 echo_form?size=large...&topping=olives&topping=mushrooms&topping=onions
 ```
 
+Notice that there are several pairs with `topping=` as the input name. 
+So, there's no longer a single value associated with ath name. 
 You can access this data in your Flask handler using the `.getlist` method on the dictionary of data:
 
 ```python
@@ -192,19 +194,22 @@ def pizza_order():
         data = request.form
         ...
     else:
-        # this can't actually happen, since this handler function
-        # is only configured for GET and POST, but there 
-        # are other HTTP methods that we'll learn later
         pass
 ```
 
-The HTTP method for each request is stored in `request.method`. 
+The HTTP method for each request is stored in `request.method`, which the handler function (`pizza_order`)
+uses to distinguish the two cases. 
+Note that in the code above, we have an `if` and an `elif` that explicitly check the value of `request.method`, 
+and a final `else`. In real life, the `else` can't happen because the `@app.route` wrapper specifies that this endpoint 
+handler, `pizza_order`, only handles `GET` and `POST`. So we can simplify the code. 
+But for this first example, we wanted to be 
+very clear about the two branches.
 
 Let's be clear about what happens here, since students often get confused. Here's a sequence of events:
 
 1. User visits a completely different page, maybe the home page of the pizza shop. On that page is 
    a simple link to the page for ordering: `<a href="/pizza-order">order a pizza</a>`. They click on that link.
-1. Consequently, the browser makes a GET request to the server: `GET /pizza`. 
+1. Consequently, the browser makes a GET request to the server: `GET /pizza`
 1. Flask routes the request to this handler, which notices that the method is `GET` and so it sends 
    a response that is a page with an empty pizza form.
 1. The browser receives that form and renders it.

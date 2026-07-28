@@ -4,10 +4,6 @@ One common feature of a web form is a menu of options, such as "red," "green" or
 When the data will be processed by a computer, it's far better to have the user choose from among the known options than to try have them guess what values the software is expecting: "medium"? "regular"? "extra-large"? "XL"? 
 Let's return to the pizza example:
 
-```{=pretext}
-</input></program></listing>
-```
-
 ```htmla
   <p><label for="select_size">Size:</label>
       <select id="select_size" name="size">

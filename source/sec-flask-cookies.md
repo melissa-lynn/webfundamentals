@@ -257,7 +257,7 @@ global variable. (This isn't realistic, but give us a minute.)
 
 default_zip = '02481'
 
-@app.request('/listings/')
+@app.route('/listings/')
 def get_listings():
     zip_code = default_zip
     listings = movies_for(zip_code)
@@ -272,7 +272,7 @@ we need to explicitly create a response object and then use the `set_cookie` met
 the following:
 
 ```python
-@app.request('/listings/')
+@app.route('/listings/')
 def get_listings():
     zip_code = default_zip
     listings = movies_for(zip_code)
@@ -287,7 +287,7 @@ The next improvement is to read and use any cookie that the browser has sent us.
 the default zip code.
 
 ```python
-@app.request('/listings/')
+@app.route('/listings/')
 def get_listings():
     zip_code = request.cookies.get('zip_code', default_zip)
     listings = movies_for(zip_code)

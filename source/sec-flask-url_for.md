@@ -1,4 +1,4 @@
-# The `url_for` Function
+# Generating Application URLs {#url_for}
 
 A web application often has to send URLs to the browser. For example, 
 the response to a web request might be a list of links to pages within 
@@ -20,15 +20,15 @@ following:
 And the Flask `app.py` file might have matching endpoints like these:
 
 ```python
-@app.request('/')
+@app.route('/')
 def home():
     return render_template('home')
 
-@app.request('/about')
+@app.route('/about')
 def about():
     return render_template('about_us')
 
-@app.request('/contact')
+@app.route('/contact')
 def contact():
     return render_template('contact')
 ```
