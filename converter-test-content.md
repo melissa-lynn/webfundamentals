@@ -32,9 +32,73 @@ another nested lists
 1. Outer ordered item
     * Inner bullet
 
+## Figures
+
+Not the province of the converter, but here's a model of how to do a figure. Note that the shortdescription
+becomes the ALT text. Aim for a description of the picture (for someone who can't see) and keep in short (100-140 characters).
+
+```{=pretext}
+<figure>
+  <caption>
+    The CSS box model. Figure used in accordance with the
+    W3Schools fair-use policy.
+  </caption>
+  <image source="box-model.gif" width="50%">
+    <shortdescription>
+      The CSS box model consists of four nested regions. 
+      From the center outward they are content, padding, border, and margin.
+    </shortdescription>
+  </image>
+</figure>
+```
+
+and here's one that adds a longer, more descriptive description. 
+
+```{=pretext}
+<figure>
+  <caption>
+    The CSS box model. Figure used in accordance with the
+    W3Schools fair-use policy.
+  </caption>
+  <image source="box-model.gif" width="50%">
+    <shortdescription>
+      The CSS box model consists of four nested regions. 
+      From the center outward they are content, padding, border, and margin.
+    </shortdescription>
+    <description>
+      <p>
+        The diagram consists of four nested rectangular areas. The innermost
+        area and largest is the content. Padding surrounds the content, a thin
+        green-colored border surrounds
+        the padding, and the margin is the outermost area.
+      </p>
+    </description>
+  </image>
+</figure>
+```
+
 ## Xref
 
 See <xref ref="code_blocks"/> to learn about code blocks.
+
+## Mermaid sequence diagrams
+
+Here's a sequence diagram:
+
+```mermaid
+sequenceDiagram
+    autonumber
+
+    actor Browser as 🧑 Browser
+    participant Server as 🗄️ Web Server
+
+    Browser->>Server: GET /foo
+    Note right of Server: Resource moved
+    Server-->>Browser: 302 Found<br/>Location: /bar
+
+    Browser->>Server: GET /bar
+    Server-->>Browser: 200 OK<br/>HTML document
+```
 
 ## Live HTML examples
 
@@ -79,5 +143,16 @@ function pyth(a,b) {
     return Math.sqrt(a2+b2);
 }
 ```
+
+## Tables
+
+| Attribute            | Why you need it                     |
+| -------------------- | ----------------------------------- |
+| `request.method`     | Is this a GET or POST?              |
+| `request.args`       | GET form/query parameters.          |
+| `request.form`       | POST form parameters.               |
+| `request.files`      | Uploaded files.                     |
+| `request.cookies`    | Read cookies.                       |
+| `request.get_json()` | Read JSON requests from JavaScript. |
 
 
