@@ -56,7 +56,7 @@
   </ul>
 </p>
 </subsection>
-<xi:include href="subsec-labels.ptx" />
+<xi:include href="generated/subsec-labels.ptx" />
 
 <subsection><title>WAVE Validation</title>
 <p>Because it's so important to ensure that your web forms are accessible, 
@@ -209,5 +209,5 @@ try to cover all of them; consult <url href="https://developer.mozilla.org/en-US
   </ul></p>
   
 </subsection>
-<xi:include href="subsec-html-forms-summary.ptx" />
+<xi:include href="generated/subsec-html-forms-summary.ptx" />
 </section>
