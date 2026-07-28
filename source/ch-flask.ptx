@@ -18,22 +18,22 @@
   <xi:include href="sec-flask-routing.ptx" />
   <xi:include href="sec-flask-static.ptx" />
   <xi:include href="sec-flask-templates.ptx" />
-  <xi:include href="sec-flask-requestobj.ptx" />
-  <xi:include href="sec-flask-redirects.ptx" />
+  <xi:include href="generated/sec-flask-requestobj.ptx" />
+  <xi:include href="generated/sec-flask-redirects.ptx" />
   <xi:include href="sec-flask-responses.ptx" />
   <xi:include href="sec-flask-sessions.ptx" />
   <xi:include href="sec-flask-messageflashing.ptx" />
   <xi:include href="sec-flask-logging.ptx" />
   <xi:include href="sec-flask-templating.ptx" />
-  <xi:include href="sec-flask-file-upload.ptx" />
-  <xi:include href="sec-flask-cookies.ptx" />
+  <xi:include href="generated/sec-flask-file-upload.ptx" />
+  <xi:include href="generated/sec-flask-cookies.ptx" />
 <!-- the following are new sections that are not in the original book; 
   Scott volunteered to write the first draft.-->
-  <xi:include href="sec-flask-url_for.ptx" />
-  <xi:include href="sec-flask-passwords.ptx" />
-  <xi:include href="sec-flask-backend-form-validation.ptx" />
-  <xi:include href="sec-flask-http-methods.ptx" />
-  <xi:include href="sec-flask-rest-api.ptx" />
+  <xi:include href="generated/sec-flask-url_for.ptx" />
+  <xi:include href="generated/sec-flask-passwords.ptx" />
+  <xi:include href="generated/sec-flask-backend-form-validation.ptx" />
+  <xi:include href="generated/sec-flask-http-methods.ptx" />
+  <xi:include href="generated/sec-flask-rest-api.ptx" />
   <xi:include href="sec-flask-context-locals.ptx" />
   <xi:include href="sec-flask-Exercises.ptx" />
 

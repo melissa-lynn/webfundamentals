@@ -191,11 +191,11 @@ try to cover all of them; consult <url href="https://developer.mozilla.org/en-US
           placeholder="e.g moony or padfoot"&gt;&lt;/label&gt;&lt;/p&gt;
       </input></program></listing>
       </subsection>
-<xi:include href="subsec-select.ptx" />
-<xi:include href="subsec-textarea.ptx" />
-<xi:include href="subsec-radio-buttons.ptx" />
-<xi:include href="subsec-buttons.ptx" />
-<xi:include href="subsec-datalist.ptx" />
+<xi:include href="generated/subsec-select.ptx" />
+<xi:include href="generated/subsec-textarea.ptx" />
+<xi:include href="generated/subsec-radio-buttons.ptx" />
+<xi:include href="generated/subsec-buttons.ptx" />
+<xi:include href="generated/subsec-datalist.ptx" />
 <subsection>
   <title>Extras</title>
   <p><ul>

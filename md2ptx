@@ -13,7 +13,11 @@ if [[ -z "$mdfile" || ! -f "$mdfile" ]]; then
     exit 1
 fi
 
-ptxfile="${mdfile%.md}.ptx"
+if [[ -d generated ]]; then
+    ptxfile="generated/${mdfile%.md}.ptx"
+else
+    ptxfile="${mdfile%.md}.ptx"
+fi
 
 echo "Converting $mdfile -> $ptxfile"
 pandoc "$mdfile" -t /workspaces/webfundamentals/pretext.lua -o "$ptxfile"
