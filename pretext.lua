@@ -319,39 +319,105 @@ function LineBlock(ls)
          '</div>'
 end
 
+
+-- added <program> for listings and htmla for activeCode html
+local language_aliases = {
+  -- JavaScript
+  js = "javascript",
+  javascript = "javascript",
+
+  -- TypeScript
+  ts = "typescript",
+  typescript = "typescript",
+
+  -- Python
+  py = "python",
+  python = "python",
+  python3 = "python",
+
+  -- C-family languages
+  c = "c",
+  cpp = "cpp",
+  ["c++"] = "cpp",
+  cs = "csharp",
+  csharp = "csharp",
+
+  -- Web languages
+  html = "html",
+  css = "css",
+  xml = "xml",
+
+  -- Other common languages
+  java = "java",
+  lua = "lua",
+  r = "r",
+  sql = "sql",
+  bash = "bash",
+  sh = "bash",
+  shell = "bash",
+  json = "json",
+  yaml = "yaml",
+  yml = "yaml",
+}
+
 function CodeBlock(s, attr)
   local tabs = string.rep("\t", indents)
 
-  local lang = nil
+  local markdown_language = nil
   if attr and attr.class and attr.class ~= "" then
-    lang = attr.class
+    markdown_language = attr.class
   end
 
-  -- ActiveCode versions
-  if lang == "htmla" then
+  if markdown_language == "mermaid" then
+    return tabs .. "<image>\n" ..
+           tabs .. "\t<mermaid>\n" ..
+           escape(s) .. "\n" ..
+           tabs .. "\t</mermaid>\n" ..
+           tabs .. "</image>"
+  end
+
+  -- ActiveCode HTML:
+  --
+  -- ```htmla
+  -- ...
+  -- ```
+  --
+  -- This retains the existing editable/runnable Runestone version.
+  if markdown_language == "htmla" then
     return tabs ..
            '<program interactive="activecode" language="html" include-source="yes">\n' ..
            tabs .. '\t<input>\n' ..
            escape(s) .. '\n' ..
            tabs .. '\t</input>\n' ..
            tabs .. '</program>'
-
-  -- Display-only HTML
-  elseif lang == "html" then
-    return tabs ..
-           '<program language="html">\n' ..
-           tabs .. '\t<input>\n' ..
-           escape(s) .. '\n' ..
-           tabs .. '\t</input>\n' ..
-           tabs .. '</program>'
-
-  -- Everything else
-  else
-    return tabs ..
-           "<pre>" ..
-           escape(s) ..
-           "</pre>"
   end
+
+  -- Display-only program with syntax highlighting and line numbers.
+  --
+  -- Examples:
+  --
+  -- ```python
+  -- ...
+  -- ```
+  --
+  -- ```js
+  -- ...
+  -- ```
+  local pretext_language = language_aliases[markdown_language]
+
+  if pretext_language then
+    return tabs ..
+           '<program language="' .. pretext_language ..
+           '" line-numbers="yes">\n' ..
+           escape(s) .. '\n' ..
+           tabs .. '</program>'
+  end
+
+  -- Unknown or unspecified languages remain ordinary preformatted text.
+  return tabs ..
+         "<pre>" ..
+         escape(s) ..
+         "</pre>"
 end
 
 -- Chat GPT helped replace definitions of BulletList and OrderedList with a single function that handles both, since they are so similar.  DefinitionList is still separate, since it is different enough.
