@@ -1,48 +1,42 @@
 <?xml version="1.0"?>
 <section xml:id="html_semantic-html-tags">
   <title>Semantic HTML Tags</title>
-  <p>Some tags in HTML are designed for you to use in creating a logical structure for your page.  As you have probably noticed many sites have a navigation bar in the header, and have some information about the page in a footer.  Many web pages have sidebars, and of course blogs and many news sites are divided into articles.  Scholarly web sites are divided into parts and sections.</p>
-  <p>You have probably also noticed that it is pretty easy to tell the different parts of a web page apart because they have a distinct look to them.  In order to give different sections different looks we need to provide some structure within our markup.   This is done by using structural tags as follows:</p>
+  <p>Some tags in HTML are designed for you to use in creating a logical structure for your page, and to describe their role in that structure.  You may have noticed that many sites have a navigation bar in their header, and they have information about the page in a footer.  Many web pages also have sidebars, and some webpages like blogs and news sites may be divided into articles.  Scholarly web sites may be divided into parts and sections.</p>
+  <p>The word <term>semantic</term> refers to the conceptual meaning of language, and by writing semantic HTML we use tags to communicate the meaning and roles of elements. We can use <term>semantic HTML tags</term> to label sections or parts of webpages with their roles, and this will allow us to give them different visual appearances once we incorporate CSS.  By labeling parts of a page in this way, we also enable screen reader users to navigate our webpage effectively, since they can identify the different parts based on the HTML structure rather than needing to rely on visual cues. The following tags allow us to structure our webpages using semantic HTML.</p>
   <p>
     <ul>
       <li>
-        <p>article</p>
+        <p>An <c>&lt;article&gt;</c> is a self-contained document, page, application, or other content. It contains the information required to be used or distributed independently from the rest of the webpage (for example, it could be copied and included in a different webpage and still make sense).</p>
       </li>
       <li>
-        <p>aside</p>
+        <p>An <c>&lt;aside&gt;</c> is content that is tangentially or indirectly related to the main content.</p>
       </li>
       <li>
-        <p>details</p>
+        <p>A <c>&lt;details&gt;</c> element provides an expandable item that the user can open or close to show or hide the content. The <c>&lt;details&gt;</c> element contains a <c>&lt;summary&gt;</c> element as a child. The content of the <c>&lt;summary&gt;</c> element is always displayed, while the <c>&lt;details&gt;</c> element can be expanded or collapsed to show or hide the rest of its content.</p>
       </li>
       <li>
-        <p>figcaption</p>
+        <p>A <c>&lt;figure&gt;</c> is used for self-contained content such as pictures, diagrams, charts, and illustrations. A <c>&lt;figure&gt;</c> should contain a <c>&lt;figcaption&gt;</c> child element, which displays a caption describing the content of the figure. A <c>&lt;figure&gt;</c> should also contain an <c>&lt;img&gt;</c> or other child element. You can think of a <c>&lt;figure&gt;</c> as a way to group an image with its caption into one unit.</p>
       </li>
       <li>
-        <p>figure</p>
+        <p>A <c>&lt;footer&gt;</c> contains footer information for a document, which is typically displayed at the bottom of the page. It will often contain information such as the author of the page, copyright information, contact information, and related links.</p>
       </li>
       <li>
-        <p>footer</p>
+        <p>A <c>&lt;header&gt;</c> contains content introducing a page, and it may also contain navigation links. It will often contain a heading element <c>&lt;h1&gt;</c> and a paragraph element <c>&lt;p&gt;</c> with some additional information, such as the author of the page.</p>
       </li>
       <li>
-        <p>header</p>
+        <p>The <c>&lt;main&gt;</c> element contains the primary content of the webpage. This content should be unique to the particular page, and should not include navigation bars or footers that would be repeated between pages on the same site.</p>
       </li>
       <li>
-        <p>main</p>
+        <p>The <c>&lt;mark&gt;</c> tag is used to identify text to be marked or highlighted, often containing a word or a few words within a paragraph.</p>
       </li>
       <li>
-        <p>mark</p>
+        <p>A <c>&lt;nav&gt;</c> element is used to contain the links that are used to navigate between pages within a website.</p>
       </li>
       <li>
-        <p>nav</p>
+        <p>A <c>&lt;section&gt;</c> is used to define a section of a webpage. For example, if you're writing a webpage including course descriptions for a computer science major, you might have a <c>&lt;section&gt;</c> element for each course. Note that you should only use the <c>&lt;section&gt;</c> tag if there is not a more descriptive semantic tag that would fit; that is, don't use a <c>&lt;section&gt;</c> for an <c>&lt;article&gt;</c>, for example.</p>
       </li>
       <li>
-        <p>section</p>
-      </li>
-      <li>
-        <p>summary</p>
-      </li>
-      <li>
-        <p>time</p>
+        <p>A <c>&lt;time&gt;</c> is used for a specific time (or datetime). Browsers can use this element to add reminders to a user's calendar, and it can also be helpful to search engines.</p>
       </li>
     </ul>
   </p>
@@ -79,17 +73,17 @@
 </listing>
   <note>
     <title>Historical Note</title>
-    <p>All of the tags mentioned above were added to the HTML5 standard.  Before HTML5 there were only two of these invisible structural tags.  You will see many examples of the use of these tags:</p>
+    <p>All of the tags mentioned above were added to the HTML5 standard.  Before HTML5 there were only two of these invisible structural tags.  You may encounter these tags, especially in older webpages:</p>
     <p>
       <ul>
         <li>
-          <p>div</p>
+          <p><c>&lt;div&gt;</c></p>
         </li>
         <li>
-          <p>span</p>
+          <p><c>&lt;span&gt;</c></p>
         </li>
       </ul>
     </p>
-    <p>These tags served the same purpose, usually by using an id or class attribute to indicate their semantic purpose.</p>
+    <p>These tags also delineate blocks within a page, and often use an <c>id</c> or <c>class</c> attribute to indicate their semantic purpose. However, for screen reader accessibility, it's important to only use the <c>&lt;div&gt;</c> or <c>&lt;span&gt;</c> tags if there is no semantic HTML tag that fits the purpose of your content.</p>
   </note>
 </section>
