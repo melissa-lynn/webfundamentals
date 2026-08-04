@@ -107,4 +107,5 @@ codechat_config.yaml
 .github/workflows/test-build.yml
 
 # Scott added this for generated ptx file.
-/generated/
+generated/
+converter-test-content.ptx
