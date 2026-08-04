@@ -27,6 +27,5 @@
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />
-    <xi:include href="./converter-test-content.ptx" />
   </book>
 </pretext>
