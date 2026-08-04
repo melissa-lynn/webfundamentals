@@ -1,4 +1,4 @@
-# REST API
+# REST API {#flask_rest_api}
 
 Now that we have more HTTP methods, we have more choices about how to 
 build our app. While there are no inviolable rules about using these
