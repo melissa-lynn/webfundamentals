@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5 -->
+<!-- CreationDate: Mon Mar 20 09:44:22 2017 -->
+<!-- Magnification: 1.000 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="4.8in" height="2.9in" viewBox="810 465 5766 3485">
+<g style="stroke-width:.025in; stroke:black; fill:none">
+<!-- Line -->
+<polyline points="1725,1350
+5892,1796
+" style="stroke:#000000;stroke-width:15;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Arrowhead on XXXpoint 1725 1350 - 5954 1803-->
+<polyline points="5675 1833
+5921 1799
+5688 1713
+" style="stroke:#000000;stroke-width:15;
+"/>
+<!-- Line -->
+<polyline points="6000,2175
+1832,2547
+" style="stroke:#000000;stroke-width:15;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Arrowhead on XXXpoint 6000 2175 - 1770 2552-->
+<polyline points="2036 2467
+1803 2549
+2047 2587
+" style="stroke:#000000;stroke-width:15;
+"/>
+<!-- Line -->
+<polyline points="1950,2700
+5892,3295
+" style="stroke:#000000;stroke-width:15;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Arrowhead on XXXpoint 1950 2700 - 5954 3304-->
+<polyline points="5674 3322
+5921 3299
+5692 3203
+" style="stroke:#000000;stroke-width:15;
+"/>
+<!-- Line -->
+<polyline points="5925,3450
+2057,3896
+" style="stroke:#000000;stroke-width:15;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Arrowhead on XXXpoint 5925 3450 - 1995 3903-->
+<polyline points="2259 3811
+2028 3899
+2273 3931
+" style="stroke:#000000;stroke-width:15;
+"/>
+<!-- Text -->
+<text xml:space="preserve" x="825" y="750" stroke="#0000ff" fill="#0000ff"  font-family="Helvetica" font-style="normal" font-weight="bold" font-size="192" text-anchor="start">Browser</text>
+<!-- Text -->
+<text xml:space="preserve" x="5700" y="675" stroke="#008f00" fill="#008f00"  font-family="Helvetica" font-style="normal" font-weight="bold" font-size="192" text-anchor="start">Server</text>
+<!-- Text -->
+<text xml:space="preserve" x="2250" y="1200" stroke="#000000" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="bold" font-size="192" text-anchor="start">GET foo</text>
+<!-- Text -->
+<text xml:space="preserve" x="2475" y="2175" stroke="#000000" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="bold" font-size="192" text-anchor="start">302 moved bar</text>
+<!-- Text -->
+<text xml:space="preserve" x="3375" y="2775" stroke="#000000" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="bold" font-size="192" text-anchor="start">Get bar</text>
+<!-- Text -->
+<text xml:space="preserve" x="2475" y="3600" stroke="#000000" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="bold" font-size="192" text-anchor="start">200 bar</text>
+</g>
+</svg>
