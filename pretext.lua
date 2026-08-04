@@ -194,9 +194,10 @@ function Emph(s)
   return "<em>" .. s .. "</em>"
 end
 
--- No <bold> tag in PreTeXt, but <term> gives bold look.  Assume bold in source document denotes a term, otherwise author could search for <term> and fix case-by-case. 
+-- No <bold> tag in PreTeXt, but <alert> is close
+-- Assume bold in source document denotes a term, otherwise author could search for <term> and fix case-by-case. 
 function Strong(s)
-  return "<em class='strong'>" .. s .. "</em>"
+  return "<alert>" .. s .. "</alert>"
 end
 
 function Subscript(s)

@@ -1,6 +1,6 @@
 # Regression tests
 
-Simple paragraph
+Simple paragraph with *emphasis* and **alerts**. 
 
 The follow is a subsection header with a specified ID
 
@@ -83,11 +83,18 @@ See <xref ref="code_blocks"/> to learn about code blocks.
 
 ## Mermaid sequence diagrams
 
-Here's a sequence diagram:
+Here's a sequence diagram. It has accTitle and addDesc for accessibility.
 
 ```mermaid
 sequenceDiagram
     autonumber
+    accTitle: HTTP redirect
+  accDescr {
+The browser requests /foo.
+The server replies with status 302 and a Location header naming /bar.
+The browser automatically requests /bar.
+The server returns the requested HTML document.
+}
 
     actor Browser as 🧑 Browser
     participant Server as 🗄️ Web Server
@@ -99,6 +106,56 @@ sequenceDiagram
     Browser->>Server: GET /bar
     Server-->>Browser: 200 OK<br/>HTML document
 ```
+
+Or, creating a nice `figure` environment and both a shortdescription (same role as ALT) and
+and 
+
+```{=pretext}
+<figure xml:id="fig-http-redirect">
+  <caption>
+    A browser follows an HTTP redirect from <c>/foo</c> to <c>/bar</c>.
+  </caption>
+
+  <image>
+    <shortdescription>
+      Sequence diagram showing a browser following an HTTP redirect
+  from /foo to /bar.
+    </shortdescription>
+
+    <description>
+     <p>
+    The diagram has two vertical lifelines, with the browser on the
+    left and the web server on the right. Time proceeds downward.
+    Four numbered arrows show the interaction. The browser requests
+    <c>/foo</c>. The server returns status 302 with a Location header
+    naming <c>/bar</c>. The browser then requests <c>/bar</c>, and
+    the server returns status 200 with the HTML document.
+  </p>
+    </description>
+
+    <mermaid label="http-redirect-sequence">
+sequenceDiagram
+    accTitle: HTTP redirect from /foo to /bar
+    accDescr {
+      The browser requests /foo. The server responds with status 302
+      and a Location header naming /bar. The browser then requests /bar,
+      and the server returns the HTML document.
+    }
+
+    autonumber
+    actor Browser
+    participant Server as Web Server
+
+    Browser->>Server: GET /foo
+    Note right of Server: Resource moved
+    Server-->>Browser: 302 Found<br/>Location: /bar
+    Browser->>Server: GET /bar
+    Server-->>Browser: 200 OK<br/>HTML document
+    </mermaid>
+  </image>
+</figure>
+```
+
 
 ## Live HTML examples
 
