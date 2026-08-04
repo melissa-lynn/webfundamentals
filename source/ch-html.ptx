@@ -4,9 +4,40 @@
   <title>HTML Basics</title>
 
   <introduction>
-    <p>As we noted in the previous chapter, HTML is the language of the web for expressing content. But before we dive into the specifics of HTML, let's look at what we mean by a markup language in general.  A markup language is a language that <term>annotates</term> text so that the computer can manipulate it for some purpose.  Most markup languages are readable by humans and are designed to be written with a plain text editor as rather than a fancy word processor like Microsoft Word. You can read more about different markup languages in the <url href="https://en.wikipedia.org/wiki/Markup_language" visual="https://en.wikipedia.org/wiki/Markup_language">Wikipedia article about Markup languages</url>.</p>
-   <p>When using a markup language, there's a difference between what the author writes and what the reader sees. It might be as simple as surrounding a phrase with asterisks (*like this*) and having the result look <em>like this</em>. </p>
-   <p>The exact presentation of the HTML depends on many factors, which we will get to in the chapter on CSS. For now, you should know that HTML is about the <emphasis>structure</emphasis> and <emphasis>contents</emphasis> of the document, not its appearance. </p>
+    <p>As we noted in the previous chapter, HTML is the language of the web for expressing content. But before we dive into the specifics of HTML, let's look at what we mean by a markup language in general.  A markup language is a language that <term>annotates</term> text so that the computer can manipulate it for some purpose.  Most markup languages are readable by humans and are designed to be written with a plain text editor as rather than a fancy word processor like Microsoft Word.</p>
+  <p>This book is written using a markup language called <url href="https://pretextbook.org/documentation.html" visual="https://pretextbook.org/documentation.html">PreTeXt</url>. PreTeXt is similar to another very popular markup language called <url href="http://daringfireball.net/projects/markdown/syntax" visual="http://daringfireball.net/projects/markdown/syntax">Markdown</url>.  Both of these languages are designed to be easily readable by humans, and yet easily translate into our language of choice for this class, HTML.  Now you know about three markup languages:</p>
+  <p>
+    <ul>
+      <li>
+        <p>HTML</p>
+      </li>
+      <li>
+        <p>Markdown</p>
+      </li>
+      <li>
+        <p>PreTeXt</p>
+      </li>
+    </ul>
+  </p>
+  <!-- Jos stopped here needs to edit further -->
+  <p>The restructuredText markup for the content in this chapter so far looks like this:</p>
+  <program language="rst">
+    <input>
+The HyperText Markup Language
+=============================
+
+As we noted in the previous chapter, HTML is the language of the web for expressing content. But before we dive into the specifics of HTML, let's look at what we mean by a markup language in general.  A markup language is a language that **annotates** text so that the computer can manipulate it for some purpose.  Most markup languages are readable by humans and are designed to be written with a plain text editor as rather than a fancy word processor like Microsoft Word.
+
+This book is written using a markup language called `restructuredText &lt;//http://sphinx-doc.org/rest.html&gt;`_ restructuredText is similar to another very popular markup language called `Markdown &lt;http://daringfireball.net/projects/markdown/syntax&gt;`_.  Both of these languages are designed to be easily readable by humans, and yet easily translate into our language of choice for this class, HTML.  Now you know about three markup languages:
+
+* HTML
+* Markdown
+* restructuredText
+
+The restructutedText markup for the content in this chapter so far looks like this:
+</input>
+  </program>
+  <p>The annotations in the restructuredText are pretty unobtrusive, and actually add to the readability of the plain text in most cases.  For example the <c>===</c> below the title of this chapter indicate that it is, in fact a title or heading.  regular paragraphs require no extra annotation.  To make something bold you surround it by double asterisks.  If you want to make a bullet list, you just start the line with an asterisk.</p>
   <p>Most documents have a reasonably limited set of elements including the following:</p>
   <p>
     <ul>
