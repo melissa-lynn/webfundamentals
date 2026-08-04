@@ -8,7 +8,7 @@
       routine tasks to do, regardless of the programming language (Python,
       JavaScript, Perl, etc) and so libraries/modules and other software
       infrastructure have been created to make this routine work easier.
-      <strong>Flask</strong> is one such framework. There are others,
+      <emph>Flask</emph> is one such framework. There are others,
     such as Django and Pyramid. We'll cover Flask.</p>
   </introduction>
 
