@@ -18,15 +18,17 @@
   <xi:include href="sec-flask-routing.ptx" />
   <xi:include href="sec-flask-static.ptx" />
   <xi:include href="sec-flask-templates.ptx" />
+  <xi:include href="generated/sec-xss-attacks.ptx" />
   <xi:include href="generated/sec-flask-requestobj.ptx" />
   <xi:include href="generated/sec-flask-redirects.ptx" />
-  <xi:include href="sec-flask-responses.ptx" />
-  <xi:include href="sec-flask-sessions.ptx" />
-  <xi:include href="sec-flask-messageflashing.ptx" />
+  <xi:include href="generated/sec-flask-sessions.ptx" />
+  <xi:include href="generated/sec-flask-messageflashing.ptx" />
   <xi:include href="sec-flask-logging.ptx" />
-  <xi:include href="sec-flask-templating.ptx" />
+  <xi:include href="sec-flask-templating-in-depth.ptx" />
   <xi:include href="generated/sec-flask-file-upload.ptx" />
   <xi:include href="generated/sec-flask-cookies.ptx" />
+<!-- the following used to be earlier, but Scott moved it down. -->
+  <xi:include href="sec-flask-responses.ptx" />
 <!-- the following are new sections that are not in the original book; 
   Scott volunteered to write the first draft.-->
   <xi:include href="generated/sec-flask-url_for.ptx" />
