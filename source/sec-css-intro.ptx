@@ -1,7 +1,14 @@
 <?xml version="1.0"?>
 <section xml:id="css_introduction-to-css">
   <title>Introduction to CSS</title>
-  <p>CSS stands for Cascading Style Sheets.  Style sheets define how to display your html code.  This was not always the case.  In HTML 3 the designers of the language added tags like font and color. This was great for companies like Microsoft where you could export your word doc as html, but created a nightmare for developers of large sites that were not developed using WYSIWYG tools, and it made the html completely unreadable.  So, in HTML 4.0 CSS was introduced to fix the problem we created for ourselves.</p>
+  <p>CSS stands for Cascading Style Sheets.  Style sheets control the visual appearance of your markup. In other words, the design of your website. This was not always the case.  In HTML 3 the designers of the language added tags like font and color. This was great for companies like Microsoft where you could export your word doc as html, but created a nightmare for developers of large sites that were not developed using WYSIWYG tools, and it made the html completely unreadable.  So, in HTML 4.0 CSS was introduced to fix the problem we created for ourselves. Fast forward to HTML 5, we have more complex CSS frameworks and libraries to incorporate in our web projects to enhance the sophistication of our designs. Some of these have challenged the function and utility of CSS so they depend on the preference of the designer and developer as well as the project requirements. Here are some examples:</p>
+  <ul>
+    <li>Material UI</li>
+    <li>Flex box</li>
+    <li>Grid</li>
+    <li>Tailwind CSS</li>
+    <li>Bootstrap</li>
+  </ul>
   <p>CSS defines how the html should look, and it does this using a set of rules.  We are all used to following certain rules in every day life:  <term>If</term> it is raining, <term>then</term> take your umbrella.  <term>If</term> the light is red, <term>then</term> come to a stop at the stoplight.  In html terms we might say, <term>if</term> the tag is an <c>h1</c> <term>then</term> color it blue and set the font size to 28 points.</p>
   <subsection xml:id="css_css-syntax">
     <title>CSS Syntax</title>
@@ -14,7 +21,7 @@ selector {
     }
 </input>
     </program>
-    <p>The declaration itself consists of two parts: a property and a value.  There are many many CSS properties and we willl look at a lot of them, but for now, just think of the property as something like color, font-size, font-family, etc.</p>
+    <p>The declaration itself consists of two parts: a property and a value.  There are many many CSS properties and we will look at a lot of them, but for now, just think of the property as something like color, font-size, font-family, etc.</p>
     <p>Selectors can be as simple as a tag name, or a very complex pattern to match.  We will start with some very simple selectors and work our way up to the more complex.</p>
     <p>Without further fuss, let's look at a CSS rule for coloring h1 tags blue, and changing their font to 28 points.</p>
     <program language="css">
@@ -32,13 +39,13 @@ h1 {
     <p>
       <ul>
         <li>
-          <p>You can add a style attribute to a tag.  This should not be used very often, if ever!</p>
+          <p>Using an <i> inline </i> approach, you can add a style attribute to a tag.  This should not be used very often, if ever! </p>
         </li>
         <li>
-          <p>You can embed your CSS in your file inside a <c>style</c> tag.  We'll use this method in this book for convenience.</p>
+          <p>Using an <i> internal </i> approach, You can embed your CSS in your HTML document inside a <c>style</c> tag.  We'll use this method in this book for convenience.</p>
         </li>
         <li>
-          <p>You can put all of your CSS in a separate style file and include the style file into your HTML.  This is the preferred way of doing it because it achieves the greatest amount of separation between the content and how the content looks.</p>
+          <p>Using an <i> external </i> approach, you can put all of your CSS in a separate style (.css) file and include the style file into your HTML.  This is the preferred way of doing it because it achieves the greatest amount of separation between the content and how the content looks.</p>
         </li>
       </ul>
     </p>
@@ -81,6 +88,6 @@ h1 {
   <subsection xml:id="css_cascading">
     <title>Cascading</title>
     <p>Since you can add style information about a tag in any or all of the three places, how is the style resolved if different sources provide conflicting information?</p>
-    <p>Default rules from the browser are combined with rules from an external Style Sheet are combined with the rules contained in any style tags in the page itself.  If there is a conflict then then internal style tag wins.  These rules are then combined with any style information contained in a style attribute.  If the style attribute conflicts with any previous informatin, it wins.</p>
+    <p>Default rules from the browser are combined with rules from an external Style Sheet are combined with the rules contained in any style tags in the page itself.  If there is a conflict then then internal style tag wins.  These rules are then combined with any style information contained in a style attribute.  If the style attribute conflicts with any previous information, it wins.</p>
   </subsection>
 </section>
