@@ -2,7 +2,7 @@
 <section xml:id="css_grid-layout">
   <title>Grid Layout</title>
   <p>Earlier we looked at an example of laying out a modern page. CSS now provides us with even more powerful tools for doing page layout than ever before.</p>
-  <p>the CSS grid layout is a two-dimensional grid-based layout system designed specifically to solve the layout problems that CSS coders have been struggling with for years.</p>
+  <p>The CSS grid layout is a two-dimensional grid-based layout system designed specifically to solve the layout problems that CSS coders have been struggling with for years.</p>
   <p>Using grid layout begins with a container element that uses a <c>display: grid</c> property.  You can then describe what your grid looks like with two additional properties:</p>
   <p>
     <ul>
@@ -97,7 +97,7 @@
 </tests>
   </program>
   <p>The grid layout has the concept of tracks and grid lines.  In the example above we have defined 3 tracks, one for each column and four grid lines. two on the outside and the two lines separating track 1 from track 2 and another separating track 2 from track 3.  The same concept applies to the rows.</p>
-  <p>We can use these values to take more control over how and where we want our grid containers to go.  Let's say we want <c>#d1</c> to span all three columns.  We can add <c>grid-column-start: 1;</c> and <c>grid-column-end: 4;</c> as descripters for our <c>#d1</c> element</p>
+  <p>We can use these values to take more control over how and where we want our grid containers to go.  Let's say we want <c>#d1</c> to span all three columns.  We can add <c>grid-column-start: 1;</c> and <c>grid-column-end: 4;</c> as descriptors for our <c>#d1</c> element</p>
   <listing>
     <caption>Grid Layout 2</caption>
   <program xml:id="grid_layout_css2" interactive="activecode" language="html" label="program-activecode-css-grid_layout2" include-source="yes">
