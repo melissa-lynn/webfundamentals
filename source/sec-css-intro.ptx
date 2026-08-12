@@ -39,13 +39,13 @@ h1 {
     <p>
       <ul>
         <li>
-          <p>Using an <i> inline </i> approach, you can add a style attribute to a tag.  This should not be used very often, if ever! </p>
+          <p>Using an <em> inline </em> approach, you can add a style attribute to a tag.  This should not be used very often, if ever! </p>
         </li>
         <li>
-          <p>Using an <i> internal </i> approach, You can embed your CSS in your HTML document inside a <c>style</c> tag.  We'll use this method in this book for convenience.</p>
+          <p>Using an <em> internal </em> approach, You can embed your CSS in your HTML document inside a <c>style</c> tag.  We'll use this method in this book for convenience.</p>
         </li>
         <li>
-          <p>Using an <i> external </i> approach, you can put all of your CSS in a separate style (.css) file and include the style file into your HTML.  This is the preferred way of doing it because it achieves the greatest amount of separation between the content and how the content looks.</p>
+          <p>Using an <em> external </em> approach, you can put all of your CSS in a separate style (.css) file and include the style file into your HTML.  This is the preferred way of doing it because it achieves the greatest amount of separation between the content and how the content looks.</p>
         </li>
       </ul>
     </p>
@@ -86,8 +86,9 @@ h1 {
     </program>
   </subsection>
   <subsection xml:id="css_cascading">
-    <title>Cascading</title>
+    <title>Cascading: Precedence and Specificity</title>
     <p>Since you can add style information about a tag in any or all of the three places, how is the style resolved if different sources provide conflicting information?</p>
     <p>Default rules from the browser are combined with rules from an external Style Sheet are combined with the rules contained in any style tags in the page itself.  If there is a conflict then then internal style tag wins.  These rules are then combined with any style information contained in a style attribute.  If the style attribute conflicts with any previous information, it wins.</p>
+    <p>
   </subsection>
 </section>
