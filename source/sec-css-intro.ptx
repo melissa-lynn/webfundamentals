@@ -89,6 +89,6 @@ h1 {
     <title>Cascading: Precedence and Specificity</title>
     <p>Since you can add style information about a tag in any or all of the three places, how is the style resolved if different sources provide conflicting information?</p>
     <p>Default rules from the browser are combined with rules from an external Style Sheet are combined with the rules contained in any style tags in the page itself.  If there is a conflict then then internal style tag wins.  These rules are then combined with any style information contained in a style attribute.  If the style attribute conflicts with any previous information, it wins.</p>
-    <p>
+    <p> JOS ADDS CONTENT HERE AND EXERCISE</p>
   </subsection>
 </section>
