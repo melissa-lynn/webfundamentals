@@ -9,7 +9,7 @@ Let's start with a *submit* button. Here's an example from our pizza form:
 
 ```htmla
 <form method="get"
-      action="/cgi-bin/echo.cgi">
+      action="/assignment/echoform">
     <p><label>Customer name: <input type=text name="customer"></label></p>
     <p><button type="submit">Order pizza</button></p>
 </form>
@@ -39,7 +39,7 @@ Sometimes, you want to offer the user a way to reset the form to its initial sta
 
 ```htmla
 <form method="get"
-      action="/cgi-bin/echo.cgi">
+      action="/assignment/echoform">
     <p><label>Customer name: <input type=text name="customer"></label></p>
     <p><button type="reset">reset form</button></p>
     <p><button type="submit">Order pizza</button></p>
@@ -61,7 +61,7 @@ That would be a good use of a button button:
 
 ```htmla
 <form method="get"
-      action="/cgi-bin/echo.cgi">
+      action="/assignment/echoform">
     <p><label>Customer name: <input type=text name="customer"></label></p>
     <p><button type="reset">reset form</button></p>
     <p><button type="button" id="calc_price">Calculate Price</button></p>

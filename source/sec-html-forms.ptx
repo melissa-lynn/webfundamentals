@@ -12,7 +12,7 @@
     <program interactive="activecode" language="html" include-source="yes">
       <input>
 &lt;form method="GET"
-         action="/cgi-bin/echo.cgi"&gt;
+         action="/assignment/echoform"&gt;
   &lt;p&gt;&lt;label&gt;Customer name: &lt;input type="text" name="customer"&gt;&lt;/label&gt;&lt;/p&gt;
   &lt;p&gt;&lt;label&gt;Telephone: &lt;input type=tel name="phone"&gt;&lt;/label&gt;&lt;/p&gt;
   &lt;p&gt;&lt;label&gt;E-mail address: &lt;input type=email name="addr"&gt;&lt;/label&gt;&lt;/p&gt;
@@ -154,7 +154,7 @@ try to cover all of them; consult <url href="https://developer.mozilla.org/en-US
       <input>
 &lt;form 
       method="GET"
-      action="/cgi-bin/echo.cgi"&gt;
+      action="/assignment/echoform"&gt;
   &lt;p&gt;&lt;label&gt;user name: &lt;input type="text" name="username"&gt;&lt;/label&gt;&lt;/p&gt;
   &lt;p&gt;&lt;label&gt;password: &lt;input type="password" name="pwd1"&gt;&lt;/label&gt;&lt;/p&gt;
   &lt;p&gt;&lt;label&gt;password again: &lt;input type="password" name="pwd2"&gt;&lt;/label&gt;&lt;/p&gt;
@@ -170,7 +170,7 @@ try to cover all of them; consult <url href="https://developer.mozilla.org/en-US
     <program interactive="activecode" language="html" include-source="yes">
       <input>
 &lt;form method="GET"
-      action="/cgi-bin/echo.cgi"&gt;
+      action="/assignment/echoform"&gt;
   &lt;p&gt;&lt;label&gt;Name: &lt;input type=text name="username"&gt;&lt;/label&gt;&lt;/p&gt;
   &lt;p&gt;&lt;label&gt;House: &lt;input type=text name="house" value="Gryffindor"&gt;&lt;/label&gt;&lt;/p&gt;
   &lt;p&gt;&lt;label&gt;School: &lt;input type=text name="school" value="Hogwarts"&gt;&lt;/label&gt;&lt;/p&gt;

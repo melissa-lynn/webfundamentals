@@ -75,7 +75,7 @@ need to check the value, though it should do that anyway.
 For birth years, you can make use of `max` and `min`:
 
 ```htmla
-<form method="get" action="/cgi-bin/echo.cgi">
+<form method="get" action="/assignment/echoform">
 <p><label>birth year: <input type="number" min="1900" max="2026"></label>
 <p><button type="submit">report age</button>
 </form>
