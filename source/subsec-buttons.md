@@ -1,6 +1,6 @@
 ## Buttons
 
-While we are on the topic of buttons, let's look a few buttons that are used with forms. 
+While we are on the topic of buttons, let's look at a few buttons that are used with forms. 
 They are not value-bearing inputs per se, but can still be important in using a form.
 
 ### Submit Buttons

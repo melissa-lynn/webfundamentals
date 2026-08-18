@@ -146,7 +146,8 @@ try to cover all of them; consult <url href="https://developer.mozilla.org/en-US
 
 </table>
 
-<p>The consequence of this data representation is that pretty much every input should have a <c>name</c> that is unique within within that form. For example, if you have a form where the user is "signing up" for your web
+<p>The consequence of this data representation is that pretty much every input should have a <c>name</c> 
+  that is unique within that form. For example, if you have a form where the user is "signing up" for your web
   application, so you ask them to type their password twice, the html code might look like this.</p>
   <listing>
     <caption>Signup Form</caption>
