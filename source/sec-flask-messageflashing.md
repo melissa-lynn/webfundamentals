@@ -1,4 +1,4 @@
-# Message Flashing
+# Message Flashing {#flask_message_flashing}
 
 To provide a good user experience, a web app should give the user
 appropriate feedback that actions have worked, or why they failed,
