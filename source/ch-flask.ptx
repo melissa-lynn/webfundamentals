@@ -17,7 +17,7 @@
   <xi:include href="sec-flask-quickstart.ptx" />
   <xi:include href="sec-flask-routing.ptx" />
   <xi:include href="sec-flask-static.ptx" />
-  <xi:include href="sec-flask-templates.ptx" />
+  <xi:include href="generated/sec-flask-templates.ptx" />
   <xi:include href="generated/sec-xss-attacks.ptx" />
   <xi:include href="generated/sec-flask-requestobj.ptx" />
   <xi:include href="generated/sec-flask-redirects.ptx" />
