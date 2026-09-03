@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <section xml:id="html_html-quiz">
   <title>HTML Quiz</title>
-  <p>Do NOT click on the start button until you are ready to take this quiz.  (probably during class)  Once you open the
-            quiz you are committed to finishing it.  The quiz has a time limit of 20 minutes.</p>
   <exercises line="7" runestone_options="{'timelimit': 30, 'subchapter': 'htmlquiz', 'chapter': 'HTML', 'basecourse': 'webfundamentals', 'optional': '', 'optclass': '', 'divid': 'html_final_timed', 'qnumber': '', 'question_label': '2.6.1'}" source="/Users/lynn5/WebDevBook/webfundamentals/_sources/HTML/htmlquiz.rst">
     <exercise label="html_quiz_q1">
       <statement>
@@ -386,5 +384,4 @@
       </choices>
     </exercise>
   </exercises>
-  <p>Once you have completed the quiz you can review your answers but you will not be able to change them.</p>
 </section>
