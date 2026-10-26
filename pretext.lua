@@ -260,7 +260,8 @@ function Span(s, attr)
  return s
 end
 
--- RowInline is a way to pass certain html or latex directly to the output if there is no equivalent in the AST.  Seems to only be for \cite, \ref. For now, we just leave it blank, so these elements are just dropped.
+-- RowInline is a way to pass certain html or latex directly to the output if there is no equivalent in the AST.  
+-- Seems to only be for \cite, \ref. For now, we just leave it blank, so these elements are just dropped.
 function RawInline(format, str)
   -- if format == "html" then
   --   return "<raw-html>"..str.."</raw-html>"

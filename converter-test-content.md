@@ -1,5 +1,9 @@
 # Regression tests
 
+## Building This
+
+./run-converter-test
+
 Simple paragraph with *emphasis* and **alerts**. 
 
 The follow is a subsection header with a specified ID
@@ -212,4 +216,24 @@ function pyth(a,b) {
 | `request.cookies`    | Read cookies.                       |
 | `request.get_json()` | Read JSON requests from JavaScript. |
 
+## Database Code Examples
 
+```{=pretext}
+ <program xml:id="sql_bikeshare_filter_1b" interactive="activecode" language="sql"
+    database="book.db">
+    <input>
+SELECT
+  bike_number, start_date, duration
+FROM
+  trip
+WHERE
+  duration &gt;= 3600
+LIMIT
+  10
+        </input>
+    <tests>
+
+
+</tests>
+  </program>
+```
