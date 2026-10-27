@@ -2,7 +2,7 @@
 <exercises xml:id="javascript_javascript-exercises">
   <title>Javascript Exercises</title>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
             </li>
     </ol>
@@ -31,7 +31,7 @@
   </listing>
   </exercise>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
             </li>
     </ol>
@@ -57,7 +57,7 @@
   </listing>
   </exercise>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
             </li>
     </ol>
@@ -83,7 +83,7 @@
   </listing>
   </exercise>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
             </li>
     </ol>
@@ -110,7 +110,7 @@
   </listing>
   </exercise>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
             </li>
     </ol>
@@ -136,7 +136,7 @@
   </listing>
   </exercise>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
             </li>
     </ol>
@@ -164,7 +164,7 @@
   </listing>
   </exercise>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
             </li>
     </ol>

@@ -127,7 +127,7 @@
   <p>Ok, that is really nice, Now we can move the slider, and whenever we let go, it just updates the color.  But we can go one step further and have the color change as the bar moves!  Change the event from <c>onchange</c> to <c>onmousemove</c> to see the results.</p>
   <p>Before we leave this section, let's add two more enhancement to this example:</p>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p>Let's display the values of red, green, and blue</p>
       </li>
@@ -202,7 +202,7 @@ theSpan.innerHTML = sliderVal;
 </listing>
   <p>The second example breaks up our work into much more manageable chunks:</p>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p>Get a reference to the span element following the slider.  This is where the value of the slider will be shown.</p>
       </li>

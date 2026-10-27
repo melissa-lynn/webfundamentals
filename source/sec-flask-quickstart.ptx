@@ -20,7 +20,7 @@ def hello_world():
     </program>
     <p>So what did that code do?</p>
     <p>
-      <ol label="1">
+      <ol marker="1">
         <li>
           <p>First we imported the <c classes="xref py py-class">Flask</c> class. An instance of
                         this class will be our WSGI application.</p>
@@ -127,7 +127,7 @@ $ flask run</pre>
     <p>(On Windows you need to use <c>set</c> instead of <c>export</c>.)</p>
     <p>This does the following things:</p>
     <p>
-      <ol label="1">
+      <ol marker="1">
         <li>
           <p>it activates the debugger</p>
         </li>

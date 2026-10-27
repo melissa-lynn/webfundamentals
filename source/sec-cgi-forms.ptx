@@ -59,7 +59,7 @@ print "&lt;/html&gt;"
     <title>Combining into One File</title>
     <p>Let's now combine our application into a single file. Using the following flow:</p>
     <p>
-      <ol label="1">
+      <ol marker="1">
         <li>
           <p>If there is no QUERY_STRING simply return the HTML for the form.</p>
         </li>

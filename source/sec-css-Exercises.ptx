@@ -2,7 +2,7 @@
 <exercises xml:id="css_css-exercises">
   <title>CSS Exercises</title>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
             </li>
     </ol>
@@ -35,7 +35,7 @@
   </listing>
   </exercise>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
             </li>
     </ol>
@@ -67,7 +67,7 @@
   </listing>
   </exercise>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
             </li>
     </ol>
@@ -94,7 +94,7 @@
   </listing>
   </exercise>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
             </li>
     </ol>
@@ -121,7 +121,7 @@
   </listing>
   </exercise>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
             </li>
     </ol>
@@ -148,7 +148,7 @@
   </listing>
   </exercise>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
             </li>
     </ol>
@@ -175,7 +175,7 @@
   </listing>
   </exercise>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p>Using the template developed in the layout chapter, develop a homepage for yourself, published on github pages, that employs a two column layout with a fixed navbar (always on screen), and a footer.  The navbar should link to at least two additional pages used to describe your hobbies or favorite teams.  The CSS for this website should be contained in its own CSS file, and all three pages should use this CSS file.</p>
       </li>

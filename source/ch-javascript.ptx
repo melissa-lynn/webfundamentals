@@ -31,7 +31,7 @@
   <p>Now that example may look very complex to you, and in fact it does demonstrate <term>LOTS</term> of important aspects of programming.  But do not worry, we'll dissect this example carefully so that you fully understand what is going on.</p>
   <p>Here are some questions that we should answer about the example above:</p>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p>Button?  We haven't talked about a <c>button</c> tag before, whats the deal with that?</p>
       </li>
@@ -54,7 +54,7 @@
   <p>The <c>onclick</c> attribute is the way we answer the question, <q>what should this button do when someone clicks on it.</q>  The answer in this case is may lead to confusion, but hopefully you at least get the idea that when the button is clicked we want to <q>change this page</q>.  The way we are going to do this is through a <term>function call</term>. You have used functions in math class many times, and these are not all that different.  The important thing to remember is that functions are <term>abstractions</term> of things that need doing.  We all use abstractions all the time in our everyday life.</p>
   <p>For example, you may tell your friend, <q>I'm going to Computer Science now.</q> this is an abstraction of the following hypothetical steps:</p>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p>Get out of bed.</p>
       </li>
@@ -80,7 +80,7 @@
   <p>The stuff inside the script tag is Javascript code. This code contains a <term>function definition</term> which is how we create our very own abstractions. Unlike your friend to naturally understands what it means to go to class, computers are very dumb, and very literal, they only do what you tell them.  In this case there are two steps to our abstraction.  One changes the background color of the body, and the second one changes our message.  These lines are also abstractions of a very complicated set of steps that we as programmers don't need to know the details of right now.  We just need to know which abstractions the browser understands.</p>
   <p>Let's defer the question of what happened to the button for just a bit.  In the meantime experiment with the Javascript code by trying the following things:</p>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p>Make the background light green</p>
       </li>

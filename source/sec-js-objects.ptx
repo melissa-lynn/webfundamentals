@@ -108,7 +108,7 @@
   <p>Our function has grown!  But, don't let that worry you, we have added more assginment statemetnts that only change the <c>main</c> tag.  However we have introduced one very significant new programming feature into this example.  <c>myMain</c> is a <term>variable</term>.  Variables are names that we give to Javascript objects, in this case it is the <c>main</c> tag.  Now, given what you know so far, you might wonder why not just use <c>document.body.main</c>?  Because it does not exist.  The document object has a <c>body</c> attribute because all documents have a <c>body</c>, but not all documents have a <c>main</c>.</p>
   <p>So, we need to find the main in our document and give it a name so we can do things with it.  This is what is going on in the statement:  <c>myMain = document.querySelector('main');</c>  Assignment statements work as follows:</p>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p>evaluate whatever is to the right side of the <c>=</c> assignment operator.</p>
       </li>

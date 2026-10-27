@@ -19,7 +19,7 @@ for(i = 0; i &lt; 10; i++) {
 </listing>
   <p>Now that was pretty simple, but it illustrates a very important aspect of programming.  The key aspects of the example are:</p>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p>The for statement,  is the statement that allows us to do things many times.</p>
       </li>

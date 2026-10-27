@@ -76,7 +76,7 @@ t.render(name='Luther')
     </program>
     <p>This introduces several interesting new features of templates.</p>
     <p>
-      <ol label="1">
+      <ol marker="1">
         <li>
           <p>The <c>{&#x200B;% ... %&#x200B;}</c> notation is used to include a non-rendering bit of code in the template.  In this example we introduce a for loop.  Notice that since html does not require you to indent things we need an endfor to delimit the end of the for loop.</p>
         </li>
@@ -207,7 +207,7 @@ Great Title
     <title>Templates in Flask</title>
     <p>To use Jinja templates in flask is easy.</p>
     <p>
-      <ol label="1">
+      <ol marker="1">
         <li>
           <p>You need to make a templates subdirectory in your main project directory.</p>
         </li>

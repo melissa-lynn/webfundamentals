@@ -25,7 +25,7 @@
   </p>
   <p>One service that makes it very easy to publish your own blog or even a simple web page is a company called Github.  Github is largely a company that helps you manage your software projects, but they have one simple service called <q>Github Pages</q> that works extremely well for our purposes.  To make a web page available to the involves the following steps:</p>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p>Make an account on <url href="https://github.com/join" visual="https://github.com/join">Github</url></p>
       </li>

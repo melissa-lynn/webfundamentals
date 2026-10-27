@@ -49,7 +49,7 @@
       <title>Installing a Virtual Environment and Flask</title>
       <p>For your own development purposes it is good to get in the habit of using a virtual environment.  Using Python 3.4 it is really easy.</p>
       <p>
-        <ol label="1">
+        <ol marker="1">
           <li>
             <p>Make a Folder in your home directory called Environments</p>
           </li>

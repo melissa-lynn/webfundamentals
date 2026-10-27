@@ -398,7 +398,7 @@
     <blockquote>
       <p>Write a function that <em>each time</em> it is clicked will do the following:</p>
       <p>
-        <ol label="1">
+        <ol marker="1">
           <li>
             <p>Turn the background of the page light blue.</p>
           </li>

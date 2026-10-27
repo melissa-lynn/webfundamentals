@@ -352,7 +352,7 @@
     </listing>
       <p>If you run the example you will see the three cards lined up next to each other.  As a reminder this is because:</p>
       <p>
-        <ol label="1">
+        <ol marker="1">
           <li>
             <p>images are inline elements and so do not create a line break.</p>
           </li>
@@ -523,7 +523,7 @@ img#c {
   </listing>
     <p>This looks pretty good.  It almost matches the picture in the aside area. This is a pretty typical layout for a good quality page, and you can use this as a template for your own homepage.  However it is missing the article area, and there is an ugly black band between the nav and the tops of the aside and section.  See if you can do the following:</p>
     <p>
-      <ol label="1">
+      <ol marker="1">
         <li>
           <p>Remove the black band.  Hint:  A good way to find out why things look the way they do is to use the <q>Inspect Element</q> feature of your browser.  If you right click on an area that interests you, you will be able to see all of the css rules including the default style rules that affect a particular element.</p>
         </li>

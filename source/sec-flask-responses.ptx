@@ -9,7 +9,7 @@
             The logic that Flask applies to converting return values into response
             objects is as follows:</p>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p>If a response object of the correct type is returned it's directly
                     returned from the view.</p>

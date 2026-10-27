@@ -45,7 +45,7 @@ writeln("the request has been sent");
   </listing>
     <p>Now that seems like a lot of code to accomplish a simple task, but I've made it as verbose as possible to make it easier to break down.  Shortly, we will see how to shorten it up considerably.</p>
     <p>
-      <ol label="1">
+      <ol marker="1">
         <li>
           <p>The call to <c>fetch</c> sends the request to runestone and immediately returns a promise (<c>myPromise</c>).   That promise will resolve when the response headers are returned.  This is partly for security reasons, that we will mention later.
                         a.  We have instructed <c>myPromise</c> to call <c>receiveResponse</c> using <c>myPromise.then(receiveResponse)</c>.  The <c>then</c> method is what you use to tell a promise what to do when a promise is resolved successfully.

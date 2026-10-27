@@ -109,7 +109,7 @@ def about():
     <p>Why would you want to build URLs using the URL reversing function
                 <c classes="xref py py-func">url_for()</c> instead of hard-coding them into your templates?</p>
     <p>
-      <ol label="1">
+      <ol marker="1">
         <li>
           <p>Reversing is often more descriptive than hard-coding the URLs.</p>
         </li>

@@ -83,7 +83,7 @@ LIMIT
 </tests>
       </program>
       <p>
-        <ol label="1">
+        <ol marker="1">
           <li>
             <p>
               <c>select bike_number, duration from trip_data order by duration desc limit 1;</c>

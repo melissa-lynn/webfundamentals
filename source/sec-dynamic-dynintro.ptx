@@ -84,7 +84,7 @@ exit;
     </p>
     <p>The LAMP stack was very good for generating pages and provided a certain level of interactivity, mainly through forms, but for many people the cycle of</p>
     <p>
-      <ol label="1">
+      <ol marker="1">
         <li>
           <p>Look at a page</p>
         </li>

@@ -113,7 +113,7 @@
       <p>What does this mean for you?  If you have a macro you want to import,
                     that needs to access the request object you have two possibilities:</p>
       <p>
-        <ol label="1">
+        <ol marker="1">
           <li>
             <p>you explicitly pass the request to the macro as parameter, or
                             the attribute of the request object you are interested in.</p>

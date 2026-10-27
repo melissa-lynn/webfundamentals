@@ -3,7 +3,7 @@
   <title>Persistent Data and Databases</title>
   <p>In the three legged stool of web applications, we have covered both the view and the controller.  We have even built simple apps with very simple models.  But now it is time to look at a real model, and how a database management system is used in a web application.   We will divide this chapter into three modules:</p>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p>Data Modeling and Creating a Database</p>
       </li>

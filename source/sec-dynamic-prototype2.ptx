@@ -155,21 +155,21 @@ $(document).ready(function () {
     </program>
     <p>Let's trace through precisely what happens when an item is added to the shopping list.</p>
     <p>
-      <ol label="1">
+      <ol marker="1">
         <li>
           <p>User fills out the form with information about the item to be added.</p>
         </li>
         <li>
           <p>User clicks on the Add Item button.  Clicking causes the <c>clickedon</c> function in the controller to be invoked.</p>
           <p>
-            <ol label="a">
+            <ol marker="a">
               <li>
                 <p>The <c>clickedon</c> function creates a new <c>Item</c></p>
               </li>
               <li>
                 <p>Then <c>clickedon</c> calls <c>shoppingModel.addItem</c> which adds the newly created item to the model</p>
                 <p>
-                  <ol label="i">
+                  <ol marker="i">
                     <li>
                       <p>The <c>addItem</c> method of the model appends the new item to the list of items.</p>
                     </li>

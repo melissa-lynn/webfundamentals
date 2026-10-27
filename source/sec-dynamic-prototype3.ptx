@@ -3,11 +3,11 @@
   <title>Prototype 3 Storing the List in the Browser</title>
   <p>With this new information about localStorage and how to serialize javascript objects we are now ready to update our application.  The wonderful thing about this next step is that we are adding some major new functionality to our app, but it's not going to require a reorganization of our existing code. Let's look at list of steps:</p>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p>Write a new class called LocalStorageSaver with the following capabilities.</p>
         <p>
-          <ol label="a">
+          <ol marker="a">
             <li>
               <p>Write a saveAll method to serialize our shopping list and save the serialized list to localStorage.</p>
             </li>

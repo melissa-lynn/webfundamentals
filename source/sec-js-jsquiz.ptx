@@ -143,7 +143,7 @@
   </exercises>
   <hint>
     <p>
-      <ol label="1">
+      <ol marker="1">
         <li>
           <p>Given the following HTML Add a button with a callback function that changes the <c>h1</c> from <q>Hello World</q> to <q>So Long CS130</q>  When you change the message you should also arrange it so the color of the text turns blue.  The rest of your page should remain unchanged.</p>
         </li>
